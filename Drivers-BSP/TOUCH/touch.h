@@ -6,6 +6,7 @@
 /******************************************************************************************/
 /* 电阻触摸屏驱动IC T_PEN/T_CS/T_MISO/T_MOSI/T_SCK 引脚 定义 */
 
+/*!!!If you change Pin,please pay attention to check the Port and RCC clock !!!*/
 #define T_PEN_GPIO_PORT GPIOF
 #define T_PEN_GPIO_PIN GPIO_PIN_11
 #define T_PEN_GPIO_CLK_ENABLE()       \
