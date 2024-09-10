@@ -1,7 +1,7 @@
 #ifndef __UART_REDEFINE_H
 #define __UART_REDEFINE_H
 
-#include "stm32f4xx_hal.h"
+#include "sys.h"
 #include "usart.h"
 #include <stdio.h>
 

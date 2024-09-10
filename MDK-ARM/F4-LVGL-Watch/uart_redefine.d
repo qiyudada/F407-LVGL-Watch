@@ -1,5 +1,6 @@
 f4-lvgl-watch\uart_redefine.o: ..\Drivers-SYSTEM\Uart_Redefine\Uart_Redefine.c
 f4-lvgl-watch\uart_redefine.o: ..\Drivers-SYSTEM\Uart_Redefine\Uart_Redefine.h
+f4-lvgl-watch\uart_redefine.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\uart_redefine.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\uart_redefine.o: ../Core/Inc/stm32f4xx_hal_conf.h
 f4-lvgl-watch\uart_redefine.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
@@ -34,6 +35,6 @@ f4-lvgl-watch\uart_redefine.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal
 f4-lvgl-watch\uart_redefine.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\uart_redefine.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\uart_redefine.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+f4-lvgl-watch\uart_redefine.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\uart_redefine.o: ../Core/Inc/usart.h
 f4-lvgl-watch\uart_redefine.o: ../Core/Inc/main.h
-f4-lvgl-watch\uart_redefine.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h

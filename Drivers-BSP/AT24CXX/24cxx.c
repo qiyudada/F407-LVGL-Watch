@@ -1,6 +1,13 @@
 #include "24cxx.h"
 #include "Delay.h"
-#include "myiic.h"
+#include "iic_hal.h"
+
+iic_bus_t AT24CXX_Bus = {
+    .IIC_SCL_PIN = GPIO_PIN_8,
+    .IIC_SCL_PORT = GPIOB,
+    .IIC_SDA_PIN = GPIO_PIN_9,
+    .IIC_SDA_PORT = GPIOB,
+};
 
 /**
  * @brief       初始化IIC接口
@@ -9,7 +16,7 @@
  */
 void AT24Cxx_Init(void)
 {
-    IIC_Init();
+    IIC_Init(&AT24CXX_Bus);
 }
 
 /**
@@ -20,28 +27,28 @@ void AT24Cxx_Init(void)
 uint8_t AT24Cxx_Read_One_Byte(uint16_t addr)
 {
     uint8_t temp = 0;
-    IIC_Start(); /* 发送起始信号 */
+    IIC_Start(&AT24CXX_Bus); /* 发送起始信号 */
 
     if (EE_TYPE > AT24C16) /* 24C16以上的型号, 分2个字节发送地址 */
     {
-        IIC_Send_Byte(0XA0);      /* 发送写命令, IIC规定最低位是0, 表示写入 */
-        IIC_Wait_Ack();           /* 每次发送完一个字节,都要等待ACK */
-        IIC_Send_Byte(addr >> 8); /* 发送高字节地址 */
+        IIC_Send_Byte(&AT24CXX_Bus, 0XA0);      /* 发送写命令, IIC规定最低位是0, 表示写入 */
+        IIC_Wait_Ack(&AT24CXX_Bus);             /* 每次发送完一个字节,都要等待ACK */
+        IIC_Send_Byte(&AT24CXX_Bus, addr >> 8); /* 发送高字节地址 */
     }
     else
     {
-        IIC_Send_Byte(0XA0 + ((addr >> 8) << 1)); /* 发送器件 0XA0 + 高位a8/a9/a10地址,写数据 */
+        IIC_Send_Byte(&AT24CXX_Bus, 0XA0 + ((addr >> 8) << 1)); /* 发送器件 0XA0 + 高位a8/a9/a10地址,写数据 */
     }
 
-    IIC_Wait_Ack();            /* 每次发送完一个字节,都要等待ACK */
-    IIC_Send_Byte(addr % 256); /* 发送低位地址 */
-    IIC_Wait_Ack();            /* 等待ACK, 此时地址发送完成了 */
+    IIC_Wait_Ack(&AT24CXX_Bus);              /* 每次发送完一个字节,都要等待ACK */
+    IIC_Send_Byte(&AT24CXX_Bus, addr % 256); /* 发送低位地址 */
+    IIC_Wait_Ack(&AT24CXX_Bus);              /* 等待ACK, 此时地址发送完成了 */
 
-    IIC_Start();             /* 重新发送起始信号 */
-    IIC_Send_Byte(0XA1);     /* 进入接收模式, IIC规定最低位是0, 表示读取 */
-    IIC_Wait_Ack();          /* 每次发送完一个字节,都要等待ACK */
-    temp = IIC_Read_Byte(0); /* 接收一个字节数据 */
-    IIC_Stop();              /* 产生一个停止条件 */
+    IIC_Start(&AT24CXX_Bus);            /* 重新发送起始信号 */
+    IIC_Send_Byte(&AT24CXX_Bus, 0XA1);  /* 进入接收模式, IIC规定最低位是0, 表示读取 */
+    IIC_Wait_Ack(&AT24CXX_Bus);         /* 每次发送完一个字节,都要等待ACK */
+    temp = IIC_Read_Byte(&AT24CXX_Bus); /* 接收一个字节数据 */
+    IIC_Stop(&AT24CXX_Bus);             /* 产生一个停止条件 */
     return temp;
 }
 
@@ -54,28 +61,28 @@ uint8_t AT24Cxx_Read_One_Byte(uint16_t addr)
 void AT24Cxx_Write_One_Byte(uint16_t addr, uint8_t data)
 {
     /* 原理说明见:at24cxx_read_one_byte函数, 本函数完全类似 */
-    IIC_Start(); /* 发送起始信号 */
+    IIC_Start(&AT24CXX_Bus); /* 发送起始信号 */
 
     if (EE_TYPE > AT24C16) /* 24C16以上的型号, 分2个字节发送地址 */
     {
-        IIC_Send_Byte(0XA0);      /* 发送写命令, IIC规定最低位是0, 表示写入 */
-        IIC_Wait_Ack();           /* 每次发送完一个字节,都要等待ACK */
-        IIC_Send_Byte(addr >> 8); /* 发送高字节地址 */
+        IIC_Send_Byte(&AT24CXX_Bus, 0XA0);      /* 发送写命令, IIC规定最低位是0, 表示写入 */
+        IIC_Wait_Ack(&AT24CXX_Bus);             /* 每次发送完一个字节,都要等待ACK */
+        IIC_Send_Byte(&AT24CXX_Bus, addr >> 8); /* 发送高字节地址 */
     }
     else
     {
-        IIC_Send_Byte(0XA0 + ((addr >> 8) << 1)); /* 发送器件 0XA0 + 高位a8/a9/a10地址,写数据 */
+        IIC_Send_Byte(&AT24CXX_Bus, 0XA0 + ((addr >> 8) << 1)); /* 发送器件 0XA0 + 高位a8/a9/a10地址,写数据 */
     }
 
-    IIC_Wait_Ack();            /* 每次发送完一个字节,都要等待ACK */
-    IIC_Send_Byte(addr % 256); /* 发送低位地址 */
-    IIC_Wait_Ack();            /* 等待ACK, 此时地址发送完成了 */
+    IIC_Wait_Ack(&AT24CXX_Bus);              /* 每次发送完一个字节,都要等待ACK */
+    IIC_Send_Byte(&AT24CXX_Bus, addr % 256); /* 发送低位地址 */
+    IIC_Wait_Ack(&AT24CXX_Bus);              /* 等待ACK, 此时地址发送完成了 */
 
     /* 因为写数据的时候,不需要进入接收模式了,所以这里不用重新发送起始信号了 */
-    IIC_Send_Byte(data); /* 发送1字节 */
-    IIC_Wait_Ack();      /* 等待ACK */
-    IIC_Stop();          /* 产生一个停止条件 */
-    Delay_ms(10);        /* 注意: EEPROM 写入比较慢,必须等到10ms后再写下一个字节 */
+    IIC_Send_Byte(&AT24CXX_Bus, data); /* 发送1字节 */
+    IIC_Wait_Ack(&AT24CXX_Bus);        /* 等待ACK */
+    IIC_Stop(&AT24CXX_Bus);            /* 产生一个停止条件 */
+    Delay_ms(10);                      /* 注意: EEPROM 写入比较慢,必须等到10ms后再写下一个字节 */
 }
 
 /**
@@ -139,4 +146,3 @@ void AT24Cxx_Write(uint16_t addr, uint8_t *pbuf, uint16_t datalen)
         pbuf++;
     }
 }
-

@@ -133,7 +133,7 @@ int main(void)
         }
         else
         {
-          tp_draw_big_point(tp_dev.x[0], tp_dev.y[0], MAGENTA); /* ۭ֣ */
+          tp_draw_big_point(tp_dev.x[0], tp_dev.y[0], GRED); /* ۭ֣ */
         }
       }
     }

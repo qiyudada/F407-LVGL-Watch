@@ -556,11 +556,6 @@
               <FilePath>..\Drivers-SYSTEM\Delay\Delay.c</FilePath>
             </File>
             <File>
-              <FileName>myiic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers-SYSTEM\IIC\myiic.c</FilePath>
-            </File>
-            <File>
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers-SYSTEM\SYS\sys.c</FilePath>
@@ -569,6 +564,11 @@
               <FileName>Uart_Redefine.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers-SYSTEM\Uart_Redefine\Uart_Redefine.c</FilePath>
+            </File>
+            <File>
+              <FileName>iic_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers-SYSTEM\IIC\iic_hal.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -37,4 +37,4 @@ f4-lvgl-watch\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.
 f4-lvgl-watch\24cxx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f4-lvgl-watch\24cxx.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\24cxx.o: ../Drivers-SYSTEM/Delay/Delay.h
-f4-lvgl-watch\24cxx.o: ../Drivers-SYSTEM/IIC/myiic.h
+f4-lvgl-watch\24cxx.o: ../Drivers-SYSTEM/IIC/iic_hal.h

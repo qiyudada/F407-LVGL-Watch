@@ -2,6 +2,10 @@
     "files.associations": {
         "myiic.h": "c",
         "lcd.h": "c",
-        "gui.h": "c"
+        "gui.h": "c",
+        "iic_hal.h": "c",
+        "sys.h": "c",
+        "uart_redefine.h": "c",
+        "usart.h": "c"
     }
 }
