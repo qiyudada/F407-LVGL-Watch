@@ -2,6 +2,8 @@
 #define __SYS_H
 
 #include "stm32f4xx_hal.h"
+#include "Delay.h"
+#include "main.h"
 #include <stdio.h>
 
 typedef int32_t  s32;

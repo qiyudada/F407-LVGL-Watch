@@ -7,6 +7,8 @@
         "sys.h": "c",
         "uart_redefine.h": "c",
         "usart.h": "c",
-        "touch.h": "c"
+        "touch.h": "c",
+        "rc522.h": "c",
+        "main.h": "c"
     }
 }

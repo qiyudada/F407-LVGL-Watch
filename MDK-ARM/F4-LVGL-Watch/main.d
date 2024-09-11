@@ -43,6 +43,9 @@ f4-lvgl-watch\main.o: ../Drivers-BSP/LCD/lcd.h
 f4-lvgl-watch\main.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h
 f4-lvgl-watch\main.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\main.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\main.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\main.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\main.o: ../Drivers-BSP/TOUCH/touch.h
 f4-lvgl-watch\main.o: ../Drivers-BSP/LCD/gui.h
+f4-lvgl-watch\main.o: ../Drivers-BSP/RC522/rc522.h
+f4-lvgl-watch\main.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\string.h
