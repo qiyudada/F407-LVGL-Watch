@@ -9,6 +9,8 @@
         "usart.h": "c",
         "touch.h": "c",
         "rc522.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "mpu6050.h": "c",
+        "stm32f4xx_it.h": "c"
     }
 }

@@ -38,6 +38,9 @@
 "f4-lvgl-watch\gui.o"
 "f4-lvgl-watch\touch.o"
 "f4-lvgl-watch\rc522.o"
+"f4-lvgl-watch\mpu6050.o"
+"f4-lvgl-watch\inv_mpu_dmp_motion_driver.o"
+"f4-lvgl-watch\inv_mpu.o"
 --library_type=microlib --strict --scatter "F4-LVGL-Watch\F4-LVGL-Watch.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

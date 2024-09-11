@@ -16,9 +16,11 @@
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\LCD",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\TOUCH",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\RC522",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\MPU6050",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\MDK-ARM",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Core\\Src",
-                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers\\STM32F4xx_HAL_Driver\\Src"
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers\\STM32F4xx_HAL_Driver\\Src",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\MPU6050\\eMPL"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

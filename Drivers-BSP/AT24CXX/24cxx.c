@@ -2,6 +2,8 @@
 #include "Delay.h"
 #include "iic_hal.h"
 
+#define AT24xx_CLK_ENABLE  __HAL_RCC_GPIOB_CLK_ENABLE()
+
 iic_bus_t AT24CXX_Bus = {
     .IIC_SCL_PIN = GPIO_PIN_8,
     .IIC_SCL_PORT = GPIOB,
@@ -16,6 +18,7 @@ iic_bus_t AT24CXX_Bus = {
  */
 void AT24Cxx_Init(void)
 {
+    AT24xx_CLK_ENABLE;
     IIC_Init(&AT24CXX_Bus);
 }
 

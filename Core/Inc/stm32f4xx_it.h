@@ -42,7 +42,7 @@
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+extern uint8_t HardInt_mpu_flag;
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -65,6 +65,7 @@ void USART1_IRQHandler(void);
 void USART3_IRQHandler(void);
 void UART4_IRQHandler(void);
 /* USER CODE BEGIN EFP */
+void EXTI9_5_IRQHandler(void);
 
 /* USER CODE END EFP */
 

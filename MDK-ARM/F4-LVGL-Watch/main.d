@@ -49,3 +49,6 @@ f4-lvgl-watch\main.o: ../Drivers-BSP/TOUCH/touch.h
 f4-lvgl-watch\main.o: ../Drivers-BSP/LCD/gui.h
 f4-lvgl-watch\main.o: ../Drivers-BSP/RC522/rc522.h
 f4-lvgl-watch\main.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\string.h
+f4-lvgl-watch\main.o: ..\Drivers-BSP\MPU6050\mpu6050.h
+f4-lvgl-watch\main.o: ../Drivers-SYSTEM/IIC/iic_hal.h
+f4-lvgl-watch\main.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
