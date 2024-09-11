@@ -36,7 +36,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+uint8_t HardInt_mpu_flag=0;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -334,5 +334,13 @@ void UART4_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+/**
+  * @brief This function handles EXTI line[15:10] interrupts.MPU Interrupt
+  */
+void EXTI9_5_IRQHandler(void)
+{
+  HardInt_mpu_flag = 1;
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
 
+}
 /* USER CODE END 1 */
