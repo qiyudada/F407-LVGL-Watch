@@ -31,6 +31,7 @@
 #include "gui.h"
 #include "rc522.h"
 #include "mpu6050.h"
+#include "key.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -62,7 +63,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-short MGx,MGY,MGZ;
+short MGx, MGY, MGZ;
 /* USER CODE END 0 */
 
 /**
@@ -101,6 +102,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+  led_init();
   LCD_Init();
   tp_init();
   PCD_Init_RST();
@@ -109,13 +111,13 @@ int main(void)
   LCD_ShowString2(30, 50, 200, 16, 16, "STM32", RED);
 
   /* USER CODE END 2 */
-  
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-    printf("temp is %d\r\n",MPU_Get_Temperature());
+
     /* USER CODE BEGIN 3 */
   }
 

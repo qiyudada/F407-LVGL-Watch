@@ -11,6 +11,9 @@
         "rc522.h": "c",
         "main.h": "c",
         "mpu6050.h": "c",
-        "stm32f4xx_it.h": "c"
+        "stm32f4xx_it.h": "c",
+        "delay.h": "c",
+        "led.h": "c",
+        "key.h": "c"
     }
 }

@@ -75,8 +75,17 @@ void Error_Handler(void);
 #define MISO_GPIO_Port GPIOB
 #define PEN_Pin GPIO_PIN_11
 #define PEN_GPIO_Port GPIOF
+#define KEY1_Pin GPIO_PIN_12
+#define KEY1_GPIO_Port GPIOD
+#define KEY1_EXTI_IRQn EXTI15_10_IRQn
+#define KEY2_Pin GPIO_PIN_13
+#define KEY2_GPIO_Port GPIOD
+#define KEY2_EXTI_IRQn EXTI15_10_IRQn
 #define RS_Pin GPIO_PIN_2
 #define RS_GPIO_Port GPIOG
+#define MPU6050_INT_Pin GPIO_PIN_5
+#define MPU6050_INT_GPIO_Port GPIOG
+#define MPU6050_INT_EXTI_IRQn EXTI9_5_IRQn
 #define RC522_SDA_Pin GPIO_PIN_6
 #define RC522_SDA_GPIO_Port GPIOC
 #define RD_Pin GPIO_PIN_4
