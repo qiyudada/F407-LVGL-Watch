@@ -34,6 +34,7 @@
 "f4-lvgl-watch\uart_redefine.o"
 "f4-lvgl-watch\iic_hal.o"
 "f4-lvgl-watch\log.o"
+"f4-lvgl-watch\cfifo.o"
 "f4-lvgl-watch\24cxx.o"
 "f4-lvgl-watch\lcd.o"
 "f4-lvgl-watch\gui.o"

@@ -17,6 +17,7 @@
         "key.h": "c",
         "hc06.h": "c",
         "stm32f4xx_hal.h": "c",
-        "log.h": "c"
+        "log.h": "c",
+        "cfifo.h": "c"
     }
 }

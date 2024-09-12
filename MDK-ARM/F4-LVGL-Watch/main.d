@@ -54,4 +54,6 @@ f4-lvgl-watch\main.o: ../Drivers-SYSTEM/IIC/iic_hal.h
 f4-lvgl-watch\main.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
 f4-lvgl-watch\main.o: ../Drivers-BSP/KEY/key.h
 f4-lvgl-watch\main.o: ../Drivers-BSP/LED/led.h
-f4-lvgl-watch\main.o: ..\Drivers-SYSTEM\Log\log.h
+f4-lvgl-watch\main.o: ../Drivers-SYSTEM/Log/log.h
+f4-lvgl-watch\main.o: ../Drivers-BSP/BLE/Hc06.h
+f4-lvgl-watch\main.o: ../Drivers-SYSTEM/Ringbuffer/cFIFO.h

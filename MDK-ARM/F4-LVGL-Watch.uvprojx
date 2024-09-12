@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;..\Drivers-SYSTEM\Log;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/KEY;../Drivers-BSP/LED;..\Drivers-BSP\BLE</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;../Drivers-SYSTEM/Log;../Drivers-SYSTEM/Ringbuffer;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/KEY;../Drivers-BSP/LED;../Drivers-BSP/BLE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -574,6 +574,11 @@
               <FileName>log.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers-SYSTEM\Log\log.c</FilePath>
+            </File>
+            <File>
+              <FileName>cFIFO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers-SYSTEM\Ringbuffer\cFIFO.c</FilePath>
             </File>
           </Files>
         </Group>

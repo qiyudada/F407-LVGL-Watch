@@ -11,6 +11,7 @@
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-SYSTEM\\Uart_Redefine",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-SYSTEM\\SYS",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-SYSTEM\\Log",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-SYSTEM\\Ringbuffer",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-SYSTEM\\IIC",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-SYSTEM\\Delay",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\AT24CXX",

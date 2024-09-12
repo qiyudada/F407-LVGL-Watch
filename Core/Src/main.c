@@ -34,6 +34,7 @@
 #include "key.h"
 #include "led.h"
 #include "log.h"
+#include "Hc06.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,7 +112,7 @@ int main(void)
   MPU_Init();
   printf("RC522 Initation Completed\n");
   LCD_ShowString2(30, 50, 200, 16, 16, "STM32", RED);
-
+  BlueTooth_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -119,7 +120,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    
+
     /* USER CODE BEGIN 3 */
   }
 
