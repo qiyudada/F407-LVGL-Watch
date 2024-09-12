@@ -1,4 +1,6 @@
 #include "Hc06.h"
+#include <string.h>
+#include "usart.h"
 
 uint8_t BlueTooth_Buffer[128];
 extern DMA_HandleTypeDef hdma_usart3_rx;
@@ -34,7 +36,8 @@ GPIO_PinState BlueTooth_Get_State(void)
  */
 void BlueTooth_Control(short mode)
 {
-    HAL_GPIO_WritePin(BLE_EN_GPIO_Port, BLE_EN_Pin, mode);
+
+    HAL_GPIO_WritePin(BLE_EN_GPIO_Port, BLE_EN_Pin, mode == 1 ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
 /*Uart DMA Receive Callback*/

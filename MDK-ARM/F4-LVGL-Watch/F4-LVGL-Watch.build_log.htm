@@ -27,24 +27,18 @@ Project File Date:  09/12/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Keil\ARM Start\ARM\ARMCC\Bin'
 Build target 'F4-LVGL-Watch'
-compiling Hc06.c...
-..\Drivers-BSP\BLE\Hc06.c(20): warning:  #223-D: function "memset" declared implicitly
-     memset(BlueTooth_Buffer, 0, sizeof(BlueTooth_Buffer));
-..\Drivers-BSP\BLE\Hc06.c(37): warning:  #188-D: enumerated type mixed with another type
-      HAL_GPIO_WritePin(
-LE_EN_GPIO_Port, 
-LE_EN_Pin, mode);
-..\Drivers-BSP\BLE\Hc06.c: 2 warnings, 0 errors
-compiling stm32f4xx_it.c...
 compiling key.c...
+compiling log.c...
+..\Drivers-SYSTEM\Log\log.c(39): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers-SYSTEM\Log\log.c: 1 warning, 0 errors
+compiling stm32f4xx_it.c...
+compiling Hc06.c...
 compiling main.c...
-../Drivers-SYSTEM/Log/log.h(9): warning:  #1-D: last line of file ends without a newline
-  #endif //HAL_DMA_PRINTF_LOG_H
-../Core/Src/main.c: 1 warning, 0 errors
 linking...
 Program Size: Code=19756 RO-data=6400 RW-data=172 ZI-data=1916  
 FromELF: creating hex file...
-"F4-LVGL-Watch\F4-LVGL-Watch.axf" - 0 Error(s), 3 Warning(s).
+"F4-LVGL-Watch\F4-LVGL-Watch.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -67,7 +61,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.1
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

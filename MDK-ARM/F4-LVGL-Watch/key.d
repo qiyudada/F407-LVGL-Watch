@@ -41,4 +41,3 @@ f4-lvgl-watch\key.o: ../Core/Inc/main.h
 f4-lvgl-watch\key.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\key.o: ../Drivers-BSP/LED/LED.h
 f4-lvgl-watch\key.o: ../Drivers-BSP/BLE/Hc06.h
-f4-lvgl-watch\key.o: ../Core/Inc/usart.h

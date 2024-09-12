@@ -1,7 +1,6 @@
 f4-lvgl-watch\hc06.o: ..\Drivers-BSP\BLE\Hc06.c
 f4-lvgl-watch\hc06.o: ..\Drivers-BSP\BLE\Hc06.h
-f4-lvgl-watch\hc06.o: ../Core/Inc/usart.h
-f4-lvgl-watch\hc06.o: ../Core/Inc/main.h
+f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\hc06.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\hc06.o: ../Core/Inc/stm32f4xx_hal_conf.h
 f4-lvgl-watch\hc06.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
@@ -36,7 +35,9 @@ f4-lvgl-watch\hc06.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 f4-lvgl-watch\hc06.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\hc06.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\hc06.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\hc06.o: ../Core/Inc/main.h
 f4-lvgl-watch\hc06.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
+f4-lvgl-watch\hc06.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\string.h
+f4-lvgl-watch\hc06.o: ../Core/Inc/usart.h

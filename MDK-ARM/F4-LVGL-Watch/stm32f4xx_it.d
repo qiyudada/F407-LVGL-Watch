@@ -36,7 +36,6 @@ f4-lvgl-watch\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 f4-lvgl-watch\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f4-lvgl-watch\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h
 f4-lvgl-watch\stm32f4xx_it.o: ../Drivers-BSP/BLE/Hc06.h
-f4-lvgl-watch\stm32f4xx_it.o: ../Core/Inc/usart.h
 f4-lvgl-watch\stm32f4xx_it.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\stm32f4xx_it.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\stm32f4xx_it.o: ../Drivers-SYSTEM/SYS/sys.h
