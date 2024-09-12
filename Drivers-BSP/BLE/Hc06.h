@@ -12,10 +12,9 @@ extern "C" {
 
 #define BlueTooth_UART huart3
 
-
+extern uint8_t BlueTooth_Buffer[128];
 
 void BlueTooth_Init(void);
-
 
 
 

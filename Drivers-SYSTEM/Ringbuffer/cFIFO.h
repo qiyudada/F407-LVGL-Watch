@@ -15,7 +15,7 @@ extern "C" {
  
 /* USER CODE BEGIN Private defines */
  
-#define CFIFO_SIZE 20           //环形队列CFIFO大小
+#define CFIFO_SIZE 1024           //环形队列CFIFO大小
  
  
 /*环形CFIFO结构体*/
