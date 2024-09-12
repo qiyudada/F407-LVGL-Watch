@@ -75,6 +75,10 @@ void Error_Handler(void);
 #define MISO_GPIO_Port GPIOB
 #define PEN_Pin GPIO_PIN_11
 #define PEN_GPIO_Port GPIOF
+#define BLE_EN_Pin GPIO_PIN_12
+#define BLE_EN_GPIO_Port GPIOF
+#define BLE_STATE_Pin GPIO_PIN_13
+#define BLE_STATE_GPIO_Port GPIOF
 #define BLE_TX_Pin GPIO_PIN_10
 #define BLE_TX_GPIO_Port GPIOB
 #define BLE_RX_Pin GPIO_PIN_11

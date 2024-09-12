@@ -7,15 +7,19 @@ extern "C" {
 
 #include "usart.h"
 #include "sys.h"
-#include "cFIFO.h"
+
  
 
 #define BlueTooth_UART huart3
-
 extern uint8_t BlueTooth_Buffer[128];
 
+
+/*Function*/
 void BlueTooth_Init(void);
 
+void BlueTooth_Control(short mode);
+
+GPIO_PinState BlueTooth_Get_State(void);
 
 
 

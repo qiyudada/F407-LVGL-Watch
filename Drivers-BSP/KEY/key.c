@@ -1,6 +1,7 @@
 #include "key.h"
 #include "LED.h"
 #include "Delay.h"
+#include "Hc06.h"
 
 /**
  * @brief       按键初始化函数

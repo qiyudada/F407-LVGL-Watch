@@ -114,7 +114,7 @@ int main(void)
   LCD_ShowString2(30, 50, 200, 16, 16, "STM32", RED);
   BlueTooth_Init();
   /* USER CODE END 2 */
-
+  
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -122,6 +122,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+  
   }
 
   /* USER CODE END 3 */
