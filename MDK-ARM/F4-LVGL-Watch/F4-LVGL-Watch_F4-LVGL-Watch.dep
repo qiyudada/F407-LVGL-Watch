@@ -1,6 +1,6 @@
 Dependencies for Project 'F4-LVGL-Watch', Target 'F4-LVGL-Watch': (DO NOT MODIFY !)
 F (startup_stm32f407xx.s)(0x66E2CF7A)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list startup_stm32f407xx.lst --xref -o f4-lvgl-watch\startup_stm32f407xx.o --depend f4-lvgl-watch\startup_stm32f407xx.d)
-F (../Core/Src/main.c)(0x66E2D2E3)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\main.o --omf_browse f4-lvgl-watch\main.crf --depend f4-lvgl-watch\main.d)
+F (../Core/Src/main.c)(0x66E305AF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\main.o --omf_browse f4-lvgl-watch\main.crf --depend f4-lvgl-watch\main.d)
 I (../Core/Inc/main.h)(0x66E2CF79)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x66DD10DD)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66DEE768)
@@ -46,7 +46,7 @@ I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-BSP/TOUCH/touch.h)(0x66E063CD)
-I (../Drivers-BSP/LCD/gui.h)(0x66DEE6D2)
+I (../Drivers-BSP/LCD/gui.h)(0x66E305AF)
 I (../Drivers-BSP/RC522/rc522.h)(0x66E0E611)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)
 I (../Drivers-BSP/MPU6050/mpu6050.h)(0x66E17B26)
@@ -55,8 +55,7 @@ I (D:\Keil\ARM Start\ARM\ARMCC\include\math.h)(0x588B8344)
 I (../Drivers-BSP/KEY/key.h)(0x66E1A93F)
 I (../Drivers-BSP/LED/led.h)(0x66E1B35F)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E25915)
-I (../Drivers-BSP/BLE/Hc06.h)(0x66E2D171)
-I (../Drivers-SYSTEM/Ringbuffer/cFIFO.h)(0x66E2C45F)
+I (../Drivers-BSP/BLE/Hc06.h)(0x66E30604)
 F (../Core/Src/gpio.c)(0x66E2CF77)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\gpio.o --omf_browse f4-lvgl-watch\gpio.crf --depend f4-lvgl-watch\gpio.d)
 I (../Core/Inc/gpio.h)(0x66DEE765)
 I (../Core/Inc/main.h)(0x66E2CF79)
@@ -273,13 +272,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x66DD10DD)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x66DD10DD)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x66DD10DD)
 I (../Core/Inc/stm32f4xx_it.h)(0x66E2B712)
-I (../Drivers-BSP/BLE/Hc06.h)(0x66E2D171)
+I (../Drivers-BSP/BLE/Hc06.h)(0x66E30604)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (../Drivers-SYSTEM/Ringbuffer/cFIFO.h)(0x66E2C45F)
-I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)
 F (../Core/Src/stm32f4xx_hal_msp.c)(0x66DEE767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\stm32f4xx_hal_msp.o --omf_browse f4-lvgl-watch\stm32f4xx_hal_msp.crf --depend f4-lvgl-watch\stm32f4xx_hal_msp.d)
 I (../Core/Inc/main.h)(0x66E2CF79)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x66DD10DD)
@@ -1304,7 +1301,7 @@ I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (../Core/Inc/main.h)(0x66E2CF79)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-SYSTEM/IIC/iic_hal.h)(0x66E060A3)
-F (..\Drivers-BSP\LCD\Lcd.c)(0x66DEE6D2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\lcd.o --omf_browse f4-lvgl-watch\lcd.crf --depend f4-lvgl-watch\lcd.d)
+F (..\Drivers-BSP\LCD\Lcd.c)(0x66E305AF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\lcd.o --omf_browse f4-lvgl-watch\lcd.crf --depend f4-lvgl-watch\lcd.d)
 I (..\Drivers-BSP\LCD\Lcd.h)(0x66E066F6)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x66DD10DD)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66DEE768)
@@ -1344,8 +1341,8 @@ I (D:\Keil\ARM Start\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (..\Drivers-BSP\LCD\GUI.c)(0x66DEE6D2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\gui.o --omf_browse f4-lvgl-watch\gui.crf --depend f4-lvgl-watch\gui.d)
-I (..\Drivers-BSP\LCD\GUI.h)(0x66DEE6D2)
+F (..\Drivers-BSP\LCD\GUI.c)(0x66E305AF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\gui.o --omf_browse f4-lvgl-watch\gui.crf --depend f4-lvgl-watch\gui.d)
+I (..\Drivers-BSP\LCD\GUI.h)(0x66E305AF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x66DD10DD)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66DEE768)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x66DD10DD)
@@ -1429,7 +1426,7 @@ I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (../Drivers-BSP/LCD/lcd.h)(0x66E066F6)
 I (../Drivers-BSP/AT24CXX/24cxx.h)(0x66DEE6D2)
-I (../Drivers-BSP/LCD/GUI.h)(0x66DEE6D2)
+I (../Drivers-BSP/LCD/GUI.h)(0x66E305AF)
 F (..\Drivers-BSP\RC522\RC522.c)(0x66E0EABF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\rc522.o --omf_browse f4-lvgl-watch\rc522.crf --depend f4-lvgl-watch\rc522.d)
 I (..\Drivers-BSP\RC522\RC522.h)(0x66E0E611)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
@@ -1604,7 +1601,7 @@ I (..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x66E0EEC9)
 I (../Drivers-BSP/MPU6050/mpu6050.h)(0x66E17B26)
 I (../Drivers-SYSTEM/IIC/iic_hal.h)(0x66E060A3)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
-F (..\Drivers-BSP\KEY\key.c)(0x66E2D1F4)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\key.o --omf_browse f4-lvgl-watch\key.crf --depend f4-lvgl-watch\key.d)
+F (..\Drivers-BSP\KEY\key.c)(0x66E305AF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\key.o --omf_browse f4-lvgl-watch\key.crf --depend f4-lvgl-watch\key.d)
 I (..\Drivers-BSP\KEY\key.h)(0x66E1A93F)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x66DD10DD)
@@ -1644,10 +1641,8 @@ I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (../Core/Inc/main.h)(0x66E2CF79)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-BSP/LED/LED.h)(0x66E1B35F)
-I (../Drivers-BSP/BLE/Hc06.h)(0x66E2D171)
+I (../Drivers-BSP/BLE/Hc06.h)(0x66E30604)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
-I (../Drivers-SYSTEM/Ringbuffer/cFIFO.h)(0x66E2C45F)
-I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)
 F (..\Drivers-BSP\LED\led.c)(0x66E1B02C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\led.o --omf_browse f4-lvgl-watch\led.crf --depend f4-lvgl-watch\led.d)
 I (..\Drivers-BSP\LED\led.h)(0x66E1B35F)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
@@ -1687,8 +1682,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x66DD10DD)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (../Core/Inc/main.h)(0x66E2CF79)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (..\Drivers-BSP\BLE\Hc06.c)(0x66E2D140)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\hc06.o --omf_browse f4-lvgl-watch\hc06.crf --depend f4-lvgl-watch\hc06.d)
-I (..\Drivers-BSP\BLE\Hc06.h)(0x66E2D171)
+F (..\Drivers-BSP\BLE\Hc06.c)(0x66E3060A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\hc06.o --omf_browse f4-lvgl-watch\hc06.crf --depend f4-lvgl-watch\hc06.d)
+I (..\Drivers-BSP\BLE\Hc06.h)(0x66E30604)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
 I (../Core/Inc/main.h)(0x66E2CF79)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x66DD10DD)
@@ -1727,5 +1722,3 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x66DD10DD)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66E25903)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (../Drivers-SYSTEM/Ringbuffer/cFIFO.h)(0x66E2C45F)
-I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)

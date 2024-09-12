@@ -40,5 +40,3 @@ f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\hc06.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
-f4-lvgl-watch\hc06.o: ../Drivers-SYSTEM/Ringbuffer/cFIFO.h
-f4-lvgl-watch\hc06.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\string.h

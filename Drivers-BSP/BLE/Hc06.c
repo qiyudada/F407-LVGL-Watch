@@ -42,7 +42,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
     if (huart->Instance == USART3)
     {
-        uint8_t cnt = CFIFO_SIZE - __HAL_DMA_GET_COUNTER(&hdma_usart3_rx);
+        uint8_t cnt = BLE_BUFFER_SIZE - __HAL_DMA_GET_COUNTER(&hdma_usart3_rx);
         HAL_UART_Transmit(&BlueTooth_UART, BlueTooth_Buffer, cnt, HAL_MAX_DELAY);
         Blue_Buffer_Clear();
     }
