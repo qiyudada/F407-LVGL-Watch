@@ -75,6 +75,10 @@ void Error_Handler(void);
 #define MISO_GPIO_Port GPIOB
 #define PEN_Pin GPIO_PIN_11
 #define PEN_GPIO_Port GPIOF
+#define BLE_TX_Pin GPIO_PIN_10
+#define BLE_TX_GPIO_Port GPIOB
+#define BLE_RX_Pin GPIO_PIN_11
+#define BLE_RX_GPIO_Port GPIOB
 #define KEY1_Pin GPIO_PIN_12
 #define KEY1_GPIO_Port GPIOD
 #define KEY1_EXTI_IRQn EXTI15_10_IRQn
@@ -88,6 +92,10 @@ void Error_Handler(void);
 #define MPU6050_INT_EXTI_IRQn EXTI9_5_IRQn
 #define RC522_SDA_Pin GPIO_PIN_6
 #define RC522_SDA_GPIO_Port GPIOC
+#define Serial_TX_Pin GPIO_PIN_9
+#define Serial_TX_GPIO_Port GPIOA
+#define Serial_RX_Pin GPIO_PIN_10
+#define Serial_RX_GPIO_Port GPIOA
 #define RD_Pin GPIO_PIN_4
 #define RD_GPIO_Port GPIOD
 #define WR_Pin GPIO_PIN_5

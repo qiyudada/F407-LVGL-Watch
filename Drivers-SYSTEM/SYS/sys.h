@@ -42,6 +42,7 @@ typedef __I uint8_t vuc8;
 #define SYS_RTOS  (1)
 #define SYS_CLK  (100)
 
+/*debug info*/
 #define __QILALA_DEBUG 0
 
 #if (__QILALA_DEBUG == 1)

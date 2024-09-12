@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/KEY;..\Drivers-BSP\LED</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;..\Drivers-SYSTEM\Log;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/KEY;../Drivers-BSP/LED;..\Drivers-BSP\BLE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -570,6 +570,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers-SYSTEM\IIC\iic_hal.c</FilePath>
             </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers-SYSTEM\Log\log.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -624,6 +629,11 @@
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers-BSP\LED\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Hc06.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers-BSP\BLE\Hc06.c</FilePath>
             </File>
           </Files>
         </Group>

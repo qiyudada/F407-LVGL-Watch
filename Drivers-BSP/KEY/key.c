@@ -9,7 +9,6 @@
  */
 void key_init(void)
 {
-	
 }
 
 /**
@@ -25,54 +24,53 @@ void key_init(void)
  */
 uint8_t key_scan(uint8_t mode)
 {
-	static uint8_t key_up = 1; /* 按键按松开标志 */
-	uint8_t keyval = 0;
+    static uint8_t key_up = 1; /* 按键按松开标志 */
+    uint8_t keyval = 0;
 
-	if (mode)
-		key_up = 1; /* 支持连按 */
+    if (mode)
+        key_up = 1; /* 支持连按 */
 
-	if (key_up && (KEY1 == 0 || KEY2 == 0)) /* 按键松开标志为1, 且有任意一个按键按下了 */
-	{
-		Delay_ms(10); /* 去抖动 */
-		key_up = 0;
+    if (key_up && (KEY1 == 0 || KEY2 == 0)) /* 按键松开标志为1, 且有任意一个按键按下了 */
+    {
+        Delay_ms(10); /* 去抖动 */
+        key_up = 0;
 
-		if (KEY1 == 0)
-			keyval = KEY1_PRES;
+        if (KEY1 == 0)
+            keyval = KEY1_PRES;
 
-		if (KEY2 == 0)
-			keyval = KEY2_PRES;
-	}
-	else if (KEY1 == 1 && KEY2 == 1) /* 没有任何按键按下, 标记按键松开 */
-	{
-		key_up = 1;
-	}
+        if (KEY2 == 0)
+            keyval = KEY2_PRES;
+    }
+    else if (KEY1 == 1 && KEY2 == 1) /* 没有任何按键按下, 标记按键松开 */
+    {
+        key_up = 1;
+    }
 
-	return keyval; /* 返回键值 */
+    return keyval; /* 返回键值 */
 }
-
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    Delay_ms(20);      /* 消抖 */
-    switch(GPIO_Pin)
+    Delay_ms(20); /* 消抖 */
+    switch (GPIO_Pin)
     {
-     
-        case KEY1_GPIO_PIN:
-            if (KEY1 == 0)
-            {
-                LED1_TOGGLE();  /* LED1 状态取反 */ 
-            }
-            break;
 
-        case KEY2_GPIO_PIN:
-            if (KEY2 == 0)
-            {
-                LED1_TOGGLE();  /* LED1 状态取反 */
-                LED0_TOGGLE();  /* LED0 状态取反 */ 
-            }
-            break;
+    case KEY1_GPIO_PIN:
+        if (KEY1 == 0)
+        {
+            LED1_TOGGLE(); /* LED1 状态取反 */
+        }
+        break;
 
-    
-        default : break;
+    case KEY2_GPIO_PIN:
+        if (KEY2 == 0)
+        {
+            LED1_TOGGLE(); /* LED1 状态取反 */
+            LED0_TOGGLE(); /* LED0 状态取反 */
+        }
+        break;
+
+    default:
+        break;
     }
 }

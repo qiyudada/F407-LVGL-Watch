@@ -33,6 +33,7 @@
 "f4-lvgl-watch\sys.o"
 "f4-lvgl-watch\uart_redefine.o"
 "f4-lvgl-watch\iic_hal.o"
+"f4-lvgl-watch\log.o"
 "f4-lvgl-watch\24cxx.o"
 "f4-lvgl-watch\lcd.o"
 "f4-lvgl-watch\gui.o"
@@ -43,6 +44,7 @@
 "f4-lvgl-watch\inv_mpu.o"
 "f4-lvgl-watch\key.o"
 "f4-lvgl-watch\led.o"
+"f4-lvgl-watch\hc06.o"
 --library_type=microlib --strict --scatter "F4-LVGL-Watch\F4-LVGL-Watch.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
