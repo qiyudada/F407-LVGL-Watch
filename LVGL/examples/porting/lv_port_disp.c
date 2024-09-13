@@ -83,45 +83,53 @@ void lv_port_disp_init(void)
      *      and you only need to change the frame buffer's address.
      */
 
-    /* Example for 1) */
-    static lv_disp_draw_buf_t draw_buf_dsc_1;
-    static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                             /*A buffer for 10 rows*/
-    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, NULL, MY_DISP_HOR_RES * 10); /*Initialize the display buffer*/
-
-    //    /* Example for 2) */
-    //    static lv_disp_draw_buf_t draw_buf_dsc_2;
-    //    static lv_color_t buf_2_1[MY_DISP_HOR_RES * 10];                        /*A buffer for 10 rows*/
-    //    static lv_color_t buf_2_2[MY_DISP_HOR_RES * 10];                        /*An other buffer for 10 rows*/
-    //    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * 10);   /*Initialize the display buffer*/
-
-    //    /* Example for 3) also set disp_drv.full_refresh = 1 below*/
-    //    static lv_disp_draw_buf_t draw_buf_dsc_3;
-    //    static lv_color_t buf_3_1[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*A screen sized buffer*/
-    //    static lv_color_t buf_3_2[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*Another screen sized buffer*/
-    //    lv_disp_draw_buf_init(&draw_buf_dsc_3, buf_3_1, buf_3_2,
-    //                          MY_DISP_VER_RES * LV_VER_RES_MAX);   /*Initialize the display buffer*/
-
     /*-----------------------------------
      * Register the display in LVGL
      *----------------------------------*/
-
     static lv_disp_drv_t disp_drv; /*Descriptor of a display driver*/
     lv_disp_drv_init(&disp_drv);   /*Basic initialization*/
-
-    /*Set up the functions to access to your display*/
 
     /*Set the resolution of the display*/
     disp_drv.hor_res = MY_DISP_HOR_RES;
     disp_drv.ver_res = MY_DISP_VER_RES;
 
+    /*Set up the functions to access to your display*/
+
     /*Used to copy the buffer's content to the display*/
     disp_drv.flush_cb = disp_flush;
+
+    /* Example for 1) */
+#define LV_DISP_MODE 2
+
+#if LV_DISP_MODE == 1
+    static lv_disp_draw_buf_t draw_buf_dsc_1;
+    static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                             /*A buffer for 10 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, NULL, MY_DISP_HOR_RES * 10); /*Initialize the display buffer*/
 
     /*Set a display buffer*/
     disp_drv.draw_buf = &draw_buf_dsc_1;
 
-    /*Required for Example 3)*/
-    // disp_drv.full_refresh = 1;
+#elif LV_DISP_MODE == 2
+    /* Example for 2) */
+    static lv_disp_draw_buf_t draw_buf_dsc_2;
+    static lv_color_t buf_2_1[MY_DISP_HOR_RES * 10];                                /*A buffer for 10 rows*/
+    static lv_color_t buf_2_2[MY_DISP_HOR_RES * 10];                                /*An other buffer for 10 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * 10); /*Initialize the display buffer*/
+    /*Set a display buffer*/
+    disp_drv.draw_buf = &draw_buf_dsc_2;
+#elif LV_DISP_MODE == 3
+    /* Example for 3) also set disp_drv.full_refresh = 1 below*/
+    static lv_disp_draw_buf_t draw_buf_dsc_3;
+    static lv_color_t buf_3_1[MY_DISP_HOR_RES * MY_DISP_VER_RES]; /*A screen sized buffer*/
+    static lv_color_t buf_3_2[MY_DISP_HOR_RES * MY_DISP_VER_RES]; /*Another screen sized buffer*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_3, buf_3_1, buf_3_2,
+                          MY_DISP_VER_RES * LV_VER_RES_MAX); /*Initialize the display buffer*/
+                                                            
+    disp_drv.full_refresh = 1; /*Required for Example 3)*/
+
+    /*Set a display buffer*/
+    disp_drv.draw_buf = &draw_buf_dsc_3;
+#endif
 
     /* Fill a memory array with a color if you have GPU.
      * Note that, in lv_conf.h you can enable GPUs that has built-in support in LVGL.
@@ -181,7 +189,7 @@ static void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_
         //         color_p++;
         //     }
         // }
-        
+
         /*a Fast way to draw*/
         lvgl_LCD_Color_Fill(area->x1, area->y1, area->x2, area->y2, color_p);
     }
