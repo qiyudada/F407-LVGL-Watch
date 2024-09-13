@@ -118,7 +118,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    log_error("Kernel unstart!");
+    log_error("Kernel unstart!\r\n");
     /* USER CODE BEGIN 3 */
   }
 

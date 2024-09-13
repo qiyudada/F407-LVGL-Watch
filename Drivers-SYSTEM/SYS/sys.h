@@ -39,7 +39,7 @@ typedef __I uint16_t vuc16;
 typedef __I uint8_t vuc8;
 
 /*Choose delay ways*/
-#define SYS_RTOS  (1)
+#define SYS_RTOS  (2)
 #define SYS_CLK  (100)
 
 /*debug info*/

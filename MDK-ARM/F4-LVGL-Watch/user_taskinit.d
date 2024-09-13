@@ -45,6 +45,8 @@ f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/includ
 f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 f4-lvgl-watch\user_taskinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 f4-lvgl-watch\user_taskinit.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_taskinit.o: ../LVGL/src/misc/lv_log.h

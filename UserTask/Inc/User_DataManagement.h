@@ -10,6 +10,7 @@ extern "C"
 #include <stdio.h>
 #include "main.h"
 #include "FreeRTOS.h"
+#include "task.h"
 #include "cmsis_os2.h"
 
 /*Gross management*/

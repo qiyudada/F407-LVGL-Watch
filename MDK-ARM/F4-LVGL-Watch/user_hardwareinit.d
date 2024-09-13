@@ -46,6 +46,8 @@ f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/in
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/src/misc/lv_log.h
@@ -193,3 +195,5 @@ f4-lvgl-watch\user_hardwareinit.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\ma
 f4-lvgl-watch\user_hardwareinit.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu.h
 f4-lvgl-watch\user_hardwareinit.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/BLE/Hc06.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_disp.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_indev.h

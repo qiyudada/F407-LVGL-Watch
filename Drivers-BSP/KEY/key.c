@@ -3,6 +3,8 @@
 #include "Delay.h"
 #include "Hc06.h"
 
+#include "cmsis_os.h"
+
 /**
  * @brief       按键初始化函数
  * @param       无
@@ -35,7 +37,7 @@ uint8_t key_scan(uint8_t mode)
 
     if (key_up && (KEY1 == 0 || KEY2 == 0)) /* 按键松开标志为1, 且有任意一个按键按下了 */
     {
-        Delay_ms(10); /* 去抖动 */
+        osDelay(3); /* 去抖动 */
         key_up = 0;
 
         if (KEY1 == 0)
@@ -54,7 +56,6 @@ uint8_t key_scan(uint8_t mode)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    Delay_ms(20); /* 消抖 */
     switch (GPIO_Pin)
     {
 
@@ -77,3 +78,4 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
         break;
     }
 }
+

@@ -63,6 +63,8 @@ void MPU_Motion_Init(void)
 void MPU_Bus_Init(void)
 {
 	MPU6050_CLK_ENABLE;
+	HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
+	HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 	IIC_Init(&MPU_bus);
 }
 

@@ -27,6 +27,7 @@ const osThreadAttr_t HardwareInitTask_attributes = {
 void User_Tasks_Init(void)
 {
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
+    
 }
 
 void TaskTickHook(void)
