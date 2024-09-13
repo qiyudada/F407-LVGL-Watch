@@ -5,7 +5,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include "Delay.h"
-// #include "lvgl.h"
 
 // LCD重要参数集
 typedef struct

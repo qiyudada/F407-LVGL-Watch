@@ -174,7 +174,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-		printf("Hello world\r\n");
+		printf("Hello world jjjjj\r\n");
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */

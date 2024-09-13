@@ -2,7 +2,7 @@
 #define __GUI_H__
 
 #include "stm32f4xx_hal.h"
-//#include "lvgl.h"
+#include "lvgl.h"
 
 typedef uint8_t u8;
 typedef uint16_t u16;
@@ -26,7 +26,7 @@ void LCD_ShowString2(uint16_t x, uint16_t y, uint16_t width, uint16_t height, ui
 
 void LCD_DrawFillRectangle(u16 x1, u16 y1, u16 x2, u16 y2);
 
-//void lvgl_LCD_Color_Fill(u16 sx, u16 sy, u16 ex, u16 ey, lv_color_t *color);
+void lvgl_LCD_Color_Fill(u16 sx, u16 sy, u16 ex, u16 ey, lv_color_t *color);
 
 /*GUI FUNCTION*/
 

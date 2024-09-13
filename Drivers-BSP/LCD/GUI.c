@@ -784,19 +784,19 @@ void GUI_Drawbmp16(u16 x, u16 y, const unsigned char *p)
 	LCD_SetWindows(0, 0, lcddev.width - 1, lcddev.height - 1);
 }
 
-//void lvgl_LCD_Color_Fill(u16 sx, u16 sy, u16 ex, u16 ey, lv_color_t *color)
-//{
+void lvgl_LCD_Color_Fill(u16 sx, u16 sy, u16 ex, u16 ey, lv_color_t *color)
+{
 
-//	uint32_t y = 0;
-//	u16 height, width;
-//	width = ex - sx + 1;  // 得到填充的宽度
-//	height = ey - sy + 1; // 高度
+	uint32_t y = 0;
+	u16 height, width;
+	width = ex - sx + 1;  // 得到填充的宽度
+	height = ey - sy + 1; // 高度
 
-//	LCD_SetWindows(sx, sy, ex, ey);
+	LCD_SetWindows(sx, sy, ex, ey);
 
-//	for (y = 0; y < width * height; y++)
-//	{
-//		Lcd_WriteData_16Bit(color->full);
-//		color++;
-//	}
-//}
+	for (y = 0; y < width * height; y++)
+	{
+		Lcd_WriteData_16Bit(color->full);
+		color++;
+	}
+}
