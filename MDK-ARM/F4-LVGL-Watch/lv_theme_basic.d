@@ -5,7 +5,7 @@ f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\src\extra\themes\basic\../../../../src/m
 f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\src\extra\themes\basic\../../../../src/misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_theme_basic.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\src\extra\themes\basic\../../../../src/misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_theme_basic.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\src\extra\themes\basic\../../../../src/misc/lv_types.h
 f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\src\extra\themes\basic\../../../../src/misc/lv_timer.h
 f4-lvgl-watch\lv_theme_basic.o: ..\LVGL\src\extra\themes\basic\../../../../src/misc/../hal/lv_hal_tick.h

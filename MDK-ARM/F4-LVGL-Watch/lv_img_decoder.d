@@ -3,7 +3,7 @@ f4-lvgl-watch\lv_img_decoder.o: ..\LVGL\src\draw\lv_img_decoder.h
 f4-lvgl-watch\lv_img_decoder.o: ..\LVGL\src\draw\../lv_conf_internal.h
 f4-lvgl-watch\lv_img_decoder.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_img_decoder.o: ..\LVGL\src\draw\../lv_conf_kconfig.h
-f4-lvgl-watch\lv_img_decoder.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_img_decoder.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_img_decoder.o: ..\LVGL\src\draw\lv_img_buf.h
 f4-lvgl-watch\lv_img_decoder.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdbool.h
 f4-lvgl-watch\lv_img_decoder.o: ..\LVGL\src\draw\../misc/lv_color.h

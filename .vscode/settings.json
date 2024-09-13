@@ -19,6 +19,13 @@
         "stm32f4xx_hal.h": "c",
         "log.h": "c",
         "cfifo.h": "c",
-        "lv_port_disp.h": "c"
+        "lv_port_disp.h": "c",
+        "user_taskinit.h": "c",
+        "cmsis_os.h": "c",
+        "user_hardwareinit.h": "c",
+        "user_datamanagement.h": "c",
+        "lvgl.h": "c",
+        "24cxx.h": "c",
+        "cmsis_os2.h": "c"
     }
 }

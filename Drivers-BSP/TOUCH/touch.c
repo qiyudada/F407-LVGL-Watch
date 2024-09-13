@@ -480,6 +480,7 @@ uint8_t tp_init(void)
 
 	if (tp_get_adjust_data())
 	{
+		LCD_Clear(WHITE);
 		return 0; /* 已经校准 */
 	}
 	else /* 未校准? */

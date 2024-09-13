@@ -4,7 +4,7 @@ f4-lvgl-watch\lv_draw_img.o: ..\LVGL\src\draw\lv_img_decoder.h
 f4-lvgl-watch\lv_draw_img.o: ..\LVGL\src\draw\../lv_conf_internal.h
 f4-lvgl-watch\lv_draw_img.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_draw_img.o: ..\LVGL\src\draw\../lv_conf_kconfig.h
-f4-lvgl-watch\lv_draw_img.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_draw_img.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_draw_img.o: ..\LVGL\src\draw\lv_img_buf.h
 f4-lvgl-watch\lv_draw_img.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdbool.h
 f4-lvgl-watch\lv_draw_img.o: ..\LVGL\src\draw\../misc/lv_color.h

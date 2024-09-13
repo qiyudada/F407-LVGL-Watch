@@ -5,7 +5,7 @@ f4-lvgl-watch\lv_refr.o: ..\LVGL\src\core\lv_obj.h
 f4-lvgl-watch\lv_refr.o: ..\LVGL\src\core\../lv_conf_internal.h
 f4-lvgl-watch\lv_refr.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_refr.o: ..\LVGL\src\core\../lv_conf_kconfig.h
-f4-lvgl-watch\lv_refr.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_refr.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_refr.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdbool.h
 f4-lvgl-watch\lv_refr.o: ..\LVGL\src\core\../misc/lv_style.h
 f4-lvgl-watch\lv_refr.o: ..\LVGL\src\core\../misc/../font/lv_font.h

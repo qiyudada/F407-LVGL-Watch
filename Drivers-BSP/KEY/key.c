@@ -10,6 +10,8 @@
  */
 void key_init(void)
 {
+    HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
 /**

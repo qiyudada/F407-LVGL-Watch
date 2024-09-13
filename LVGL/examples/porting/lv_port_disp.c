@@ -17,12 +17,12 @@
  *      DEFINES
  *********************/
 #ifndef MY_DISP_HOR_RES
-// #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen width, default value 320 is used for now.
+ #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen width, default value 320 is used for now.
 #define MY_DISP_HOR_RES 240
 #endif
 
 #ifndef MY_DISP_VER_RES
-// #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen height, default value 240 is used for now.
+ #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen height, default value 240 is used for now.
 #define MY_DISP_VER_RES 320
 #endif
 
@@ -148,7 +148,7 @@ void lv_port_disp_init(void)
 static void disp_init(void)
 {
     /*You code here*/
-    LCD_Init();
+    
 }
 
 volatile bool disp_flush_enabled = true;

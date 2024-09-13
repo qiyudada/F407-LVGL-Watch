@@ -3,7 +3,7 @@ f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\src\hal\../misc/lv_assert.h
 f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\src\hal\../misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_hal_indev.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\src\hal\../misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_hal_indev.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\src\hal\../misc/lv_log.h
 f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\src\hal\../misc/lv_types.h
 f4-lvgl-watch\lv_hal_indev.o: ..\LVGL\src\hal\../misc/lv_mem.h

@@ -6,7 +6,7 @@ f4-lvgl-watch\lv_led.o: ..\LVGL\src\extra\widgets\led\../../../../src/misc/lv_lo
 f4-lvgl-watch\lv_led.o: ..\LVGL\src\extra\widgets\led\../../../../src/misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_led.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_led.o: ..\LVGL\src\extra\widgets\led\../../../../src/misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_led.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_led.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_led.o: ..\LVGL\src\extra\widgets\led\../../../../src/misc/lv_types.h
 f4-lvgl-watch\lv_led.o: ..\LVGL\src\extra\widgets\led\../../../../src/misc/lv_timer.h
 f4-lvgl-watch\lv_led.o: ..\LVGL\src\extra\widgets\led\../../../../src/misc/../hal/lv_hal_tick.h

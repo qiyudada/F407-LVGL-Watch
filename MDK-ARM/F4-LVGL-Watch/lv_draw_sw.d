@@ -3,7 +3,7 @@ f4-lvgl-watch\lv_draw_sw.o: ..\LVGL\src\draw\sw\../lv_draw.h
 f4-lvgl-watch\lv_draw_sw.o: ..\LVGL\src\draw\sw\../../lv_conf_internal.h
 f4-lvgl-watch\lv_draw_sw.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_draw_sw.o: ..\LVGL\src\draw\sw\../../lv_conf_kconfig.h
-f4-lvgl-watch\lv_draw_sw.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_draw_sw.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_draw_sw.o: ..\LVGL\src\draw\sw\../../misc/lv_style.h
 f4-lvgl-watch\lv_draw_sw.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdbool.h
 f4-lvgl-watch\lv_draw_sw.o: ..\LVGL\src\draw\sw\../../misc/../font/lv_font.h

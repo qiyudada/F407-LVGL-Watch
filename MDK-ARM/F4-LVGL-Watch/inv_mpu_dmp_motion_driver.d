@@ -42,6 +42,7 @@ f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/s
 f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ../Core/Inc/main.h
+f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ..\Drivers-BSP\MPU6050\eMPL\dmpKey.h
 f4-lvgl-watch\inv_mpu_dmp_motion_driver.o: ..\Drivers-BSP\MPU6050\eMPL\dmpmap.h

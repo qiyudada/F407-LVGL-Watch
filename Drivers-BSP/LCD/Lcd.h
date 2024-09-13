@@ -88,7 +88,7 @@ typedef struct
 #define GRED    0XFFE0
 #define GBLUE   0X07FF
 #define RED     0xF800
-#define MAGENTA 0xF81F  //Purple
+#define Purple  0xF81F  //Purple
 #define GREEN   0x07E0  
 #define CYAN    0x7FFF
 #define YELLOW  0xFFE0

@@ -66,7 +66,8 @@
  
 #include <stdint.h>
 #include <stddef.h>
- 
+#include "cmsis_os2.h"
+
 #ifdef  __cplusplus
 extern "C"
 {

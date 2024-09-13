@@ -6,7 +6,7 @@ f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../lvgl.h
 f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../src/misc/lv_log.h
 f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../src/misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../src/misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_font_loader.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_font_loader.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../src/misc/lv_types.h
 f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../src/misc/lv_timer.h
 f4-lvgl-watch\lv_font_loader.o: ..\LVGL\src\font\../../src/misc/../hal/lv_hal_tick.h

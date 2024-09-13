@@ -1,12 +1,10 @@
 #ifndef __GUI_H__
 #define __GUI_H__
 
+#include "sys.h"
 #include "stm32f4xx_hal.h"
 #include "lvgl.h"
 
-typedef uint8_t u8;
-typedef uint16_t u16;
-typedef uint32_t u32;
 
 /*LCD Basic FUNCTION*/
 /*fc is font color,bc is background color*/

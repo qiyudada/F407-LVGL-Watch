@@ -10,7 +10,6 @@ extern DMA_HandleTypeDef hdma_usart3_rx;
  */
 void BlueTooth_Init(void)
 {
-
     __HAL_UART_ENABLE_IT(&BlueTooth_UART, UART_IT_IDLE);
     HAL_UARTEx_ReceiveToIdle_DMA(&BlueTooth_UART, BlueTooth_Buffer, sizeof(BlueTooth_Buffer));
 }

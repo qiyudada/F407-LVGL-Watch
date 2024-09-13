@@ -38,6 +38,7 @@ f4-lvgl-watch\key.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f4-lvgl-watch\key.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\key.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\key.o: ../Core/Inc/main.h
+f4-lvgl-watch\key.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\key.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\key.o: ../Drivers-BSP/LED/LED.h
 f4-lvgl-watch\key.o: ../Drivers-BSP/BLE/Hc06.h

@@ -8,7 +8,7 @@ f4-lvgl-watch\lv_disp.o: ..\LVGL\src\core\../hal/lv_hal.h
 f4-lvgl-watch\lv_disp.o: ..\LVGL\src\core\../hal/../draw/lv_draw.h
 f4-lvgl-watch\lv_disp.o: ..\LVGL\src\core\../hal/../draw/../lv_conf_internal.h
 f4-lvgl-watch\lv_disp.o: ..\LVGL\src\core\../hal/../draw/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_disp.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_disp.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_disp.o: ..\LVGL\src\core\../hal/../draw/../misc/lv_style.h
 f4-lvgl-watch\lv_disp.o: ..\LVGL\src\core\../hal/../draw/../misc/../font/lv_font.h
 f4-lvgl-watch\lv_disp.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stddef.h

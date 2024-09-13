@@ -34,6 +34,6 @@ f4-lvgl-watch\log.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 f4-lvgl-watch\log.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\log.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\log.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+f4-lvgl-watch\log.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\log.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
-f4-lvgl-watch\log.o: ..\Drivers-SYSTEM\Log\log.h
 f4-lvgl-watch\log.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdarg.h

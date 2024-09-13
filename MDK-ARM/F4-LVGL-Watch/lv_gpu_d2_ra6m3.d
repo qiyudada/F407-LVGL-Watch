@@ -4,7 +4,7 @@ f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\src\draw\renesas\../../misc/lv_color.h
 f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\src\draw\renesas\../../misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_gpu_d2_ra6m3.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\src\draw\renesas\../../misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\src\draw\renesas\../../misc/lv_assert.h
 f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\src\draw\renesas\../../misc/lv_log.h
 f4-lvgl-watch\lv_gpu_d2_ra6m3.o: ..\LVGL\src\draw\renesas\../../misc/lv_types.h

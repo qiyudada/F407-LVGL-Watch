@@ -84,7 +84,7 @@ void lv_port_indev_init(void)
 static void touchpad_init(void)
 {
     /*Your code comes here*/
-    tp_dev.init();
+    
 }
 
 /*Will be called by the library to read the touchpad*/

@@ -5,7 +5,7 @@ f4-lvgl-watch\lv_draw_line.o: ..\LVGL\src\draw\../core/lv_obj.h
 f4-lvgl-watch\lv_draw_line.o: ..\LVGL\src\draw\../core/../lv_conf_internal.h
 f4-lvgl-watch\lv_draw_line.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_draw_line.o: ..\LVGL\src\draw\../core/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_draw_line.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_draw_line.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_draw_line.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stddef.h
 f4-lvgl-watch\lv_draw_line.o: ..\LVGL\src\draw\../core/../misc/lv_style.h
 f4-lvgl-watch\lv_draw_line.o: ..\LVGL\src\draw\../core/../misc/../font/lv_font.h

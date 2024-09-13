@@ -6,7 +6,7 @@ f4-lvgl-watch\lv_span.o: ..\LVGL\src\extra\widgets\span\../../../../src/misc/lv_
 f4-lvgl-watch\lv_span.o: ..\LVGL\src\extra\widgets\span\../../../../src/misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_span.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_span.o: ..\LVGL\src\extra\widgets\span\../../../../src/misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_span.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_span.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_span.o: ..\LVGL\src\extra\widgets\span\../../../../src/misc/lv_types.h
 f4-lvgl-watch\lv_span.o: ..\LVGL\src\extra\widgets\span\../../../../src/misc/lv_timer.h
 f4-lvgl-watch\lv_span.o: ..\LVGL\src\extra\widgets\span\../../../../src/misc/../hal/lv_hal_tick.h

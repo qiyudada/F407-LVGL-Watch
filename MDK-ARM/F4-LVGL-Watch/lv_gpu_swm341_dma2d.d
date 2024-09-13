@@ -4,7 +4,7 @@ f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\src\draw\swm341_dma2d\../../misc/lv
 f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\src\draw\swm341_dma2d\../../misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_gpu_swm341_dma2d.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\src\draw\swm341_dma2d\../../misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\src\draw\swm341_dma2d\../../misc/lv_assert.h
 f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\src\draw\swm341_dma2d\../../misc/lv_log.h
 f4-lvgl-watch\lv_gpu_swm341_dma2d.o: ..\LVGL\src\draw\swm341_dma2d\../../misc/lv_types.h

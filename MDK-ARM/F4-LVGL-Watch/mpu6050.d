@@ -39,5 +39,6 @@ f4-lvgl-watch\mpu6050.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.
 f4-lvgl-watch\mpu6050.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\mpu6050.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\mpu6050.o: ../Core/Inc/main.h
+f4-lvgl-watch\mpu6050.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\mpu6050.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\mpu6050.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h

@@ -42,6 +42,7 @@ f4-lvgl-watch\inv_mpu.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.
 f4-lvgl-watch\inv_mpu.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\inv_mpu.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\inv_mpu.o: ../Core/Inc/main.h
+f4-lvgl-watch\inv_mpu.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\inv_mpu.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\inv_mpu.o: ../Drivers-BSP/MPU6050/mpu6050.h
 f4-lvgl-watch\inv_mpu.o: ../Drivers-SYSTEM/IIC/iic_hal.h

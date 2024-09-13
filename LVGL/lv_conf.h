@@ -19,6 +19,11 @@
 
 #include <stdint.h>
 
+/* screen size */
+#define MY_DISP_HOR_RES 240
+#define MY_DISP_VER_RES 320
+
+
 /*====================
    COLOR SETTINGS
  *====================*/

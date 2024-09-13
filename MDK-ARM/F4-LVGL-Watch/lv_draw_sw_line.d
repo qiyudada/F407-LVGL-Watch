@@ -6,7 +6,7 @@ f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\src\draw\sw\../../misc/lv_color.h
 f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\src\draw\sw\../../misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_draw_sw_line.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\src\draw\sw\../../misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_draw_sw_line.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\src\draw\sw\../../misc/lv_assert.h
 f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\src\draw\sw\../../misc/lv_log.h
 f4-lvgl-watch\lv_draw_sw_line.o: ..\LVGL\src\draw\sw\../../misc/lv_types.h

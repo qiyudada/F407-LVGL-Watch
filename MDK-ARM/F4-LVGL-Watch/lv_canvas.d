@@ -3,7 +3,7 @@ f4-lvgl-watch\lv_canvas.o: ..\LVGL\src\widgets\lv_canvas.h
 f4-lvgl-watch\lv_canvas.o: ..\LVGL\src\widgets\../lv_conf_internal.h
 f4-lvgl-watch\lv_canvas.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_canvas.o: ..\LVGL\src\widgets\../lv_conf_kconfig.h
-f4-lvgl-watch\lv_canvas.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_canvas.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_canvas.o: ..\LVGL\src\widgets\../core/lv_obj.h
 f4-lvgl-watch\lv_canvas.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stddef.h
 f4-lvgl-watch\lv_canvas.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdbool.h

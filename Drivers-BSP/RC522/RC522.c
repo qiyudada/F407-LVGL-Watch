@@ -267,12 +267,12 @@ void PCD_Reset(void)
     Delay_ms(2);
 
     /*复位后的初始化配置*/
-    MFRC_WriteReg(MFRC_ModeReg, 0x3D);   // CRC初始值0x6363
-    MFRC_WriteReg(MFRC_TReloadRegL, 30); // 定时器重装值
+    MFRC_WriteReg(MFRC_ModeReg, 0x3D);          // CRC初始值0x6363
+    MFRC_WriteReg(MFRC_TReloadRegL, 30);        // 定时器重装值
     MFRC_WriteReg(MFRC_TReloadRegH, 0);
-    MFRC_WriteReg(MFRC_TModeReg, 0x8D);      // 定时器设置
-    MFRC_WriteReg(MFRC_TPrescalerReg, 0x3E); // 定时器预分频值
-    MFRC_WriteReg(MFRC_TxAutoReg, 0x40);     // 100%ASK
+    MFRC_WriteReg(MFRC_TModeReg, 0x8D);         // 定时器设置
+    MFRC_WriteReg(MFRC_TPrescalerReg, 0x3E);    // 定时器预分频值
+    MFRC_WriteReg(MFRC_TxAutoReg, 0x40);        // 100%ASK
 
     PCD_AntennaOff(); // 关天线
     Delay_ms(2);

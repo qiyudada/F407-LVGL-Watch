@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;../Drivers-SYSTEM/Log;../Drivers-SYSTEM/Ringbuffer;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/KEY;../Drivers-BSP/LED;../Drivers-BSP/BLE;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;..\LVGL;..\LVGL\src;..\LVGL\examples\porting</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;../Drivers-SYSTEM/Log;../Drivers-SYSTEM/Ringbuffer;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;..\Drivers-BSP\MPU6050\eMPL;../Drivers-BSP/KEY;../Drivers-BSP/LED;../Drivers-BSP/BLE;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../LVGL;../LVGL/src;../LVGL/examples/porting;..\UserTask\Src;..\UserTask\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -489,6 +489,31 @@
               <FileName>stm32f4xx_hal_timebase_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_hal_timebase_tim.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Application/User_Task</GroupName>
+          <Files>
+            <File>
+              <FileName>User_TaskInit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserTask\Src\User_TaskInit.c</FilePath>
+            </File>
+            <File>
+              <FileName>User_HardwareInit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserTask\Src\User_HardwareInit.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Application/Mid_Task</GroupName>
+          <Files>
+            <File>
+              <FileName>User_DataManagement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserTask\Src\User_DataManagement.c</FilePath>
             </File>
           </Files>
         </Group>

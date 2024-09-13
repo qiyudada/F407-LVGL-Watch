@@ -4,7 +4,7 @@ f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\src\draw\stm32_dma2d\../../misc/lv_c
 f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\src\draw\stm32_dma2d\../../misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_gpu_stm32_dma2d.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\src\draw\stm32_dma2d\../../misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\src\draw\stm32_dma2d\../../misc/lv_assert.h
 f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\src\draw\stm32_dma2d\../../misc/lv_log.h
 f4-lvgl-watch\lv_gpu_stm32_dma2d.o: ..\LVGL\src\draw\stm32_dma2d\../../misc/lv_types.h

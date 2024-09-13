@@ -58,6 +58,9 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOE, LED1_Pin|LED2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, LCD_BL_Pin|BLE_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
@@ -75,6 +78,13 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = LCD_BL_Pin;
@@ -142,11 +152,10 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(MPU6050_INT_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+  // HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
+  // HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+  
 
 }
 

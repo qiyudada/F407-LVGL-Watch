@@ -4,7 +4,7 @@ f4-lvgl-watch\lv_gpu_d2_draw_label.o: ..\LVGL\src\draw\renesas\../../draw/../mis
 f4-lvgl-watch\lv_gpu_d2_draw_label.o: ..\LVGL\src\draw\renesas\../../draw/../misc/../lv_conf_internal.h
 f4-lvgl-watch\lv_gpu_d2_draw_label.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdint.h
 f4-lvgl-watch\lv_gpu_d2_draw_label.o: ..\LVGL\src\draw\renesas\../../draw/../misc/../lv_conf_kconfig.h
-f4-lvgl-watch\lv_gpu_d2_draw_label.o: ..\LVGL\examples\porting\../../lv_conf.h
+f4-lvgl-watch\lv_gpu_d2_draw_label.o: ../LVGL/examples/porting/../../lv_conf.h
 f4-lvgl-watch\lv_gpu_d2_draw_label.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdbool.h
 f4-lvgl-watch\lv_gpu_d2_draw_label.o: ..\LVGL\src\draw\renesas\../../draw/../misc/lv_txt.h
 f4-lvgl-watch\lv_gpu_d2_draw_label.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdarg.h

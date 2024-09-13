@@ -34,3 +34,4 @@ f4-lvgl-watch\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 f4-lvgl-watch\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+f4-lvgl-watch\stm32f4xx_hal_msp.o: ../Drivers-SYSTEM/Log/log.h
