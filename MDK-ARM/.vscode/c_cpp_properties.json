@@ -22,10 +22,15 @@
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\KEY",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\LED",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\BLE",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Middlewares\\Third_Party\\FreeRTOS\\Source\\include",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Middlewares\\Third_Party\\FreeRTOS\\Source\\CMSIS_RTOS_V2",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\RVDS\\ARM_CM4F",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\MDK-ARM",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Core\\Src",
                 "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers\\STM32F4xx_HAL_Driver\\Src",
-                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\MPU6050\\eMPL"
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Drivers-BSP\\MPU6050\\eMPL",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Middlewares\\Third_Party\\FreeRTOS\\Source",
+                "d:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\Middlewares\\Third_Party\\FreeRTOS\\Source\\portable\\MemMang"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
