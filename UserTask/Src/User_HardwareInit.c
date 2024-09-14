@@ -10,7 +10,7 @@
 #include "User_DataManagement.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
-
+#include "ui.h"
 /**
  * @brief Hardware Init Task
  */
@@ -54,6 +54,7 @@ void HardwareInitTask(void *argument)
         lv_init();
         lv_port_disp_init();
         lv_port_indev_init();
+        ui_init();
         /*----------Lvgl app---------- */
 
         log_info("Hardware initiate has been completed!");

@@ -17,5 +17,7 @@ void User_Tasks_Init(void);
 
 void TaskTickHook(void);
 
+void LvHandlerTask(void *argument);
+
 
 #endif
