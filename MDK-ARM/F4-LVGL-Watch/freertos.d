@@ -39,6 +39,8 @@ f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram
 f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
 f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
@@ -46,9 +48,10 @@ f4-lvgl-watch\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
-f4-lvgl-watch\freertos.o: ..\UserTask\Inc\User_TaskInit.h
-f4-lvgl-watch\freertos.o: ..\UserTask\Inc\User_DataManagement.h
+f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_TaskInit.h
+f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\freertos.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
+f4-lvgl-watch\freertos.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\freertos.o: ../LVGL/lvgl.h
 f4-lvgl-watch\freertos.o: ../LVGL/src/misc/lv_log.h
 f4-lvgl-watch\freertos.o: ../LVGL/src/misc/../lv_conf_internal.h
@@ -192,6 +195,6 @@ f4-lvgl-watch\freertos.o: ../Drivers-BSP/LED/led.h
 f4-lvgl-watch\freertos.o: ../Drivers-BSP/MPU6050/mpu6050.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/IIC/iic_hal.h
 f4-lvgl-watch\freertos.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
-f4-lvgl-watch\freertos.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu.h
-f4-lvgl-watch\freertos.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+f4-lvgl-watch\freertos.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
+f4-lvgl-watch\freertos.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\freertos.o: ../Drivers-BSP/BLE/Hc06.h

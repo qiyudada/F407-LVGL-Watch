@@ -18,18 +18,23 @@ extern "C"
 
 #if (User_Manage_file)
 
-#define Lvgl_Manage_file        1
-#define LCD_Manage_file         1
-#define Key_Manage_file         1
-#define NFC_Manage_file         1
-#define LED_Manage_file         1
-#define Touch_Manage_file       1
-#define Mpu6050_Manage_file     1
-#define Bluetooth_Manage_file   1
+#define RTC_Manage_file 1
+#define Lvgl_Manage_file 1
+#define LCD_Manage_file 1
+#define Key_Manage_file 1
+#define NFC_Manage_file 1
+#define LED_Manage_file 1
+#define Touch_Manage_file 1
+#define Mpu6050_Manage_file 1
+#define Bluetooth_Manage_file 1
 
 #endif
 
 /*child file include */
+#if (RTC_Manage_file)
+#include "rtc.h"
+#endif
+
 #if (Lvgl_Manage_file)
 #include "lvgl.h"
 #endif
@@ -66,13 +71,13 @@ extern "C"
 #include "Hc06.h"
 #endif
 
-/*-----------------------------------------------------------------------------------------------------------*/
-/**
- * @enum error message
- */
+    /*-----------------------------------------------------------------------------------------------------------*/
+    /**
+     * @enum error message
+     */
 
-#define MW_ERROR_NONE       0
-#define MW_ERROR_DETECT     9
+#define MW_ERROR_NONE 0
+#define MW_ERROR_DETECT 9
 
 /*-----------------------------------------------------------------------------------------------------------*/
 /**
@@ -131,6 +136,46 @@ extern "C"
     } MW_NFC_InterfaceTypeDef;
 
     /**
+     * @brief  MW RTC DateTime structure definition
+     */
+    typedef struct
+    {
+        uint8_t WeekDay; /*!< Specifies the RTC Date WeekDay.
+                             This parameter can be a value of @ref RTC_WeekDay_Definitions */
+
+        uint8_t Month; /*!< Specifies the RTC Date Month (in BCD format).
+                           This parameter can be a value of @ref RTC_Month_Date_Definitions */
+
+        uint8_t Date; /*!< Specifies the RTC Date.
+                          This parameter must be a number between Min_Data = 1 and Max_Data = 31 */
+
+        uint8_t Year; /*!< Specifies the RTC Date Year.
+                          This parameter must be a number between Min_Data = 0 and Max_Data = 99 */
+
+        uint8_t Hours; /*!< Specifies the RTC Time Hour.
+                           This parameter must be a number between Min_Data = 0 and Max_Data = 12 if the RTC_HourFormat_12 is selected
+                           This parameter must be a number between Min_Data = 0 and Max_Data = 23 if the RTC_HourFormat_24 is selected */
+
+        uint8_t Minutes; /*!< Specifies the RTC Time Minutes.
+                             This parameter must be a number between Min_Data = 0 and Max_Data = 59 */
+
+        uint8_t Seconds; /*!< Specifies the RTC Time Seconds.
+                             This parameter must be a number between Min_Data = 0 and Max_Data = 59 */
+
+    } MW_DateTimeTypeDef;
+
+    /**
+     * @brief  MW RTC Interface definition
+     */
+    typedef struct
+    {
+        void (*GetTimeDate)(MW_DateTimeTypeDef *nowdatetime);
+        void (*SetDate)(uint8_t year, uint8_t month, uint8_t date);
+        void (*SetTime)(uint8_t hours, uint8_t minutes, uint8_t seconds);
+        uint8_t (*CalculateWeekday)(uint8_t setyear, uint8_t setmonth, uint8_t setday, uint8_t century);
+    } MW_RTC_InterfaceTypeDef;
+
+    /**
      * @brief  Hardware Interface structure definition
      */
     typedef struct
@@ -139,7 +184,7 @@ extern "C"
         MW_DTH11_InterfaceTypeDef DTH11;
         MW_BLE_InterfaceTypeDef BLE;
         MW_NFC_InterfaceTypeDef NFC;
-
+        MW_RTC_InterfaceTypeDef RealTime;
     } MW_InterfaceTypeDef;
 
     extern MW_InterfaceTypeDef MW_Interface;

@@ -1,7 +1,7 @@
 f4-lvgl-watch\user_hardwareinit.o: ..\UserTask\Src\User_HardwareInit.c
-f4-lvgl-watch\user_hardwareinit.o: ..\UserTask\Inc\User_HardwareInit.h
-f4-lvgl-watch\user_hardwareinit.o: ..\UserTask\Inc\User_TaskInit.h
-f4-lvgl-watch\user_hardwareinit.o: ..\UserTask\Inc\User_DataManagement.h
+f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_HardwareInit.h
+f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_TaskInit.h
+f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\user_hardwareinit.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_hardwareinit.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -34,6 +34,8 @@ f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
@@ -49,6 +51,7 @@ f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/in
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+f4-lvgl-watch\user_hardwareinit.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/src/misc/lv_log.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/src/misc/../lv_conf_internal.h
@@ -192,12 +195,12 @@ f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/LED/led.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/MPU6050/mpu6050.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-SYSTEM/IIC/iic_hal.h
 f4-lvgl-watch\user_hardwareinit.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
-f4-lvgl-watch\user_hardwareinit.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu.h
-f4-lvgl-watch\user_hardwareinit.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
+f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_disp.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_indev.h
-f4-lvgl-watch\user_hardwareinit.o: ..\LVGL\APP\design\ui.h
-f4-lvgl-watch\user_hardwareinit.o: ..\LVGL\APP\design\ui_helpers.h
-f4-lvgl-watch\user_hardwareinit.o: ..\LVGL\APP\design\ui.h
-f4-lvgl-watch\user_hardwareinit.o: ..\LVGL\APP\design\ui_events.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_helpers.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_events.h

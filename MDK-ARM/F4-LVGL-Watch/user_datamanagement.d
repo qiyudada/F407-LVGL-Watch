@@ -1,5 +1,5 @@
 f4-lvgl-watch\user_datamanagement.o: ..\UserTask\Src\User_DataManagement.c
-f4-lvgl-watch\user_datamanagement.o: ..\UserTask\Inc\User_DataManagement.h
+f4-lvgl-watch\user_datamanagement.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\user_datamanagement.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_datamanagement.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -32,6 +32,8 @@ f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
+f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
@@ -47,6 +49,7 @@ f4-lvgl-watch\user_datamanagement.o: ../Middlewares/Third_Party/FreeRTOS/Source/
 f4-lvgl-watch\user_datamanagement.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 f4-lvgl-watch\user_datamanagement.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 f4-lvgl-watch\user_datamanagement.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+f4-lvgl-watch\user_datamanagement.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_datamanagement.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_datamanagement.o: ../LVGL/src/misc/lv_log.h
 f4-lvgl-watch\user_datamanagement.o: ../LVGL/src/misc/../lv_conf_internal.h
@@ -190,6 +193,6 @@ f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/LED/led.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/MPU6050/mpu6050.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers-SYSTEM/IIC/iic_hal.h
 f4-lvgl-watch\user_datamanagement.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
-f4-lvgl-watch\user_datamanagement.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu.h
-f4-lvgl-watch\user_datamanagement.o: ..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
+f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/BLE/Hc06.h

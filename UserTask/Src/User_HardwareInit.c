@@ -32,7 +32,11 @@ void HardwareInitTask(void *argument)
         }
         /*-------bluetooth Init------- */
         MW_Interface.BLE.Init();
+        MW_Interface.BLE.Control(1);
         Delay_ms(1000);
+
+        /*------------RTC Init---------- */
+        
         /*----------Mpu6050 Init---------- */
         num = 3;
         while (num && MW_Interface.IMU.ConnectionError)
@@ -41,6 +45,7 @@ void HardwareInitTask(void *argument)
             MW_Interface.IMU.ConnectionError = MW_Interface.IMU.Init();
             Delay_ms(300);
         }
+
         /*---------------LCD Init---------- */
         LCD_Init();
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, YELLOW);
