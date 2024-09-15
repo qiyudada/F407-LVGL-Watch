@@ -35,6 +35,7 @@ extern lv_obj_t * ui_DateLabel2;
 void ui_Navigation_screen_init(void);
 void ui_event_Navigation(lv_event_t * e);
 extern lv_obj_t * ui_Navigation;
+void ui_event_SettingPic(lv_event_t * e);
 extern lv_obj_t * ui_SettingPic;
 extern lv_obj_t * ui_SettingLabel;
 void ui_event_DrainPic(lv_event_t * e);
@@ -42,6 +43,7 @@ extern lv_obj_t * ui_DrainPic;
 extern lv_obj_t * ui_DrainLabel;
 extern lv_obj_t * ui_ClockPic;
 extern lv_obj_t * ui_ClockLabel;
+void ui_event_NFCPic(lv_event_t * e);
 extern lv_obj_t * ui_NFCPic;
 extern lv_obj_t * ui_NFCLabel;
 void ui_event_MusicPic(lv_event_t * e);
@@ -49,16 +51,21 @@ extern lv_obj_t * ui_MusicPic;
 extern lv_obj_t * ui_MusicLabel;
 extern lv_obj_t * ui_CalculatorPic;
 extern lv_obj_t * ui_CalculatorLabel;
+void ui_event_BluetoothPic(lv_event_t * e);
 extern lv_obj_t * ui_BluetoothPic;
+void ui_event_WifiPic(lv_event_t * e);
 extern lv_obj_t * ui_WifiPic;
 void ui_event_Calendar(lv_event_t * e);
 extern lv_obj_t * ui_Calendar;
-// SCREEN: ui_MessageArc
-void ui_MessageArc_screen_init(void);
-void ui_event_MessageArc(lv_event_t * e);
-extern lv_obj_t * ui_MessageArc;
+// SCREEN: ui_MessageArcPage
+void ui_MessageArcPage_screen_init(void);
+void ui_event_MessageArcPage(lv_event_t * e);
+extern lv_obj_t * ui_MessageArcPage;
+void ui_event_StepArc(lv_event_t * e);
 extern lv_obj_t * ui_StepArc;
+void ui_event_TempatureArc(lv_event_t * e);
 extern lv_obj_t * ui_TempatureArc;
+void ui_event_HumidityArc(lv_event_t * e);
 extern lv_obj_t * ui_HumidityArc;
 extern lv_obj_t * ui_Stepimg;
 extern lv_obj_t * ui_Tempimg;
@@ -69,44 +76,89 @@ void ui_event_TempArcLabel(lv_event_t * e);
 extern lv_obj_t * ui_TempArcLabel;
 void ui_event_StepArcLabel(lv_event_t * e);
 extern lv_obj_t * ui_StepArcLabel;
-// SCREEN: ui_Music
-void ui_Music_screen_init(void);
-void ui_event_Music(lv_event_t * e);
-extern lv_obj_t * ui_Music;
-extern lv_obj_t * ui_Image6;
+void ui_event_LightBar(lv_event_t * e);
+extern lv_obj_t * ui_LightBar;
+extern lv_obj_t * ui_Image2;
+// SCREEN: ui_MusicPage
+void ui_MusicPage_screen_init(void);
+void ui_event_MusicPage(lv_event_t * e);
+extern lv_obj_t * ui_MusicPage;
+extern lv_obj_t * ui_MusicPIc;
 extern lv_obj_t * ui_MusicControl;
 extern lv_obj_t * ui_Next;
 extern lv_obj_t * ui_Back;
+// SCREEN: ui_MenuPage
+void ui_MenuPage_screen_init(void);
+extern lv_obj_t * ui_MenuPage;
+extern lv_obj_t * ui_MenuContainer;
+extern lv_obj_t * ui_BluetoothPanel;
+extern lv_obj_t * ui_MenuBluetoothImage;
+void ui_event_BluetoothSwitch(lv_event_t * e);
+extern lv_obj_t * ui_BluetoothSwitch;
+extern lv_obj_t * ui_MenuBluetoothLabel;
+extern lv_obj_t * ui_WifiPanel;
+extern lv_obj_t * ui_MenuWifiImage;
+extern lv_obj_t * ui_MenuWifiLabel;
+extern lv_obj_t * ui_WifiGoMoreImg;
+extern lv_obj_t * ui_CalendarPanel;
+extern lv_obj_t * ui_MenuCalendarImage;
+extern lv_obj_t * ui_MenuCalendarLabel;
+extern lv_obj_t * ui_CalendarGoMoreImg;
+extern lv_obj_t * ui_CardPanel;
+extern lv_obj_t * ui_MenuCardImage;
+extern lv_obj_t * ui_MenuCardLabel;
+extern lv_obj_t * ui_CardGoMoreImg;
+extern lv_obj_t * ui_StoptimePanel;
+extern lv_obj_t * ui_StoptimeImage;
+extern lv_obj_t * ui_StoptimeLabel;
+extern lv_obj_t * ui_StoptimeGoMoreImg;
+extern lv_obj_t * ui_CalculatorPanel;
+extern lv_obj_t * ui_CalculatorImg;
+extern lv_obj_t * ui_CalculatorLabelMenu;
+extern lv_obj_t * ui_StoptimeGoMoreImg1;
+// SCREEN: ui_NFCCardPage
+void ui_NFCCardPage_screen_init(void);
+extern lv_obj_t * ui_NFCCardPage;
+extern lv_obj_t * ui_Image1;
+// SCREEN: ui_AlarmPage
+void ui_AlarmPage_screen_init(void);
+extern lv_obj_t * ui_AlarmPage;
 extern lv_obj_t * ui____initial_actions0;
 
 
-LV_IMG_DECLARE(ui__temporary_image);
 LV_IMG_DECLARE(ui_img_iu_bg_png);    // assets/iu_bg.png
 LV_IMG_DECLARE(ui_img_iu_bg3_png);    // assets/iu_bg3.png
-LV_IMG_DECLARE(ui_img_setting1_png);    // assets/setting1.png
+LV_IMG_DECLARE(ui_img_setting_png);    // assets/setting.png
 LV_IMG_DECLARE(ui_img_drain_png);    // assets/drain.png
 LV_IMG_DECLARE(ui_img_clock_png);    // assets/clock.png
 LV_IMG_DECLARE(ui_img_card_png);    // assets/card.png
 LV_IMG_DECLARE(ui_img_cat_png);    // assets/cat.png
 LV_IMG_DECLARE(ui_img_calculator_png);    // assets/Calculator.png
-LV_IMG_DECLARE(ui_img_blue_png);    // assets/blue.png
-LV_IMG_DECLARE(ui_img_closewifi_png);    // assets/closewifi.png
-LV_IMG_DECLARE(ui_img_wifia_png);    // assets/WIFIa.png
+LV_IMG_DECLARE(ui_img_1688708748);    // assets/BLE-C.png
+LV_IMG_DECLARE(ui_img_1508907960);    // assets/BLE-O.png
+LV_IMG_DECLARE(ui_img_876457220);    // assets/Wifi-C.png
+LV_IMG_DECLARE(ui_img_876444160);    // assets/Wifi-O.png
 LV_IMG_DECLARE(ui_img_step_png);    // assets/step.png
-LV_IMG_DECLARE(ui_img_temp_png);    // assets/temp.png
-LV_IMG_DECLARE(ui_img_materialsymbolshumiditypercentage_png);    // assets/MaterialSymbolsHumidityPercentage.png
+LV_IMG_DECLARE(ui_img_tempature_png);    // assets/Tempature.png
+LV_IMG_DECLARE(ui_img_humidity_png);    // assets/Humidity.png
+LV_IMG_DECLARE(ui_img_light_png);    // assets/light.png
 LV_IMG_DECLARE(ui_img_iu1_png);    // assets/IU1.png
-LV_IMG_DECLARE(ui_img_materialsymbolsplaycircle_png);    // assets/MaterialSymbolsPlayCircle.png
-LV_IMG_DECLARE(ui_img_materialsymbolspausecirclerounded_png);    // assets/MaterialSymbolsPauseCircleRounded.png
-LV_IMG_DECLARE(ui_img_fluentnext20filled_png);    // assets/FluentNext20Filled.png
-LV_IMG_DECLARE(ui_img_fluentprevious24filled_png);    // assets/FluentPrevious24Filled.png
-LV_IMG_DECLARE(ui_img_1452209827);    // assets/cold-1293305_1280.png
-LV_IMG_DECLARE(ui_img_230494180);    // assets/flat-design-2307381_1280.png
-LV_IMG_DECLARE(ui_img_1071127293);    // assets/icons-8821556_1280.png
+LV_IMG_DECLARE(ui_img_play_png);    // assets/Play.png
+LV_IMG_DECLARE(ui_img_suspend_png);    // assets/Suspend.png
+LV_IMG_DECLARE(ui_img_next_png);    // assets/Next.png
+LV_IMG_DECLARE(ui_img_back_png);    // assets/Back.png
+LV_IMG_DECLARE(ui_img_bibluetooth_png);    // assets/BiBluetooth.png
+LV_IMG_DECLARE(ui_img_wifi_png);    // assets/wifi.png
+LV_IMG_DECLARE(ui_img_ggmoreo_png);    // assets/GgMoreO.png
+LV_IMG_DECLARE(ui_img_phcalendar_png);    // assets/PhCalendar.png
+LV_IMG_DECLARE(ui_img_open_png);    // assets/open.png
+LV_IMG_DECLARE(ui_img_nfc_png);    // assets/NFC.png
+LV_IMG_DECLARE(ui_img_tokenolt_png);    // assets/TokenOlt.png
+LV_IMG_DECLARE(ui_img_stoptime_png);    // assets/Stoptime.png
+LV_IMG_DECLARE(ui_img_gomore3_png);    // assets/goMore3.png
+LV_IMG_DECLARE(ui_img_calculator1_png);    // assets/calculator1.png
+LV_IMG_DECLARE(ui_img_opencal_png);    // assets/opencal.png
 LV_IMG_DECLARE(ui_img_iu_bg2_png);    // assets/iu_bg2.png
-LV_IMG_DECLARE(ui_img_178944631);    // assets/pause-button-2148106_1280.png
-LV_IMG_DECLARE(ui_img_1364712013);    // assets/rss-2440955_1280.png
-LV_IMG_DECLARE(ui_img_wifi1_png);    // assets/wifi1.png
 
 
 

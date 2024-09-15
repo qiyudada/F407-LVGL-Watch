@@ -1,39 +1,48 @@
 SET(SOURCES screens/ui_HomePage1.c
     screens/ui_HomePage2.c
     screens/ui_Navigation.c
-    screens/ui_MessageArc.c
-    screens/ui_Music.c
+    screens/ui_MessageArcPage.c
+    screens/ui_MusicPage.c
+    screens/ui_MenuPage.c
+    screens/ui_NFCCardPage.c
+    screens/ui_AlarmPage.c
     ui.c
     components/ui_comp_hook.c
     ui_helpers.c
     ui_events.c
     images/ui_img_iu_bg_png.c
     images/ui_img_iu_bg3_png.c
-    images/ui_img_setting1_png.c
+    images/ui_img_setting_png.c
     images/ui_img_drain_png.c
     images/ui_img_clock_png.c
     images/ui_img_card_png.c
     images/ui_img_cat_png.c
     images/ui_img_calculator_png.c
-    images/ui_img_blue_png.c
-    images/ui_img_closewifi_png.c
-    images/ui_img_wifia_png.c
+    images/ui_img_1688708748.c
+    images/ui_img_1508907960.c
+    images/ui_img_876457220.c
+    images/ui_img_876444160.c
     images/ui_img_step_png.c
-    images/ui_img_temp_png.c
-    images/ui_img_materialsymbolshumiditypercentage_png.c
+    images/ui_img_tempature_png.c
+    images/ui_img_humidity_png.c
+    images/ui_img_light_png.c
     images/ui_img_iu1_png.c
-    images/ui_img_materialsymbolsplaycircle_png.c
-    images/ui_img_materialsymbolspausecirclerounded_png.c
-    images/ui_img_fluentnext20filled_png.c
-    images/ui_img_fluentprevious24filled_png.c
-    images/ui_img_1452209827.c
-    images/ui_img_230494180.c
-    images/ui_img_1071127293.c
+    images/ui_img_play_png.c
+    images/ui_img_suspend_png.c
+    images/ui_img_next_png.c
+    images/ui_img_back_png.c
+    images/ui_img_bibluetooth_png.c
+    images/ui_img_wifi_png.c
+    images/ui_img_ggmoreo_png.c
+    images/ui_img_phcalendar_png.c
+    images/ui_img_open_png.c
+    images/ui_img_nfc_png.c
+    images/ui_img_tokenolt_png.c
+    images/ui_img_stoptime_png.c
+    images/ui_img_gomore3_png.c
+    images/ui_img_calculator1_png.c
+    images/ui_img_opencal_png.c
     images/ui_img_iu_bg2_png.c
-    images/ui_img_178944631.c
-    images/ui_img_1364712013.c
-    images/ui_img_wifi1_png.c
-    ui_temporary_image.c
     fonts/ui_font_Number.c)
 
 add_library(ui ${SOURCES})

@@ -17,7 +17,7 @@ void ui_HomePage1_screen_init(void)
     lv_obj_set_x(ui_ClockNumberLabel, -1);
     lv_obj_set_y(ui_ClockNumberLabel, 72);
     lv_obj_set_align(ui_ClockNumberLabel, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_ClockNumberLabel, "17:15");
+    lv_label_set_text(ui_ClockNumberLabel, "15:20");
     lv_obj_set_style_text_color(ui_ClockNumberLabel, lv_color_hex(0xF3E7F3), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_ClockNumberLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_ClockNumberLabel, LV_TEXT_ALIGN_AUTO, LV_PART_MAIN | LV_STATE_DEFAULT);
