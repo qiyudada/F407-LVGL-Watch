@@ -580,30 +580,20 @@
               <FileType>1</FileType>
               <FilePath>..\UserTask\Src\User_DataManagement.c</FilePath>
             </File>
+            <File>
+              <FileName>User_PageManagement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserTask\Src\User_PageManagement.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Application/LVGL_APP</GroupName>
+          <GroupName>Application/LVGL_App</GroupName>
           <Files>
-            <File>
-              <FileName>ui_comp_hook.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\components\ui_comp_hook.c</FilePath>
-            </File>
             <File>
               <FileName>ui_font_Number.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\fonts\ui_font_Number.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_178944631.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_178944631.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_230494180.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_230494180.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_876444160.c</FileName>
@@ -614,21 +604,6 @@
               <FileName>ui_img_876457220.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_876457220.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_1071127293.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_1071127293.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_1364712013.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_1364712013.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_1452209827.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_1452209827.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_1508907960.c</FileName>
@@ -649,11 +624,6 @@
               <FileName>ui_img_bibluetooth_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_bibluetooth_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_blue_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_blue_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_calculator_png.c</FileName>
@@ -681,24 +651,9 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_clock_png.c</FilePath>
             </File>
             <File>
-              <FileName>ui_img_closewifi_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_closewifi_png.c</FilePath>
-            </File>
-            <File>
               <FileName>ui_img_drain_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_drain_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_fluentnext20filled_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_fluentnext20filled_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_fluentprevious24filled_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_fluentprevious24filled_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_ggmoreo_png.c</FileName>
@@ -709,6 +664,11 @@
               <FileName>ui_img_gomore3_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_gomore3_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_heart_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_heart_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_humidity_png.c</FileName>
@@ -741,21 +701,6 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_light_png.c</FilePath>
             </File>
             <File>
-              <FileName>ui_img_materialsymbolshumiditypercentage_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_materialsymbolshumiditypercentage_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_materialsymbolspausecirclerounded_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_materialsymbolspausecirclerounded_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_materialsymbolsplaycircle_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_materialsymbolsplaycircle_png.c</FilePath>
-            </File>
-            <File>
               <FileName>ui_img_next_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_next_png.c</FilePath>
@@ -764,6 +709,11 @@
               <FileName>ui_img_nfc_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_nfc_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_nfcoff_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_nfcoff_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_open_png.c</FileName>
@@ -781,19 +731,24 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_phcalendar_png.c</FilePath>
             </File>
             <File>
+              <FileName>ui_img_phsharefill_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_phsharefill_png.c</FilePath>
+            </File>
+            <File>
               <FileName>ui_img_play_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_play_png.c</FilePath>
             </File>
             <File>
+              <FileName>ui_img_readcard_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_readcard_png.c</FilePath>
+            </File>
+            <File>
               <FileName>ui_img_setting_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_setting_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_setting1_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_setting1_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_step_png.c</FileName>
@@ -811,11 +766,6 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_suspend_png.c</FilePath>
             </File>
             <File>
-              <FileName>ui_img_temp_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_temp_png.c</FilePath>
-            </File>
-            <File>
               <FileName>ui_img_tempature_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_tempature_png.c</FilePath>
@@ -831,19 +781,9 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_wifi_png.c</FilePath>
             </File>
             <File>
-              <FileName>ui_img_wifi1_png.c</FileName>
+              <FileName>ui_img_writecard_png.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_wifi1_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_wifia_png.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\images\ui_img_wifia_png.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_AlarmPage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_AlarmPage.c</FilePath>
+              <FilePath>..\LVGL\APP\design\images\ui_img_writecard_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_HomePage1.c</FileName>

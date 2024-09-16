@@ -54,28 +54,28 @@ uint8_t key_scan(uint8_t mode)
     return keyval; /* 返回键值 */
 }
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-    switch (GPIO_Pin)
-    {
+// void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+// {
+//     switch (GPIO_Pin)
+//     {
 
-    case KEY1_GPIO_PIN:
-        if (KEY1 == 0)
-        {
-            LED1_TOGGLE(); /* LED1 状态取反 */
-        }
-        break;
+//     case KEY1_GPIO_PIN:
+//         if (KEY1 == 0)
+//         {
+//             LED1_TOGGLE(); /* LED1 状态取反 */
+//         }
+//         break;
 
-    case KEY2_GPIO_PIN:
-        if (KEY2 == 0)
-        {
-            LED1_TOGGLE(); /* LED1 状态取反 */
-            LED0_TOGGLE(); /* LED0 状态取反 */
-        }
-        break;
+//     case KEY2_GPIO_PIN:
+//         if (KEY2 == 0)
+//         {
+//             LED1_TOGGLE(); /* LED1 状态取反 */
+//             LED0_TOGGLE(); /* LED0 状态取反 */
+//         }
+//         break;
 
-    default:
-        break;
-    }
-}
+//     default:
+//         break;
+//     }
+// }
 

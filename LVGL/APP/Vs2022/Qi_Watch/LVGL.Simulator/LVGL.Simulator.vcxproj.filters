@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="lv_conf.h" />
+    <ClInclude Include="lv_drv_conf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="LVGL.Simulator.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mile.Project.Properties.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LVGL.Simulator.cpp" />
+    <ClCompile Include="ui\images\ui_img_876444160.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_876457220.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_1508907960.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_1688708748.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_back_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_bibluetooth_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_calculator_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_calculator1_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_card_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_cat_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_clock_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_drain_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_ggmoreo_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_gomore3_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_heart_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_humidity_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_iu_bg_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_iu_bg2_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_iu_bg3_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_iu1_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_light_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_next_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_nfc_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_nfcoff_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_open_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_opencal_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_phcalendar_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_phsharefill_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_play_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_readcard_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_setting_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_step_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_stoptime_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_suspend_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_tempature_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_tokenolt_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_wifi_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\images\ui_img_writecard_png.c">
+      <Filter>LVGL_APP\LVGL_IMG</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\fonts\ui_font_Number.c">
+      <Filter>LVGL_APP\LVGL_FONT</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_HomePage1.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_HomePage2.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_MenuPage.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_MessageArcPage.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_MusicPage.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_Navigation.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screens\ui_NFCCardPage.c">
+      <Filter>LVGL_APP\LVGL_PAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui.c">
+      <Filter>LVGL_APP\LVGL_OTHER</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_events.c">
+      <Filter>LVGL_APP\LVGL_OTHER</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_helpers.c">
+      <Filter>LVGL_APP\LVGL_OTHER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\UserTask\Src\User_PageManagement.c">
+      <Filter>LVGL_Management</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LVGL.Simulator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LVGL.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freetype.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="LVGL_APP">
+      <UniqueIdentifier>{92d87a6d-dc1f-43ed-bc17-67a255b80d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LVGL_APP\LVGL_IMG">
+      <UniqueIdentifier>{f5d846fd-c8d7-4d75-ba4c-8c54ac43e0e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LVGL_APP\LVGL_FONT">
+      <UniqueIdentifier>{76afd8f3-9bb1-4469-9fc7-0ea6b36906ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LVGL_APP\LVGL_PAGE">
+      <UniqueIdentifier>{50ddbd0e-77ac-4136-a31a-1262cf8eb076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LVGL_APP\LVGL_OTHER">
+      <UniqueIdentifier>{31fef4d8-8ced-46ee-8a5a-ba38b4c15d29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LVGL_Management">
+      <UniqueIdentifier>{679ac5b6-986b-4fcf-a184-1ff2442357f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

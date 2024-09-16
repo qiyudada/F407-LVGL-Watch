@@ -22,7 +22,7 @@ const osThreadAttr_t HardwareInitTask_attributes = {
 };
 
 /*LVGL Handler task*/
-osThreadId_t LvHandlerTaskHandle;
+osThreadId_t LvHandler_TaskHandle;
 const osThreadAttr_t LvHandlerTask_attributes = {
     .name = "LvHandlerTask",
     .stack_size = 128 * 24,
@@ -35,8 +35,12 @@ const osThreadAttr_t LvHandlerTask_attributes = {
 void User_Tasks_Init(void)
 {
 
+
+
+    /* add threads, ... */
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
-    LvHandlerTaskHandle = osThreadNew(LvHandlerTask, NULL, &LvHandlerTask_attributes);
+    LvHandler_TaskHandle = osThreadNew(LvHandlerTask, NULL, &LvHandlerTask_attributes);
+    
 }
 
 void TaskTickHook(void)

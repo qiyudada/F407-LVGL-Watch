@@ -29,6 +29,7 @@
         "cmsis_os2.h": "c",
         "task.h": "c",
         "lv_indev.h": "c",
-        "rtc.h": "c"
+        "rtc.h": "c",
+        "user_keytask.h": "c"
     }
 }

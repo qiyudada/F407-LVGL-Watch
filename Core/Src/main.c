@@ -61,7 +61,7 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-short MGx, MGY, MGZ;
+
 /* USER CODE END 0 */
 
 /**
