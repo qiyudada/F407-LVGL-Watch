@@ -1,11 +1,11 @@
 ﻿#include "ui.h"
-#include "ui_helpers.h"
 #include "User_PageManagement.h"
 
 ///////////////////// VARIABLES ////////////////////
 
 
-/*--------------------SCREEN: ui_HomePage1------------------------------*/ 
+/*--------------------SCREEN: ui_HomePage1------------------------------*/
+uint8_t Img_Index=0;
 void ui_HomePage1_screen_init(void);
 void ui_event_HomePage1(lv_event_t * e);
 lv_obj_t * ui_HomePage1;
@@ -44,6 +44,7 @@ void ui_event_Calendar(lv_event_t * e);
 lv_obj_t * ui_Calendar;
 
 /*--------------------SCREEN: ui_MessageArcPage------------------------------*/
+extern Page_t Page_MessageArc;
 void ui_MessageArcPage_screen_init(void);
 void ui_event_MessageArcPage(lv_event_t * e);
 lv_obj_t * ui_MessageArcPage;
@@ -113,6 +114,7 @@ lv_obj_t * ui_ShareImage;
 lv_obj_t * ui_GomoreImage;
 
 /*--------------------SCREEN: ui_NFCCardPage------------------------------*/
+extern Page_t Page_NFCCard;
 void ui_NFCCardPage_screen_init(void);
 lv_obj_t * ui_NFCCardPage;
 lv_obj_t * ui_WriteCardPanel;
@@ -158,28 +160,42 @@ void ui_event_HomePage1(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
+
+    /*change background by clicking*/
     if(event_code == LV_EVENT_CLICKED) {
-        lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg2_png, LV_PART_MAIN | LV_STATE_DEFAULT);
-        /*_ui_screen_change(&ui_HomePage2, LV_SCR_LOAD_ANIM_FADE_ON, 0, 0, &ui_HomePage2_screen_init);
-        _ui_screen_delete(&ui_HomePage1);*/
+        Img_Index++;
+        if (Img_Index > 2)
+        {
+            Img_Index = 0;
+            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+     
+        }
+        if (Img_Index == 1)
+        {
+            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg2_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
+        if (Img_Index == 2)
+        {
+            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg3_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
     }
+    /*Skip Navigation page*/
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_BOTTOM) {
         lv_indev_wait_release(lv_indev_get_act());
         Page_Load(&Page_Navigation);
-       /* _ui_screen_change(&ui_Navigation, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_Navigation_screen_init);
-        _ui_screen_delete(&ui_HomePage1);*/
     }
+    /*Skip MessageArcPage*/
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT) {
         lv_indev_wait_release(lv_indev_get_act());
-        _ui_screen_change(&ui_MessageArcPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_MessageArcPage_screen_init);
-        _ui_screen_delete(&ui_HomePage1);
+        Page_Load(&Page_MessageArc);
     }
+    /*Skip Music Page*/
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
         lv_indev_wait_release(lv_indev_get_act());
-        _ui_screen_change(&ui_MusicPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_MusicPage_screen_init);
-        _ui_screen_delete(&ui_HomePage1);
+        Page_Load(&Page_Music);
     }
 }
+
 void ui_event_ClockNumberLabel(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -188,6 +204,7 @@ void ui_event_ClockNumberLabel(lv_event_t * e)
         Update_Home_Time(e);
     }
 }
+
 void ui_event_DateLabel(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -205,9 +222,7 @@ void ui_event_Navigation(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_TOP) {
         lv_indev_wait_release(lv_indev_get_act());
-        Page_Back(&Page_Home);
-       /* _ui_screen_change(&ui_HomePage1, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_HomePage1_screen_init);
-        _ui_screen_delete(&ui_Navigation);*/
+        Page_Back_Bottom();
     }
 }
 void ui_event_SettingPic(lv_event_t * e)
@@ -215,8 +230,8 @@ void ui_event_SettingPic(lv_event_t * e)
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_LONG_PRESSED) {
-        _ui_screen_change(&ui_MenuPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_MenuPage_screen_init);
-        _ui_screen_delete(&ui_Navigation);
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Menu);
     }
 }
 void ui_event_DrainPic(lv_event_t * e)
@@ -242,7 +257,8 @@ void ui_event_NFCPic(lv_event_t * e)
         NFC_Close(e);
     }
     if(event_code == LV_EVENT_LONG_PRESSED) {
-        _ui_screen_change(&ui_NFCCardPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_NFCCardPage_screen_init);
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_NFCCard);
     }
 }
 void ui_event_MusicPic(lv_event_t * e)
@@ -250,8 +266,9 @@ void ui_event_MusicPic(lv_event_t * e)
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
-        _ui_screen_change(&ui_MusicPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_MusicPage_screen_init);
-        _ui_screen_delete(&ui_Navigation);
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Music);
+
     }
 }
 void ui_event_BluetoothPic(lv_event_t * e)
@@ -292,15 +309,13 @@ void ui_event_MessageArcPage(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
-    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
         lv_indev_wait_release(lv_indev_get_act());
-        _ui_screen_change(&ui_HomePage1, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_HomePage1_screen_init);
-        _ui_screen_delete(&ui_MessageArcPage);
+        Page_Back_Bottom();
     }
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT) {
         lv_indev_wait_release(lv_indev_get_act());
-        _ui_screen_change(&ui_MusicPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_MusicPage_screen_init);
-        _ui_screen_delete(&ui_MessageArcPage);
+        Page_Load(&Page_Music);
     }
 }
 void ui_event_StepArc(lv_event_t * e)
@@ -379,24 +394,10 @@ void ui_event_CardGoMoreImg(lv_event_t * e)
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
-        _ui_screen_change(&ui_NFCCardPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_NFCCardPage_screen_init);
+        Page_Load(&Page_NFCCard);
     }
 }
-void ui_event_MusicPage(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t * target = lv_event_get_target(e);
-    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT) {
-        lv_indev_wait_release(lv_indev_get_act());
-        _ui_screen_change(&ui_HomePage1, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_HomePage1_screen_init);
-        _ui_screen_delete(&ui_MusicPage);
-    }
-    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
-        lv_indev_wait_release(lv_indev_get_act());
-        _ui_screen_change(&ui_MessageArcPage, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_MessageArcPage_screen_init);
-        _ui_screen_delete(&ui_MusicPage);
-    }
-}
+
 void ui_event_CardDormancySwitch(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -409,12 +410,28 @@ void ui_event_CardDormancySwitch(lv_event_t * e)
     }
 }
 
+/*--------------------SCREEN: ui_MusicPage------------------------------*/
 
-
+void ui_event_MusicPage(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back_Bottom();
+    }
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back();
+    }
+}
 
 
 ///////////////////// SCREENS-Initiation ////////////////////
 
+/**
+*@brief  Initialize the screen
+*/
 void ui_init(void)
 {
     lv_disp_t * dispp = lv_disp_get_default();
@@ -423,5 +440,4 @@ void ui_init(void)
     lv_disp_set_theme(dispp, theme);
     Pages_init();
     ui____initial_actions0 = lv_obj_create(NULL);
-
 }

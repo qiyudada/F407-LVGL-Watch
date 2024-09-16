@@ -30,7 +30,9 @@ Page_t* Page_Get_NowPage(void);
 void Page_Back(void);
 void Page_Back_Bottom(void);
 void Page_Load(Page_t* newPage);
+void Page_Skip_To(Page_t* page);
 void Pages_init(void);
+uint8_t page_stack_pop(PageStack_t* stack);
 
 
 #endif

@@ -17,6 +17,7 @@ extern "C" {
 #include "User_PageManagement.h"
 
 /*--------------------SCREEN: ui_HomePage1------------------------------*/
+extern  uint8_t Img_Index;
 extern  Page_t Page_Home;
 void ui_HomePage1_screen_init(void);
 void ui_event_HomePage1(lv_event_t * e);
@@ -122,7 +123,7 @@ void ui_MenuPage_screen_deinit(void);
 
 
 /*--------------------SCREEN: ui_MusicPage------------------------------*/
-
+extern Page_t Page_Music;
 void ui_MusicPage_screen_init(void);
 void ui_event_MusicPage(lv_event_t * e);
 extern lv_obj_t * ui_MusicPage;

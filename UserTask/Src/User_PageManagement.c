@@ -28,7 +28,7 @@ static uint8_t page_stack_push(PageStack_t* stack, Page_t* page)
 * @brief  PageStack pop function
 * @param  stack: pointer to stack
 */
-static uint8_t page_stack_pop(PageStack_t* stack)
+uint8_t page_stack_pop(PageStack_t* stack)
 {
 	if (stack->top <= 0)
 		return Page_Error;
@@ -86,9 +86,8 @@ void Page_Back(void)
 	if (page_stack_is_empty(&PageStack))
 	{
 		page_stack_push(&PageStack, &Page_Home);
-		page_stack_push(&PageStack, &Page_Menu);
-		Page_Menu.init();
-		lv_scr_load_anim(*Page_Menu.page_obj, LV_SCR_LOAD_ANIM_FADE_ON, 100, 0, true);
+		Page_Home.init();
+		lv_scr_load_anim(*Page_Home.page_obj, LV_SCR_LOAD_ANIM_FADE_ON, 100, 0, true);
 	}
 	else
 	{
@@ -120,6 +119,20 @@ void Page_Back_Bottom(void) {
 	lv_scr_load_anim(*PageStack.pages[PageStack.top - 1]->page_obj, LV_SCR_LOAD_ANIM_FADE_ON, 100, 0, true);
 }
 
+
+void Page_Skip_To(Page_t* page)
+{
+	/*Check the stack is empty or not*/
+	if (page_stack_is_empty(&PageStack))
+	{
+		return;
+	}
+	while (PageStack.top > 1)
+	{
+		page_stack_pop(&PageStack);
+	}
+	Page_Load(&page);
+}
 
 
 /**

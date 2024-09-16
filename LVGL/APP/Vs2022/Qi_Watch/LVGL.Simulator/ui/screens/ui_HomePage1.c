@@ -12,8 +12,22 @@ void ui_HomePage1_screen_init(void)
 {
     ui_HomePage1 = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_HomePage1, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    switch (Img_Index)
+    {
+        case 0:
+            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+            break;
+        case 1:
+            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg2_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+            break;
+        case 2:
+            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg3_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+            break;
+         default:
+            break;
+    }
+    
     /*create clock*/
     ui_ClockNumberLabel = lv_label_create(ui_HomePage1);
     lv_obj_set_width(ui_ClockNumberLabel, LV_SIZE_CONTENT);   /// 1
