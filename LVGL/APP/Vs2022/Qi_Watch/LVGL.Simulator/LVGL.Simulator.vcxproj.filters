@@ -133,12 +133,6 @@
     <ClCompile Include="ui\screens\ui_HomePage1.c">
       <Filter>LVGL_APP\LVGL_PAGE</Filter>
     </ClCompile>
-    <ClCompile Include="ui\screens\ui_HomePage2.c">
-      <Filter>LVGL_APP\LVGL_PAGE</Filter>
-    </ClCompile>
-    <ClCompile Include="ui\screens\ui_MenuPage.c">
-      <Filter>LVGL_APP\LVGL_PAGE</Filter>
-    </ClCompile>
     <ClCompile Include="ui\screens\ui_MessageArcPage.c">
       <Filter>LVGL_APP\LVGL_PAGE</Filter>
     </ClCompile>

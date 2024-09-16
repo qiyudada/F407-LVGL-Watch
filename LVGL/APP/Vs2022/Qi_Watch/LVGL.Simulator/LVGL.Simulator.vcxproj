@@ -26,7 +26,7 @@
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Optimization Condition="'$(Configuration)'=='Release'">MinSpace</Optimization>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\UserTask\Inc;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\UserTask\Src;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\lvgl\env_support;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\lvgl\src;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\lvgl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\ui;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\UserTask\Inc;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\UserTask\Src;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\lvgl\env_support;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\lvgl\src;D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\APP\Vs2022\Qi_Watch\LVGL.Simulator\lvgl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -103,8 +103,6 @@
     <ClCompile Include="ui\images\ui_img_wifi_png.c" />
     <ClCompile Include="ui\images\ui_img_writecard_png.c" />
     <ClCompile Include="ui\screens\ui_HomePage1.c" />
-    <ClCompile Include="ui\screens\ui_HomePage2.c" />
-    <ClCompile Include="ui\screens\ui_MenuPage.c" />
     <ClCompile Include="ui\screens\ui_MessageArcPage.c" />
     <ClCompile Include="ui\screens\ui_MusicPage.c" />
     <ClCompile Include="ui\screens\ui_Navigation.c" />
