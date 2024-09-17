@@ -38,7 +38,7 @@ typedef __I uint32_t vuc32;
 typedef __I uint16_t vuc16; 
 typedef __I uint8_t vuc8;
 
-/*Choose delay ways*/
+/*Choose delay ways,0 will disturb systick,1 based on hal tick,2 based on systick(only run after osKernelStart())*/
 #define SYS_RTOS  (2)
 #define SYS_CLK  (100)
 

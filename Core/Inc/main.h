@@ -100,6 +100,8 @@ void Error_Handler(void);
 #define Serial_TX_GPIO_Port GPIOA
 #define Serial_RX_Pin GPIO_PIN_10
 #define Serial_RX_GPIO_Port GPIOA
+#define DTH11_Pin GPIO_PIN_3
+#define DTH11_GPIO_Port GPIOD
 #define RD_Pin GPIO_PIN_4
 #define RD_GPIO_Port GPIOD
 #define WR_Pin GPIO_PIN_5

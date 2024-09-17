@@ -133,3 +133,4 @@ f4-lvgl-watch\ui_events.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_events.o: ..\LVGL\APP\design\ui_helpers.h
 f4-lvgl-watch\ui_events.o: ..\LVGL\APP\design\ui.h
 f4-lvgl-watch\ui_events.o: ..\LVGL\APP\design\ui_events.h
+f4-lvgl-watch\ui_events.o: ../UserTask/Inc/User_PageManagement.h

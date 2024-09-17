@@ -196,3 +196,4 @@ f4-lvgl-watch\rtc.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/BLE/Hc06.h
+f4-lvgl-watch\rtc.o: ../Drivers-BSP/DTH11/Dth11.h

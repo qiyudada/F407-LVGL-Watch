@@ -177,7 +177,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for (;;)
   {
-    log_warn("Default task is running!\r\n");
+    log_info("Default task is running!\r\n");
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
     osDelay(500);
   }

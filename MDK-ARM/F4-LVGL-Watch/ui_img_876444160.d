@@ -133,3 +133,4 @@ f4-lvgl-watch\ui_img_876444160.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_img_876444160.o: ..\LVGL\APP\design\images\../ui_helpers.h
 f4-lvgl-watch\ui_img_876444160.o: ..\LVGL\APP\design\images\../ui.h
 f4-lvgl-watch\ui_img_876444160.o: ..\LVGL\APP\design\images\../ui_events.h
+f4-lvgl-watch\ui_img_876444160.o: ../UserTask/Inc/User_PageManagement.h

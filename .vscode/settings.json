@@ -30,6 +30,10 @@
         "task.h": "c",
         "lv_indev.h": "c",
         "rtc.h": "c",
-        "user_keytask.h": "c"
+        "user_keytask.h": "c",
+        "ui.h": "c",
+        "user_screennew.h": "c",
+        "user_sensorupdate.h": "c",
+        "dth11.h": "c"
     }
 }

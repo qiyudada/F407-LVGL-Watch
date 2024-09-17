@@ -133,3 +133,4 @@ f4-lvgl-watch\ui_musicpage.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_musicpage.o: ..\LVGL\APP\design\screens\../ui_helpers.h
 f4-lvgl-watch\ui_musicpage.o: ..\LVGL\APP\design\screens\../ui.h
 f4-lvgl-watch\ui_musicpage.o: ..\LVGL\APP\design\screens\../ui_events.h
+f4-lvgl-watch\ui_musicpage.o: ../UserTask/Inc/User_PageManagement.h

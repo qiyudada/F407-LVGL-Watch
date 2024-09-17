@@ -197,4 +197,8 @@ f4-lvgl-watch\user_taskinit.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\math.h
 f4-lvgl-watch\user_taskinit.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\user_taskinit.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_taskinit.o: ../Drivers-BSP/BLE/Hc06.h
+f4-lvgl-watch\user_taskinit.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_HardwareInit.h
+f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_KeyTask.h
+f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_ScreenNew.h
+f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_SensorUpdate.h

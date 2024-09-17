@@ -22,8 +22,15 @@ void HardwareInitTask(void *argument)
         led_init();
         /*----------Key Init---------- */
         key_init();
-        /*----------NFC Init---------- */
+        /*----------DTH11 Init---------- */
         uint8_t num = 3;
+        while (num && MW_Interface.DTH11.ConnectionError)
+        {
+            num--;
+            MW_Interface.DTH11.ConnectionError = MW_Interface.DTH11.Init();
+        }
+        /*----------NFC Init---------- */
+        num = 3;
         while (num && MW_Interface.NFC.ConnectionState)
         {
             num--;
@@ -51,7 +58,7 @@ void HardwareInitTask(void *argument)
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, YELLOW);
         Delay_ms(1000);
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, WHITE);
-        LCD_ShowString2(80, 140, 116, 156, 16, "Welcome!", Purple);
+        LCD_ShowString2(84, 140, 116, 156, 16, "Welcome!", Purple);
         Delay_ms(2000);
         /*---------Touch Init---------- */
         tp_dev.init();

@@ -130,3 +130,7 @@ f4-lvgl-watch\user_pagemanagement.o: ../LVGL/src/extra/widgets/colorwheel/lv_col
 f4-lvgl-watch\user_pagemanagement.o: ../LVGL/src/extra/widgets/led/lv_led.h
 f4-lvgl-watch\user_pagemanagement.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\user_pagemanagement.o: ../LVGL/src/extra/widgets/span/lv_span.h
+f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui_helpers.h
+f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui_events.h

@@ -27,6 +27,7 @@ extern "C"
 #define Touch_Manage_file 1
 #define Mpu6050_Manage_file 1
 #define Bluetooth_Manage_file 1
+#define DTH11_Manage_file 1
 
 #endif
 
@@ -71,6 +72,10 @@ extern "C"
 #include "Hc06.h"
 #endif
 
+#if (DTH11_Manage_file)
+#include "Dth11.h"
+#endif
+
     /*-----------------------------------------------------------------------------------------------------------*/
     /**
      * @enum error message
@@ -112,7 +117,7 @@ extern "C"
         uint8_t temperature;
         uint8_t humidity;
         uint8_t (*Init)(void);
-        void (*GetHumiTemp)(float *humi, float *temp);
+        uint8_t (*GetHumiTemp)(int *humi, int *temp);
     } MW_DTH11_InterfaceTypeDef;
 
     /**

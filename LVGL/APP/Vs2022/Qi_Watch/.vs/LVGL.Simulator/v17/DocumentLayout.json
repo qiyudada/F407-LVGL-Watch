@@ -7,18 +7,8 @@
       "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\ui\\ui.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\UserTask\\Src\\User_PageManagement.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_MessageArcPage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\ui\\screens\\ui_MessageArcPage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_HomePage1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\ui\\screens\\ui_HomePage1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710EMBEDED LEARN\\MY FREERTOS\\F407-LVGL-WATCH\\USERTASK\\INC\\USER_PAGEMANAGEMENT.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710EMBEDED LEARN\\MY FREERTOS\\F407-LVGL-WATCH\\LVGL\\APP\\VS2022\\QI_WATCH\\LVGL.SIMULATOR\\UI\\UI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -42,7 +32,7 @@
               "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\ui.c",
               "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.c",
               "RelativeToolTip": "LVGL.Simulator\\ui\\ui.c",
-              "ViewState": "AQIAAJkBAAAAAAAAAAAAAKgBAAAUAAAA",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAAABABAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-16T03:58:32.574Z",
               "IsPinned": true,
@@ -50,29 +40,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "ui.h",
               "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h",
               "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\ui.h",
               "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h",
               "RelativeToolTip": "LVGL.Simulator\\ui\\ui.h",
-              "ViewState": "AQIAAAgAAAAAAAAAAIAwwBQAAAAZAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAKQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-16T03:50:44.063Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User_PageManagement.h",
-              "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\UserTask\\Inc\\User_PageManagement.h",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\UserTask\\Inc\\User_PageManagement.h",
-              "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\UserTask\\Inc\\User_PageManagement.h",
-              "RelativeToolTip": "..\\..\\..\\..\\UserTask\\Inc\\User_PageManagement.h",
-              "ViewState": "AQIAABYAAAAAAAAAAAAxwCAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-16T06:59:40.253Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -98,41 +74,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ui_MessageArcPage.c",
-              "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_MessageArcPage.c",
-              "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\screens\\ui_MessageArcPage.c",
-              "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_MessageArcPage.c",
-              "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_MessageArcPage.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-16T12:04:24.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User_PageManagement.c",
-              "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\UserTask\\Src\\User_PageManagement.c",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\UserTask\\Src\\User_PageManagement.c",
-              "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\UserTask\\Src\\User_PageManagement.c",
-              "RelativeToolTip": "..\\..\\..\\..\\UserTask\\Src\\User_PageManagement.c",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAIQAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-16T11:23:04.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ui_HomePage1.c",
               "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_HomePage1.c",
               "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\screens\\ui_HomePage1.c",
               "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_HomePage1.c",
               "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_HomePage1.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-16T07:21:48.003Z",
+              "WhenOpened": "2024-09-17T01:31:02.458Z",
               "EditorCaption": ""
             }
           ]

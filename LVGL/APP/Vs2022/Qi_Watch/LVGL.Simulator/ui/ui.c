@@ -4,11 +4,11 @@
 ///////////////////// VARIABLES ////////////////////
 
 
-/*--------------------SCREEN: ui_HomePage1------------------------------*/
+/*--------------------SCREEN: ui_HomePage------------------------------*/
 uint8_t Img_Index=0;
 void ui_HomePage1_screen_init(void);
 void ui_event_HomePage1(lv_event_t * e);
-lv_obj_t * ui_HomePage1;
+lv_obj_t * ui_HomePage;
 void ui_event_ClockNumberLabel(lv_event_t * e);
 lv_obj_t * ui_ClockNumberLabel;
 void ui_event_DateLabel(lv_event_t * e);
@@ -17,6 +17,7 @@ lv_timer_t* ui_HomePage1Timer;
 
 
 /*--------------------SCREEN: ui_Navigation------------------------------*/
+
 void ui_Navigation_screen_init(void);
 void ui_event_Navigation(lv_event_t * e);
 lv_obj_t * ui_Navigation;
@@ -153,7 +154,7 @@ const lv_img_dsc_t * ui_imgset_iu_bg[2] = {&ui_img_iu_bg2_png, &ui_img_iu_bg3_pn
 ///////////////////// FUNCTIONS ////////////////////
 
 
-/*--------------------SCREEN: ui_HomePage1------------------------------*/
+/*--------------------SCREEN: ui_HomePage------------------------------*/
 
 
 void ui_event_HomePage1(lv_event_t * e)
@@ -167,16 +168,16 @@ void ui_event_HomePage1(lv_event_t * e)
         if (Img_Index > 2)
         {
             Img_Index = 0;
-            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
      
         }
         if (Img_Index == 1)
         {
-            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg2_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg2_png, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         if (Img_Index == 2)
         {
-            lv_obj_set_style_bg_img_src(ui_HomePage1, &ui_img_iu_bg3_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg3_png, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
     }
     /*Skip Navigation page*/

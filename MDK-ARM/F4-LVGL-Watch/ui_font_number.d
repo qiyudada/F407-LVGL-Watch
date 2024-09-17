@@ -133,3 +133,4 @@ f4-lvgl-watch\ui_font_number.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_font_number.o: ..\LVGL\APP\design\fonts\../ui_helpers.h
 f4-lvgl-watch\ui_font_number.o: ..\LVGL\APP\design\fonts\../ui.h
 f4-lvgl-watch\ui_font_number.o: ..\LVGL\APP\design\fonts\../ui_events.h
+f4-lvgl-watch\ui_font_number.o: ../UserTask/Inc/User_PageManagement.h

@@ -131,7 +131,7 @@ void Page_Skip_To(Page_t* page)
 	{
 		page_stack_pop(&PageStack);
 	}
-	Page_Load(&page);
+	Page_Load(page);
 }
 
 

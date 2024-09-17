@@ -160,8 +160,9 @@ uint16_t MW_MPU_Get_Steps(void)
     if (!MW_Interface.IMU.ConnectionError)
         dmp_get_pedometer_step_count(&STEPS);
     return (uint16_t)STEPS;
-#endif
+#else
     return 0;
+#endif
 }
 
 /**
@@ -173,8 +174,8 @@ int MW_MPU_Set_Steps(unsigned long count)
 #if Mpu6050_Manage_file
     if (!MW_Interface.IMU.ConnectionError)
         return dmp_set_pedometer_step_count(count);
+    return 0;
 #endif
-    return MW_ERROR_DETECT;
 }
 
 /************************************************************************************
@@ -192,19 +193,49 @@ uint8_t MW_NFC_Init(void)
 #endif
 }
 
+/************************************************************************************
+ * @defgroup DTH11 area
+ ***********************************************************************************/
+/**
+ * @brief  DTH11 init
+ */
+uint8_t MW_DTH11_Init(void)
+{
+#if DTH11_Manage_file
+    return DHT11_Init();
+#else
+    return MW_ERROR_DETECT;
+#endif
+}
+
+uint8_t MW_DHT11_Read_Data(int *temp, int *humi)
+{
+#if DTH11_Manage_file
+    return DHT11_Read_Data(temp, humi);
+#else
+    return MW_ERROR_DETECT;
+#endif
+}
+
 /**************************************************************
  * @defgroup Watch gross function and data management
  *************************************************************/
 
 MW_InterfaceTypeDef MW_Interface = {
-    
+
     .RealTime = {
         .GetTimeDate = MW_RTC_Get_TimeDate,
         .SetDate = MW_RTC_Set_Date,
         .SetTime = MW_RTC_Set_Time,
         .CalculateWeekday = MW_weekday_calculate,
     },
-
+    .DTH11 = {
+        .ConnectionError = 1,
+        .temperature = 26,
+        .humidity = 50,
+        .Init = MW_DTH11_Init,
+        .GetHumiTemp = MW_DHT11_Read_Data,
+    },
     .BLE = {
         .ConnectionState = 1,
         .Init = MW_BlueTooth_Init,

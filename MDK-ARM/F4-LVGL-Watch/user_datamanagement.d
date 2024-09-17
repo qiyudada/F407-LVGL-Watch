@@ -196,3 +196,4 @@ f4-lvgl-watch\user_datamanagement.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\
 f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/BLE/Hc06.h
+f4-lvgl-watch\user_datamanagement.o: ../Drivers-BSP/DTH11/Dth11.h
