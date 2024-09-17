@@ -177,6 +177,7 @@ void ui_MessageArcPage_screen_init(void)
     lv_obj_add_event_cb(ui_LightBar, ui_event_LightBar, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_MessageArcPage, ui_event_MessageArcPage, LV_EVENT_ALL, NULL);
 
+
 }
 
 void ui_MessageArcPage_screen_deinit(void)

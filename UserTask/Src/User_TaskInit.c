@@ -62,7 +62,7 @@ const osThreadAttr_t SensorDataTask_attributes = {
 
 osMessageQueueId_t Key_MessageQueue;
 osMessageQueueId_t Skip_MessageQueue;
-
+osMessageQueueId_t SensorUpdata_MessageQueue;
 /**
  * @brief  Initialize all the tasks
  */
@@ -71,6 +71,7 @@ void User_Tasks_Init(void)
     /* add queues, ... */
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
     Skip_MessageQueue = osMessageQueueNew(1, 1, NULL);
+    SensorUpdata_MessageQueue = osMessageQueueNew(1, 1, NULL);
 
     /* add threads, ... */
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
@@ -79,8 +80,16 @@ void User_Tasks_Init(void)
     ScrRenewTaskHandle = osThreadNew(ScreenNewTask, NULL, &ScrRenewTask_attributes);
 	SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
 
+
+    /* add  others ... */
+	uint8_t SensorUpdataStr;
+	osMessageQueuePut(SensorUpdata_MessageQueue, &SensorUpdataStr, 0, 1);
+
 }
 
+/**
+ * @brief Support lvgl heartbeat
+ */
 void TaskTickHook(void)
 {
     lv_tick_inc(1);

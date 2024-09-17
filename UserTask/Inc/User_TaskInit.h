@@ -10,12 +10,8 @@
 /*-------------------extern define-------------------*/
 /*Message Queue*/
 extern osMessageQueueId_t Key_MessageQueue;
-
 extern osMessageQueueId_t Skip_MessageQueue;
-
-
-
-
+extern osMessageQueueId_t SensorUpdata_MessageQueue;
 
 /*Taskhandler*/
 extern osThreadId_t HardwareInit_TaskHandle;

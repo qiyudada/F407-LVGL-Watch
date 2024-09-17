@@ -1,5 +1,6 @@
 f4-lvgl-watch\user_sensorupdate.o: ..\UserTask\Src\User_SensorUpdate.c
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_SensorUpdate.h
+f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\user_sensorupdate.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_sensorupdate.o: ../Core/Inc/main.h

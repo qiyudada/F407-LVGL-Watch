@@ -4,7 +4,7 @@ Page_t Page_Home = { ui_HomePage1_screen_init, ui_HomePage_screen_deinit, &ui_Ho
 
 static void HomePage_timer_cb(lv_timer_t* timer)
 {
-
+    
 }
 
 
