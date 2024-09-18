@@ -117,7 +117,7 @@ extern "C"
         uint8_t temperature;
         uint8_t humidity;
         uint8_t (*Init)(void);
-        uint8_t (*GetHumiTemp)(int *humi, int *temp);
+        void (*GetHumiTemp)(int *humi, int *temp);
     } MW_DTH11_InterfaceTypeDef;
 
     /**

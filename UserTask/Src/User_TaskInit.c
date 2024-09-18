@@ -63,11 +63,20 @@ const osThreadAttr_t SensorDataTask_attributes = {
 osMessageQueueId_t Key_MessageQueue;
 osMessageQueueId_t Skip_MessageQueue;
 osMessageQueueId_t SensorUpdata_MessageQueue;
+
+/* Timers --------------------------------------------------------------------*/
+osTimerId_t UpdateTimerHandle;
+
 /**
  * @brief  Initialize all the tasks
  */
 void User_Tasks_Init(void)
 {
+
+    /* start timers, add new ones, ... */
+    UpdateTimerHandle = osTimerNew(UpdateTimerCallback, osTimerPeriodic, NULL, NULL);
+    osTimerStart(UpdateTimerHandle, 1000);
+
     /* add queues, ... */
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
     Skip_MessageQueue = osMessageQueueNew(1, 1, NULL);
@@ -103,10 +112,14 @@ void LvHandlerTask(void *argument)
     while (1)
     {
         // printf("lv_stack is %d \r\n", (int *)uxTaskGetStackHighWaterMark(LvHandler_TaskHandle));
-        uint8_t SensorUpdataStr;
-        osMessageQueuePut(SensorUpdata_MessageQueue, &SensorUpdataStr, 0, 1);
-    
         lv_task_handler();
         osDelay(1);
     }
+}
+
+void UpdateTimerCallback(void *argument)
+{
+    uint8_t UpdateTimerCount = 0;
+    // send the Stop message
+    osMessageQueuePut(SensorUpdata_MessageQueue, &UpdateTimerCount, 0, 1);
 }

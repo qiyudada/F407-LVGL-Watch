@@ -24,5 +24,7 @@ void TaskTickHook(void);
 
 void LvHandlerTask(void *argument);
 
+void UpdateTimerCallback(void *argument);
+
 
 #endif

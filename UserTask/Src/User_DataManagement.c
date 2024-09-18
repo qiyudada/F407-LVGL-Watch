@@ -208,10 +208,13 @@ uint8_t MW_DTH11_Init(void)
 #endif
 }
 
-uint8_t MW_DHT11_Read_Data(int *temp, int *humi)
+void MW_DHT11_Read_Data(int *humi, int *temp)
 {
 #if DTH11_Manage_file
-    return DHT11_Read_Data(temp, humi);
+    if (!MW_Interface.DTH11.ConnectionError)
+    {
+        DHT11_Read_Data(temp, humi);
+    }
 #else
     return MW_ERROR_DETECT;
 #endif

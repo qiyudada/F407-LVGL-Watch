@@ -18,6 +18,8 @@ void HardwareInitTask(void *argument)
 {
     while (1)
     {
+        /*----------Delay Init---------- */
+        //Delay_init();
         /*----------LED Init---------- */
         led_init();
         /*----------Key Init---------- */
