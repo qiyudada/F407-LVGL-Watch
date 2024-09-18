@@ -39,9 +39,7 @@ void SensorDataUpdateTask(void *argument)
           MW_Interface.DTH11.humidity = humi;
           MW_Interface.DTH11.temperature = temp;
         }
-      }
-
-      
+      } 
     }
     osDelay(500);
   }

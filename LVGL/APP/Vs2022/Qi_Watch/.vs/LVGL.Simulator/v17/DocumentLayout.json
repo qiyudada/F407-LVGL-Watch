@@ -11,8 +11,8 @@
       "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\ui\\screens\\ui_HomePage1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710EMBEDED LEARN\\MY FREERTOS\\F407-LVGL-WATCH\\LVGL\\APP\\VS2022\\QI_WATCH\\LVGL.SIMULATOR\\UI\\UI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.SIMULATOR\\UI\\UI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LVGL.Simulator\\ui\\ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\ui.c",
               "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.c",
               "RelativeToolTip": "LVGL.Simulator\\ui\\ui.c",
-              "ViewState": "AQIAAPAAAAAAAAAAAAAAABABAAAFAAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAABABAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-16T03:58:32.574Z",
               "IsPinned": true,
@@ -49,8 +49,7 @@
               "ViewState": "AQIAADAAAAAAAAAAAAAAAKQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-16T03:50:44.063Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -82,8 +81,7 @@
               "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_HomePage1.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-17T01:31:02.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T01:31:02.458Z"
             }
           ]
         }

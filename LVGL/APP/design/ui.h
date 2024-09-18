@@ -15,7 +15,7 @@ extern "C" {
 #include "ui_helpers.h"
 #include "ui_events.h"
 #include "User_PageManagement.h"
-
+#include "User_DataManagement.h"
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 extern  uint8_t Img_Index;
 extern  Page_t Page_Home;

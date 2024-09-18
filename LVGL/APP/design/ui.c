@@ -424,7 +424,6 @@ void ui_event_MusicPage(lv_event_t* e)
     }
 }
 
-
 ///////////////////// SCREENS-Initiation ////////////////////
 
 /**
@@ -438,4 +437,5 @@ void ui_init(void)
     lv_disp_set_theme(dispp, theme);
     Pages_init();
     ui____initial_actions0 = lv_obj_create(NULL);
+    
 }

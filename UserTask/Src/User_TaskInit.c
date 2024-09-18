@@ -10,6 +10,7 @@
 #include "User_KeyTask.h"
 #include "User_ScreenNew.h"
 #include "User_SensorUpdate.h"
+#include "ui.h"
 /*------------------------------------------------*/
 
 /**
@@ -27,7 +28,7 @@ const osThreadAttr_t HardwareInitTask_attributes = {
 osThreadId_t LvHandler_TaskHandle;
 const osThreadAttr_t LvHandlerTask_attributes = {
     .name = "LvHandlerTask",
-    .stack_size = 128 * 24,
+    .stack_size = 128 * 30,
     .priority = (osPriority_t)osPriorityLow,
 };
 
@@ -42,17 +43,16 @@ const osThreadAttr_t KeyTask_attributes = {
 /*ScrRenew task*/
 osThreadId_t ScrRenewTaskHandle;
 const osThreadAttr_t ScrRenewTask_attributes = {
-  .name = "ScrRenewTask",
-  .stack_size = 128 * 10,
-  .priority = (osPriority_t) osPriorityLow1,
+    .name = "ScrRenewTask",
+    .stack_size = 128 * 10,
+    .priority = (osPriority_t)osPriorityLow1,
 };
-
 
 osThreadId_t SensorDataTaskHandle;
 const osThreadAttr_t SensorDataTask_attributes = {
-  .name = "SensorDataTask",
-  .stack_size = 128 * 5,
-  .priority = (osPriority_t) osPriorityLow1,
+    .name = "SensorDataTask",
+    .stack_size = 128 * 5,
+    .priority = (osPriority_t)osPriorityLow1,
 };
 
 /*------------------------------------------------*/
@@ -78,13 +78,11 @@ void User_Tasks_Init(void)
     LvHandler_TaskHandle = osThreadNew(LvHandlerTask, NULL, &LvHandlerTask_attributes);
     KeyTaskHandle = osThreadNew(KeyTask, NULL, &KeyTask_attributes);
     ScrRenewTaskHandle = osThreadNew(ScreenNewTask, NULL, &ScrRenewTask_attributes);
-	SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
-
+    SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
 
     /* add  others ... */
-	uint8_t SensorUpdataStr;
-	osMessageQueuePut(SensorUpdata_MessageQueue, &SensorUpdataStr, 0, 1);
-
+    uint8_t SensorUpdataStr;
+    osMessageQueuePut(SensorUpdata_MessageQueue, &SensorUpdataStr, 0, 1);
 }
 
 /**
@@ -104,6 +102,10 @@ void LvHandlerTask(void *argument)
 {
     while (1)
     {
+        // printf("lv_stack is %d \r\n", (int *)uxTaskGetStackHighWaterMark(LvHandler_TaskHandle));
+        uint8_t SensorUpdataStr;
+        osMessageQueuePut(SensorUpdata_MessageQueue, &SensorUpdataStr, 0, 1);
+    
         lv_task_handler();
         osDelay(1);
     }

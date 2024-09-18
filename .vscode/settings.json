@@ -34,6 +34,7 @@
         "ui.h": "c",
         "user_screennew.h": "c",
         "user_sensorupdate.h": "c",
-        "dth11.h": "c"
+        "dth11.h": "c",
+        "ui_events.h": "c"
     }
 }

@@ -202,3 +202,8 @@ f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_HardwareInit.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_KeyTask.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_ScreenNew.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_SensorUpdate.h
+f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui_helpers.h
+f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui_events.h
+f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_PageManagement.h
