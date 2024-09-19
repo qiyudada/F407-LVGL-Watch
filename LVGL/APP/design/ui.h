@@ -16,85 +16,117 @@ extern "C" {
 #include "ui_events.h"
 #include "User_PageManagement.h"
 #include "User_DataManagement.h"
+
+/*extra font declations */
+LV_FONT_DECLARE(ui_font_Cuyuan24);
+
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 extern  uint8_t Img_Index;
 extern  Page_t Page_Home;
+
 void ui_HomePage1_screen_init(void);
+
 void ui_event_HomePage1(lv_event_t * e);
 extern lv_obj_t * ui_HomePage;
+
 void ui_event_ClockNumberLabel(lv_event_t * e);
 extern lv_obj_t * ui_ClockNumberLabel;
+
 void ui_event_DateLabel(lv_event_t * e);
 extern lv_obj_t * ui_DateLabel;
+
 extern lv_timer_t* ui_HomePage1Timer;
 void ui_HomePage_screen_deinit(void);
 
 
 /*--------------------SCREEN: ui_Navigation------------------------------*/
 extern Page_t Page_Navigation;
+
 void ui_Navigation_screen_init(void);
+
+extern void ui_Navigation_screen_deinit(void);
+
 void ui_event_Navigation(lv_event_t * e);
 extern lv_obj_t * ui_Navigation;
+
 void ui_event_SettingPic(lv_event_t * e);
 extern lv_obj_t * ui_SettingPic;
 extern lv_obj_t * ui_SettingLabel;
+
 void ui_event_DrainPic(lv_event_t * e);
 extern lv_obj_t * ui_DrainPic;
 extern lv_obj_t * ui_DrainLabel;
 extern lv_obj_t * ui_ClockPic;
 extern lv_obj_t * ui_ClockLabel;
+
 void ui_event_NFCPic(lv_event_t * e);
 extern lv_obj_t * ui_NFCPic;
 extern lv_obj_t * ui_NFCLabel;
+
 void ui_event_MusicPic(lv_event_t * e);
 extern lv_obj_t * ui_MusicPic;
 extern lv_obj_t * ui_MusicLabel;
+
+void ui_event_CalculatorPic(lv_event_t * e);
 extern lv_obj_t * ui_CalculatorPic;
 extern lv_obj_t * ui_CalculatorLabel;
+
 void ui_event_BluetoothPic(lv_event_t * e);
 extern lv_obj_t * ui_BluetoothPic;
+
 void ui_event_WifiPic(lv_event_t * e);
 extern lv_obj_t * ui_WifiPic;
+
 void ui_event_Calendar(lv_event_t * e);
 extern lv_obj_t * ui_Calendar;
-extern void ui_Navigation_screen_deinit(void);
-
-
 
 /*--------------------SCREEN: ui_MessageArcPage------------------------------*/
+extern lv_obj_t * ui_MessageArcPage;
 
 void ui_MessageArcPage_screen_init(void);
+
+void ui_MessageArcPage_screen_deinit(void);
+
 void ui_event_MessageArcPage(lv_event_t * e);
-extern lv_obj_t * ui_MessageArcPage;
+
+
 void ui_event_StepArc(lv_event_t * e);
 extern lv_obj_t * ui_StepArc;
+extern lv_obj_t * ui_Stepimg;
+void ui_event_StepArcLabel(lv_event_t * e);
+extern lv_obj_t * ui_StepArcLabel;
+
 void ui_event_TempatureArc(lv_event_t * e);
 extern lv_obj_t * ui_TempatureArc;
+extern lv_obj_t * ui_Tempimg;
+void ui_event_TempArcLabel(lv_event_t * e);
+extern lv_obj_t * ui_TempArcLabel;
+
+
 void ui_event_HumidityArc(lv_event_t * e);
 extern lv_obj_t * ui_HumidityArc;
-extern lv_obj_t * ui_Stepimg;
-extern lv_obj_t * ui_Tempimg;
 extern lv_obj_t * ui_Humidimg;
 void ui_event_HumidArcLabel(lv_event_t * e);
 extern lv_obj_t * ui_HumidArcLabel;
-void ui_event_TempArcLabel(lv_event_t * e);
-extern lv_obj_t * ui_TempArcLabel;
-void ui_event_StepArcLabel(lv_event_t * e);
-extern lv_obj_t * ui_StepArcLabel;
+
+
 void ui_event_LightBar(lv_event_t * e);
 extern lv_obj_t * ui_LightBar;
 extern lv_obj_t * ui_Image2;
-void ui_MessageArcPage_screen_deinit(void);
-
 
 /*--------------------SCREEN: ui_MenuPage------------------------------*/
 
 extern Page_t Page_Menu;
+
 void ui_MenuPage_screen_init(void);
+
+void ui_MenuPage_screen_deinit(void);
+
 extern lv_obj_t * ui_MenuPage;
 extern lv_obj_t * ui_MenuContainer;
 extern lv_obj_t * ui_BluetoothPanel;
 extern lv_obj_t * ui_MenuBluetoothImage;
+
 void ui_event_BluetoothSwitch(lv_event_t * e);
 extern lv_obj_t * ui_BluetoothSwitch;
 extern lv_obj_t * ui_MenuBluetoothLabel;
@@ -109,6 +141,7 @@ extern lv_obj_t * ui_CalendarGoMoreImg;
 extern lv_obj_t * ui_CardPanel;
 extern lv_obj_t * ui_MenuCardImage;
 extern lv_obj_t * ui_MenuCardLabel;
+
 void ui_event_CardGoMoreImg(lv_event_t * e);
 extern lv_obj_t * ui_CardGoMoreImg;
 extern lv_obj_t * ui_StoptimePanel;
@@ -119,12 +152,17 @@ extern lv_obj_t * ui_CalculatorPanel;
 extern lv_obj_t * ui_CalculatorImg;
 extern lv_obj_t * ui_CalculatorLabelMenu;
 extern lv_obj_t * ui_StoptimeGoMoreImg1;
-void ui_MenuPage_screen_deinit(void);
+
 
 
 /*--------------------SCREEN: ui_MusicPage------------------------------*/
+
 extern Page_t Page_Music;
+
 void ui_MusicPage_screen_init(void);
+
+extern void ui_MusicPage_screen_deinit(void);
+
 void ui_event_MusicPage(lv_event_t * e);
 extern lv_obj_t * ui_MusicPage;
 extern lv_obj_t * ui_MusicControl;
@@ -137,12 +175,14 @@ extern lv_obj_t * ui_SingerLabel;
 extern lv_obj_t * ui_SongwordLabel;
 extern lv_obj_t * ui_ShareImage;
 extern lv_obj_t * ui_GomoreImage;
-extern void ui_MusicPage_screen_deinit(void);
 
 
 /*--------------------SCREEN: ui_NFCCardPage------------------------------*/
 
 void ui_NFCCardPage_screen_init(void);
+
+void ui_NFCCardPage_screen_deinit(void);
+
 extern lv_obj_t * ui_NFCCardPage;
 extern lv_obj_t * ui_WriteCardPanel;
 extern lv_obj_t * ui_WriteCardImage;
@@ -154,15 +194,25 @@ extern lv_obj_t * ui_ReadCardLabel;
 extern lv_obj_t * ui_ReadCardGoMoreImg;
 extern lv_obj_t * ui_CardDormancyPanel;
 extern lv_obj_t * ui_CardDormancyImage;
+
 void ui_event_CardDormancySwitch(lv_event_t * e);
 extern lv_obj_t * ui_CardDormancySwitch;
 extern lv_obj_t * ui_CardDormancyLabel;
 extern lv_obj_t * ui____initial_actions0;
-void ui_NFCCardPage_screen_deinit(void);
 
 
 /*--------------------SCREEN: ui_ComputerPage------------------------------*/
-;
+
+extern Page_t Page_Computer;
+
+void ui_ComputerPage_screen_init(void);
+
+void ui_ComputerPage_screen_deinit(void);
+
+extern lv_obj_t * ui_Computerpage;
+extern lv_obj_t * ui_CompageBtnM;
+extern lv_obj_t * ui_CompageTextarea;
+extern lv_obj_t * ui_CompageBackBtn;
 
 
 

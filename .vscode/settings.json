@@ -35,6 +35,10 @@
         "user_screennew.h": "c",
         "user_sensorupdate.h": "c",
         "dth11.h": "c",
-        "ui_events.h": "c"
+        "ui_events.h": "c",
+        "inv_mpu_dmp_motion_driver.h": "c",
+        "ui_computerpage.h": "c",
+        "user_pagemanagement.h": "c",
+        "strcalculate.h": "c"
     }
 }

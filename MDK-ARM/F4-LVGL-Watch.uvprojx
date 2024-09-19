@@ -590,6 +590,11 @@
               <FileType>1</FileType>
               <FilePath>..\UserTask\Src\User_PageManagement.c</FilePath>
             </File>
+            <File>
+              <FileName>StrCalculate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\StrCalculate.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -839,6 +844,16 @@
               <FileName>ui_helpers.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\ui_helpers.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_ComputerPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_ComputerPage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_font_Cuyuan24.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\fonts\ui_font_Cuyuan24.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,6 +1,4 @@
 ﻿#include "ui.h"
-#include "User_PageManagement.h"
-
 ///////////////////// VARIABLES ////////////////////
 
 
@@ -19,51 +17,71 @@ lv_timer_t* ui_HomePage1Timer;
 /*--------------------SCREEN: ui_Navigation------------------------------*/
 
 void ui_Navigation_screen_init(void);
+
 void ui_event_Navigation(lv_event_t * e);
 lv_obj_t * ui_Navigation;
+
 void ui_event_SettingPic(lv_event_t * e);
 lv_obj_t * ui_SettingPic;
 lv_obj_t * ui_SettingLabel;
+
 void ui_event_DrainPic(lv_event_t * e);
 lv_obj_t * ui_DrainPic;
 lv_obj_t * ui_DrainLabel;
 lv_obj_t * ui_ClockPic;
 lv_obj_t * ui_ClockLabel;
+
 void ui_event_NFCPic(lv_event_t * e);
 lv_obj_t * ui_NFCPic;
 lv_obj_t * ui_NFCLabel;
+
 void ui_event_MusicPic(lv_event_t * e);
 lv_obj_t * ui_MusicPic;
 lv_obj_t * ui_MusicLabel;
+
+
+void ui_event_CalculatorPic(lv_event_t * e);
 lv_obj_t * ui_CalculatorPic;
 lv_obj_t * ui_CalculatorLabel;
+
 void ui_event_BluetoothPic(lv_event_t * e);
 lv_obj_t * ui_BluetoothPic;
+
 void ui_event_WifiPic(lv_event_t * e);
 lv_obj_t * ui_WifiPic;
+
 void ui_event_Calendar(lv_event_t * e);
 lv_obj_t * ui_Calendar;
 
 /*--------------------SCREEN: ui_MessageArcPage------------------------------*/
 extern Page_t Page_MessageArc;
+
 void ui_MessageArcPage_screen_init(void);
+
 void ui_event_MessageArcPage(lv_event_t * e);
 lv_obj_t * ui_MessageArcPage;
+
+
 void ui_event_StepArc(lv_event_t * e);
 lv_obj_t * ui_StepArc;
+lv_obj_t * ui_Stepimg;
+void ui_event_StepArcLabel(lv_event_t * e);
+lv_obj_t * ui_StepArcLabel;
+
 void ui_event_TempatureArc(lv_event_t * e);
 lv_obj_t * ui_TempatureArc;
+lv_obj_t * ui_Tempimg;
+void ui_event_TempArcLabel(lv_event_t * e);
+lv_obj_t * ui_TempArcLabel;
+
+
 void ui_event_HumidityArc(lv_event_t * e);
 lv_obj_t * ui_HumidityArc;
-lv_obj_t * ui_Stepimg;
-lv_obj_t * ui_Tempimg;
 lv_obj_t * ui_Humidimg;
 void ui_event_HumidArcLabel(lv_event_t * e);
 lv_obj_t * ui_HumidArcLabel;
-void ui_event_TempArcLabel(lv_event_t * e);
-lv_obj_t * ui_TempArcLabel;
-void ui_event_StepArcLabel(lv_event_t * e);
-lv_obj_t * ui_StepArcLabel;
+
+
 void ui_event_LightBar(lv_event_t * e);
 lv_obj_t * ui_LightBar;
 lv_obj_t * ui_Image2;
@@ -269,6 +287,18 @@ void ui_event_MusicPic(lv_event_t * e)
 
     }
 }
+
+void ui_event_CalculatorPic(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+      if(event_code == LV_EVENT_CLICKED) {
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Computer);
+
+    }
+}
+
 void ui_event_BluetoothPic(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);

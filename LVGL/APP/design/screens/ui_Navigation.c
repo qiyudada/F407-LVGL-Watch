@@ -229,6 +229,7 @@ void ui_Navigation_screen_init(void)
     lv_obj_add_event_cb(ui_DrainPic, ui_event_DrainPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_NFCPic, ui_event_NFCPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_MusicPic, ui_event_MusicPic, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_CalculatorPic, ui_event_CalculatorPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_BluetoothPic, ui_event_BluetoothPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_WifiPic, ui_event_WifiPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Calendar, ui_event_Calendar, LV_EVENT_ALL, NULL);
