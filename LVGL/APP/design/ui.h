@@ -219,8 +219,17 @@ extern lv_obj_t * ui_CompageBtnM;
 extern lv_obj_t * ui_CompageTextarea;
 extern lv_obj_t * ui_CompageBackBtn;
 
+/*--------------------SCREEN: ui_ComputerPage------------------------------*/
 
+extern Page_t Page_Calender;
 
+extern lv_obj_t * ui_CalendarPage;
+extern lv_obj_t * ui_CalendarShowPage;
+
+void ui_CalendarPage_screen_init(void);
+void ui_CalendarPage_screen_deinit(void);
+
+/*--------------------Picture------------------------------*/
 LV_IMG_DECLARE(ui_img_iu_bg_png);    // assets/iu_bg.png
 LV_IMG_DECLARE(ui_img_iu_bg3_png);    // assets/iu_bg3.png
 LV_IMG_DECLARE(ui_img_setting_png);    // assets/setting.png

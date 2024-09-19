@@ -850,6 +850,11 @@
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\screens\ui_MessageArcPage.c</FilePath>
             </File>
+            <File>
+              <FileName>ui_CalendarPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_CalendarPage.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

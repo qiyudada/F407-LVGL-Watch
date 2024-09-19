@@ -244,7 +244,7 @@ void ui_ComputerPage_screen_init(void)
     lv_textarea_set_align(ui_CompageTextarea, LV_TEXT_ALIGN_RIGHT);
 
     ui_CompageBackBtn = lv_btn_create(ui_Computerpage);
-    lv_obj_align(ui_CompageBackBtn, LV_ALIGN_RIGHT_MID, -10, -110);
+    lv_obj_align(ui_CompageBackBtn, LV_ALIGN_RIGHT_MID, -20, -80);
     lv_obj_set_width(ui_CompageBackBtn, 40);
     lv_obj_set_height(ui_CompageBackBtn, 30);
     lv_obj_set_style_bg_opa(ui_CompageBackBtn, 0, LV_PART_MAIN | LV_STATE_DEFAULT);

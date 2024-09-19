@@ -69,6 +69,7 @@
 "f4-lvgl-watch\ui_navigation.o"
 "f4-lvgl-watch\ui_nfccardpage.o"
 "f4-lvgl-watch\ui_messagearcpage.o"
+"f4-lvgl-watch\ui_calendarpage.o"
 "f4-lvgl-watch\stm32f4xx_hal_rcc.o"
 "f4-lvgl-watch\stm32f4xx_hal_rcc_ex.o"
 "f4-lvgl-watch\stm32f4xx_hal_flash.o"

@@ -83,6 +83,16 @@ void ui_event_CalculatorGoMoreImg(lv_event_t *e)
     }
 }
 
+void ui_event_CalendarGoMoreImg(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        Page_Load(&Page_Calender);
+    }
+}
+
 void ui_MenuPage_screen_init(void)
 {
     ui_MenuPage = lv_obj_create(NULL);
@@ -245,7 +255,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_x(ui_CalendarGoMoreImg, 70);
     lv_obj_set_y(ui_CalendarGoMoreImg, -1);
     lv_obj_set_align(ui_CalendarGoMoreImg, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_ADV_HITTEST);  /// Flags
+    lv_obj_add_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
     ui_CardPanel = lv_obj_create(ui_MenuContainer);
@@ -391,6 +401,8 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_event_cb(ui_BluetoothSwitch, ui_event_BluetoothSwitch, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CardGoMoreImg, ui_event_CardGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalculatorGoMoreImg, ui_event_CalculatorGoMoreImg, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_CalendarGoMoreImg, ui_event_CalendarGoMoreImg, LV_EVENT_ALL, NULL);
+    
 }
 
 void ui_MenuPage_screen_deinit(void)
