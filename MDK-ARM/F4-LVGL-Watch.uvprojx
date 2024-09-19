@@ -796,36 +796,6 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_writecard_png.c</FilePath>
             </File>
             <File>
-              <FileName>ui_HomePage1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_HomePage1.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_MenuPage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_MenuPage.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_MessageArcPage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_MessageArcPage.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_MusicPage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_MusicPage.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_Navigation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_Navigation.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_NFCCardPage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\screens\ui_NFCCardPage.c</FilePath>
-            </File>
-            <File>
               <FileName>ui.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\ui.c</FilePath>
@@ -849,6 +819,36 @@
               <FileName>ui_font_Cuyuan24.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\fonts\ui_font_Cuyuan24.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_HomePage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_HomePage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_MenuPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_MenuPage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_MusicPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_MusicPage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_Navigation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_Navigation.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_NFCCardPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_NFCCardPage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_MessageArcPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_MessageArcPage.c</FilePath>
             </File>
           </Files>
         </Group>

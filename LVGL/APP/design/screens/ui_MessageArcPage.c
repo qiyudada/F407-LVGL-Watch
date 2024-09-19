@@ -1,8 +1,116 @@
 #include "../ui.h"
 
 Page_t Page_MessageArc = {ui_MessageArcPage_screen_init, ui_MessageArcPage_screen_deinit, &ui_MessageArcPage};
+/*--------------------SCREEN: ui_MessageArcPage------------------------------*/
+void ui_MessageArcPage_screen_init(void);
+
+void ui_event_MessageArcPage(lv_event_t *e);
+lv_obj_t *ui_MessageArcPage;
+
+void ui_event_StepArc(lv_event_t *e);
+lv_obj_t *ui_StepArc;
+lv_obj_t *ui_Stepimg;
+void ui_event_StepArcLabel(lv_event_t *e);
+lv_obj_t *ui_StepArcLabel;
+
+void ui_event_TempatureArc(lv_event_t *e);
+lv_obj_t *ui_TempatureArc;
+lv_obj_t *ui_Tempimg;
+void ui_event_TempArcLabel(lv_event_t *e);
+lv_obj_t *ui_TempArcLabel;
+
+void ui_event_HumidityArc(lv_event_t *e);
+lv_obj_t *ui_HumidityArc;
+lv_obj_t *ui_Humidimg;
+void ui_event_HumidArcLabel(lv_event_t *e);
+lv_obj_t *ui_HumidArcLabel;
+
+void ui_event_LightBar(lv_event_t *e);
+lv_obj_t *ui_LightBar;
+lv_obj_t *ui_Image2;
 
 lv_timer_t *ui_MessageArcPageTimer;
+
+/*--------------------SCREEN: ui_MessageArcPage------------------------------*/
+
+void ui_event_MessageArcPage(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back_Bottom();
+    }
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Load(&Page_Music);
+    }
+}
+void ui_event_StepArc(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Step(e);
+    }
+}
+void ui_event_TempatureArc(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Tempature(e);
+    }
+}
+void ui_event_HumidityArc(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Humidity(e);
+    }
+}
+void ui_event_HumidArcLabel(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Humidity_Arc(e);
+    }
+}
+void ui_event_TempArcLabel(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Tempature_Arc(e);
+    }
+}
+void ui_event_StepArcLabel(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Step_Arc(e);
+    }
+}
+void ui_event_LightBar(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Light_Intensity(e);
+    }
+}
 
 static void ui_timer_cb_MessageArcPage(lv_timer_t *timer)
 {

@@ -81,6 +81,8 @@ void ui_event_Calendar(lv_event_t * e);
 extern lv_obj_t * ui_Calendar;
 
 /*--------------------SCREEN: ui_MessageArcPage------------------------------*/
+extern Page_t Page_MessageArc;
+
 extern lv_obj_t * ui_MessageArcPage;
 
 void ui_MessageArcPage_screen_init(void);
@@ -180,6 +182,7 @@ extern lv_obj_t * ui_GomoreImage;
 
 
 /*--------------------SCREEN: ui_NFCCardPage------------------------------*/
+extern Page_t Page_NFCCard;
 
 void ui_NFCCardPage_screen_init(void);
 

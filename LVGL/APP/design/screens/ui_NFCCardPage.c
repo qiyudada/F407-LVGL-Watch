@@ -1,7 +1,46 @@
 ﻿#include "../ui.h"
 
 Page_t Page_NFCCard = { ui_NFCCardPage_screen_init, ui_Navigation_screen_deinit, &ui_NFCCardPage };
+/*--------------------SCREEN: ui_NFCCardPage------------------------------*/
+void ui_NFCCardPage_screen_init(void);
+lv_obj_t *ui_NFCCardPage;
+lv_obj_t *ui_WriteCardPanel;
+lv_obj_t *ui_WriteCardImage;
+lv_obj_t *ui_writeCardLabel;
+lv_obj_t *ui_WriteCardGoMoreImg;
+lv_obj_t *ui_ReadCardPanel;
+lv_obj_t *ui_ReadCardImage;
+lv_obj_t *ui_ReadCardLabel;
+lv_obj_t *ui_ReadCardGoMoreImg;
+lv_obj_t *ui_CardDormancyPanel;
+lv_obj_t *ui_CardDormancyImage;
+void ui_event_CardDormancySwitch(lv_event_t *e);
+lv_obj_t *ui_CardDormancySwitch;
+lv_obj_t *ui_CardDormancyLabel;
+lv_obj_t *ui____initial_actions0;
+const lv_img_dsc_t *ui_imgset_calculator[1] = {&ui_img_calculator1_png};
+const lv_img_dsc_t *ui_imgset_gomore[1] = {&ui_img_gomore3_png};
+const lv_img_dsc_t *ui_imgset_iu[1] = {&ui_img_iu1_png};
+const lv_img_dsc_t *ui_imgset_iu_bg[2] = {&ui_img_iu_bg2_png, &ui_img_iu_bg3_png};
 
+
+
+void ui_event_NFCCardpage_cb(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        if(Page_Get_SecondPage()->page_obj==&ui_MenuPage)
+        {
+            Page_Back();
+        }
+        else
+        Page_Back_Bottom();
+    }
+}
 
 void ui_NFCCardPage_screen_init(void)
 {
@@ -160,7 +199,8 @@ void ui_NFCCardPage_screen_init(void)
     lv_obj_set_style_text_opa(ui_CardDormancyLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_add_event_cb(ui_CardDormancySwitch, ui_event_CardDormancySwitch, LV_EVENT_ALL, NULL);
-
+    lv_obj_add_event_cb(ui_NFCCardPage, ui_event_NFCCardpage_cb, LV_EVENT_ALL, NULL);
+    
 }
 
 void ui_NFCCardPage_screen_deinit(void)

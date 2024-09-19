@@ -2,7 +2,39 @@
 
 Page_t Page_Music = { ui_MusicPage_screen_init, ui_MusicPage_screen_deinit, &ui_MusicPage };
 
+/*--------------------SCREEN: ui_MusicPage------------------------------*/
+void ui_MusicPage_screen_init(void);
+void ui_event_MusicPage(lv_event_t *e);
+lv_obj_t *ui_MusicPage;
+lv_obj_t *ui_MusicControl;
+lv_obj_t *ui_Next;
+lv_obj_t *ui_Back;
+lv_obj_t *ui_IUPanel;
+lv_obj_t *ui_HeartImage;
+lv_obj_t *ui_SongnameLabel;
+lv_obj_t *ui_SingerLabel;
+lv_obj_t *ui_SongwordLabel;
+lv_obj_t *ui_ShareImage;
+lv_obj_t *ui_GomoreImage;
 
+
+/*--------------------SCREEN: ui_MusicPage------------------------------*/
+
+void ui_event_MusicPage(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back_Bottom();
+    }
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back();
+    }
+}
 void ui_MusicPage_screen_init(void)
 {
     ui_MusicPage = lv_obj_create(NULL);

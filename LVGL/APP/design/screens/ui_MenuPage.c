@@ -1,6 +1,87 @@
 ﻿#include "../ui.h"
 
 Page_t Page_Menu = {ui_MenuPage_screen_init, ui_MenuPage_screen_deinit, &ui_MenuPage};
+/*--------------------SCREEN: ui_MenuPage------------------------------*/
+void ui_MenuPage_screen_init(void);
+lv_obj_t *ui_MenuPage;
+lv_obj_t *ui_MenuContainer;
+lv_obj_t *ui_BluetoothPanel;
+lv_obj_t *ui_MenuBluetoothImage;
+void ui_event_BluetoothSwitch(lv_event_t *e);
+lv_obj_t *ui_BluetoothSwitch;
+lv_obj_t *ui_MenuBluetoothLabel;
+lv_obj_t *ui_WifiPanel;
+lv_obj_t *ui_MenuWifiImage;
+lv_obj_t *ui_MenuWifiLabel;
+lv_obj_t *ui_WifiGoMoreImg;
+lv_obj_t *ui_CalendarPanel;
+lv_obj_t *ui_MenuCalendarImage;
+lv_obj_t *ui_MenuCalendarLabel;
+lv_obj_t *ui_CalendarGoMoreImg;
+lv_obj_t *ui_CardPanel;
+lv_obj_t *ui_MenuCardImage;
+lv_obj_t *ui_MenuCardLabel;
+void ui_event_CardGoMoreImg(lv_event_t *e);
+lv_obj_t *ui_CardGoMoreImg;
+lv_obj_t *ui_StoptimePanel;
+lv_obj_t *ui_StoptimeImage;
+lv_obj_t *ui_StoptimeLabel;
+lv_obj_t *ui_StoptimeGoMoreImg;
+void ui_event_CalculatorGoMoreImg(lv_event_t *e);
+lv_obj_t *ui_CalculatorPanel;
+lv_obj_t *ui_CalculatorImg;
+lv_obj_t *ui_CalculatorLabelMenu;
+lv_obj_t *ui_CalculatorGoMoreImg;
+
+
+/*--------------------SCREEN: ui_MenuPage------------------------------*/
+
+void ui_event_BluetoothSwitch(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetooth_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetoorh_Close(e);
+    }
+}
+void ui_event_CardGoMoreImg(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        Page_Load(&Page_NFCCard);
+    }
+}
+
+void ui_event_CardDormancySwitch(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetooth_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetoorh_Close(e);
+    }
+}
+
+void ui_event_CalculatorGoMoreImg(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        Page_Load(&Page_Computer);
+    }
+}
 
 void ui_MenuPage_screen_init(void)
 {

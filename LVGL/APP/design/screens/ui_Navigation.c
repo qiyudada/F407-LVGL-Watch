@@ -1,7 +1,156 @@
 ﻿#include "../ui.h"
 
 Page_t Page_Navigation = { ui_Navigation_screen_init, ui_Navigation_screen_deinit, &ui_Navigation };
+/*--------------------SCREEN: ui_Navigation------------------------------*/
 
+void ui_Navigation_screen_init(void);
+
+void ui_event_Navigation(lv_event_t *e);
+lv_obj_t *ui_Navigation;
+
+void ui_event_SettingPic(lv_event_t *e);
+lv_obj_t *ui_SettingPic;
+lv_obj_t *ui_SettingLabel;
+
+void ui_event_DrainPic(lv_event_t *e);
+lv_obj_t *ui_DrainPic;
+lv_obj_t *ui_DrainLabel;
+lv_obj_t *ui_ClockPic;
+lv_obj_t *ui_ClockLabel;
+
+void ui_event_NFCPic(lv_event_t *e);
+lv_obj_t *ui_NFCPic;
+lv_obj_t *ui_NFCLabel;
+
+void ui_event_MusicPic(lv_event_t *e);
+lv_obj_t *ui_MusicPic;
+lv_obj_t *ui_MusicLabel;
+
+void ui_event_CalculatorPic(lv_event_t *e);
+lv_obj_t *ui_CalculatorPic;
+lv_obj_t *ui_CalculatorLabel;
+
+void ui_event_BluetoothPic(lv_event_t *e);
+lv_obj_t *ui_BluetoothPic;
+
+void ui_event_WifiPic(lv_event_t *e);
+lv_obj_t *ui_WifiPic;
+
+void ui_event_Calendar(lv_event_t *e);
+lv_obj_t *ui_Calendar;
+
+
+/*--------------------SCREEN: ui_Navigation------------------------------*/
+
+void ui_event_Navigation(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_TOP)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back_Bottom();
+    }
+}
+void ui_event_SettingPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_LONG_PRESSED)
+    {
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Menu);
+    }
+}
+void ui_event_DrainPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Drain_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Drain_Close(e);
+    }
+}
+
+void ui_event_NFCPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        NFC_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        NFC_Close(e);
+    }
+    if (event_code == LV_EVENT_LONG_PRESSED)
+    {
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_NFCCard);
+    }
+}
+void ui_event_MusicPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Music);
+    }
+}
+
+void ui_event_CalculatorPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Computer);
+    }
+}
+
+void ui_event_BluetoothPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetooth_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetoorh_Close(e);
+    }
+}
+void ui_event_WifiPic(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Wifi_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Wifi_Close(e);
+    }
+}
+void ui_event_Calendar(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED)
+    {
+        Update_Navi_Date(e);
+    }
+}
 
 void ui_Navigation_screen_init(void)
 {
