@@ -601,11 +601,6 @@
           <GroupName>Application/LVGL_App</GroupName>
           <Files>
             <File>
-              <FileName>ui_comp_hook.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\components\ui_comp_hook.c</FilePath>
-            </File>
-            <File>
               <FileName>ui_font_Number.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\fonts\ui_font_Number.c</FilePath>

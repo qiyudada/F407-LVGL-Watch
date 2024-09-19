@@ -19,7 +19,6 @@
 "f4-lvgl-watch\user_datamanagement.o"
 "f4-lvgl-watch\user_pagemanagement.o"
 "f4-lvgl-watch\strcalculate.o"
-"f4-lvgl-watch\ui_comp_hook.o"
 "f4-lvgl-watch\ui_font_number.o"
 "f4-lvgl-watch\ui_img_876444160.o"
 "f4-lvgl-watch\ui_img_876457220.o"

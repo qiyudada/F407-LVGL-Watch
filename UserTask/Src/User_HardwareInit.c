@@ -30,6 +30,7 @@ void HardwareInitTask(void *argument)
         {
             num--;
             MW_Interface.DTH11.ConnectionError = MW_Interface.DTH11.Init();
+            Delay_ms(100);
         }
         /*----------NFC Init---------- */
         num = 3;
