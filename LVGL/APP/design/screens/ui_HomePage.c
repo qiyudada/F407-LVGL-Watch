@@ -1,20 +1,25 @@
 ﻿#include "../ui.h"
 
-Page_t Page_Home = { ui_HomePage1_screen_init, ui_HomePage_screen_deinit, &ui_HomePage };
+Page_t Page_Home = {ui_HomePage1_screen_init, ui_HomePage_screen_deinit, &ui_HomePage};
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 uint8_t Img_Index = 0;
 void ui_HomePage1_screen_init(void);
 void ui_event_HomePage1(lv_event_t *e);
 
 lv_obj_t *ui_HomePage;
-void ui_event_ClockNumberLabel(lv_event_t *e);
 
 lv_obj_t *ui_ClockNumberLabel;
-void ui_event_DateLabel(lv_event_t *e);
 
 lv_obj_t *ui_DateLabel;
-lv_timer_t *ui_HomePage1Timer;
+lv_timer_t *ui_HomePageTimer;
 
+// variables
+uint8_t ui_TimeHourValue = 20;
+uint8_t ui_TimeMinuteValue = 30;
+const char *ui_Days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+uint8_t ui_DateMonthValue = 9;
+uint8_t ui_DateDayValue = 19;
+uint8_t ui_DataWeekdayValue = 4;
 
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 
@@ -57,53 +62,50 @@ void ui_event_HomePage1(lv_event_t *e)
     }
 }
 
-void ui_event_ClockNumberLabel(lv_event_t *e)
+static void HomePage_timer_cb(lv_timer_t *timer)
 {
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
+    char value_strbuf[10];
+    MW_DateTimeTypeDef DateTime;
+    MW_Interface.RealTime.GetTimeDate(&DateTime);
+
+    if ((ui_TimeMinuteValue != DateTime.Minutes) && (ui_TimeHourValue != DateTime.Hours))
     {
-        Update_Home_Time(e);
+        ui_TimeMinuteValue = DateTime.Minutes;
+        ui_TimeHourValue = DateTime.Hours;
+        sprintf(value_strbuf, "%02d:%02d", (char)ui_TimeHourValue, (char)ui_TimeMinuteValue);
+        lv_label_set_text(ui_ClockNumberLabel, value_strbuf);
+    }
+
+    if (ui_DateDayValue != DateTime.Date)
+    {
+        ui_DateDayValue = DateTime.Date;
+        ui_DataWeekdayValue = DateTime.WeekDay;
+        sprintf(value_strbuf, "%s %02d", ui_Days[ui_DataWeekdayValue - 1], (char)ui_DateDayValue);
+        lv_label_set_text(ui_DateLabel, value_strbuf);
     }
 }
-
-void ui_event_DateLabel(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Home_Date(e);
-    }
-}
-
-static void HomePage_timer_cb(lv_timer_t* timer)
-{
-    
-}
-
 
 void ui_HomePage1_screen_init(void)
 {
     ui_HomePage = lv_obj_create(NULL);
-    lv_obj_clear_flag(ui_HomePage, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_clear_flag(ui_HomePage, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
     switch (Img_Index)
     {
-        case 0:
-            lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
-            break;
-        case 1:
-            lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg3_png, LV_PART_MAIN | LV_STATE_DEFAULT);
-            break;
-         default:
-            break;
+    case 0:
+        lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+        break;
+    case 1:
+        lv_obj_set_style_bg_img_src(ui_HomePage, &ui_img_iu_bg3_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+        break;
+    default:
+        break;
     }
-    
+
     /*create clock*/
     ui_ClockNumberLabel = lv_label_create(ui_HomePage);
-    lv_obj_set_width(ui_ClockNumberLabel, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_ClockNumberLabel, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_width(ui_ClockNumberLabel, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_ClockNumberLabel, LV_SIZE_CONTENT); /// 1
     lv_obj_set_x(ui_ClockNumberLabel, -1);
     lv_obj_set_y(ui_ClockNumberLabel, 72);
     lv_obj_set_align(ui_ClockNumberLabel, LV_ALIGN_CENTER);
@@ -114,8 +116,8 @@ void ui_HomePage1_screen_init(void)
     lv_obj_set_style_text_font(ui_ClockNumberLabel, &lv_font_montserrat_40, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_DateLabel = lv_label_create(ui_HomePage);
-    lv_obj_set_width(ui_DateLabel, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_DateLabel, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_width(ui_DateLabel, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_DateLabel, LV_SIZE_CONTENT); /// 1
     lv_obj_set_x(ui_DateLabel, -2);
     lv_obj_set_y(ui_DateLabel, 107);
     lv_obj_set_align(ui_DateLabel, LV_ALIGN_CENTER);
@@ -125,18 +127,11 @@ void ui_HomePage1_screen_init(void)
     lv_obj_set_style_text_align(ui_DateLabel, LV_TEXT_ALIGN_AUTO, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_DateLabel, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    lv_obj_add_event_cb(ui_ClockNumberLabel, ui_event_ClockNumberLabel, LV_EVENT_ALL, NULL);
-    lv_obj_add_event_cb(ui_DateLabel, ui_event_DateLabel, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_HomePage, ui_event_HomePage1, LV_EVENT_ALL, NULL);
 
-    lv_timer_t* ui_HomePage1Timer = lv_timer_create(HomePage_timer_cb, 500, NULL);
-
+    lv_timer_t *ui_HomePageTimer = lv_timer_create(HomePage_timer_cb, 500, NULL);
 }
-
 
 void ui_HomePage_screen_deinit(void)
 {
-    
 }
-
-

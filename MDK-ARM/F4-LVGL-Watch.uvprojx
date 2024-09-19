@@ -801,11 +801,6 @@
               <FilePath>..\LVGL\APP\design\ui.c</FilePath>
             </File>
             <File>
-              <FileName>ui_events.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\ui_events.c</FilePath>
-            </File>
-            <File>
               <FileName>ui_helpers.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\ui_helpers.c</FilePath>
@@ -854,6 +849,11 @@
               <FileName>ui_CalendarPage.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\screens\ui_CalendarPage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_events.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\ui_events.c</FilePath>
             </File>
           </Files>
         </Group>

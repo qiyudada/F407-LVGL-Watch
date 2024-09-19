@@ -39,6 +39,7 @@
         "inv_mpu_dmp_motion_driver.h": "c",
         "ui_computerpage.h": "c",
         "user_pagemanagement.h": "c",
-        "strcalculate.h": "c"
+        "strcalculate.h": "c",
+        "lv_event.h": "c"
     }
 }

@@ -1,4 +1,5 @@
 f4-lvgl-watch\ui_calendarpage.o: ..\LVGL\APP\design\screens\ui_CalendarPage.c
+f4-lvgl-watch\ui_calendarpage.o: .\RTE\_F4-LVGL-Watch\RTE_Components.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/lvgl.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/src/misc/lv_log.h
@@ -130,9 +131,9 @@ f4-lvgl-watch\ui_calendarpage.o: ../LVGL/src/extra/widgets/colorwheel/lv_colorwh
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/src/extra/widgets/led/lv_led.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/src/extra/widgets/span/lv_span.h
+f4-lvgl-watch\ui_calendarpage.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/APP/design/ui_helpers.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/APP/design/ui.h
-f4-lvgl-watch\ui_calendarpage.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\ui_calendarpage.o: ../UserTask/Inc/User_PageManagement.h
 f4-lvgl-watch\ui_calendarpage.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\ui_calendarpage.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h

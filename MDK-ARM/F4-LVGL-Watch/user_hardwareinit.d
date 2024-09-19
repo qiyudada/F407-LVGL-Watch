@@ -202,7 +202,7 @@ f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_disp.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_indev.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_helpers.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui.h
-f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_PageManagement.h

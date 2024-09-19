@@ -200,7 +200,7 @@ f4-lvgl-watch\user_screennew.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_d
 f4-lvgl-watch\user_screennew.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_screennew.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui_helpers.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui.h
-f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_PageManagement.h

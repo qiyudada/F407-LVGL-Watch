@@ -130,9 +130,9 @@ f4-lvgl-watch\ui_homepage.o: ../LVGL/src/extra/widgets/colorwheel/lv_colorwheel.
 f4-lvgl-watch\ui_homepage.o: ../LVGL/src/extra/widgets/led/lv_led.h
 f4-lvgl-watch\ui_homepage.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\ui_homepage.o: ../LVGL/src/extra/widgets/span/lv_span.h
+f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui_events.h
 f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui_helpers.h
 f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui.h
-f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui_events.h
 f4-lvgl-watch\ui_homepage.o: ../UserTask/Inc/User_PageManagement.h
 f4-lvgl-watch\ui_homepage.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\ui_homepage.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h

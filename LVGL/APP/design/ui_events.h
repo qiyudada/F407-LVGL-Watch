@@ -10,8 +10,7 @@
 extern "C" {
 #endif
 
-void Update_Home_Time(lv_event_t * e);
-void Update_Home_Date(lv_event_t * e);
+
 void Drain_Open(lv_event_t * e);
 void Drain_Close(lv_event_t * e);
 void NFC_Open(lv_event_t * e);
@@ -20,14 +19,6 @@ void Bluetooth_Open(lv_event_t * e);
 void Bluetoorh_Close(lv_event_t * e);
 void Wifi_Open(lv_event_t * e);
 void Wifi_Close(lv_event_t * e);
-void Update_Navi_Date(lv_event_t * e);
-void Update_Step(lv_event_t * e);
-void Update_Tempature(lv_event_t *e);
-void Update_Humidity(lv_event_t *e);
-void Update_Humidity_Arc(lv_event_t * e);
-void Update_Tempature_Arc(lv_event_t * e);
-void Update_Step_Arc(lv_event_t * e);
-void Update_Light_Intensity(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

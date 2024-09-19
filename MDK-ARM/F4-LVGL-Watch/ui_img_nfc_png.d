@@ -130,9 +130,9 @@ f4-lvgl-watch\ui_img_nfc_png.o: ../LVGL/src/extra/widgets/colorwheel/lv_colorwhe
 f4-lvgl-watch\ui_img_nfc_png.o: ../LVGL/src/extra/widgets/led/lv_led.h
 f4-lvgl-watch\ui_img_nfc_png.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\ui_img_nfc_png.o: ../LVGL/src/extra/widgets/span/lv_span.h
+f4-lvgl-watch\ui_img_nfc_png.o: ..\LVGL\APP\design\images\../ui_events.h
 f4-lvgl-watch\ui_img_nfc_png.o: ..\LVGL\APP\design\images\../ui_helpers.h
 f4-lvgl-watch\ui_img_nfc_png.o: ..\LVGL\APP\design\images\../ui.h
-f4-lvgl-watch\ui_img_nfc_png.o: ..\LVGL\APP\design\images\../ui_events.h
 f4-lvgl-watch\ui_img_nfc_png.o: ../UserTask/Inc/User_PageManagement.h
 f4-lvgl-watch\ui_img_nfc_png.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\ui_img_nfc_png.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h

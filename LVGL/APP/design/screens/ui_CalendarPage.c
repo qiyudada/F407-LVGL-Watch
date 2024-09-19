@@ -1,3 +1,4 @@
+#include "RTE_Components.h"             // Component selection
 #include "ui.h"
 #include "ui_helpers.h"
 #include "User_DataManagement.h"
