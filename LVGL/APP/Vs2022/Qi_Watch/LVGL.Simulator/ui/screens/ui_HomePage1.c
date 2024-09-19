@@ -1,6 +1,6 @@
 ﻿#include "../ui.h"
 
-Page_t Page_Home = { ui_HomePage1_screen_init, ui_HomePage_screen_deinit, &ui_HomePage };
+Page_t Page_Home = { ui_HomePage_screen_init, ui_HomePage_screen_deinit, &ui_HomePage };
 
 static void HomePage_timer_cb(lv_timer_t* timer)
 {
@@ -8,7 +8,7 @@ static void HomePage_timer_cb(lv_timer_t* timer)
 }
 
 
-void ui_HomePage1_screen_init(void)
+void ui_HomePage_screen_init(void)
 {
     ui_HomePage = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_HomePage, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
@@ -55,7 +55,7 @@ void ui_HomePage1_screen_init(void)
 
     lv_obj_add_event_cb(ui_ClockNumberLabel, ui_event_ClockNumberLabel, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_DateLabel, ui_event_DateLabel, LV_EVENT_ALL, NULL);
-    lv_obj_add_event_cb(ui_HomePage, ui_event_HomePage1, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_HomePage, ui_event_HomePage, LV_EVENT_ALL, NULL);
 
     lv_timer_t* ui_HomePage1Timer = lv_timer_create(HomePage_timer_cb, 500, NULL);
 

@@ -23,9 +23,9 @@ LV_FONT_DECLARE(ui_font_Cuyuan24);
 extern  uint8_t Img_Index;
 extern  Page_t Page_Home;
 
-void ui_HomePage1_screen_init(void);
+void ui_HomePage_screen_init(void);
 
-void ui_event_HomePage1(lv_event_t * e);
+void ui_event_HomePage(lv_event_t * e);
 extern lv_obj_t * ui_HomePage;
 
 void ui_event_ClockNumberLabel(lv_event_t * e);

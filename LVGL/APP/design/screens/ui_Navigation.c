@@ -98,7 +98,7 @@ void ui_event_MusicPic(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_CLICKED)
+    if (event_code == LV_EVENT_LONG_PRESSED)
     {
         page_stack_pop(&PageStack);
         Page_Load(&Page_Music);
@@ -109,7 +109,7 @@ void ui_event_CalculatorPic(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_CLICKED)
+    if (event_code == LV_EVENT_LONG_PRESSED)
     {
         page_stack_pop(&PageStack);
         Page_Load(&Page_Computer);

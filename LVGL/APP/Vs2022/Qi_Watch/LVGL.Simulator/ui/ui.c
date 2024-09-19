@@ -6,8 +6,8 @@
 
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 uint8_t Img_Index=0;
-void ui_HomePage1_screen_init(void);
-void ui_event_HomePage1(lv_event_t * e);
+void ui_HomePage_screen_init(void);
+void ui_event_HomePage(lv_event_t * e);
 lv_obj_t * ui_HomePage;
 void ui_event_ClockNumberLabel(lv_event_t * e);
 lv_obj_t * ui_ClockNumberLabel;
@@ -157,7 +157,7 @@ const lv_img_dsc_t * ui_imgset_iu_bg[2] = {&ui_img_iu_bg2_png, &ui_img_iu_bg3_pn
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 
 
-void ui_event_HomePage1(lv_event_t * e)
+void ui_event_HomePage(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);

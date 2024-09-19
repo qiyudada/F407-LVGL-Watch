@@ -38,7 +38,7 @@ void MX_RTC_Init(void)
   RTC_DateTypeDef sDate = {0};
 
   /* USER CODE BEGIN RTC_Init 1 */
- 
+
   /* USER CODE END RTC_Init 1 */
 
   /** Initialize RTC Only
@@ -56,13 +56,14 @@ void MX_RTC_Init(void)
   }
 
   /* USER CODE BEGIN Check_RTC_BKUP */
-
+  if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR0) != 0X5050)
+  {
   /* USER CODE END Check_RTC_BKUP */
 
   /** Initialize RTC and set the Time and Date
   */
-  sTime.Hours = 0x12;
-  sTime.Minutes = 0x0;
+  sTime.Hours = 0x22;
+  sTime.Minutes = 0x11;
   sTime.Seconds = 0x0;
   sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
   sTime.StoreOperation = RTC_STOREOPERATION_RESET;
@@ -70,9 +71,9 @@ void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-  sDate.WeekDay = RTC_WEEKDAY_SUNDAY;
+  sDate.WeekDay = RTC_WEEKDAY_THURSDAY;
   sDate.Month = RTC_MONTH_SEPTEMBER;
-  sDate.Date = 0x15;
+  sDate.Date = 0x19;
   sDate.Year = 0x24;
 
   if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
@@ -82,12 +83,13 @@ void MX_RTC_Init(void)
 
   /** Enable the WakeUp
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 0, RTC_WAKEUPCLOCK_RTCCLK_DIV16) != HAL_OK)
+  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 2000, RTC_WAKEUPCLOCK_RTCCLK_DIV16) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN RTC_Init 2 */
-
+    HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR0, 0X5050);
+  }
   /* USER CODE END RTC_Init 2 */
 
 }
