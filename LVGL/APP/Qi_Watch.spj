@@ -3222,7 +3222,8 @@
                 "InheritedType": 4
               }
             ],
-            "saved_objtypeKey": "PANEL"
+            "saved_objtypeKey": "PANEL",
+            "tree_closed": true
           },
           {
             "guid": "GUID8589418-205818S3883258",
@@ -18125,7 +18126,6 @@
                       },
                       {
                         "nid": -1346116518,
-                        "flags": 1048576,
                         "strtype": "OBJECT/Flags",
                         "InheritedType": 1
                       },
@@ -18138,7 +18138,7 @@
                       {
                         "nid": -1821752346,
                         "strtype": "OBJECT/Clickable",
-                        "strval": "False",
+                        "strval": "True",
                         "InheritedType": 2
                       },
                       {

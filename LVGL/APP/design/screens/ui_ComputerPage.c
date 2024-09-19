@@ -32,7 +32,7 @@ void ui_CompageBtnM_event_cb(lv_event_t *e)
     {
         /*draw logic symbol outline is circle*/
         lv_obj_draw_part_dsc_t *dsc = lv_event_get_param(e);
-        
+
         /*3 is '+' ,7 is '-',11 is '*',14 is '/',15 is '='*/
         if (dsc->id == 3 || dsc->id == 7 || dsc->id == 11 || dsc->id == 14 || dsc->id == 15)
         {
@@ -123,7 +123,7 @@ void ui_CompageBtnM_event_cb(lv_event_t *e)
             // calculate
             if (StrCalculate(CalStr.strque, &NumStack, &SymStack))
             {
-                lv_textarea_add_text(ui_CompageTextarea, "error");
+                lv_textarea_add_text(ui_CompageTextarea, "erro");
             }
             else
             {
@@ -185,13 +185,30 @@ void ui_CompageBackBtn_event_cb(lv_event_t *e)
     }
 }
 
+void ui_event_Computerpage_cb(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        if(Page_Get_SecondPage()->page_obj==&ui_MenuPage)
+        {
+            Page_Back();
+        }
+        else
+        Page_Back_Bottom();
+    }
+}
+
 ///////////////////// SCREEN init ////////////////////
 void ui_ComputerPage_screen_init(void)
 {
     strclear(&CalStr);
     NumStackClear(&NumStack);
     SymStackClear(&SymStack);
-    
+
     ui_Computerpage = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_Computerpage, LV_OBJ_FLAG_SCROLLABLE);
     ui_CompageBtnM = lv_btnmatrix_create(ui_Computerpage);
@@ -200,12 +217,12 @@ void ui_ComputerPage_screen_init(void)
     lv_obj_set_style_text_font(ui_CompageBtnM, &ui_font_Cuyuan24, 0);
     lv_btnmatrix_set_one_checked(ui_CompageBtnM, true);
     int i = 0;
-    
+
     for (i = 0; i < 16; i++)
     {
         lv_btnmatrix_set_btn_ctrl(ui_CompageBtnM, i, LV_BTNMATRIX_CTRL_NO_REPEAT); // 长按按钮时禁用重复
     }
-    
+
     lv_obj_clear_flag(ui_CompageBtnM, LV_OBJ_FLAG_CLICK_FOCUSABLE);
     lv_obj_set_style_border_width(ui_CompageBtnM, 0, 0);
     lv_obj_set_style_bg_opa(ui_CompageBtnM, 0, 0);
@@ -213,11 +230,11 @@ void ui_ComputerPage_screen_init(void)
     lv_obj_set_align(ui_CompageBtnM, LV_ALIGN_BOTTOM_MID);
 
     ui_CompageTextarea = lv_textarea_create(ui_Computerpage);
-    lv_textarea_set_one_line(ui_CompageTextarea, false);                // 将文本区域配置为一行
-    lv_textarea_set_max_length(ui_CompageTextarea, TEXT_FULL * 2);      // 设置文本区域可输入的字符长度最大值
-    lv_obj_add_state(ui_CompageTextarea, LV_STATE_FOCUSED);             // 显示光标
-    lv_obj_set_style_radius(ui_CompageTextarea, 0, 0);                  // 设置样式的圆角弧度
-    lv_obj_set_style_border_width(ui_CompageTextarea, 0, 0);             // 设置边框宽度
+    lv_textarea_set_one_line(ui_CompageTextarea, false);           // 将文本区域配置为一行
+    lv_textarea_set_max_length(ui_CompageTextarea, TEXT_FULL * 2); // 设置文本区域可输入的字符长度最大值
+    lv_obj_add_state(ui_CompageTextarea, LV_STATE_FOCUSED);        // 显示光标
+    lv_obj_set_style_radius(ui_CompageTextarea, 0, 0);             // 设置样式的圆角弧度
+    lv_obj_set_style_border_width(ui_CompageTextarea, 0, 0);       // 设置边框宽度
     lv_obj_set_style_bg_color(ui_CompageTextarea, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_CompageTextarea, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_size(ui_CompageTextarea, 200, 60); // 设置对象大小
@@ -239,6 +256,7 @@ void ui_ComputerPage_screen_init(void)
 
     lv_obj_add_event_cb(ui_CompageBtnM, ui_CompageBtnM_event_cb, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CompageBackBtn, ui_CompageBackBtn_event_cb, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Computerpage, ui_event_Computerpage_cb, LV_EVENT_ALL, NULL);
 }
 
 /////////////////// SCREEN deinit ////////////////////

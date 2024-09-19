@@ -5,19 +5,19 @@
 PageStack_t PageStack;
 
 /**
-* @brief  PageStack init function
-* @param  stack: pointer to stack
-*/
-static void page_stack_init(PageStack_t* stack)
+ * @brief  PageStack init function
+ * @param  stack: pointer to stack
+ */
+static void page_stack_init(PageStack_t *stack)
 {
 	stack->top = 0;
 }
 /**
-* @brief  PageStack push function
-* @param  stack: pointer to stack
-* @param  page: pointer to page
-*/
-static uint8_t page_stack_push(PageStack_t* stack, Page_t* page)
+ * @brief  PageStack push function
+ * @param  stack: pointer to stack
+ * @param  page: pointer to page
+ */
+static uint8_t page_stack_push(PageStack_t *stack, Page_t *page)
 {
 	if (stack->top >= MAX_DEPTH)
 		return Page_Error;
@@ -25,10 +25,10 @@ static uint8_t page_stack_push(PageStack_t* stack, Page_t* page)
 	return 0;
 }
 /**
-* @brief  PageStack pop function
-* @param  stack: pointer to stack
-*/
-uint8_t page_stack_pop(PageStack_t* stack)
+ * @brief  PageStack pop function
+ * @param  stack: pointer to stack
+ */
+uint8_t page_stack_pop(PageStack_t *stack)
 {
 	if (stack->top <= 0)
 		return Page_Error;
@@ -36,19 +36,19 @@ uint8_t page_stack_pop(PageStack_t* stack)
 	return 0;
 }
 /**
-* @brief  PageStack is empty function
-* @param  stack: pointer to stack
-*/
-static uint8_t page_stack_is_empty(const PageStack_t* stack)
+ * @brief  PageStack is empty function
+ * @param  stack: pointer to stack
+ */
+static uint8_t page_stack_is_empty(const PageStack_t *stack)
 {
 	return stack->top == 0;
 }
 
 /**
-* @brief  get the top page function
-* @param  stack: pointer to stack
-*/
-static Page_t* get_top_page(PageStack_t* stack)
+ * @brief  get the top page function
+ * @param  stack: pointer to stack
+ */
+static Page_t *get_top_page(PageStack_t *stack)
 {
 	/*Check the stack is empty or not*/
 	if (stack->top == 0)
@@ -61,12 +61,38 @@ static Page_t* get_top_page(PageStack_t* stack)
 }
 
 /**
-* @brief  PageStack get top page function
-*/
+ * @brief  get the second top page function
+ * @param  stack: pointer to stack
+ */
+static Page_t *get_second_top_page(PageStack_t *stack)
+{
+	/*Check the stack is empty or not*/
+	if (stack->top == 0)
+	{
+		return NULL; /*if stack is empty*/
+	}
 
-Page_t* Page_Get_NowPage(void)
+	/*return the pointer of the page*/
+	return stack->pages[stack->top - 2];
+}
+
+
+/**
+ * @brief  PageStack get top page function
+ */
+
+Page_t *Page_Get_NowPage(void)
 {
 	return get_top_page(&PageStack);
+}
+
+/**
+ * @brief  PageStack get second top page function
+ */
+
+Page_t *Page_Get_SecondPage(void)
+{
+	return get_second_top_page(&PageStack);
 }
 
 /**
@@ -91,11 +117,10 @@ void Page_Back(void)
 	}
 	else
 	{
-		Page_t* previous_page = PageStack.pages[PageStack.top - 1];
+		Page_t *previous_page = PageStack.pages[PageStack.top - 1];
 		previous_page->init();
 		lv_scr_load_anim(*previous_page->page_obj, LV_SCR_LOAD_ANIM_FADE_ON, 100, 0, true);
 	}
-
 }
 
 /**
@@ -104,7 +129,8 @@ void Page_Back(void)
  * @param NULL
  * @return NULL
  */
-void Page_Back_Bottom(void) {
+void Page_Back_Bottom(void)
+{
 
 	if (page_stack_is_empty(&PageStack))
 	{
@@ -115,12 +141,11 @@ void Page_Back_Bottom(void) {
 	{
 		page_stack_pop(&PageStack);
 	}
-	PageStack.pages[PageStack.top - 1]->init(); 
+	PageStack.pages[PageStack.top - 1]->init();
 	lv_scr_load_anim(*PageStack.pages[PageStack.top - 1]->page_obj, LV_SCR_LOAD_ANIM_FADE_ON, 100, 0, true);
 }
 
-
-void Page_Skip_To(Page_t* page)
+void Page_Skip_To(Page_t *page)
 {
 	/*Check the stack is empty or not*/
 	if (page_stack_is_empty(&PageStack))
@@ -134,33 +159,30 @@ void Page_Skip_To(Page_t* page)
 	Page_Load(page);
 }
 
-
 /**
  * Load a new page to stack top
  *
  * @param newPage Page_t a new page
  * @return NULL
  */
-void Page_Load(Page_t* newPage) {
-	// 检查堆栈是否已满
-	if (PageStack.top >= MAX_DEPTH - 1) {
-		// 错误处理：堆栈满
+void Page_Load(Page_t *newPage)
+{
+
+	if (PageStack.top >= MAX_DEPTH - 1)
+	{
+
 		return;
 	}
 
-	// 如果堆栈非空，反初始化当前页面
-	if (PageStack.top > 0) {
+	if (PageStack.top > 0)
+	{
 		PageStack.pages[PageStack.top - 1]->deinit();
 	}
 
-	// 将新页面推入堆栈
 	page_stack_push(&PageStack, newPage);
-	newPage->init(); // 初始化新页面
+	newPage->init();
 	lv_scr_load_anim(*newPage->page_obj, LV_SCR_LOAD_ANIM_FADE_ON, 100, 0, true);
 }
-
-
-
 
 /**
  * initialize the page manager & start home page
@@ -175,4 +197,3 @@ void Pages_init(void)
 	Page_Home.init();
 	lv_disp_load_scr(*Page_Home.page_obj);
 }
-

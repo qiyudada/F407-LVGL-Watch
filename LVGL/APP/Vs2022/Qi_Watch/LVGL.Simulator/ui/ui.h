@@ -118,7 +118,7 @@ extern lv_obj_t * ui_StoptimeGoMoreImg;
 extern lv_obj_t * ui_CalculatorPanel;
 extern lv_obj_t * ui_CalculatorImg;
 extern lv_obj_t * ui_CalculatorLabelMenu;
-extern lv_obj_t * ui_StoptimeGoMoreImg1;
+extern lv_obj_t * ui_CalculatorGoMoreImg;
 void ui_MenuPage_screen_deinit(void);
 
 

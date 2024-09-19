@@ -148,10 +148,12 @@ extern lv_obj_t * ui_StoptimePanel;
 extern lv_obj_t * ui_StoptimeImage;
 extern lv_obj_t * ui_StoptimeLabel;
 extern lv_obj_t * ui_StoptimeGoMoreImg;
+
+void ui_event_CalculatorGoMoreImg(lv_event_t *e);
 extern lv_obj_t * ui_CalculatorPanel;
 extern lv_obj_t * ui_CalculatorImg;
 extern lv_obj_t * ui_CalculatorLabelMenu;
-extern lv_obj_t * ui_StoptimeGoMoreImg1;
+extern lv_obj_t * ui_CalculatorGoMoreImg;
 
 
 

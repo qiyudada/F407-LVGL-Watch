@@ -97,7 +97,7 @@ lv_obj_t * ui_StoptimeGoMoreImg;
 lv_obj_t * ui_CalculatorPanel;
 lv_obj_t * ui_CalculatorImg;
 lv_obj_t * ui_CalculatorLabelMenu;
-lv_obj_t * ui_StoptimeGoMoreImg1;
+lv_obj_t * ui_CalculatorGoMoreImg;
 
 /*--------------------SCREEN: ui_MusicPage------------------------------*/
 void ui_MusicPage_screen_init(void);

@@ -27,6 +27,7 @@ extern PageStack_t PageStack;
 
 
 Page_t* Page_Get_NowPage(void);
+Page_t *Page_Get_SecondPage(void);
 void Page_Back(void);
 void Page_Back_Bottom(void);
 void Page_Load(Page_t* newPage);
