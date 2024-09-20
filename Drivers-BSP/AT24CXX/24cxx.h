@@ -28,7 +28,7 @@
 
 void AT24Cxx_Init(void); /* 初始化IIC */
 
-uint8_t AT24Cxx_Check(void); /* 检查器件 */
+uint8_t AT24Cxx_Touch_Check(void); /* 检查器件 */
 
 uint8_t AT24Cxx_Read_One_Byte(uint16_t addr); /* 指定地址读取一个字节 */
 
@@ -37,5 +37,7 @@ void AT24Cxx_Write_One_Byte(uint16_t addr, uint8_t data); /* 指定地址写入�
 void AT24Cxx_Write(uint16_t addr, uint8_t *pbuf, uint16_t datalen); /* 从指定地址开始写入指定长度的数据 */
 
 void AT24Cxx_Read(uint16_t addr, uint8_t *pbuf, uint16_t datalen); /* 从指定地址开始读出指定长度的数据 */
+
+uint8_t AT24Cxx_Epprom_Check(void);
 
 #endif

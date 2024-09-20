@@ -476,8 +476,6 @@ uint8_t tp_init(void)
 	tp_dev.touchtype = 0;				   /* 默认设置(电阻屏 & 竖屏) */
 	tp_dev.touchtype |= lcddev.dir & 0X01; /* 根据LCD判定是横屏还是竖屏 */
 
-	AT24Cxx_Init(); /* 初始化24CXX */
-
 	if (tp_get_adjust_data())
 	{
 		LCD_Clear(WHITE);

@@ -43,7 +43,7 @@ void HardwareInitTask(void *argument)
         /*-------bluetooth Init------- */
         MW_Interface.BLE.Init();
         MW_Interface.BLE.Control(0);
-        MW_Interface.BLE.ConnectionState = 0;//set not connection state 
+        MW_Interface.BLE.ConnectionState = 0; // set not connection state
         Delay_ms(1000);
         /*----------Mpu6050 Init---------- */
         num = 3;
@@ -52,6 +52,37 @@ void HardwareInitTask(void *argument)
             num--;
             MW_Interface.IMU.ConnectionError = MW_Interface.IMU.Init();
             Delay_ms(300);
+        }
+        /*----------AT24Cxx(EEPROM) Init---------- */
+        AT24Cxx_Init();
+        /*----------Data  read Init---------- */
+        if (!AT24Cxx_Epprom_Check())
+        {
+            uint8_t recbuf[3];
+            SettingGet(recbuf, 0x10, 2);
+            if ((recbuf[0] != 0 && recbuf[0] != 1) || (recbuf[1] != 0 && recbuf[1] != 1))
+            {
+                MW_Interface.IMU.wrist_is_enabled = 0;
+                MW_Interface.BLE.ConnectionState = 0;
+            }
+            else
+            {
+                MW_Interface.IMU.wrist_is_enabled = recbuf[0];
+                MW_Interface.BLE.ConnectionState = 0;
+            }
+
+            RTC_DateTypeDef nowdate;
+            HAL_RTC_GetDate(&hrtc, &nowdate, RTC_FORMAT_BIN);
+
+            SettingGet(recbuf, 0x20, 3);
+            if (recbuf[0] == nowdate.Date)
+            {
+                uint16_t steps = 0;
+                steps = recbuf[1] & 0x00ff;
+                steps = steps << 8 | recbuf[2];
+                if (!MW_Interface.IMU.ConnectionError)
+                    dmp_set_pedometer_step_count((unsigned long)steps);
+            }
         }
 
         /*---------------LCD Init---------- */

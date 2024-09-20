@@ -12,12 +12,12 @@
 extern osMessageQueueId_t Key_MessageQueue;
 extern osMessageQueueId_t Skip_MessageQueue;
 extern osMessageQueueId_t SensorUpdata_MessageQueue;
-
+extern osMessageQueueId_t DataSave_MessageQueue;
 /*Taskhandler*/
 extern osThreadId_t HardwareInit_TaskHandle;
 
 
-
+/*function declaration*/
 void User_Tasks_Init(void);
 
 void TaskTickHook(void);

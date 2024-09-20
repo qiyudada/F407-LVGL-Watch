@@ -1,8 +1,9 @@
 #include "24cxx.h"
 #include "Delay.h"
 #include "iic_hal.h"
+#include <string.h>
 
-#define AT24xx_CLK_ENABLE  __HAL_RCC_GPIOB_CLK_ENABLE()
+#define AT24xx_CLK_ENABLE __HAL_RCC_GPIOB_CLK_ENABLE()
 
 iic_bus_t AT24CXX_Bus = {
     .IIC_SCL_PIN = GPIO_PIN_8,
@@ -98,7 +99,7 @@ void AT24Cxx_Write_One_Byte(uint16_t addr, uint8_t data)
  *              0: 检测成功
  *              1: 检测失败
  */
-uint8_t AT24Cxx_Check(void)
+uint8_t AT24Cxx_Touch_Check(void)
 {
     uint8_t temp;
     temp = AT24Cxx_Read_One_Byte(EE_TYPE); /* 避免每次开机都写AT24CXX */
@@ -148,4 +149,28 @@ void AT24Cxx_Write(uint16_t addr, uint8_t *pbuf, uint16_t datalen)
         addr++;
         pbuf++;
     }
+}
+
+uint8_t AT24Cxx_Epprom_Check(void)
+{
+    uint8_t check_buff[2];
+    Delay_ms(10);
+    AT24Cxx_Read(0, check_buff, 2);
+    if ((check_buff[0] == 0x55) && (check_buff[1] == 0xAA))
+    {
+        return 0; // check OK
+    }
+    else
+    {
+        check_buff[0] = 0x55;
+        check_buff[1] = 0xAA;
+        Delay_ms(10);
+        AT24Cxx_Write(0, check_buff, 2);
+        memset(check_buff, 0, 2);
+        Delay_ms(10);
+        AT24Cxx_Read(0, check_buff, 2);
+        if (check_buff[0] == 0x55 && check_buff[1] == 0xAA)
+            return 0; // check ok
+    }
+    return 1; // check error
 }

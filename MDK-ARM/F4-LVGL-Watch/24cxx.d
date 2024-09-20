@@ -43,3 +43,4 @@ f4-lvgl-watch\24cxx.o: ../Core/Inc/main.h
 f4-lvgl-watch\24cxx.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\24cxx.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\24cxx.o: ../Drivers-SYSTEM/IIC/iic_hal.h
+f4-lvgl-watch\24cxx.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\string.h

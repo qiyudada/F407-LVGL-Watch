@@ -38,14 +38,16 @@ static void StrCMD_Get(uint8_t *str, char *cmd)
 }
 
 
-static uint8_t TimeFormat_Get(uint8_t * str)
+static void TimeFormat_Get(uint8_t * str)
 {
+	/*char type value transforms to int need to be minus '0'*/
 	TimeSetMessage.nowdate.Year = (str[8]-'0')*10+str[9]-'0';
 	TimeSetMessage.nowdate.Month = (str[10]-'0')*10+str[11]-'0';
 	TimeSetMessage.nowdate.Date = (str[12]-'0')*10+str[13]-'0';
 	TimeSetMessage.nowtime.Hours = (str[14]-'0')*10+str[15]-'0';
 	TimeSetMessage.nowtime.Minutes = (str[16]-'0')*10+str[17]-'0';
 	TimeSetMessage.nowtime.Seconds = (str[18]-'0')*10+str[19]-'0';
+	/*uint8_t no negative,so the judge of ( >=0 ) always true*/
 	if(TimeSetMessage.nowdate.Year>0 && TimeSetMessage.nowdate.Year<99
 		&& TimeSetMessage.nowdate.Month>0 && TimeSetMessage.nowdate.Month<=12
 		&& TimeSetMessage.nowdate.Date>0 && TimeSetMessage.nowdate.Date<=31

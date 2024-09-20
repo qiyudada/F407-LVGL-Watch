@@ -580,6 +580,11 @@
               <FileType>1</FileType>
               <FilePath>..\UserTask\Src\User_BLECommunication.c</FilePath>
             </File>
+            <File>
+              <FileName>user_DataSaveTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserTask\Src\user_DataSaveTask.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

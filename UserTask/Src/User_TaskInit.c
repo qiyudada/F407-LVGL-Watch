@@ -11,6 +11,7 @@
 #include "User_ScreenNew.h"
 #include "User_SensorUpdate.h"
 #include "User_BLECommunication.h"
+#include "user_DataSaveTask.h"
 #include "ui.h"
 /*------------------------------------------------*/
 
@@ -56,12 +57,20 @@ const osThreadAttr_t SensorDataTask_attributes = {
     .priority = (osPriority_t)osPriorityLow1,
 };
 
-// BLEmessagesendtask
+/*BLEmessagesendtask*/
 osThreadId_t MessageSendTaskHandle;
 const osThreadAttr_t MessageSendTask_attributes = {
     .name = "MessageSendTask",
     .stack_size = 128 * 5,
     .priority = (osPriority_t)osPriorityLow1,
+};
+
+/*DataSaveTask*/
+osThreadId_t DataSaveTaskHandle;
+const osThreadAttr_t DataSaveTask_attributes = {
+  .name = "DataSaveTask",
+  .stack_size = 128 * 5,
+  .priority = (osPriority_t) osPriorityLow2,
 };
 
 /*------------------------------------------------*/
@@ -72,6 +81,7 @@ const osThreadAttr_t MessageSendTask_attributes = {
 osMessageQueueId_t Key_MessageQueue;
 osMessageQueueId_t Skip_MessageQueue;
 osMessageQueueId_t SensorUpdata_MessageQueue;
+osMessageQueueId_t DataSave_MessageQueue;
 
 /* Timers --------------------------------------------------------------------*/
 osTimerId_t UpdateTimerHandle;
@@ -90,6 +100,7 @@ void User_Tasks_Init(void)
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
     Skip_MessageQueue = osMessageQueueNew(1, 1, NULL);
     SensorUpdata_MessageQueue = osMessageQueueNew(1, 1, NULL);
+    DataSave_MessageQueue = osMessageQueueNew(1, 1, NULL);
 
     /* add threads, ... */
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
@@ -98,6 +109,7 @@ void User_Tasks_Init(void)
     ScrRenewTaskHandle = osThreadNew(ScreenNewTask, NULL, &ScrRenewTask_attributes);
     SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
     MessageSendTaskHandle = osThreadNew(MessageSendTask, NULL, &MessageSendTask_attributes);
+    DataSaveTaskHandle = osThreadNew(DataSaveTask, NULL, &DataSaveTask_attributes);
 
     /* add  others ... */
     uint8_t SensorUpdataStr;

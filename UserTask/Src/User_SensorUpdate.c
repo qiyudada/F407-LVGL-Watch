@@ -39,7 +39,11 @@ void SensorDataUpdateTask(void *argument)
           MW_Interface.DTH11.humidity = humi;
           MW_Interface.DTH11.temperature = temp;
         }
-      } 
+      }
+
+      // send data save message queue
+      uint8_t Datastr = 3;
+      osMessageQueuePut(DataSave_MessageQueue, &Datastr, 0, 1);
     }
     osDelay(500);
   }
