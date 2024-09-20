@@ -48,69 +48,8 @@ void ui_event_MessageArcPage(lv_event_t *e)
         Page_Load(&Page_Music);
     }
 }
-void ui_event_StepArc(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Step(e);
-    }
-}
-void ui_event_TempatureArc(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Tempature(e);
-    }
-}
-void ui_event_HumidityArc(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Humidity(e);
-    }
-}
-void ui_event_HumidArcLabel(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Humidity_Arc(e);
-    }
-}
-void ui_event_TempArcLabel(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Tempature_Arc(e);
-    }
-}
-void ui_event_StepArcLabel(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Step_Arc(e);
-    }
-}
-void ui_event_LightBar(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED)
-    {
-        Update_Light_Intensity(e);
-    }
-}
+
+
 
 static void ui_timer_cb_MessageArcPage(lv_timer_t *timer)
 {

@@ -250,7 +250,7 @@ MW_InterfaceTypeDef MW_Interface = {
         .Init = MW_NFC_Init,
     },
     .IMU = {
-        .ConnectionError = 1,
+        .ConnectionError = 0,
         .Steps = 0,
         .wrist_is_enabled = 0,
         .wrist_state = WRIST_UP,

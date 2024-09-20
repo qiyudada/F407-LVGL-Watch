@@ -20,6 +20,15 @@ extern "C" {
 LV_FONT_DECLARE(ui_font_Cuyuan24);
 
 /*--------------------SCREEN: ui_HomePage------------------------------*/
+
+extern uint8_t ui_TimeHourValue;
+extern uint8_t ui_TimeMinuteValue;
+extern const char *ui_Days[7];
+extern uint8_t ui_DateMonthValue;
+extern uint8_t ui_DateDayValue;
+extern uint8_t ui_DataWeekdayValue;
+
+
 extern  uint8_t Img_Index;
 extern  Page_t Page_Home;
 

@@ -10,6 +10,7 @@
 #include "User_KeyTask.h"
 #include "User_ScreenNew.h"
 #include "User_SensorUpdate.h"
+#include "User_BLECommunication.h"
 #include "ui.h"
 /*------------------------------------------------*/
 
@@ -55,6 +56,14 @@ const osThreadAttr_t SensorDataTask_attributes = {
     .priority = (osPriority_t)osPriorityLow1,
 };
 
+// BLEmessagesendtask
+osThreadId_t MessageSendTaskHandle;
+const osThreadAttr_t MessageSendTask_attributes = {
+    .name = "MessageSendTask",
+    .stack_size = 128 * 5,
+    .priority = (osPriority_t)osPriorityLow1,
+};
+
 /*------------------------------------------------*/
 /**
  * @defgroup Queue
@@ -88,6 +97,7 @@ void User_Tasks_Init(void)
     KeyTaskHandle = osThreadNew(KeyTask, NULL, &KeyTask_attributes);
     ScrRenewTaskHandle = osThreadNew(ScreenNewTask, NULL, &ScrRenewTask_attributes);
     SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
+    MessageSendTaskHandle = osThreadNew(MessageSendTask, NULL, &MessageSendTask_attributes);
 
     /* add  others ... */
     uint8_t SensorUpdataStr;

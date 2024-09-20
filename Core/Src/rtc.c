@@ -56,8 +56,8 @@ void MX_RTC_Init(void)
   }
 
   /* USER CODE BEGIN Check_RTC_BKUP */
-  if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR0) != 0X5050)
-  {
+  // if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR0) != 0X5050)
+  // {
   /* USER CODE END Check_RTC_BKUP */
 
   /** Initialize RTC and set the Time and Date
@@ -88,8 +88,8 @@ void MX_RTC_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN RTC_Init 2 */
-    HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR0, 0X5050);
-  }
+  //   HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR0, 0X5050);
+  // }
   /* USER CODE END RTC_Init 2 */
 
 }

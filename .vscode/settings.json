@@ -40,6 +40,8 @@
         "ui_computerpage.h": "c",
         "user_pagemanagement.h": "c",
         "strcalculate.h": "c",
-        "lv_event.h": "c"
+        "lv_event.h": "c",
+        "user_blecommunication.h": "c",
+        "dma.h": "c"
     }
 }

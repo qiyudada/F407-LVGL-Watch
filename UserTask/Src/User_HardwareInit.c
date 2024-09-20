@@ -19,7 +19,7 @@ void HardwareInitTask(void *argument)
     while (1)
     {
         /*----------Delay Init---------- */
-        //Delay_init();
+        // Delay_init();
         /*----------LED Init---------- */
         led_init();
         /*----------Key Init---------- */
@@ -43,10 +43,8 @@ void HardwareInitTask(void *argument)
         /*-------bluetooth Init------- */
         MW_Interface.BLE.Init();
         MW_Interface.BLE.Control(1);
+        MW_Interface.BLE.ConnectionState = 0;//set not connection state 
         Delay_ms(1000);
-
-        /*------------RTC Init---------- */
-        
         /*----------Mpu6050 Init---------- */
         num = 3;
         while (num && MW_Interface.IMU.ConnectionError)

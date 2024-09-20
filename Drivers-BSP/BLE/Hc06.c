@@ -2,6 +2,7 @@
 #include <string.h>
 #include "usart.h"
 
+uint8_t HardInt_BLE_flag;
 uint8_t BlueTooth_Buffer[128];
 extern DMA_HandleTypeDef hdma_usart3_rx;
 
@@ -18,12 +19,12 @@ void BlueTooth_Init(void)
  */
 static void Blue_Buffer_Clear(void)
 {
-   memset(BlueTooth_Buffer, 0, sizeof(BlueTooth_Buffer));
+    memset(BlueTooth_Buffer, 0, sizeof(BlueTooth_Buffer));
 }
 /**
- * @brief Get bluetooth state pin 
+ * @brief Get bluetooth state pin
  * @details if connect successfully the pin will be High other wise Low
- * @return GPIO_PinState(0-low,1-High)
+ * @return GPIO_PinState(0-low,1-High(connect))
  */
 GPIO_PinState BlueTooth_Get_State(void)
 {
@@ -44,8 +45,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
     if (huart->Instance == USART3)
     {
-        uint8_t cnt = BLE_BUFFER_SIZE - __HAL_DMA_GET_COUNTER(&hdma_usart3_rx);
-        HAL_UART_Transmit(&BlueTooth_UART, BlueTooth_Buffer, cnt, HAL_MAX_DELAY);
-        Blue_Buffer_Clear();
+        HardInt_BLE_flag = 1;
+        HAL_UART_DMAStop(&BlueTooth_UART);//make the dma write pointer refresh to the start
     }
 }

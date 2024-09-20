@@ -575,6 +575,11 @@
               <FileType>1</FileType>
               <FilePath>..\UserTask\Src\User_ScreenNew.c</FilePath>
             </File>
+            <File>
+              <FileName>User_BLECommunication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserTask\Src\User_BLECommunication.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

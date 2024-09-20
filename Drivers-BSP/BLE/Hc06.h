@@ -13,6 +13,7 @@ extern "C" {
 #define BlueTooth_UART huart3
 #define BLE_BUFFER_SIZE 128
 extern uint8_t BlueTooth_Buffer[BLE_BUFFER_SIZE];
+extern uint8_t HardInt_BLE_flag;
 
 
 /*Function*/
