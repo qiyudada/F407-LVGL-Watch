@@ -42,7 +42,7 @@ void HardwareInitTask(void *argument)
         }
         /*-------bluetooth Init------- */
         MW_Interface.BLE.Init();
-        MW_Interface.BLE.Control(1);
+        MW_Interface.BLE.Control(0);
         MW_Interface.BLE.ConnectionState = 0;//set not connection state 
         Delay_ms(1000);
         /*----------Mpu6050 Init---------- */

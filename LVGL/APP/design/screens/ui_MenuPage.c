@@ -33,7 +33,6 @@ lv_obj_t *ui_CalculatorImg;
 lv_obj_t *ui_CalculatorLabelMenu;
 lv_obj_t *ui_CalculatorGoMoreImg;
 
-
 /*--------------------SCREEN: ui_MenuPage------------------------------*/
 
 void ui_event_BluetoothSwitch(lv_event_t *e)
@@ -92,6 +91,18 @@ void ui_event_CalendarGoMoreImg(lv_event_t *e)
         Page_Load(&Page_Calender);
     }
 }
+
+void ui_event_ui_MenuPage(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT)
+    {
+        lv_indev_wait_release(lv_indev_get_act());
+        Page_Back_Bottom();
+    }
+}
+
 
 void ui_MenuPage_screen_init(void)
 {
@@ -156,6 +167,16 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_style_bg_color(ui_BluetoothSwitch, lv_color_hex(0x391CE6), LV_PART_KNOB | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_BluetoothSwitch, 255, LV_PART_KNOB | LV_STATE_DEFAULT);
 
+    
+    if (!lv_obj_has_state(ui_BluetoothSwitch, LV_STATE_CHECKED) && MW_Interface.BLE.ConnectionState)
+    {
+        lv_obj_add_state(ui_BluetoothSwitch, LV_STATE_CHECKED);
+    }
+    else
+    {
+        lv_obj_clear_state(ui_BluetoothSwitch, LV_STATE_CHECKED);
+    }
+    
     ui_MenuBluetoothLabel = lv_label_create(ui_BluetoothPanel);
     lv_obj_set_width(ui_MenuBluetoothLabel, LV_SIZE_CONTENT);  /// 1
     lv_obj_set_height(ui_MenuBluetoothLabel, LV_SIZE_CONTENT); /// 1
@@ -393,7 +414,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_x(ui_CalculatorGoMoreImg, 70);
     lv_obj_set_y(ui_CalculatorGoMoreImg, -1);
     lv_obj_set_align(ui_CalculatorGoMoreImg, LV_ALIGN_CENTER);
-    
+
     lv_obj_add_flag(ui_CalculatorGoMoreImg, LV_OBJ_FLAG_CLICKABLE);
     lv_obj_clear_flag(ui_CalculatorGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
@@ -402,7 +423,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_event_cb(ui_CardGoMoreImg, ui_event_CardGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalculatorGoMoreImg, ui_event_CalculatorGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalendarGoMoreImg, ui_event_CalendarGoMoreImg, LV_EVENT_ALL, NULL);
-    
+    lv_obj_add_event_cb(ui_MenuPage, ui_event_ui_MenuPage, LV_EVENT_ALL, NULL);
 }
 
 void ui_MenuPage_screen_deinit(void)

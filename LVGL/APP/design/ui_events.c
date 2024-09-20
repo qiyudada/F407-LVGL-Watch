@@ -22,13 +22,11 @@ void NFC_Close(lv_event_t *e)
 
 void Bluetooth_Open(lv_event_t *e)
 {
-	MW_Interface.BLE.Control(0);
 	MW_Interface.BLE.ConnectionState = 1;
 }
 
 void Bluetoorh_Close(lv_event_t *e)
 {
-	MW_Interface.BLE.Control(1);
 	MW_Interface.BLE.ConnectionState = 0;
 }
 

@@ -239,6 +239,16 @@ void ui_Navigation_screen_init(void)
     lv_obj_set_align(ui_NFCPic, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_NFCPic, LV_OBJ_FLAG_CHECKABLE);    /// Flags
     lv_obj_clear_flag(ui_NFCPic, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+    
+    if (!lv_obj_has_state(ui_NFCPic, LV_STATE_CHECKED) && (!MW_Interface.NFC.ConnectionState))
+    {
+        lv_obj_add_state(ui_NFCPic, LV_STATE_CHECKED);
+    }
+    else
+    {
+        lv_obj_clear_state(ui_NFCPic, LV_STATE_CHECKED);
+    }
+
     lv_obj_set_style_radius(ui_NFCPic, 50, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui_NFCPic, lv_color_hex(0x2D2C2C), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_NFCPic, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -317,10 +327,16 @@ void ui_Navigation_screen_init(void)
     lv_obj_set_align(ui_BluetoothPic, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_BluetoothPic, LV_OBJ_FLAG_CHECKABLE);    /// Flags
     lv_obj_clear_flag(ui_BluetoothPic, LV_OBJ_FLAG_SCROLLABLE); /// Flags
-    if (MW_Interface.BLE.ConnectionState)
+
+    if (!lv_obj_has_state(ui_BluetoothPic, LV_STATE_CHECKED) && MW_Interface.BLE.ConnectionState)
     {
         lv_obj_add_state(ui_BluetoothPic, LV_STATE_CHECKED);
     }
+    else
+    {
+        lv_obj_clear_state(ui_BluetoothPic, LV_STATE_CHECKED);
+    }
+
     lv_obj_set_style_bg_color(ui_BluetoothPic, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_BluetoothPic, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_img_src(ui_BluetoothPic, &ui_img_1688708748, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -366,6 +382,7 @@ void ui_Navigation_screen_init(void)
     lv_obj_set_y(ui_Calendar, 290);
     lv_obj_set_align(ui_Calendar, LV_ALIGN_TOP_MID);
 
+    /*update time label*/
     sprintf(Navi_value_strbuf, "%d/%02d %s", (char)ui_DateMonthValue, (char)ui_DateDayValue, ui_Days[ui_DataWeekdayValue - 1]);
     lv_label_set_text(ui_Calendar, Navi_value_strbuf);
 

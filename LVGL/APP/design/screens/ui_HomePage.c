@@ -63,7 +63,9 @@ void ui_event_HomePage(lv_event_t *e)
 }
 
 static void HomePage_timer_cb(lv_timer_t *timer)
-{ 
+{
+    if (Page_Get_NowPage()->page_obj == &ui_HomePage)
+    {
         char value_strbuf[10];
         MW_DateTimeTypeDef DateTime;
         MW_Interface.RealTime.GetTimeDate(&DateTime);
@@ -83,6 +85,7 @@ static void HomePage_timer_cb(lv_timer_t *timer)
             sprintf(value_strbuf, "%s %02d", ui_Days[ui_DataWeekdayValue - 1], (char)ui_DateDayValue);
             lv_label_set_text(ui_DateLabel, value_strbuf);
         }
+    }
 }
 
 void ui_HomePage_screen_init(void)
