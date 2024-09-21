@@ -44,6 +44,10 @@
         "user_blecommunication.h": "c",
         "dma.h": "c",
         "user_datasavetask.h": "c",
-        "user_runmode.h": "c"
+        "user_runmode.h": "c",
+        "temt6000.h": "c",
+        "adc.h": "c",
+        "atomic": "c",
+        "cstdint": "c"
     }
 }

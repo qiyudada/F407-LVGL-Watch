@@ -49,8 +49,6 @@ void ui_event_MessageArcPage(lv_event_t *e)
     }
 }
 
-
-
 static void ui_timer_cb_MessageArcPage(lv_timer_t *timer)
 {
     if (Page_Get_NowPage()->page_obj == &ui_MessageArcPage)
@@ -58,6 +56,7 @@ static void ui_timer_cb_MessageArcPage(lv_timer_t *timer)
         char Value_buf[6];
         lv_arc_set_value(ui_TempatureArc, MW_Interface.DTH11.temperature);
         lv_arc_set_value(ui_HumidityArc, MW_Interface.DTH11.humidity);
+        lv_bar_set_value(ui_LightBar, MW_Interface.TEMT6000.Light_Intensity, LV_ANIM_OFF);
         sprintf(Value_buf, "%d", MW_Interface.DTH11.temperature);
         lv_label_set_text(ui_TempArcLabel, Value_buf);
         sprintf(Value_buf, "%d", MW_Interface.DTH11.humidity);
@@ -85,7 +84,9 @@ void ui_MessageArcPage_screen_init(void)
     // lv_obj_add_flag(ui_StepArc, LV_OBJ_FLAG_CHECKABLE);   /// Flags
     lv_obj_clear_flag(ui_StepArc, LV_OBJ_FLAG_CLICKABLE); /// Flags
     lv_arc_set_range(ui_StepArc, 0, 10000);
-    lv_arc_set_value(ui_StepArc, 3500);
+    
+    lv_arc_set_value(ui_StepArc, MW_Interface.IMU.Steps);
+    
     lv_obj_set_style_arc_color(ui_StepArc, lv_color_hex(0x6A6D73), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_arc_opa(ui_StepArc, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_arc_width(ui_StepArc, 20, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -109,7 +110,9 @@ void ui_MessageArcPage_screen_init(void)
     lv_obj_set_align(ui_TempatureArc, LV_ALIGN_CENTER);
     // lv_obj_add_flag(ui_TempatureArc, LV_OBJ_FLAG_CHECKABLE);   /// Flags
     lv_obj_clear_flag(ui_TempatureArc, LV_OBJ_FLAG_CLICKABLE); /// Flags
-    lv_arc_set_value(ui_TempatureArc, 29);
+    
+    lv_arc_set_value(ui_TempatureArc, MW_Interface.DTH11.temperature);
+    
     lv_obj_set_style_arc_color(ui_TempatureArc, lv_color_hex(0x6C6C70), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_arc_opa(ui_TempatureArc, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_arc_width(ui_TempatureArc, 20, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -133,7 +136,9 @@ void ui_MessageArcPage_screen_init(void)
     lv_obj_set_align(ui_HumidityArc, LV_ALIGN_CENTER);
     // lv_obj_add_flag(ui_HumidityArc, LV_OBJ_FLAG_CHECKABLE);   /// Flags
     lv_obj_clear_flag(ui_HumidityArc, LV_OBJ_FLAG_CLICKABLE); /// Flags
-    lv_arc_set_value(ui_HumidityArc, 55);
+    
+    lv_arc_set_value(ui_HumidityArc, MW_Interface.DTH11.humidity);
+    
     lv_obj_set_style_arc_color(ui_HumidityArc, lv_color_hex(0x6A6D73), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_arc_opa(ui_HumidityArc, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_arc_width(ui_HumidityArc, 20, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -222,8 +227,11 @@ void ui_MessageArcPage_screen_init(void)
     lv_obj_set_style_text_color(ui_StepArcLabel, lv_color_hex(0xFF0C00), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_StepArcLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+
     ui_LightBar = lv_bar_create(ui_MessageArcPage);
-    lv_bar_set_value(ui_LightBar, 20, LV_ANIM_OFF);
+    
+    lv_bar_set_value(ui_LightBar, MW_Interface.TEMT6000.Light_Intensity, LV_ANIM_OFF);
+    
     lv_bar_set_start_value(ui_LightBar, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_LightBar, 150);
     lv_obj_set_height(ui_LightBar, 10);

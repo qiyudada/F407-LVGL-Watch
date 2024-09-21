@@ -21,6 +21,7 @@ uint8_t ui_LightSliderValue = 50;
 
 void IdleTimerCallback(void *argument)
 {
+    uint8_t SensorUpdataStr = 3;
     IdleTimerCount += 1;
     if (IdleTimerCount == (ui_LTimeValue))
     {
@@ -35,6 +36,7 @@ void IdleTimerCallback(void *argument)
         // send the Stop message
         osMessageQueuePut(Stop_MessageQueue, &Stopstr, 0, 1);
     }
+    osMessageQueuePut(SensorUpdata_MessageQueue, &SensorUpdataStr, 0, 1);
 }
 
 /**

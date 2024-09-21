@@ -28,7 +28,7 @@ extern "C"
 #define Mpu6050_Manage_file 1
 #define Bluetooth_Manage_file 1
 #define DTH11_Manage_file 1
-
+#define TEMT_Manage_file 1
 #endif
 
 /*child file include */
@@ -76,6 +76,9 @@ extern "C"
 #include "Dth11.h"
 #endif
 
+#if (TEMT_Manage_file)
+#include "TEMT6000.h"
+#endif
     /*-----------------------------------------------------------------------------------------------------------*/
     /**
      * @enum error message
@@ -119,6 +122,16 @@ extern "C"
         uint8_t (*Init)(void);
         void (*GetHumiTemp)(int *humi, int *temp);
     } MW_DTH11_InterfaceTypeDef;
+
+    /**
+     * @brief  MW TEMT6000 Interface definition
+     */
+    typedef struct
+    {
+        uint8_t Light_Intensity;
+        uint8_t (*Init)(void);
+        uint8_t (*LightSensor_Read)(uint8_t *pData);
+    } MW_TEMT6000_InterfaceTypeDef;
 
     /**
      * @brief  MW BLE Interface definition
@@ -188,6 +201,7 @@ extern "C"
     {
         MW_IMU_InterfaceTypeDef IMU;
         MW_DTH11_InterfaceTypeDef DTH11;
+        MW_TEMT6000_InterfaceTypeDef TEMT6000;
         MW_BLE_InterfaceTypeDef BLE;
         MW_NFC_InterfaceTypeDef NFC;
         MW_RTC_InterfaceTypeDef RealTime;

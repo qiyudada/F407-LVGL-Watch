@@ -77,7 +77,15 @@ void SensorDataUpdateTask(void *argument)
           MW_Interface.DTH11.temperature = temp;
         }
       }
-
+      if(!MW_Interface.TEMT6000.Init())
+      {
+        uint8_t light_level;
+        if(!MW_Interface.TEMT6000.LightSensor_Read(&light_level))
+        {
+            MW_Interface.TEMT6000.Light_Intensity = light_level;
+        }
+      }
+      
       // send data save message queue
       uint8_t Datastr = 3;
       osMessageQueuePut(DataSave_MessageQueue, &Datastr, 0, 1);

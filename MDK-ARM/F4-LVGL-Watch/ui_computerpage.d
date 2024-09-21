@@ -158,6 +158,9 @@ f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -202,4 +205,5 @@ f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/DTH11/Dth11.h
+f4-lvgl-watch\ui_computerpage.o: ..\Drivers-BSP\TEMT6000\TEMT6000.h
 f4-lvgl-watch\ui_computerpage.o: ../LVGL/APP/design/StrCalculate.h

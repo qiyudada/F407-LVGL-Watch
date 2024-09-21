@@ -246,6 +246,12 @@ MW_InterfaceTypeDef MW_Interface = {
         .Init = MW_DTH11_Init,
         .GetHumiTemp = MW_DHT11_Read_Data,
     },
+    .TEMT6000 = {
+        .Light_Intensity = 30,
+        .Init = TEMT6000_ADC_Start,
+        .LightSensor_Read = LightSensor_Read,
+
+    },
     .BLE = {
         .ConnectionState = 1,
         .Init = MW_BlueTooth_Init,

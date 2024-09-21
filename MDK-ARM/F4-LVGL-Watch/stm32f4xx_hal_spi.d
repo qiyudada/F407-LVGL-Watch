@@ -22,6 +22,9 @@ f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 f4-lvgl-watch\stm32f4xx_hal_spi.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h

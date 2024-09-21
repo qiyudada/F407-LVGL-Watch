@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "adc.h"
 #include "dma.h"
 #include "rtc.h"
 #include "spi.h"
@@ -73,7 +74,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	uint16_t ADC_Value;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -102,18 +103,20 @@ int main(void)
   MX_SPI2_Init();
   MX_RTC_Init();
   MX_TIM3_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+
 
   /* USER CODE END 2 */
 
   /* Init scheduler */
-  osKernelInitialize();
+ osKernelInitialize();
 
-  /* Call init function for freertos objects (in cmsis_os2.c) */
-  MX_FREERTOS_Init();
+ /* Call init function for freertos objects (in cmsis_os2.c) */
+ MX_FREERTOS_Init();
 
-  /* Start scheduler */
-  osKernelStart();
+ /* Start scheduler */
+ osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
 
@@ -124,7 +127,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-   
   }
 
   /* USER CODE END 3 */
