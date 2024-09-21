@@ -199,6 +199,7 @@ f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/DTH11/Dth11.h
+f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/user_DataSaveTask.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_disp.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_indev.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui.h

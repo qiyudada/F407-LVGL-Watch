@@ -8,6 +8,7 @@
  */
 #include "User_TaskInit.h"
 #include "User_DataManagement.h"
+#include "user_DataSaveTask.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
 #include "ui.h"

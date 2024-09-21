@@ -5,6 +5,12 @@
 extern "C" {
 #endif
 
+#include "sys.h"
+
+
+uint8_t SettingGet(uint8_t *buf, uint8_t addr, uint8_t lenth);
+
+uint8_t SettingSave(uint8_t *buf, uint8_t addr, uint8_t lenth);
 
 void DataSaveTask(void *argument);
 

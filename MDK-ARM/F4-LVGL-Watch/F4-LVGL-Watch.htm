@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F4-LVGL-Watch\F4-LVGL-Watch.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F4-LVGL-Watch\F4-LVGL-Watch.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Fri Sep 20 20:24:48 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Sep 21 10:06:49 2024
 <BR><P>
 <H3>Maximum Stack Usage =        976 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12254,9 +12254,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[66c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 <LI><a href="#[661]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadNew
-<LI><a href="#[6b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreateTimerTask
+<BR>[Called By]<UL><LI><a href="#[6b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTimerCreateTimerTask
 <LI><a href="#[64d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadNew
 </UL>
 
 <P><STRONG><a name="[245]"></a>xTaskGetSchedulerState</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, tasks.o(i.xTaskGetSchedulerState))
@@ -12273,8 +12273,8 @@ Global Symbols
 <P><STRONG><a name="[6ba]"></a>xTaskIncrementTick</STRONG> (Thumb, 206 bytes, Stack size 24 bytes, tasks.o(i.xTaskIncrementTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationTickHook
-<LI><a href="#[6b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<BR>[Calls]<UL><LI><a href="#[6b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[6ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationTickHook
 <LI><a href="#[65f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[65e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
@@ -12721,8 +12721,8 @@ Local Symbols
 <P><STRONG><a name="[115]"></a>prvIdleTask</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, tasks.o(i.prvIdleTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvIdleTask &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[669]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationIdleHook
-<LI><a href="#[668]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<BR>[Calls]<UL><LI><a href="#[668]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<LI><a href="#[669]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationIdleHook
 <LI><a href="#[65e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 <LI><a href="#[403]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[402]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical

@@ -1,9 +1,6 @@
 f4-lvgl-watch\user_datasavetask.o: ..\UserTask\Src\user_DataSaveTask.c
 f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/user_DataSaveTask.h
-f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/User_TaskInit.h
-f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\user_datasavetask.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
-f4-lvgl-watch\user_datasavetask.o: ../Core/Inc/main.h
+f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_datasavetask.o: ../Core/Inc/stm32f4xx_hal_conf.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
@@ -40,7 +37,13 @@ f4-lvgl-watch\user_datasavetask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx
 f4-lvgl-watch\user_datasavetask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/Delay/Delay.h
+f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\user_datasavetask.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/Log/log.h
+f4-lvgl-watch\user_datasavetask.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
+f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/User_TaskInit.h
+f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\user_datasavetask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f4-lvgl-watch\user_datasavetask.o: ../Core/Inc/FreeRTOSConfig.h
 f4-lvgl-watch\user_datasavetask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -182,9 +185,6 @@ f4-lvgl-watch\user_datasavetask.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\user_datasavetask.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\user_datasavetask.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h
-f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/Delay/Delay.h
-f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/SYS/sys.h
-f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers-BSP/LCD/GUI.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers-BSP/AT24CXX/24cxx.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers-BSP/TOUCH/touch.h

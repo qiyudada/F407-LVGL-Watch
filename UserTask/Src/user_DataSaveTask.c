@@ -26,10 +26,6 @@ uint8_t SettingSave(uint8_t *buf, uint8_t addr, uint8_t lenth)
 {
 	if (!AT24Cxx_Epprom_Check())
 	{
-		// for(int i=10000;i>0;i--)
-		// {
-
-		// }
 		Delay_ms(10);
 		AT24Cxx_Write(addr, buf, lenth);
 		return 0;
