@@ -51,6 +51,7 @@ f4-lvgl-watch\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/c
 f4-lvgl-watch\main.o: ../Core/Inc/dma.h
 f4-lvgl-watch\main.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\main.o: ../Core/Inc/spi.h
+f4-lvgl-watch\main.o: ../Core/Inc/tim.h
 f4-lvgl-watch\main.o: ../Core/Inc/usart.h
 f4-lvgl-watch\main.o: ../Core/Inc/gpio.h
 f4-lvgl-watch\main.o: ../Core/Inc/fsmc.h

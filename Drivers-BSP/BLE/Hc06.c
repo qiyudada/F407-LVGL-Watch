@@ -17,7 +17,7 @@ void BlueTooth_Init(void)
 /**
  * @brief BlueTooth Buffer Clear
  */
-static void Blue_Buffer_Clear(void)
+void Blue_Buffer_Clear(void)
 {
     memset(BlueTooth_Buffer, 0, sizeof(BlueTooth_Buffer));
 }

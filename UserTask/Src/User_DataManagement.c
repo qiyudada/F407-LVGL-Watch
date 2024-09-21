@@ -104,6 +104,13 @@ void MW_BlueTooth_Control(short mode)
 #endif
 }
 
+void MW_BlueTooth_Buffer_Clear(void)
+{
+#if Bluetooth_Manage_file
+    Blue_Buffer_Clear();
+#endif
+}
+
 /**
  * @brief  Bluetooth get state
  */
@@ -243,7 +250,7 @@ MW_InterfaceTypeDef MW_Interface = {
         .ConnectionState = 1,
         .Init = MW_BlueTooth_Init,
         .Control = MW_BlueTooth_Control,
-        .GetState = MW_BlueTooth_Get_State,
+        .BufferClean = MW_BlueTooth_Buffer_Clear,
     },
     .NFC = {
         .ConnectionState = 1,

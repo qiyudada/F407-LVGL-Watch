@@ -12,7 +12,7 @@ extern "C"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "cmsis_os2.h"
-
+#include "sys.h"
 /*Gross management*/
 #define User_Manage_file 1
 
@@ -128,6 +128,7 @@ extern "C"
         uint8_t ConnectionState;
         void (*Init)(void);
         void (*Control)(short mode);
+        void (*BufferClean)(void);
         GPIO_PinState (*GetState)(void);
     } MW_BLE_InterfaceTypeDef;
 

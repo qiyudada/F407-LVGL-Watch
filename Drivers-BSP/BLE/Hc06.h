@@ -21,6 +21,8 @@ void BlueTooth_Init(void);
 
 void BlueTooth_Control(short mode);
 
+void Blue_Buffer_Clear(void);
+
 GPIO_PinState BlueTooth_Get_State(void);
 
 

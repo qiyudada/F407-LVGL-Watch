@@ -51,6 +51,9 @@ f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_
 f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_DataManagement.h
 f4-lvgl-watch\freertos.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
+f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Delay/Delay.h
+f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\freertos.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\freertos.o: ../LVGL/lvgl.h
 f4-lvgl-watch\freertos.o: ../LVGL/src/misc/lv_log.h
@@ -182,9 +185,6 @@ f4-lvgl-watch\freertos.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\freertos.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\freertos.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\freertos.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h
-f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Delay/Delay.h
-f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h
-f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\freertos.o: ../Drivers-BSP/LCD/GUI.h
 f4-lvgl-watch\freertos.o: ../Drivers-BSP/AT24CXX/24cxx.h
 f4-lvgl-watch\freertos.o: ../Drivers-BSP/TOUCH/touch.h

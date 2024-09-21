@@ -22,7 +22,7 @@ void HardwareInitTask(void *argument)
         /*----------Delay Init---------- */
         // Delay_init();
         /*----------LED Init---------- */
-        led_init();
+        Led_Init();
         /*----------Key Init---------- */
         key_init();
         /*----------DTH11 Init---------- */

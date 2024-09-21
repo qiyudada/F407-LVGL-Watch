@@ -182,12 +182,12 @@ f4-lvgl-watch\ui_messagearcpage.o: ../Middlewares/Third_Party/FreeRTOS/Source/in
 f4-lvgl-watch\ui_messagearcpage.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-SYSTEM/Delay/Delay.h
+f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\ui_messagearcpage.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h
-f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-SYSTEM/Delay/Delay.h
-f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-SYSTEM/SYS/sys.h
-f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-BSP/LCD/GUI.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-BSP/AT24CXX/24cxx.h
 f4-lvgl-watch\ui_messagearcpage.o: ../Drivers-BSP/TOUCH/touch.h

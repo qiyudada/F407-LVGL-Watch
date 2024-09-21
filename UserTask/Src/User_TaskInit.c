@@ -74,6 +74,21 @@ const osThreadAttr_t DataSaveTask_attributes = {
   .priority = (osPriority_t) osPriorityLow2,
 };
 
+/*Idle Enter Task*/
+osThreadId_t IdleEnterTaskHandle;
+const osThreadAttr_t IdleEnterTask_attributes = {
+  .name = "IdleEnterTask",
+  .stack_size = 128 * 1,
+  .priority = (osPriority_t) osPriorityHigh,
+};
+
+/*Stop Enter Task*/
+osThreadId_t StopEnterTaskHandle;
+const osThreadAttr_t StopEnterTask_attributes = {
+  .name = "StopEnterTask",
+  .stack_size = 128 * 16,
+  .priority = (osPriority_t) osPriorityHigh1,
+};
 /*------------------------------------------------*/
 /**
  * @defgroup Queue

@@ -7,6 +7,7 @@
 "f4-lvgl-watch\fsmc.o"
 "f4-lvgl-watch\rtc.o"
 "f4-lvgl-watch\spi.o"
+"f4-lvgl-watch\tim.o"
 "f4-lvgl-watch\usart.o"
 "f4-lvgl-watch\stm32f4xx_it.o"
 "f4-lvgl-watch\stm32f4xx_hal_msp.o"

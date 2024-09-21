@@ -50,6 +50,9 @@ f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrap
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/Delay/Delay.h
+f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\rtc.o: ../LVGL/lvgl.h
 f4-lvgl-watch\rtc.o: ../LVGL/src/misc/lv_log.h
 f4-lvgl-watch\rtc.o: ../LVGL/src/misc/../lv_conf_internal.h
@@ -180,9 +183,6 @@ f4-lvgl-watch\rtc.o: ../LVGL/src/extra/widgets/imgbtn/lv_imgbtn.h
 f4-lvgl-watch\rtc.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\rtc.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h
-f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/Delay/Delay.h
-f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/SYS/sys.h
-f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/LCD/GUI.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/AT24CXX/24cxx.h
 f4-lvgl-watch\rtc.o: ../Drivers-BSP/TOUCH/touch.h

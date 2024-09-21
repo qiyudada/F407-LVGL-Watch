@@ -6,7 +6,7 @@
  * @param       无
  * @retval      无
  */
-void led_init(void)
+void Led_Init(void)
 {
     GPIO_InitTypeDef gpio_init_struct;
     

@@ -48,12 +48,12 @@ static void TimeFormat_Get(uint8_t * str)
 	TimeSetMessage.nowtime.Minutes = (str[16]-'0')*10+str[17]-'0';
 	TimeSetMessage.nowtime.Seconds = (str[18]-'0')*10+str[19]-'0';
 	/*uint8_t no negative,so the judge of ( >=0 ) always true*/
-	if(TimeSetMessage.nowdate.Year>0 && TimeSetMessage.nowdate.Year<99
-		&& TimeSetMessage.nowdate.Month>0 && TimeSetMessage.nowdate.Month<=12
-		&& TimeSetMessage.nowdate.Date>0 && TimeSetMessage.nowdate.Date<=31
-		&& TimeSetMessage.nowtime.Hours>=0 && TimeSetMessage.nowtime.Hours<=23
-		&& TimeSetMessage.nowtime.Minutes>=0 && TimeSetMessage.nowtime.Minutes<=59
-		&& TimeSetMessage.nowtime.Seconds>=0 && TimeSetMessage.nowtime.Seconds<=59)
+	if(/*TimeSetMessage.nowdate.Year>0 && */TimeSetMessage.nowdate.Year<99
+		/*&& TimeSetMessage.nowdate.Month>0*/ && TimeSetMessage.nowdate.Month<=12
+		/*&& TimeSetMessage.nowdate.Date>0*/ && TimeSetMessage.nowdate.Date<=31
+		/*&& TimeSetMessage.nowtime.Hours>=0*/ && TimeSetMessage.nowtime.Hours<=23
+		/*&& TimeSetMessage.nowtime.Minutes>=0*/ && TimeSetMessage.nowtime.Minutes<=59
+		/*&& TimeSetMessage.nowtime.Seconds>=0*/ && TimeSetMessage.nowtime.Seconds<=59)
 	{
 		RTC_SetDate(TimeSetMessage.nowdate.Year, TimeSetMessage.nowdate.Month,TimeSetMessage.nowdate.Date);
 		RTC_SetTime(TimeSetMessage.nowtime.Hours,TimeSetMessage.nowtime.Minutes,TimeSetMessage.nowtime.Seconds);
@@ -102,7 +102,7 @@ void MessageSendTask(void *argument)
 					TimeFormat_Get(BlueTooth_Buffer);
 				}
 			}
-			memset(BlueTooth_Buffer,0,sizeof(BlueTooth_Buffer));
+			MW_Interface.BLE.BufferClean();
 		}
 		osDelay(1000);
 	}

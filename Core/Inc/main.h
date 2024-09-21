@@ -57,10 +57,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED1_Pin GPIO_PIN_3
-#define LED1_GPIO_Port GPIOE
-#define LED2_Pin GPIO_PIN_4
-#define LED2_GPIO_Port GPIOE
 #define LCD_BL_Pin GPIO_PIN_10
 #define LCD_BL_GPIO_Port GPIOF
 #define RC522_RST_Pin GPIO_PIN_0
@@ -96,6 +92,8 @@ void Error_Handler(void);
 #define MPU6050_INT_EXTI_IRQn EXTI9_5_IRQn
 #define RC522_SDA_Pin GPIO_PIN_6
 #define RC522_SDA_GPIO_Port GPIOC
+#define LED_Pin GPIO_PIN_7
+#define LED_GPIO_Port GPIOC
 #define Serial_TX_Pin GPIO_PIN_9
 #define Serial_TX_GPIO_Port GPIOA
 #define Serial_RX_Pin GPIO_PIN_10
