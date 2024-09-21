@@ -32,6 +32,7 @@ f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
+f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h
 f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 f4-lvgl-watch\user_runmode.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h
@@ -201,6 +202,6 @@ f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/DTH11/Dth11.h
-f4-lvgl-watch\user_runmode.o: ..\Drivers-BSP\TEMT6000\TEMT6000.h
+f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/TEMT6000/TEMT6000.h
 f4-lvgl-watch\user_runmode.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_runmode.o: ../Core/Inc/usart.h

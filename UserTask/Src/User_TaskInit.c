@@ -13,6 +13,7 @@
 #include "User_BLECommunication.h"
 #include "user_DataSaveTask.h"
 #include "User_RunMode.h"
+#include "User_WatchDog.h"
 #include "ui.h"
 /*------------------------------------------------*/
 
@@ -97,6 +98,14 @@ const osThreadAttr_t MPUCheckTask_attributes = {
     .stack_size = 128 * 3,
     .priority = (osPriority_t)osPriorityLow2,
 };
+
+/*WDOG Feed task*/
+osThreadId_t WDOGFeedTaskHandle;
+const osThreadAttr_t WDOGFeedTask_attributes = {
+    .name = "WDOGFeedTask",
+    .stack_size = 128 * 1,
+    .priority = (osPriority_t)osPriorityHigh2,
+};
 /*------------------------------------------------*/
 /**
  * @defgroup Queue
@@ -141,6 +150,7 @@ void User_Tasks_Init(void)
     KeyTaskHandle = osThreadNew(KeyTask, NULL, &KeyTask_attributes);                             // 24
     IdleEnterTaskHandle = osThreadNew(IdleEnterTask, NULL, &IdleEnterTask_attributes);           // 40
     StopEnterTaskHandle = osThreadNew(StopEnterTask, NULL, &StopEnterTask_attributes);           // 41
+    WDOGFeedTaskHandle = osThreadNew(WDOGFeedTask, NULL, &WDOGFeedTask_attributes);              // 42
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes); // 43
 
     /* add  others ... */

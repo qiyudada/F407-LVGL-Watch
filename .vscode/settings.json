@@ -48,6 +48,7 @@
         "temt6000.h": "c",
         "adc.h": "c",
         "atomic": "c",
-        "cstdint": "c"
+        "cstdint": "c",
+        "user_watchdog.h": "c"
     }
 }
