@@ -35,9 +35,8 @@ void KeyTask(void *argument)
 				keystr = 2;
 				osMessageQueuePut(Key_MessageQueue, &keystr, 0, 1);
 				osMessageQueuePut(IdleBreak_MessageQueue, &IdleBreakstr, 0, 1);
-
-				break;
 			}
+			break;
 		}
 		osDelay(1);
 	}
