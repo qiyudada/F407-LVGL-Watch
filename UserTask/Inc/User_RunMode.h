@@ -4,6 +4,8 @@
 /**
  * @extern def
  */
+#include "sys.h"
+ 
 extern uint16_t IdleTimerCount;
 
 

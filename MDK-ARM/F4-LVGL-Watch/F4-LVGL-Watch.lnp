@@ -18,6 +18,7 @@
 "f4-lvgl-watch\user_screennew.o"
 "f4-lvgl-watch\user_blecommunication.o"
 "f4-lvgl-watch\user_datasavetask.o"
+"f4-lvgl-watch\user_runmode.o"
 "f4-lvgl-watch\user_datamanagement.o"
 "f4-lvgl-watch\user_pagemanagement.o"
 "f4-lvgl-watch\strcalculate.o"

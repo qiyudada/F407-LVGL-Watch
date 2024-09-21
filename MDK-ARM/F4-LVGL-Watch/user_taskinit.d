@@ -204,6 +204,7 @@ f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_ScreenNew.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_SensorUpdate.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_BLECommunication.h
 f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/user_DataSaveTask.h
+f4-lvgl-watch\user_taskinit.o: ../UserTask/Inc/User_RunMode.h
 f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_taskinit.o: ../LVGL/APP/design/ui_helpers.h

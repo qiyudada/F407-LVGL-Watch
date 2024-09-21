@@ -14,6 +14,7 @@
 uint16_t IdleTimerCount = 0;
 uint8_t ui_LTimeValue = 50;
 uint8_t ui_TTimeValue = 60;
+uint8_t ui_LightSliderValue = 50;
 
 void IdleTimerCallback(void *argument)
 {
@@ -32,7 +33,7 @@ void IdleTimerCallback(void *argument)
         // send the Stop message
         osMessageQueuePut(Stop_MessageQueue, &Stopstr, 0, 1);
     }
-    
+
     osMessageQueuePut(SensorUpdata_MessageQueue, &UpdateTimerCount, 0, 1);
 }
 
@@ -50,13 +51,13 @@ void IdleEnterTask(void *argument)
         // light get dark
         if (osMessageQueueGet(Idle_MessageQueue, &Idlestr, NULL, 1) == osOK)
         {
-            
+			//LCD_Set_Light(5);
         }
         // resume light if light got dark and idle state breaked by key pressing or screen touching
         if (osMessageQueueGet(IdleBreak_MessageQueue, &IdleBreakstr, NULL, 1) == osOK)
         {
             IdleTimerCount = 0;
-            LCD_Set_Light(ui_LightSliderValue);
+            //LCD_Set_Light(ui_LightSliderValue);
         }
         osDelay(10);
     }

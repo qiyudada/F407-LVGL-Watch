@@ -12,6 +12,7 @@
 #include "User_SensorUpdate.h"
 #include "User_BLECommunication.h"
 #include "user_DataSaveTask.h"
+#include "User_RunMode.h"
 #include "ui.h"
 /*------------------------------------------------*/
 
@@ -82,6 +83,9 @@ osMessageQueueId_t Key_MessageQueue;
 osMessageQueueId_t Skip_MessageQueue;
 osMessageQueueId_t SensorUpdata_MessageQueue;
 osMessageQueueId_t DataSave_MessageQueue;
+osMessageQueueId_t IdleBreak_MessageQueue;
+osMessageQueueId_t Stop_MessageQueue;
+osMessageQueueId_t Idle_MessageQueue;
 
 /* Timers --------------------------------------------------------------------*/
 osTimerId_t UpdateTimerHandle;
@@ -93,14 +97,18 @@ void User_Tasks_Init(void)
 {
 
     /* start timers, add new ones, ... */
-    UpdateTimerHandle = osTimerNew(UpdateTimerCallback, osTimerPeriodic, NULL, NULL);
-    osTimerStart(UpdateTimerHandle, 1000);
+    UpdateTimerHandle = osTimerNew(IdleTimerCallback, osTimerPeriodic, NULL, NULL);
+    osTimerStart(UpdateTimerHandle, 500);
 
     /* add queues, ... */
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
     Skip_MessageQueue = osMessageQueueNew(1, 1, NULL);
     SensorUpdata_MessageQueue = osMessageQueueNew(1, 1, NULL);
     DataSave_MessageQueue = osMessageQueueNew(1, 1, NULL);
+    IdleBreak_MessageQueue = osMessageQueueNew(1, 1, NULL);
+    Stop_MessageQueue = osMessageQueueNew(1, 1, NULL);
+    Idle_MessageQueue = osMessageQueueNew(1, 1, NULL);
+    
 
     /* add threads, ... */
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
@@ -139,9 +147,3 @@ void LvHandlerTask(void *argument)
     }
 }
 
-void UpdateTimerCallback(void *argument)
-{
-    uint8_t UpdateTimerCount = 0;
-    // send the Stop message
-    osMessageQueuePut(SensorUpdata_MessageQueue, &UpdateTimerCount, 0, 1);
-}
