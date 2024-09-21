@@ -179,16 +179,16 @@ Section Cross References
     user_taskinit.o(i.User_Tasks_Init) refers to user_runmode.o(i.IdleTimerCallback) for IdleTimerCallback
     user_taskinit.o(i.User_Tasks_Init) refers to user_taskinit.o(.data) for .data
     user_taskinit.o(i.User_Tasks_Init) refers to user_taskinit.o(.constdata) for .constdata
-    user_taskinit.o(i.User_Tasks_Init) refers to user_hardwareinit.o(i.HardwareInitTask) for HardwareInitTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_taskinit.o(i.LvHandlerTask) for LvHandlerTask
-    user_taskinit.o(i.User_Tasks_Init) refers to user_keytask.o(i.KeyTask) for KeyTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_screennew.o(i.ScreenNewTask) for ScreenNewTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_sensorupdate.o(i.SensorDataUpdateTask) for SensorDataUpdateTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_blecommunication.o(i.MessageSendTask) for MessageSendTask
+    user_taskinit.o(i.User_Tasks_Init) refers to user_sensorupdate.o(i.MPUCheckTask) for MPUCheckTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_datasavetask.o(i.DataSaveTask) for DataSaveTask
+    user_taskinit.o(i.User_Tasks_Init) refers to user_keytask.o(i.KeyTask) for KeyTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_runmode.o(i.IdleEnterTask) for IdleEnterTask
     user_taskinit.o(i.User_Tasks_Init) refers to user_runmode.o(i.StopEnterTask) for StopEnterTask
-    user_taskinit.o(i.User_Tasks_Init) refers to user_sensorupdate.o(i.MPUCheckTask) for MPUCheckTask
+    user_taskinit.o(i.User_Tasks_Init) refers to user_hardwareinit.o(i.HardwareInitTask) for HardwareInitTask
     user_taskinit.o(.constdata) refers to user_taskinit.o(.conststring) for .conststring
     user_hardwareinit.o(i.HardwareInitTask) refers to led.o(i.Led_Init) for Led_Init
     user_hardwareinit.o(i.HardwareInitTask) refers to key.o(i.key_init) for key_init

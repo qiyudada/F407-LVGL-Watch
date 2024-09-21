@@ -90,6 +90,7 @@ void DataSaveTask(void *argument)
 				SettingSave(dat, 0x20, 3);
 			}
 		}
+		
 		osDelay(100);
 	}
 }

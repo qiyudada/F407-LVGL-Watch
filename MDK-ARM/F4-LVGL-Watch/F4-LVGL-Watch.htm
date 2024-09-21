@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F4-LVGL-Watch\F4-LVGL-Watch.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F4-LVGL-Watch\F4-LVGL-Watch.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Sep 21 14:25:12 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Sep 21 14:51:30 2024
 <BR><P>
 <H3>Maximum Stack Usage =        976 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -70,7 +70,7 @@ Function Pointers
  <LI><a href="#[77]">DMA2_Stream5_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[78]">DMA2_Stream6_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[79]">DMA2_Stream7_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
- <LI><a href="#[94]">DataSaveTask</a> from user_datasavetask.o(i.DataSaveTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[93]">DataSaveTask</a> from user_datasavetask.o(i.DataSaveTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[30]">DebugMon_Handler</a> from stm32f4xx_it.o(i.DebugMon_Handler) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[70]">ETH_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[71]">ETH_WKUP_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
@@ -86,7 +86,7 @@ Function Pointers
  <LI><a href="#[83]">FPU_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[82]">HASH_RNG_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[2b]">HardFault_Handler</a> from stm32f4xx_it.o(i.HardFault_Handler) referenced from startup_stm32f407xx.o(RESET)
- <LI><a href="#[8e]">HardwareInitTask</a> from user_hardwareinit.o(i.HardwareInitTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[97]">HardwareInitTask</a> from user_hardwareinit.o(i.HardwareInitTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[105]">HomePage_timer_cb</a> from ui_homepage.o(i.HomePage_timer_cb) referenced from ui_homepage.o(i.ui_HomePage_screen_init)
  <LI><a href="#[53]">I2C1_ER_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[52]">I2C1_EV_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
@@ -96,9 +96,9 @@ Function Pointers
  <LI><a href="#[7b]">I2C3_EV_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[95]">IdleEnterTask</a> from user_runmode.o(i.IdleEnterTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[8d]">IdleTimerCallback</a> from user_runmode.o(i.IdleTimerCallback) referenced from user_taskinit.o(i.User_Tasks_Init)
- <LI><a href="#[90]">KeyTask</a> from user_keytask.o(i.KeyTask) referenced from user_taskinit.o(i.User_Tasks_Init)
- <LI><a href="#[8f]">LvHandlerTask</a> from user_taskinit.o(i.LvHandlerTask) referenced from user_taskinit.o(i.User_Tasks_Init)
- <LI><a href="#[97]">MPUCheckTask</a> from user_sensorupdate.o(i.MPUCheckTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[94]">KeyTask</a> from user_keytask.o(i.KeyTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[8e]">LvHandlerTask</a> from user_taskinit.o(i.LvHandlerTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[92]">MPUCheckTask</a> from user_sensorupdate.o(i.MPUCheckTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[a]">MW_BlueTooth_Buffer_Clear</a> from user_datamanagement.o(i.MW_BlueTooth_Buffer_Clear) referenced 2 times from user_datamanagement.o(.data)
  <LI><a href="#[9]">MW_BlueTooth_Control</a> from user_datamanagement.o(i.MW_BlueTooth_Control) referenced 2 times from user_datamanagement.o(.data)
  <LI><a href="#[8]">MW_BlueTooth_Init</a> from user_datamanagement.o(i.MW_BlueTooth_Init) referenced 2 times from user_datamanagement.o(.data)
@@ -115,7 +115,7 @@ Function Pointers
  <LI><a href="#[e]">MW_RTC_Set_Time</a> from user_datamanagement.o(i.MW_RTC_Set_Time) referenced 2 times from user_datamanagement.o(.data)
  <LI><a href="#[f]">MW_weekday_calculate</a> from user_datamanagement.o(i.MW_weekday_calculate) referenced 2 times from user_datamanagement.o(.data)
  <LI><a href="#[2c]">MemManage_Handler</a> from stm32f4xx_it.o(i.MemManage_Handler) referenced from startup_stm32f407xx.o(RESET)
- <LI><a href="#[93]">MessageSendTask</a> from user_blecommunication.o(i.MessageSendTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[91]">MessageSendTask</a> from user_blecommunication.o(i.MessageSendTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[2a]">NMI_Handler</a> from stm32f4xx_it.o(i.NMI_Handler) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[76]">OTG_FS_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[5d]">OTG_FS_WKUP_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
@@ -135,8 +135,8 @@ Function Pointers
  <LI><a href="#[66]">SPI3_IRQHandler</a> from startup_stm32f407xx.o(.text) referenced from startup_stm32f407xx.o(RESET)
  <LI><a href="#[87]">SPI_DMAAbortOnError</a> from stm32f4xx_hal_spi.o(i.SPI_DMAAbortOnError) referenced from stm32f4xx_hal_spi.o(i.HAL_SPI_IRQHandler)
  <LI><a href="#[2f]">SVC_Handler</a> from port.o(.emb_text) referenced from startup_stm32f407xx.o(RESET)
- <LI><a href="#[91]">ScreenNewTask</a> from user_screennew.o(i.ScreenNewTask) referenced from user_taskinit.o(i.User_Tasks_Init)
- <LI><a href="#[92]">SensorDataUpdateTask</a> from user_sensorupdate.o(i.SensorDataUpdateTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[8f]">ScreenNewTask</a> from user_screennew.o(i.ScreenNewTask) referenced from user_taskinit.o(i.User_Tasks_Init)
+ <LI><a href="#[90]">SensorDataUpdateTask</a> from user_sensorupdate.o(i.SensorDataUpdateTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[89]">StartDefaultTask</a> from freertos.o(i.StartDefaultTask) referenced from freertos.o(i.MX_FREERTOS_Init)
  <LI><a href="#[96]">StopEnterTask</a> from user_runmode.o(i.StopEnterTask) referenced from user_taskinit.o(i.User_Tasks_Init)
  <LI><a href="#[32]">SysTick_Handler</a> from cmsis_os2.o(i.SysTick_Handler) referenced from startup_stm32f407xx.o(RESET)
@@ -752,7 +752,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[244]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrCalculate
 <LI><a href="#[552]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_del_char
 <LI><a href="#[481]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_textarea_add_text
@@ -777,7 +777,7 @@ Global Symbols
 <P><STRONG><a name="[243]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
 <LI><a href="#[4bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_set_map
 <LI><a href="#[4c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnmatrix_get_btn_text
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_built_in_open
@@ -940,7 +940,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingSave
 <LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingGet
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[17e]"></a>AT24Cxx_Init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, 24cxx.o(i.AT24Cxx_Init))
@@ -948,7 +948,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[17c]"></a>AT24Cxx_Read</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, 24cxx.o(i.AT24Cxx_Read))
@@ -1145,7 +1145,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[94]"></a>DataSaveTask</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, user_datasavetask.o(i.DataSaveTask))
+<P><STRONG><a name="[93]"></a>DataSaveTask</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, user_datasavetask.o(i.DataSaveTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = DataSaveTask &rArr; SettingSave &rArr; AT24Cxx_Epprom_Check &rArr; AT24Cxx_Write &rArr; AT24Cxx_Write_One_Byte &rArr; IIC_Wait_Ack &rArr; SDA_Output_Mode &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -1168,7 +1168,7 @@ Global Symbols
 <LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingGet
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24Cxx_Epprom_Check
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 <LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24Cxx_Write_One_Byte
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_reset_fifo
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCD_Reset
@@ -1183,7 +1183,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Delay_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 <LI><a href="#[6b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_read_ad
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
@@ -1518,9 +1518,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MW_RTC_Get_TimeDate
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
 </UL>
 
 <P><STRONG><a name="[1c3]"></a>HAL_RTC_GetTime</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, stm32f4xx_hal_rtc.o(i.HAL_RTC_GetTime))
@@ -1529,7 +1529,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MW_RTC_Get_TimeDate
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
 </UL>
 
 <P><STRONG><a name="[1c4]"></a>HAL_RTC_Init</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, stm32f4xx_hal_rtc.o(i.HAL_RTC_Init))
@@ -1867,7 +1867,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[8e]"></a>HardwareInitTask</STRONG> (Thumb, 370 bytes, Stack size 16 bytes, user_hardwareinit.o(i.HardwareInitTask))
+<P><STRONG><a name="[97]"></a>HardwareInitTask</STRONG> (Thumb, 370 bytes, Stack size 16 bytes, user_hardwareinit.o(i.HardwareInitTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 672<LI>Call Chain = HardwareInitTask &rArr; ui_init &rArr; Pages_init &rArr; lv_disp_load_scr &rArr; lv_scr_load_anim &rArr; lv_obj_set_pos &rArr; lv_obj_set_y &rArr; lv_obj_set_style_y &rArr; lv_obj_set_local_style_prop &rArr; lv_obj_refresh_style &rArr; refresh_children_style &rArr;  refresh_children_style (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2009,7 +2009,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_taskinit.o(i.User_Tasks_Init)
 </UL>
-<P><STRONG><a name="[90]"></a>KeyTask</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, user_keytask.o(i.KeyTask))
+<P><STRONG><a name="[94]"></a>KeyTask</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, user_keytask.o(i.KeyTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = KeyTask &rArr; osMessageQueuePut &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2052,7 +2052,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_WriteData_16Bit
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetWindows
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 <LI><a href="#[6b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_adjust_info_show
 </UL>
 
@@ -2064,7 +2064,7 @@ Global Symbols
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_direction
 <LI><a href="#[217]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[1a6]"></a>LCD_SetCursor</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lcd.o(i.LCD_SetCursor))
@@ -2098,7 +2098,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 <LI><a href="#[6b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_adjust_info_show
 <LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tp_adjust
 </UL>
@@ -2126,13 +2126,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[204]"></a>LED_Set_Light</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, led.o(i.LED_Set_Light))
 <BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopEnterTask
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IdleEnterTask
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[1a7]"></a>Lcd_WriteData_16Bit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lcd.o(i.Lcd_WriteData_16Bit))
@@ -2148,10 +2148,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
-<P><STRONG><a name="[8f]"></a>LvHandlerTask</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, user_taskinit.o(i.LvHandlerTask))
+<P><STRONG><a name="[8e]"></a>LvHandlerTask</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, user_taskinit.o(i.LvHandlerTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = LvHandlerTask &rArr; osMessageQueuePut &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2207,7 +2207,7 @@ Global Symbols
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MFRC_ClrBitMask
 </UL>
 
-<P><STRONG><a name="[97]"></a>MPUCheckTask</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, user_sensorupdate.o(i.MPUCheckTask))
+<P><STRONG><a name="[92]"></a>MPUCheckTask</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, user_sensorupdate.o(i.MPUCheckTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = MPUCheckTask &rArr; MPU_isHorizontal &rArr; MPU_Get_Angles &rArr; MPU_Get_Accelerometer &rArr; MPU_Read_Len &rArr; IIC_Read_Byte &rArr; SDA_Output_Mode &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2291,7 +2291,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU_Get_Angles
 </UL>
 <BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopEnterTask
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
 </UL>
 
 <P><STRONG><a name="[a]"></a>MW_BlueTooth_Buffer_Clear</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, user_datamanagement.o(i.MW_BlueTooth_Buffer_Clear))
@@ -2496,7 +2496,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[93]"></a>MessageSendTask</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, user_blecommunication.o(i.MessageSendTask))
+<P><STRONG><a name="[91]"></a>MessageSendTask</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, user_blecommunication.o(i.MessageSendTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = MessageSendTask &rArr; osMessageQueuePut &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2626,7 +2626,7 @@ Global Symbols
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;page_stack_pop
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;page_stack_is_empty
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_Computerpage_cb
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_MessageArcPage
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_NFCCardpage_cb
@@ -2636,9 +2636,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[20b]"></a>Page_Get_NowPage</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, user_pagemanagement.o(i.Page_Get_NowPage))
-<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
+<BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HomePage_timer_cb
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_timer_cb_MessageArcPage
 </UL>
@@ -2655,7 +2655,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_scr_load_anim
 <LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;page_stack_push
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_HomePage
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_MessageArcPage
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_SettingPic
@@ -2798,7 +2798,7 @@ Global Symbols
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MFRC_ReadReg
 </UL>
 
-<P><STRONG><a name="[91]"></a>ScreenNewTask</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, user_screennew.o(i.ScreenNewTask))
+<P><STRONG><a name="[8f]"></a>ScreenNewTask</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, user_screennew.o(i.ScreenNewTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 656<LI>Call Chain = ScreenNewTask &rArr; Page_Load &rArr; lv_scr_load_anim &rArr; lv_obj_set_pos &rArr; lv_obj_set_y &rArr; lv_obj_set_style_y &rArr; lv_obj_set_local_style_prop &rArr; lv_obj_refresh_style &rArr; refresh_children_style &rArr;  refresh_children_style (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2809,7 +2809,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_taskinit.o(i.User_Tasks_Init)
 </UL>
-<P><STRONG><a name="[92]"></a>SensorDataUpdateTask</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, user_sensorupdate.o(i.SensorDataUpdateTask))
+<P><STRONG><a name="[90]"></a>SensorDataUpdateTask</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, user_sensorupdate.o(i.SensorDataUpdateTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = SensorDataUpdateTask &rArr; osMessageQueuePut &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -2825,8 +2825,8 @@ Global Symbols
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24Cxx_Epprom_Check
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
 </UL>
 
 <P><STRONG><a name="[19e]"></a>SettingSave</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, user_datasavetask.o(i.SettingSave))
@@ -2836,7 +2836,7 @@ Global Symbols
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24Cxx_Epprom_Check
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
 </UL>
 
 <P><STRONG><a name="[89]"></a>StartDefaultTask</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, freertos.o(i.StartDefaultTask))
@@ -3048,7 +3048,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationStackOverflowHook
 <LI><a href="#[69d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationMallocFailedHook
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
 <LI><a href="#[660]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_init
 </UL>
 
@@ -3868,7 +3868,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_write_mem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MW_MPU_Set_Steps
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[36c]"></a>dmp_set_shake_reject_thresh</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, inv_mpu_dmp_motion_driver.o(i.dmp_set_shake_reject_thresh))
@@ -3998,7 +3998,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1fe]"></a>key_init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, key.o(i.key_init))
-<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[216]"></a>key_scan</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, key.o(i.key_scan))
@@ -4007,7 +4007,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
+<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
 </UL>
 
 <P><STRONG><a name="[209]"></a>log_info</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, log.o(i.log_info))
@@ -4019,8 +4019,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDefaultTask
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimeFormat_Get
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[4a1]"></a>lv_anim_del</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, lv_anim.o(i.lv_anim_del))
@@ -4715,7 +4715,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tick_elaps
 <LI><a href="#[4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_next
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
 </UL>
 
 <P><STRONG><a name="[479]"></a>lv_disp_get_layer_sys</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, lv_disp.o(i.lv_disp_get_layer_sys))
@@ -6535,7 +6535,7 @@ Global Symbols
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_ll_init
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_lv_group_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[d6]"></a>lv_keyboard_def_event_cb</STRONG> (Thumb, 460 bytes, Stack size 16 bytes, lv_keyboard.o(i.lv_keyboard_def_event_cb))
@@ -9897,7 +9897,7 @@ Global Symbols
 <LI><a href="#[4eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_init
 <LI><a href="#[4ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_draw_buf_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[207]"></a>lv_port_indev_init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, lv_port_indev.o(i.lv_port_indev_init))
@@ -9906,7 +9906,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[543]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_register
 <LI><a href="#[542]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_drv_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[606]"></a>lv_pow</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, lv_math.o(i.lv_pow))
@@ -10934,7 +10934,7 @@ Global Symbols
 <LI><a href="#[655]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_del
 <LI><a href="#[656]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_timer_time_remaining
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
 </UL>
 
 <P><STRONG><a name="[2f4]"></a>lv_timer_pause</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_timer.o(i.lv_timer_pause))
@@ -11331,15 +11331,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartDefaultTask
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopEnterTask
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SensorDataUpdateTask
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SensorDataUpdateTask
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IdleEnterTask
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
 </UL>
 
 <P><STRONG><a name="[65a]"></a>osKernelInitialize</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, cmsis_os2.o(i.osKernelInitialize))
@@ -11361,10 +11361,10 @@ Global Symbols
 <LI><a href="#[66f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueReceive
 </UL>
 <BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopEnterTask
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SensorDataUpdateTask
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SensorDataUpdateTask
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScreenNewTask
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IdleEnterTask
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
 </UL>
 
 <P><STRONG><a name="[26c]"></a>osMessageQueueNew</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, cmsis_os2.o(i.osMessageQueueNew))
@@ -11385,12 +11385,12 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Tasks_Init
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopEnterTask
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SensorDataUpdateTask
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SensorDataUpdateTask
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPUCheckTask
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyTask
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IdleTimerCallback
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LvHandlerTask
 </UL>
 
 <P><STRONG><a name="[238]"></a>osThreadNew</STRONG> (Thumb, 136 bytes, Stack size 40 bytes, cmsis_os2.o(i.osThreadNew))
@@ -11409,7 +11409,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[677]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelete
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eTaskGetState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[26a]"></a>osTimerNew</STRONG> (Thumb, 116 bytes, Stack size 40 bytes, cmsis_os2.o(i.osTimerNew))
@@ -12108,7 +12108,7 @@ Global Symbols
 <LI><a href="#[4f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_set_theme
 <LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardwareInitTask
 </UL>
 
 <P><STRONG><a name="[67e]"></a>uxListRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
@@ -12619,7 +12619,7 @@ Local Symbols
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
 <LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_info
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
 </UL>
 
 <P><STRONG><a name="[252]"></a>page_stack_is_empty</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, user_pagemanagement.o(i.page_stack_is_empty))

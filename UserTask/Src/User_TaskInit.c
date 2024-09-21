@@ -101,7 +101,6 @@ const osThreadAttr_t MPUCheckTask_attributes = {
 /**
  * @defgroup Queue
  */
-
 osMessageQueueId_t Key_MessageQueue;
 osMessageQueueId_t Skip_MessageQueue;
 osMessageQueueId_t SensorUpdata_MessageQueue;
@@ -121,7 +120,7 @@ void User_Tasks_Init(void)
 
     /* start timers, add new ones, ... */
     IdleTimerHandle = osTimerNew(IdleTimerCallback, osTimerPeriodic, NULL, NULL);
-    osTimerStart(IdleTimerHandle, 500);
+    osTimerStart(IdleTimerHandle, 400);
 
     /* add queues, ... */
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
@@ -133,16 +132,16 @@ void User_Tasks_Init(void)
     Idle_MessageQueue = osMessageQueueNew(1, 1, NULL);
 
     /* add threads, ... */
-    HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
-    LvHandler_TaskHandle = osThreadNew(LvHandlerTask, NULL, &LvHandlerTask_attributes);
-    KeyTaskHandle = osThreadNew(KeyTask, NULL, &KeyTask_attributes);
-    ScrRenewTaskHandle = osThreadNew(ScreenNewTask, NULL, &ScrRenewTask_attributes);
-    SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
-    MessageSendTaskHandle = osThreadNew(MessageSendTask, NULL, &MessageSendTask_attributes);
-    DataSaveTaskHandle = osThreadNew(DataSaveTask, NULL, &DataSaveTask_attributes);
-    IdleEnterTaskHandle = osThreadNew(IdleEnterTask, NULL, &IdleEnterTask_attributes);
-    StopEnterTaskHandle = osThreadNew(StopEnterTask, NULL, &StopEnterTask_attributes);
-    MPUCheckTaskHandle = osThreadNew(MPUCheckTask, NULL, &MPUCheckTask_attributes);
+    LvHandler_TaskHandle = osThreadNew(LvHandlerTask, NULL, &LvHandlerTask_attributes);          // 8
+    ScrRenewTaskHandle = osThreadNew(ScreenNewTask, NULL, &ScrRenewTask_attributes);             // 9
+    SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);  // 9
+    MessageSendTaskHandle = osThreadNew(MessageSendTask, NULL, &MessageSendTask_attributes);     // 9
+    MPUCheckTaskHandle = osThreadNew(MPUCheckTask, NULL, &MPUCheckTask_attributes);              // 10
+    DataSaveTaskHandle = osThreadNew(DataSaveTask, NULL, &DataSaveTask_attributes);              // 10
+    KeyTaskHandle = osThreadNew(KeyTask, NULL, &KeyTask_attributes);                             // 24
+    IdleEnterTaskHandle = osThreadNew(IdleEnterTask, NULL, &IdleEnterTask_attributes);           // 40
+    StopEnterTaskHandle = osThreadNew(StopEnterTask, NULL, &StopEnterTask_attributes);           // 41
+    HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes); // 43
 
     /* add  others ... */
     uint8_t SensorUpdataStr;
