@@ -204,4 +204,5 @@ f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\user_runmode.o: ../Drivers-BSP/TEMT6000/TEMT6000.h
 f4-lvgl-watch\user_runmode.o: ../UserTask/Inc/User_TaskInit.h
+f4-lvgl-watch\user_runmode.o: ../Core/Inc/iwdg.h
 f4-lvgl-watch\user_runmode.o: ../Core/Inc/usart.h

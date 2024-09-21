@@ -9,6 +9,7 @@
 #include "User_DataManagement.h"
 #include "User_TaskInit.h"
 #include "main.h"
+#include "iwdg.h"
 #include "usart.h"
 
 /**
@@ -93,8 +94,7 @@ void StopEnterTask(void *argument)
             /***********************************************************************************/
 
             vTaskSuspendAll();
-            // Disnable Watch Dog
-            // WDOG_Disnable();
+
             // systick int
             CLEAR_BIT(SysTick->CTRL, SysTick_CTRL_TICKINT_Msk);
             // enter stop mode
@@ -106,7 +106,8 @@ void StopEnterTask(void *argument)
             SET_BIT(SysTick->CTRL, SysTick_CTRL_TICKINT_Msk);
             HAL_SYSTICK_Config(SystemCoreClock / (1000U / uwTickFreq));
             SystemClock_Config();
-            // WDOG_Feed();
+            HAL_IWDG_Refresh(&hiwdg);
+
             xTaskResumeAll();
 
             /****************************** your wakeup operations ******************************/
