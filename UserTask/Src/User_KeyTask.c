@@ -13,6 +13,7 @@ void KeyTask(void *argument)
 {
 	uint8_t keystr = 0;
 	uint8_t Skipstr = 0;
+	uint8_t IdleBreakstr = 0;
 	while (1)
 	{
 		switch (key_scan(0))
@@ -20,17 +21,21 @@ void KeyTask(void *argument)
 		case 1:
 			keystr = 1;
 			osMessageQueuePut(Key_MessageQueue, &keystr, 0, 1);
+			osMessageQueuePut(IdleBreak_MessageQueue, &IdleBreakstr, 0, 1);
 			break;
 		case 2:
 			if (Page_Get_NowPage()->page_obj == &ui_HomePage)
 			{
 				Skipstr = 1;
 				osMessageQueuePut(Skip_MessageQueue, &Skipstr, 0, 1);
+				osMessageQueuePut(IdleBreak_MessageQueue, &IdleBreakstr, 0, 1);
 			}
 			else
 			{
 				keystr = 2;
 				osMessageQueuePut(Key_MessageQueue, &keystr, 0, 1);
+				osMessageQueuePut(IdleBreak_MessageQueue, &IdleBreakstr, 0, 1);
+
 				break;
 			}
 		}

@@ -3,6 +3,17 @@
 
 #include "sys.h"
 
+/**
+ * @pwm led
+ */
+#define PWM_PERIOD 300
+#define PWM_COMPARE 0
+
+void LED_Set_Light(uint8_t dc);
+
+void LED_Close_Light(void);
+
+void LED_PWM_Init(void);
 
 /******************************************************************************************/
 /* 引脚 定义 */

@@ -85,7 +85,7 @@ void HardwareInitTask(void *argument)
                     dmp_set_pedometer_step_count((unsigned long)steps);
             }
         }
-
+       
         /*---------------LCD Init---------- */
         LCD_Init();
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, YELLOW);
@@ -93,6 +93,9 @@ void HardwareInitTask(void *argument)
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, WHITE);
         LCD_ShowString2(84, 140, 116, 156, 16, "Welcome!", Purple);
         Delay_ms(2000);
+         /*--------PWM Init----------*/
+        LED_PWM_Init();
+        LED_Set_Light(5);
         /*---------Touch Init---------- */
         tp_dev.init();
         /*----------Lvgl Init---------- */

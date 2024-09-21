@@ -1,5 +1,5 @@
 #include "led.h"
-
+#include "tim.h"
 
 /**
  * @brief       初始化LED相关IO口, 并使能时钟
@@ -9,20 +9,36 @@
 void Led_Init(void)
 {
     GPIO_InitTypeDef gpio_init_struct;
-    
-    LED0_GPIO_CLK_ENABLE();                                 /* LED0时钟使能 */
-    LED1_GPIO_CLK_ENABLE();                                 /* LED1时钟使能 */
 
-    gpio_init_struct.Pin = LED0_GPIO_PIN;                   /* LED0引脚 */
-    gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;            /* 推挽输出 */
-    gpio_init_struct.Pull = GPIO_PULLUP;                    /* 上拉 */
-    gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;          /* 高速 */
-    HAL_GPIO_Init(LED0_GPIO_PORT, &gpio_init_struct);       /* 初始化LED0引脚 */
+    LED0_GPIO_CLK_ENABLE(); /* LED0时钟使能 */
+    LED1_GPIO_CLK_ENABLE(); /* LED1时钟使能 */
 
-    gpio_init_struct.Pin = LED1_GPIO_PIN;                   /* LED1引脚 */
-    HAL_GPIO_Init(LED1_GPIO_PORT, &gpio_init_struct);       /* 初始化LED1引脚 */
-    
-    LED0(1);                                                /* 关闭 LED0 */
-    LED1(1);                                                /* 关闭 LED1 */
+    gpio_init_struct.Pin = LED0_GPIO_PIN;             /* LED0引脚 */
+    gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;      /* 推挽输出 */
+    gpio_init_struct.Pull = GPIO_PULLUP;              /* 上拉 */
+    gpio_init_struct.Speed = GPIO_SPEED_FREQ_HIGH;    /* 高速 */
+    HAL_GPIO_Init(LED0_GPIO_PORT, &gpio_init_struct); /* 初始化LED0引脚 */
+
+    gpio_init_struct.Pin = LED1_GPIO_PIN;             /* LED1引脚 */
+    HAL_GPIO_Init(LED1_GPIO_PORT, &gpio_init_struct); /* 初始化LED1引脚 */
+
+    LED0(1); /* 关闭 LED0 */
+    LED1(1); /* 关闭 LED1 */
 }
 
+void LED_Set_Light(uint8_t dc)
+{
+    if (dc >= 5 && dc <= 100)
+    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, dc * PWM_PERIOD / 100);
+}
+
+void LED_Close_Light(void)
+{
+	__HAL_TIM_SetCompare(&htim3,TIM_CHANNEL_2,0);
+}
+
+void LED_PWM_Init(void)
+{
+    HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_2);
+}
+    

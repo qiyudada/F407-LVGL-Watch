@@ -69,25 +69,33 @@ const osThreadAttr_t MessageSendTask_attributes = {
 /*DataSaveTask*/
 osThreadId_t DataSaveTaskHandle;
 const osThreadAttr_t DataSaveTask_attributes = {
-  .name = "DataSaveTask",
-  .stack_size = 128 * 5,
-  .priority = (osPriority_t) osPriorityLow2,
+    .name = "DataSaveTask",
+    .stack_size = 128 * 5,
+    .priority = (osPriority_t)osPriorityLow2,
 };
 
 /*Idle Enter Task*/
 osThreadId_t IdleEnterTaskHandle;
 const osThreadAttr_t IdleEnterTask_attributes = {
-  .name = "IdleEnterTask",
-  .stack_size = 128 * 1,
-  .priority = (osPriority_t) osPriorityHigh,
+    .name = "IdleEnterTask",
+    .stack_size = 128 * 5,
+    .priority = (osPriority_t)osPriorityHigh,
 };
 
 /*Stop Enter Task*/
 osThreadId_t StopEnterTaskHandle;
 const osThreadAttr_t StopEnterTask_attributes = {
-  .name = "StopEnterTask",
-  .stack_size = 128 * 16,
-  .priority = (osPriority_t) osPriorityHigh1,
+    .name = "StopEnterTask",
+    .stack_size = 128 * 16,
+    .priority = (osPriority_t)osPriorityHigh1,
+};
+
+/*MPUCheckTask*/
+osThreadId_t MPUCheckTaskHandle;
+const osThreadAttr_t MPUCheckTask_attributes = {
+    .name = "MPUCheckTask",
+    .stack_size = 128 * 3,
+    .priority = (osPriority_t)osPriorityLow2,
 };
 /*------------------------------------------------*/
 /**
@@ -103,7 +111,7 @@ osMessageQueueId_t Stop_MessageQueue;
 osMessageQueueId_t Idle_MessageQueue;
 
 /* Timers --------------------------------------------------------------------*/
-osTimerId_t UpdateTimerHandle;
+osTimerId_t IdleTimerHandle;
 
 /**
  * @brief  Initialize all the tasks
@@ -112,8 +120,8 @@ void User_Tasks_Init(void)
 {
 
     /* start timers, add new ones, ... */
-    UpdateTimerHandle = osTimerNew(IdleTimerCallback, osTimerPeriodic, NULL, NULL);
-    osTimerStart(UpdateTimerHandle, 500);
+    IdleTimerHandle = osTimerNew(IdleTimerCallback, osTimerPeriodic, NULL, NULL);
+    osTimerStart(IdleTimerHandle, 500);
 
     /* add queues, ... */
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
@@ -123,7 +131,6 @@ void User_Tasks_Init(void)
     IdleBreak_MessageQueue = osMessageQueueNew(1, 1, NULL);
     Stop_MessageQueue = osMessageQueueNew(1, 1, NULL);
     Idle_MessageQueue = osMessageQueueNew(1, 1, NULL);
-    
 
     /* add threads, ... */
     HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes);
@@ -133,6 +140,9 @@ void User_Tasks_Init(void)
     SensorDataTaskHandle = osThreadNew(SensorDataUpdateTask, NULL, &SensorDataTask_attributes);
     MessageSendTaskHandle = osThreadNew(MessageSendTask, NULL, &MessageSendTask_attributes);
     DataSaveTaskHandle = osThreadNew(DataSaveTask, NULL, &DataSaveTask_attributes);
+    IdleEnterTaskHandle = osThreadNew(IdleEnterTask, NULL, &IdleEnterTask_attributes);
+    StopEnterTaskHandle = osThreadNew(StopEnterTask, NULL, &StopEnterTask_attributes);
+    MPUCheckTaskHandle = osThreadNew(MPUCheckTask, NULL, &MPUCheckTask_attributes);
 
     /* add  others ... */
     uint8_t SensorUpdataStr;
@@ -154,11 +164,16 @@ void TaskTickHook(void)
  */
 void LvHandlerTask(void *argument)
 {
+    uint8_t IdleBreakstr = 0;
     while (1)
     {
+        if (lv_disp_get_inactive_time(NULL) < 1000)
+        {
+            // Idle time break, set to 0
+            osMessageQueuePut(IdleBreak_MessageQueue, &IdleBreakstr, 0, 0);
+        }
         // printf("lv_stack is %d \r\n", (int *)uxTaskGetStackHighWaterMark(LvHandler_TaskHandle));
         lv_task_handler();
         osDelay(1);
     }
 }
-

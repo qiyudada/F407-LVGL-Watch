@@ -199,3 +199,8 @@ f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/DTH11/Dth11.h
+f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_PageManagement.h
+f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui.h
+f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui_events.h
+f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui_helpers.h
+f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui.h

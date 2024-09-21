@@ -198,4 +198,5 @@ f4-lvgl-watch\user_blecommunication.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu.h
 f4-lvgl-watch\user_blecommunication.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_driver.h
 f4-lvgl-watch\user_blecommunication.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_blecommunication.o: ../Drivers-BSP/DTH11/Dth11.h
+f4-lvgl-watch\user_blecommunication.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_blecommunication.o: ../Core/Inc/usart.h

@@ -8,6 +8,43 @@
  */
 #include "User_TaskInit.h"
 #include "User_DataManagement.h"
+#include "User_PageManagement.h"
+#include "ui.h"
+
+/**
+ * @brief  MPU6050 Check the state
+ * @param  argument: Not used
+ * @retval None
+ */
+void MPUCheckTask(void *argument)
+{
+  while (1)
+  {
+    if (MW_Interface.IMU.wrist_is_enabled)
+    {
+      if (MPU_isHorizontal())
+      {
+        MW_Interface.IMU.wrist_state = WRIST_UP;
+      }
+      else
+      {
+        if (WRIST_UP == MW_Interface.IMU.wrist_state)
+        {
+          MW_Interface.IMU.wrist_state = WRIST_DOWN;
+          if (Page_Get_NowPage()->page_obj == &ui_HomePage ||
+              Page_Get_NowPage()->page_obj == &ui_MenuPage ||
+              Page_Get_NowPage()->page_obj == &ui_MessageArcPage)
+          {
+            uint8_t Stopstr;
+            osMessageQueuePut(Stop_MessageQueue, &Stopstr, 0, 1); // sleep
+          }
+        }
+        MW_Interface.IMU.wrist_state = WRIST_DOWN;
+      }
+    }
+    osDelay(300);
+  }
+}
 
 /**
  * @brief  Sensor data update task

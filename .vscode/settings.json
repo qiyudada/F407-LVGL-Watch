@@ -43,6 +43,7 @@
         "lv_event.h": "c",
         "user_blecommunication.h": "c",
         "dma.h": "c",
-        "user_datasavetask.h": "c"
+        "user_datasavetask.h": "c",
+        "user_runmode.h": "c"
     }
 }

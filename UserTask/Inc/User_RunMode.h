@@ -11,5 +11,8 @@ extern uint16_t IdleTimerCount;
 
 void IdleTimerCallback(void *argument);
 
+void IdleEnterTask(void *argument);
+
+void StopEnterTask(void *argument);
 
 #endif

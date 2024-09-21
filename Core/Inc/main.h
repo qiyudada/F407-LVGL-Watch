@@ -108,7 +108,7 @@ void Error_Handler(void);
 #define LCD_CS_GPIO_Port GPIOG
 
 /* USER CODE BEGIN Private defines */
-
+void SystemClock_Config(void);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
