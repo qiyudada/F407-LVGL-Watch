@@ -150,18 +150,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>233</LineNumber>
+          <LineNumber>54</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221900</Address>
+          <Address>134232424</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Core/Src/stm32f4xx_it.c</Filename>
+          <Filename>..\UserTask\Src\User_HardwareInit.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\F4_LVGL_Watch\../Core/Src/stm32f4xx_it.c\233</Expression>
+          <Expression>\\F4_LVGL_Watch\../UserTask/Src/User_HardwareInit.c\54</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>23</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134235518</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\UserTask\Src\User_SensorUpdate.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\F4_LVGL_Watch\../UserTask/Src/User_SensorUpdate.c\23</Expression>
         </Bp>
       </Breakpoint>
       <MemoryWindow1>
@@ -1625,7 +1641,7 @@
 
   <Group>
     <GroupName>Drivers/BSP</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
