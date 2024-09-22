@@ -2,7 +2,6 @@ f4-lvgl-watch\user_sensorupdate.o: ..\UserTask\Src\User_SensorUpdate.c
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_SensorUpdate.h
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\user_sensorupdate.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_sensorupdate.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_sensorupdate.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -58,6 +57,7 @@ f4-lvgl-watch\user_sensorupdate.o: ../Middlewares/Third_Party/FreeRTOS/Source/CM
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\user_sensorupdate.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_sensorupdate.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_sensorupdate.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_sensorupdate.o: ../LVGL/src/misc/lv_log.h

@@ -135,7 +135,6 @@ f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui_helpers.h
 f4-lvgl-watch\user_pagemanagement.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\user_pagemanagement.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\user_pagemanagement.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_pagemanagement.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_pagemanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_pagemanagement.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -189,6 +188,7 @@ f4-lvgl-watch\user_pagemanagement.o: ../Middlewares/Third_Party/FreeRTOS/Source/
 f4-lvgl-watch\user_pagemanagement.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_pagemanagement.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\user_pagemanagement.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\user_pagemanagement.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_pagemanagement.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_pagemanagement.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\user_pagemanagement.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h

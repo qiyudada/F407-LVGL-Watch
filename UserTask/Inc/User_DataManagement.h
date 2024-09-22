@@ -6,17 +6,18 @@ extern "C"
 {
 #endif
 
+
+/*Gross management*/
+#define User_Manage_file 1
+
+#if (User_Manage_file)
+
 /*Main include*/
-#include <stdio.h>
 #include "main.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "cmsis_os2.h"
 #include "sys.h"
-/*Gross management*/
-#define User_Manage_file 1
-
-#if (User_Manage_file)
 
 #define RTC_Manage_file 1
 #define Lvgl_Manage_file 1

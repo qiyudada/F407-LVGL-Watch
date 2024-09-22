@@ -5,6 +5,7 @@
 #include "Delay.h"
 #include "main.h"
 #include <stdio.h>
+#include <stdint.h>
 
 typedef int32_t  s32;
 typedef int16_t s16;

@@ -135,7 +135,6 @@ f4-lvgl-watch\ui_helpers.o: ..\LVGL\APP\design\ui_events.h
 f4-lvgl-watch\ui_helpers.o: ..\LVGL\APP\design\ui_helpers.h
 f4-lvgl-watch\ui_helpers.o: ../UserTask/Inc/User_PageManagement.h
 f4-lvgl-watch\ui_helpers.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\ui_helpers.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\ui_helpers.o: ../Core/Inc/main.h
 f4-lvgl-watch\ui_helpers.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\ui_helpers.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -189,6 +188,7 @@ f4-lvgl-watch\ui_helpers.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTO
 f4-lvgl-watch\ui_helpers.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\ui_helpers.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\ui_helpers.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\ui_helpers.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\ui_helpers.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\ui_helpers.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\ui_helpers.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h

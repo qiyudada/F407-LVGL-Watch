@@ -135,7 +135,6 @@ f4-lvgl-watch\ui_navigation.o: ..\LVGL\APP\design\screens\../ui_helpers.h
 f4-lvgl-watch\ui_navigation.o: ..\LVGL\APP\design\screens\../ui.h
 f4-lvgl-watch\ui_navigation.o: ../UserTask/Inc/User_PageManagement.h
 f4-lvgl-watch\ui_navigation.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\ui_navigation.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\ui_navigation.o: ../Core/Inc/main.h
 f4-lvgl-watch\ui_navigation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\ui_navigation.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -189,6 +188,7 @@ f4-lvgl-watch\ui_navigation.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_
 f4-lvgl-watch\ui_navigation.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\ui_navigation.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\ui_navigation.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\ui_navigation.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\ui_navigation.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\ui_navigation.o: ../Drivers-BSP/LCD/LCD.h
 f4-lvgl-watch\ui_navigation.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h

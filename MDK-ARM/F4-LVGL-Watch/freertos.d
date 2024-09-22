@@ -54,10 +54,10 @@ f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_
 f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\freertos.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\freertos.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\freertos.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\freertos.o: ../LVGL/lvgl.h
 f4-lvgl-watch\freertos.o: ../LVGL/src/misc/lv_log.h

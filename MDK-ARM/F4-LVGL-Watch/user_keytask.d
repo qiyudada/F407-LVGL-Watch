@@ -2,7 +2,6 @@ f4-lvgl-watch\user_keytask.o: ..\UserTask\Src\User_KeyTask.c
 f4-lvgl-watch\user_keytask.o: ../UserTask/Inc/User_KeyTask.h
 f4-lvgl-watch\user_keytask.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_keytask.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\user_keytask.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_keytask.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_keytask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_keytask.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -58,6 +57,7 @@ f4-lvgl-watch\user_keytask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_R
 f4-lvgl-watch\user_keytask.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_keytask.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\user_keytask.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\user_keytask.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_keytask.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_keytask.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_keytask.o: ../LVGL/src/misc/lv_log.h

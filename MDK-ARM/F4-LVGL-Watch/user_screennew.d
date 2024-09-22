@@ -2,7 +2,6 @@ f4-lvgl-watch\user_screennew.o: ..\UserTask\Src\User_ScreenNew.c
 f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_ScreenNew.h
 f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\user_screennew.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_screennew.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_screennew.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_screennew.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -58,6 +57,7 @@ f4-lvgl-watch\user_screennew.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS
 f4-lvgl-watch\user_screennew.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_screennew.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\user_screennew.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\user_screennew.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_screennew.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/src/misc/lv_log.h

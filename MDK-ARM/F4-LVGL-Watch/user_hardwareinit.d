@@ -2,7 +2,6 @@ f4-lvgl-watch\user_hardwareinit.o: ..\UserTask\Src\User_HardwareInit.c
 f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_HardwareInit.h
 f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_TaskInit.h
 f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\user_hardwareinit.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_hardwareinit.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_hardwareinit.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -58,6 +57,7 @@ f4-lvgl-watch\user_hardwareinit.o: ../Middlewares/Third_Party/FreeRTOS/Source/CM
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\user_hardwareinit.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\user_hardwareinit.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_hardwareinit.o: ../Core/Inc/rtc.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/lvgl.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/src/misc/lv_log.h

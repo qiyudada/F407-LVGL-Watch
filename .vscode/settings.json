@@ -49,6 +49,7 @@
         "adc.h": "c",
         "atomic": "c",
         "cstdint": "c",
-        "user_watchdog.h": "c"
+        "user_watchdog.h": "c",
+        "rte_components.h": "c"
     }
 }

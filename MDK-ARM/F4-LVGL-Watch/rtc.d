@@ -43,7 +43,6 @@ f4-lvgl-watch\rtc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\rtc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\rtc.o: ../UserTask/Inc/User_DataManagement.h
-f4-lvgl-watch\rtc.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f4-lvgl-watch\rtc.o: ../Core/Inc/FreeRTOSConfig.h
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -57,6 +56,7 @@ f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cm
 f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/SYS/sys.h
+f4-lvgl-watch\rtc.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\rtc.o: ../LVGL/lvgl.h
 f4-lvgl-watch\rtc.o: ../LVGL/src/misc/lv_log.h
 f4-lvgl-watch\rtc.o: ../LVGL/src/misc/../lv_conf_internal.h

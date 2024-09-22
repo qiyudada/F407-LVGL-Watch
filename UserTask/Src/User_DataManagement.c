@@ -227,6 +227,33 @@ void MW_DHT11_Read_Data(int *humi, int *temp)
 #endif
 }
 
+/************************************************************************************
+ * @defgroup TEMT6000 area
+ ***********************************************************************************/
+/**
+ * @brief  TEMT6000 start adc
+ */
+uint8_t MW_TEMT6000_ADC_Start(void)
+{
+#if TEMT_Manage_file
+    return TEMT6000_ADC_Start();
+#else
+    return MW_ERROR_DETECT;
+#endif
+}
+
+/**
+ * @brief  TEMT6000 read data
+ */
+uint8_t MW_LightSensor_Read(uint8_t *pdata)
+{
+#if TEMT_Manage_file
+    return LightSensor_Read(pdata);
+#else
+    return MW_ERROR_DETECT;
+#endif
+}
+
 /**************************************************************
  * @defgroup Watch gross function and data management
  *************************************************************/
@@ -248,8 +275,8 @@ MW_InterfaceTypeDef MW_Interface = {
     },
     .TEMT6000 = {
         .Light_Intensity = 30,
-        .Init = TEMT6000_ADC_Start,
-        .LightSensor_Read = LightSensor_Read,
+        .Init = MW_TEMT6000_ADC_Start,
+        .LightSensor_Read = MW_LightSensor_Read,
 
     },
     .BLE = {
