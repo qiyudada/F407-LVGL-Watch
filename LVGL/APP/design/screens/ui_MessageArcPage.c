@@ -56,11 +56,14 @@ static void ui_timer_cb_MessageArcPage(lv_timer_t *timer)
         char Value_buf[6];
         lv_arc_set_value(ui_TempatureArc, MW_Interface.DTH11.temperature);
         lv_arc_set_value(ui_HumidityArc, MW_Interface.DTH11.humidity);
+        lv_arc_set_value(ui_StepArc, MW_Interface.IMU.Steps);
         lv_bar_set_value(ui_LightBar, MW_Interface.TEMT6000.Light_Intensity, LV_ANIM_OFF);
         sprintf(Value_buf, "%d", MW_Interface.DTH11.temperature);
         lv_label_set_text(ui_TempArcLabel, Value_buf);
         sprintf(Value_buf, "%d", MW_Interface.DTH11.humidity);
         lv_label_set_text(ui_HumidArcLabel, Value_buf);
+        sprintf(Value_buf, "%d", MW_Interface.IMU.Steps);
+        lv_label_set_text(ui_StepArcLabel, Value_buf);
     }
 }
 void ui_MessageArcPage_screen_init(void)

@@ -54,6 +54,7 @@ void HardwareInitTask(void *argument)
             MW_Interface.IMU.ConnectionError = MW_Interface.IMU.Init();
             Delay_ms(300);
         }
+        
         /*----------AT24Cxx(EEPROM) Init---------- */
         AT24Cxx_Init();
         /*----------Data  read Init---------- */

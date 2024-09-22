@@ -912,8 +912,8 @@ int dmp_set_shake_reject_timeout(unsigned short time)
 int dmp_get_pedometer_step_count(unsigned long *count)
 {
     unsigned char tmp[4];
-    if (!count)
-        return -1;
+    // if (!count)
+    //     return -1;
 
     if (mpu_read_mem(D_PEDSTD_STEPCTR, 4, tmp))
         return -1;
