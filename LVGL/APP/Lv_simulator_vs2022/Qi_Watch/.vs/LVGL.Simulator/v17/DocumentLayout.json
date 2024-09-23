@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_MenuPage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\ui\\screens\\ui_MenuPage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\Middlewares\\User_DataManagement.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\Middlewares\\User_DataManagement.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -26,8 +30,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{588470cc-84f8-4a57-9ac4-86bca0625ff4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -51,19 +59,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ui_MenuPage.c",
+              "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_MenuPage.c",
+              "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\screens\\ui_MenuPage.c",
+              "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_MenuPage.c",
+              "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_MenuPage.c",
+              "ViewState": "AQIAAMcBAAAAAAAAAIAwwOEBAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-09-22T14:45:05.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "User_DataManagement.c",
               "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\Middlewares\\User_DataManagement.c",
               "RelativeDocumentMoniker": "LVGL.Simulator\\Middlewares\\User_DataManagement.c",
               "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\Middlewares\\User_DataManagement.c",
               "RelativeToolTip": "LVGL.Simulator\\Middlewares\\User_DataManagement.c",
-              "ViewState": "AQIAAO8AAAAAAAAAAAAAAPoAAAAlAAAA",
+              "ViewState": "AQIAALMAAAAAAAAAAAAAAPoAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-22T14:21:05.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T14:21:05.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "lv_conf.h",
               "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\lv_conf.h",
               "RelativeDocumentMoniker": "LVGL.Simulator\\lv_conf.h",
@@ -71,12 +91,11 @@
               "RelativeToolTip": "LVGL.Simulator\\lv_conf.h",
               "ViewState": "AQIAAFgBAAAAAAAAAIAwwGQBAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-22T14:17:48.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T14:17:48.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ui_ComputerPage.c",
               "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_ComputerPage.c",
               "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\screens\\ui_ComputerPage.c",
@@ -84,12 +103,11 @@
               "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_ComputerPage.c",
               "ViewState": "AQIAAN8AAAAAAAAAAAAAAPIAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-22T14:17:41.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T14:17:41.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "User_DataManagement.h",
               "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\APP\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\Middlewares\\User_DataManagement.h",
               "RelativeDocumentMoniker": "LVGL.Simulator\\Middlewares\\User_DataManagement.h",
@@ -97,8 +115,7 @@
               "RelativeToolTip": "LVGL.Simulator\\Middlewares\\User_DataManagement.h",
               "ViewState": "AQIAAHIAAAAAAAAAAAAAAAoAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-22T14:17:12.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T14:17:12.313Z"
             }
           ]
         }
