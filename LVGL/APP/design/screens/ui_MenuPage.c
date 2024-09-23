@@ -131,7 +131,7 @@ void ui_event_Mpu6050WristSwitch(lv_event_t* e)
         WristWake_Close(e);
     }
 }
-
+/*------------------------------------------------------------------------------------------------------------------*/
 void ui_MenuPage_screen_init(void)
 {
     ui_MenuPage = lv_obj_create(NULL);
@@ -260,11 +260,12 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_flag(ui_WifiGoMoreImg, LV_OBJ_FLAG_ADV_HITTEST);  /// Flags
     lv_obj_clear_flag(ui_WifiGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
+    /*calendar*/
     ui_CalendarPanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_CalendarPanel, 230);
     lv_obj_set_height(ui_CalendarPanel, 60);
     lv_obj_set_x(ui_CalendarPanel, 0);
-    lv_obj_set_y(ui_CalendarPanel, 8);
+    lv_obj_set_y(ui_CalendarPanel, 7);
     lv_obj_set_align(ui_CalendarPanel, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_CalendarPanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
     lv_obj_set_style_bg_color(ui_CalendarPanel, lv_color_hex(0x57CC95), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -306,11 +307,12 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
+    /*card nfc*/
     ui_CardPanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_CardPanel, 230);
     lv_obj_set_height(ui_CardPanel, 60);
     lv_obj_set_x(ui_CardPanel, 0);
-    lv_obj_set_y(ui_CardPanel, 75);
+    lv_obj_set_y(ui_CardPanel, 72);
     lv_obj_set_align(ui_CardPanel, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_CardPanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
     lv_obj_set_style_bg_color(ui_CardPanel, lv_color_hex(0xEEE765), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -352,11 +354,12 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_flag(ui_CardGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_CardGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
+    /*stoptime*/
     ui_StoptimePanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_StoptimePanel, 230);
     lv_obj_set_height(ui_StoptimePanel, 60);
     lv_obj_set_x(ui_StoptimePanel, 0);
-    lv_obj_set_y(ui_StoptimePanel, 140);
+    lv_obj_set_y(ui_StoptimePanel, 137);
     lv_obj_set_align(ui_StoptimePanel, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_StoptimePanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
     lv_obj_set_style_bg_color(ui_StoptimePanel, lv_color_hex(0xE56FF1), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -397,12 +400,13 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_align(ui_StoptimeGoMoreImg, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_StoptimeGoMoreImg, LV_OBJ_FLAG_CLICKABLE);
     lv_obj_clear_flag(ui_StoptimeGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
-
+    
+    /*calculator*/
     ui_CalculatorPanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_CalculatorPanel, 230);
     lv_obj_set_height(ui_CalculatorPanel, 60);
     lv_obj_set_x(ui_CalculatorPanel, 0);
-    lv_obj_set_y(ui_CalculatorPanel, 201);
+    lv_obj_set_y(ui_CalculatorPanel, 202);
     lv_obj_set_align(ui_CalculatorPanel, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_CalculatorPanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
     lv_obj_set_style_bg_color(ui_CalculatorPanel, lv_color_hex(0xD8D5D8), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -449,7 +453,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_width(ui_Mpu6050WristPanel, 230);
     lv_obj_set_height(ui_Mpu6050WristPanel, 60);
     lv_obj_set_x(ui_Mpu6050WristPanel, 0);
-    lv_obj_set_y(ui_Mpu6050WristPanel, 262);
+    lv_obj_set_y(ui_Mpu6050WristPanel, 267);
     lv_obj_set_align(ui_Mpu6050WristPanel, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_Mpu6050WristPanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
     lv_obj_set_style_bg_color(ui_Mpu6050WristPanel, lv_color_hex(0x8FF3F0), LV_PART_MAIN | LV_STATE_DEFAULT);
