@@ -981,6 +981,11 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_writecard_png.c</FilePath>
             </File>
             <File>
+              <FileName>ui_img_wrist_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_wrist_png.c</FilePath>
+            </File>
+            <File>
               <FileName>ui.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\ui.c</FilePath>

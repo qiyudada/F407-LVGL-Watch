@@ -16,8 +16,7 @@ extern "C" {
 #include "User_PageManagement.h"
 #include "User_DataManagement.h"
 
-/*extra font declations */
-LV_FONT_DECLARE(ui_font_Cuyuan24);
+
 
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 
@@ -165,7 +164,11 @@ extern lv_obj_t * ui_CalculatorImg;
 extern lv_obj_t * ui_CalculatorLabelMenu;
 extern lv_obj_t * ui_CalculatorGoMoreImg;
 
-
+void ui_event_Mpu6050WristSwitch(lv_event_t* e);
+extern lv_obj_t* ui_Mpu6050WristPanel;
+extern lv_obj_t* ui_Mpu6050WristImage;
+extern lv_obj_t* ui_Mpu6050WristSwitch;
+extern lv_obj_t* ui_Mpu6050WristLabel;
 
 /*--------------------SCREEN: ui_MusicPage------------------------------*/
 
@@ -276,9 +279,11 @@ LV_IMG_DECLARE(ui_img_writecard_png);    // assets/writecard.png
 LV_IMG_DECLARE(ui_img_readcard_png);    // assets/Readcard.png
 LV_IMG_DECLARE(ui_img_nfcoff_png);    // assets/Nfcoff.png
 LV_IMG_DECLARE(ui_img_iu_bg2_png);    // assets/iu_bg2.png
+LV_IMG_DECLARE(ui_img_wrist_png);    // assets/iu_bg2.png
 
 
-
+/*extra font declations */
+LV_FONT_DECLARE(ui_font_Cuyuan24);
 LV_FONT_DECLARE(ui_font_Number);
 
 

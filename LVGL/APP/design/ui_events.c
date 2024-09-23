@@ -41,5 +41,14 @@ void Wifi_Close(lv_event_t *e)
 }
 
 
+void WristWake_Open(lv_event_t* e)
+{
+    MW_Interface.IMU.WristEnable();
+}
+
+void WristWake_Close(lv_event_t* e)
+{
+    MW_Interface.IMU.WristDisable();
+}
 
 

@@ -112,6 +112,7 @@
     <ClCompile Include="ui\images\ui_img_tempature_png.c" />
     <ClCompile Include="ui\images\ui_img_tokenolt_png.c" />
     <ClCompile Include="ui\images\ui_img_wifi_png.c" />
+    <ClCompile Include="ui\images\ui_img_wrist_png.c" />
     <ClCompile Include="ui\images\ui_img_writecard_png.c" />
     <ClCompile Include="ui\screens\ui_CalendarPage.c" />
     <ClCompile Include="ui\screens\ui_ComputerPage.c" />

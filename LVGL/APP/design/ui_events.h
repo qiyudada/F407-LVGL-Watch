@@ -19,6 +19,8 @@ void Bluetooth_Open(lv_event_t * e);
 void Bluetoorh_Close(lv_event_t * e);
 void Wifi_Open(lv_event_t * e);
 void Wifi_Close(lv_event_t * e);
+void WristWake_Open(lv_event_t* e);
+void WristWake_Close(lv_event_t* e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

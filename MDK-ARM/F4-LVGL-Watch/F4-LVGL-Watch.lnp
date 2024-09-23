@@ -65,6 +65,7 @@
 "f4-lvgl-watch\ui_img_tokenolt_png.o"
 "f4-lvgl-watch\ui_img_wifi_png.o"
 "f4-lvgl-watch\ui_img_writecard_png.o"
+"f4-lvgl-watch\ui_img_wrist_png.o"
 "f4-lvgl-watch\ui.o"
 "f4-lvgl-watch\ui_helpers.o"
 "f4-lvgl-watch\ui_computerpage.o"

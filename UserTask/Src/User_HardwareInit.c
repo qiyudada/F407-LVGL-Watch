@@ -86,7 +86,6 @@ void HardwareInitTask(void *argument)
                     dmp_set_pedometer_step_count((unsigned long)steps);
             }
         }
-        MW_Interface.IMU.wrist_is_enabled = 1;
         /*---------------LCD Init---------- */
         LCD_Init();
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, YELLOW);

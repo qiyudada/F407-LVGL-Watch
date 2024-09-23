@@ -76,6 +76,7 @@
     <ClCompile Include="ui\ui_events.c" />
     <ClCompile Include="ui\ui_helpers.c" />
     <ClCompile Include="Middlewares\User_DataManagement.c" />
+    <ClCompile Include="ui\images\ui_img_wrist_png.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LVGL.Simulator.rc" />

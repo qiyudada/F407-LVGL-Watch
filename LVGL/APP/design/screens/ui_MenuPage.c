@@ -3,35 +3,49 @@
 Page_t Page_Menu = {ui_MenuPage_screen_init, ui_MenuPage_screen_deinit, &ui_MenuPage};
 /*--------------------SCREEN: ui_MenuPage------------------------------*/
 void ui_MenuPage_screen_init(void);
+
 lv_obj_t *ui_MenuPage;
 lv_obj_t *ui_MenuContainer;
+
+/*bluetooth*/
+void ui_event_BluetoothSwitch(lv_event_t *e);
 lv_obj_t *ui_BluetoothPanel;
 lv_obj_t *ui_MenuBluetoothImage;
-void ui_event_BluetoothSwitch(lv_event_t *e);
 lv_obj_t *ui_BluetoothSwitch;
 lv_obj_t *ui_MenuBluetoothLabel;
+/*wifi*/
 lv_obj_t *ui_WifiPanel;
 lv_obj_t *ui_MenuWifiImage;
 lv_obj_t *ui_MenuWifiLabel;
 lv_obj_t *ui_WifiGoMoreImg;
+/*calendar*/
 lv_obj_t *ui_CalendarPanel;
 lv_obj_t *ui_MenuCalendarImage;
 lv_obj_t *ui_MenuCalendarLabel;
 lv_obj_t *ui_CalendarGoMoreImg;
+/*card*/
 lv_obj_t *ui_CardPanel;
 lv_obj_t *ui_MenuCardImage;
 lv_obj_t *ui_MenuCardLabel;
 void ui_event_CardGoMoreImg(lv_event_t *e);
 lv_obj_t *ui_CardGoMoreImg;
+/*stoptime*/
 lv_obj_t *ui_StoptimePanel;
 lv_obj_t *ui_StoptimeImage;
 lv_obj_t *ui_StoptimeLabel;
 lv_obj_t *ui_StoptimeGoMoreImg;
+/*calculator*/
 void ui_event_CalculatorGoMoreImg(lv_event_t *e);
 lv_obj_t *ui_CalculatorPanel;
 lv_obj_t *ui_CalculatorImg;
 lv_obj_t *ui_CalculatorLabelMenu;
 lv_obj_t *ui_CalculatorGoMoreImg;
+/*mpu6050 wrist*/
+void ui_event_Mpu6050WristSwitch(lv_event_t* e);
+lv_obj_t* ui_Mpu6050WristPanel;
+lv_obj_t* ui_Mpu6050WristImage;
+lv_obj_t* ui_Mpu6050WristSwitch;
+lv_obj_t* ui_Mpu6050WristLabel;
 
 /*--------------------SCREEN: ui_MenuPage------------------------------*/
 
@@ -48,6 +62,7 @@ void ui_event_BluetoothSwitch(lv_event_t *e)
         Bluetoorh_Close(e);
     }
 }
+
 void ui_event_CardGoMoreImg(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -103,6 +118,19 @@ void ui_event_ui_MenuPage(lv_event_t *e)
     }
 }
 
+void ui_event_Mpu6050WristSwitch(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        WristWake_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        WristWake_Close(e);
+    }
+}
 
 void ui_MenuPage_screen_init(void)
 {
@@ -167,7 +195,6 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_style_bg_color(ui_BluetoothSwitch, lv_color_hex(0x391CE6), LV_PART_KNOB | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_BluetoothSwitch, 255, LV_PART_KNOB | LV_STATE_DEFAULT);
 
-    
     if (!lv_obj_has_state(ui_BluetoothSwitch, LV_STATE_CHECKED) && MW_Interface.BLE.ConnectionState)
     {
         lv_obj_add_state(ui_BluetoothSwitch, LV_STATE_CHECKED);
@@ -176,7 +203,7 @@ void ui_MenuPage_screen_init(void)
     {
         lv_obj_clear_state(ui_BluetoothSwitch, LV_STATE_CHECKED);
     }
-    
+
     ui_MenuBluetoothLabel = lv_label_create(ui_BluetoothPanel);
     lv_obj_set_width(ui_MenuBluetoothLabel, LV_SIZE_CONTENT);  /// 1
     lv_obj_set_height(ui_MenuBluetoothLabel, LV_SIZE_CONTENT); /// 1
@@ -414,9 +441,71 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_x(ui_CalculatorGoMoreImg, 70);
     lv_obj_set_y(ui_CalculatorGoMoreImg, -1);
     lv_obj_set_align(ui_CalculatorGoMoreImg, LV_ALIGN_CENTER);
-
     lv_obj_add_flag(ui_CalculatorGoMoreImg, LV_OBJ_FLAG_CLICKABLE);
     lv_obj_clear_flag(ui_CalculatorGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+
+    /*MPU6050*/
+    ui_Mpu6050WristPanel = lv_obj_create(ui_MenuContainer);
+    lv_obj_set_width(ui_Mpu6050WristPanel, 230);
+    lv_obj_set_height(ui_Mpu6050WristPanel, 60);
+    lv_obj_set_x(ui_Mpu6050WristPanel, 0);
+    lv_obj_set_y(ui_Mpu6050WristPanel, 262);
+    lv_obj_set_align(ui_Mpu6050WristPanel, LV_ALIGN_CENTER);
+    lv_obj_clear_flag(ui_Mpu6050WristPanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+    lv_obj_set_style_bg_color(ui_Mpu6050WristPanel, lv_color_hex(0x8FF3F0), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Mpu6050WristPanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_color(ui_Mpu6050WristPanel, lv_color_hex(0x13BFAC), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_main_stop(ui_Mpu6050WristPanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_stop(ui_Mpu6050WristPanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui_Mpu6050WristPanel, LV_GRAD_DIR_HOR, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui_Mpu6050WristPanel, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui_Mpu6050WristPanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_Mpu6050WristImage = lv_img_create(ui_Mpu6050WristPanel);
+    lv_img_set_src(ui_Mpu6050WristImage, &ui_img_wrist_png);
+    lv_obj_set_width(ui_Mpu6050WristImage, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_Mpu6050WristImage, LV_SIZE_CONTENT); /// 1
+    lv_obj_set_x(ui_Mpu6050WristImage, -90);
+    lv_obj_set_y(ui_Mpu6050WristImage, 0);
+    lv_obj_set_align(ui_Mpu6050WristImage, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_Mpu6050WristImage, LV_OBJ_FLAG_ADV_HITTEST);  /// Flags
+    lv_obj_clear_flag(ui_Mpu6050WristImage, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+
+    ui_Mpu6050WristSwitch = lv_switch_create(ui_Mpu6050WristPanel);
+    lv_obj_set_width(ui_Mpu6050WristSwitch, 50);
+    lv_obj_set_height(ui_Mpu6050WristSwitch, 25);
+    lv_obj_set_x(ui_Mpu6050WristSwitch, 70);
+    lv_obj_set_y(ui_Mpu6050WristSwitch, -1);
+    lv_obj_set_align(ui_Mpu6050WristSwitch, LV_ALIGN_CENTER);
+    lv_obj_set_style_bg_color(ui_Mpu6050WristSwitch, lv_color_hex(0x19EEE7), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Mpu6050WristSwitch, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_bg_color(ui_Mpu6050WristSwitch, lv_color_hex(0x99F4E9), LV_PART_INDICATOR | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Mpu6050WristSwitch, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_Mpu6050WristSwitch, lv_color_hex(0x67EEE0), LV_PART_INDICATOR | LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui_Mpu6050WristSwitch, 255, LV_PART_INDICATOR | LV_STATE_CHECKED);
+
+    lv_obj_set_style_bg_color(ui_Mpu6050WristSwitch, lv_color_hex(0x0C949B), LV_PART_KNOB | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Mpu6050WristSwitch, 255, LV_PART_KNOB | LV_STATE_DEFAULT);
+
+    if (!lv_obj_has_state(ui_Mpu6050WristSwitch, LV_STATE_CHECKED) && MW_Interface.IMU.wrist_is_enabled)
+    {
+        lv_obj_add_state(ui_Mpu6050WristSwitch, LV_STATE_CHECKED);
+    }
+    else
+    {
+        lv_obj_clear_state(ui_Mpu6050WristSwitch, LV_STATE_CHECKED);
+    }
+
+    ui_Mpu6050WristLabel = lv_label_create(ui_Mpu6050WristPanel);
+    lv_obj_set_width(ui_Mpu6050WristLabel, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_Mpu6050WristLabel, LV_SIZE_CONTENT); /// 1
+    lv_obj_set_x(ui_Mpu6050WristLabel, -25);
+    lv_obj_set_y(ui_Mpu6050WristLabel, 0);
+    lv_obj_set_align(ui_Mpu6050WristLabel, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_Mpu6050WristLabel, "Wrist Enable");
+    lv_obj_set_style_text_color(ui_Mpu6050WristLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_Mpu6050WristLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     /*event callbacks */
     lv_obj_add_event_cb(ui_BluetoothSwitch, ui_event_BluetoothSwitch, LV_EVENT_ALL, NULL);
@@ -424,6 +513,8 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_event_cb(ui_CalculatorGoMoreImg, ui_event_CalculatorGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalendarGoMoreImg, ui_event_CalendarGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_MenuPage, ui_event_ui_MenuPage, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Mpu6050WristSwitch, ui_event_Mpu6050WristSwitch, LV_EVENT_ALL, NULL);
+    
 }
 
 void ui_MenuPage_screen_deinit(void)
