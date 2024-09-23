@@ -28,6 +28,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "fsmc.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -104,7 +105,7 @@ int main(void)
   MX_RTC_Init();
   MX_TIM3_Init();
   MX_ADC1_Init();
-  
+  MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

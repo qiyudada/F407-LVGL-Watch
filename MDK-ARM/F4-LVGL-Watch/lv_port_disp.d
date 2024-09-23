@@ -177,3 +177,4 @@ f4-lvgl-watch\lv_port_disp.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\lv_port_disp.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\lv_port_disp.o: ../Drivers-BSP/LCD/Lcd.h
 f4-lvgl-watch\lv_port_disp.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdlib.h
+f4-lvgl-watch\lv_port_disp.o: ../Core/Inc/dma.h

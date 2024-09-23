@@ -800,3 +800,4 @@ void lvgl_LCD_Color_Fill(u16 sx, u16 sy, u16 ex, u16 ey, lv_color_t *color)
 		color++;
 	}
 }
+

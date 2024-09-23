@@ -13,16 +13,17 @@
 #include <stdbool.h>
 #include "Lcd.h"
 #include "GUI.h"
+#include "dma.h"
 /*********************
  *      DEFINES
  *********************/
 #ifndef MY_DISP_HOR_RES
- #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen width, default value 320 is used for now.
+#warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen width, default value 320 is used for now.
 #define MY_DISP_HOR_RES 240
 #endif
 
 #ifndef MY_DISP_VER_RES
- #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen height, default value 240 is used for now.
+#warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen height, default value 240 is used for now.
 #define MY_DISP_VER_RES 320
 #endif
 
@@ -86,8 +87,9 @@ void lv_port_disp_init(void)
     /*-----------------------------------
      * Register the display in LVGL
      *----------------------------------*/
-    static lv_disp_drv_t disp_drv; /*Descriptor of a display driver*/
-    lv_disp_drv_init(&disp_drv);   /*Basic initialization*/
+    /*Descriptor of a display driver*/
+    static lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv); /*Basic initialization*/
 
     /*Set the resolution of the display*/
     disp_drv.hor_res = MY_DISP_HOR_RES;
@@ -112,9 +114,9 @@ void lv_port_disp_init(void)
 #elif LV_DISP_MODE == 2
     /* Example for 2) */
     static lv_disp_draw_buf_t draw_buf_dsc_2;
-    static lv_color_t buf_2_1[MY_DISP_HOR_RES * MY_DISP_VER_RES / 10];                                /*A buffer for 10 rows*/
-    static lv_color_t buf_2_2[MY_DISP_HOR_RES * MY_DISP_VER_RES / 10];                                /*An other buffer for 10 rows*/
-    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * MY_DISP_VER_RES / 10); /*Initialize the display buffer*/
+    static lv_color_t buf_2_1[MY_DISP_HOR_RES * 10];                                /*A buffer for 10 rows*/
+    static lv_color_t buf_2_2[MY_DISP_HOR_RES * 10];                                /*An other buffer for 10 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * 10); /*Initialize the display buffer*/
     /*Set a display buffer*/
     disp_drv.draw_buf = &draw_buf_dsc_2;
 #elif LV_DISP_MODE == 3
@@ -124,7 +126,7 @@ void lv_port_disp_init(void)
     static lv_color_t buf_3_2[MY_DISP_HOR_RES * MY_DISP_VER_RES]; /*Another screen sized buffer*/
     lv_disp_draw_buf_init(&draw_buf_dsc_3, buf_3_1, buf_3_2,
                           MY_DISP_VER_RES * LV_VER_RES_MAX); /*Initialize the display buffer*/
-                                                            
+
     disp_drv.full_refresh = 1; /*Required for Example 3)*/
 
     /*Set a display buffer*/
@@ -148,7 +150,6 @@ void lv_port_disp_init(void)
 static void disp_init(void)
 {
     /*You code here*/
-    
 }
 
 volatile bool disp_flush_enabled = true;
@@ -165,6 +166,11 @@ void disp_enable_update(void)
 void disp_disable_update(void)
 {
     disp_flush_enabled = false;
+}
+
+void LVGL_LCD_FSMC_DMA_pCallback(DMA_HandleTypeDef *_hdma)
+{
+    lv_disp_flush_ready(lv_disp_get_default()->driver);
 }
 
 /*Flush the content of the internal buffer the specific area on the display
@@ -191,12 +197,17 @@ static void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_
         // }
 
         /*a Fast way to draw*/
-        lvgl_LCD_Color_Fill(area->x1, area->y1, area->x2, area->y2, color_p);
+        // lvgl_LCD_Color_Fill(area->x1, area->y1, area->x2, area->y2, color_p);
+
+        /*a Fast way to draw by dma*/
+        LCD_SetWindows(area->x1, area->y1, area->x2, area->y2);
+        HAL_DMA_Start_IT(&hdma_memtomem_dma2_stream7, (uint32_t)color_p, (uint32_t)&LCD->LCD_RAM,
+                         ((area->x2 + 1) - area->x1) * ((area->y2 + 1) - area->y1));
     }
 
     /*IMPORTANT!!!
      *Inform the graphics library that you are ready with the flushing*/
-    lv_disp_flush_ready(disp_drv);
+    // lv_disp_flush_ready(disp_drv);
 }
 
 /*OPTIONAL: GPU INTERFACE*/
