@@ -211,6 +211,8 @@ void ui_event_CardDormancySwitch(lv_event_t * e);
 extern lv_obj_t * ui_CardDormancySwitch;
 extern lv_obj_t * ui_CardDormancyLabel;
 
+extern lv_obj_t *ui_CardCommandLabel;
+
 /*--------------------SCREEN: ui_ComputerPage------------------------------*/
 
 extern Page_t Page_Computer;

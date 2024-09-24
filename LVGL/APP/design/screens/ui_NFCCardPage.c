@@ -66,7 +66,6 @@ void ui_event_WriteCardGoMoreImg(lv_event_t *e)
     if (event_code == LV_EVENT_CLICKED)
     {
         lv_label_set_text(ui_CardCommandLabel, "Writing card...");
-        
     }
 }
 
@@ -253,7 +252,16 @@ void ui_NFCCardPage_screen_init(void)
     lv_obj_set_x(ui_CardCommandLabel, -1);
     lv_obj_set_y(ui_CardCommandLabel, 98);
     lv_obj_set_align(ui_CardCommandLabel, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_CardCommandLabel, "Waiting for Command...");
+
+    if (MW_Interface.NFC.ConnectionState)
+    {
+        lv_label_set_text(ui_CardCommandLabel, "Please Open NFC...");
+    }
+    else
+    {
+        lv_label_set_text(ui_CardCommandLabel, "Waiting for Command...");
+    }
+
     lv_obj_set_style_text_color(ui_CardCommandLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_CardCommandLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_CardCommandLabel, LV_TEXT_ALIGN_AUTO, LV_PART_MAIN | LV_STATE_DEFAULT);

@@ -12,11 +12,19 @@ void Drain_Close(lv_event_t *e)
 
 void NFC_Open(lv_event_t *e)
 {
+	if(Page_Get_NowPage()->page_obj==&ui_NFCCardPage)
+	{
+		lv_label_set_text(ui_CardCommandLabel, "Waiting for Command...");
+	}
 	MW_Interface.NFC.ConnectionState = 0;
 }
 
 void NFC_Close(lv_event_t *e)
 {
+	if(Page_Get_NowPage()->page_obj==&ui_NFCCardPage)
+	{
+		lv_label_set_text(ui_CardCommandLabel, "Please Open NFC...");
+	}
 	MW_Interface.NFC.ConnectionState = 1;
 }
 
