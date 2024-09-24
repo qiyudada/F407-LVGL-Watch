@@ -17,7 +17,7 @@ extern "C" {
 #include "User_DataManagement.h"
 
 
-
+extern lv_obj_t * ui____initial_actions0;
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 
 extern uint8_t ui_TimeHourValue;
@@ -50,8 +50,7 @@ void ui_HomePage_screen_deinit(void);
 extern Page_t Page_Navigation;
 
 void ui_Navigation_screen_init(void);
-
-extern void ui_Navigation_screen_deinit(void);
+void ui_Navigation_screen_deinit(void);
 
 void ui_event_Navigation(lv_event_t * e);
 extern lv_obj_t * ui_Navigation;
@@ -88,6 +87,7 @@ void ui_event_Calendar(lv_event_t * e);
 extern lv_obj_t * ui_Calendar;
 
 /*--------------------SCREEN: ui_MessageArcPage------------------------------*/
+
 extern Page_t Page_MessageArc;
 
 extern lv_obj_t * ui_MessageArcPage;
@@ -118,7 +118,6 @@ extern lv_obj_t * ui_Humidimg;
 void ui_event_HumidArcLabel(lv_event_t * e);
 extern lv_obj_t * ui_HumidArcLabel;
 
-
 void ui_event_LightBar(lv_event_t * e);
 extern lv_obj_t * ui_LightBar;
 extern lv_obj_t * ui_Image2;
@@ -128,7 +127,6 @@ extern lv_obj_t * ui_Image2;
 extern Page_t Page_Menu;
 
 void ui_MenuPage_screen_init(void);
-
 void ui_MenuPage_screen_deinit(void);
 
 extern lv_obj_t * ui_MenuPage;
@@ -175,8 +173,7 @@ extern lv_obj_t* ui_Mpu6050WristLabel;
 extern Page_t Page_Music;
 
 void ui_MusicPage_screen_init(void);
-
-extern void ui_MusicPage_screen_deinit(void);
+void ui_MusicPage_screen_deinit(void);
 
 void ui_event_MusicPage(lv_event_t * e);
 extern lv_obj_t * ui_MusicPage;
@@ -196,7 +193,6 @@ extern lv_obj_t * ui_GomoreImage;
 extern Page_t Page_NFCCard;
 
 void ui_NFCCardPage_screen_init(void);
-
 void ui_NFCCardPage_screen_deinit(void);
 
 extern lv_obj_t * ui_NFCCardPage;
@@ -214,15 +210,12 @@ extern lv_obj_t * ui_CardDormancyImage;
 void ui_event_CardDormancySwitch(lv_event_t * e);
 extern lv_obj_t * ui_CardDormancySwitch;
 extern lv_obj_t * ui_CardDormancyLabel;
-extern lv_obj_t * ui____initial_actions0;
-
 
 /*--------------------SCREEN: ui_ComputerPage------------------------------*/
 
 extern Page_t Page_Computer;
 
 void ui_ComputerPage_screen_init(void);
-
 void ui_ComputerPage_screen_deinit(void);
 
 extern lv_obj_t * ui_Computerpage;
@@ -285,8 +278,6 @@ LV_IMG_DECLARE(ui_img_wrist_png);    // assets/iu_bg2.png
 /*extra font declations */
 LV_FONT_DECLARE(ui_font_Cuyuan24);
 LV_FONT_DECLARE(ui_font_Number);
-
-
 
 void ui_init(void);
 

@@ -28,6 +28,7 @@ void ui_event_MusicPage(lv_event_t *e)
     {
         lv_indev_wait_release(lv_indev_get_act());
         Page_Back_Bottom();
+       
     }
     if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT)
     {

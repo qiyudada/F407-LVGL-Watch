@@ -177,7 +177,6 @@ char PCD_ReadBlock(uint8_t BlockAddr, uint8_t *pData);                          
 char PCD_Value(uint8_t mode, uint8_t BlockAddr, uint8_t *pValue);
 char PCD_BakValue(uint8_t sourceBlockAddr, uint8_t goalBlockAddr);
 char PCD_Halt(void);
-void StartIDcardTask(void const *argument);
 uint8_t readCard(uint8_t *readUid, void (*funCallBack)(void));
 uint8_t PCD_Init_RST(void);
 void PCD_TEST(uint8_t *readUid);

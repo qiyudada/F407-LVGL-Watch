@@ -73,19 +73,7 @@ void ui_event_CardGoMoreImg(lv_event_t *e)
     }
 }
 
-void ui_event_CardDormancySwitch(lv_event_t *e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
-    {
-        Bluetooth_Open(e);
-    }
-    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
-    {
-        Bluetoorh_Close(e);
-    }
-}
+
 
 void ui_event_CalculatorGoMoreImg(lv_event_t *e)
 {

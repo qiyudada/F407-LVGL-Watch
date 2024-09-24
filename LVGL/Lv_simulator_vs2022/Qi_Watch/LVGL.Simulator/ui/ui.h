@@ -203,11 +203,17 @@ void ui_NFCCardPage_screen_init(void);
 
 void ui_NFCCardPage_screen_deinit(void);
 
+void ui_event_NFCCardpage_cb(lv_event_t* e);
 extern lv_obj_t * ui_NFCCardPage;
+
+void ui_event_WriteCardGoMoreImg(lv_event_t* e);
 extern lv_obj_t * ui_WriteCardPanel;
 extern lv_obj_t * ui_WriteCardImage;
 extern lv_obj_t * ui_writeCardLabel;
 extern lv_obj_t * ui_WriteCardGoMoreImg;
+
+
+void ui_event_ReadCardGoMoreImg(lv_event_t* e);
 extern lv_obj_t * ui_ReadCardPanel;
 extern lv_obj_t * ui_ReadCardImage;
 extern lv_obj_t * ui_ReadCardLabel;

@@ -8,16 +8,20 @@ lv_obj_t *ui_WriteCardPanel;
 lv_obj_t *ui_WriteCardImage;
 lv_obj_t *ui_writeCardLabel;
 lv_obj_t *ui_WriteCardGoMoreImg;
+
 lv_obj_t *ui_ReadCardPanel;
 lv_obj_t *ui_ReadCardImage;
 lv_obj_t *ui_ReadCardLabel;
 lv_obj_t *ui_ReadCardGoMoreImg;
+
 lv_obj_t *ui_CardDormancyPanel;
 lv_obj_t *ui_CardDormancyImage;
 void ui_event_CardDormancySwitch(lv_event_t *e);
 lv_obj_t *ui_CardDormancySwitch;
 lv_obj_t *ui_CardDormancyLabel;
-lv_obj_t *ui____initial_actions0;
+
+lv_obj_t* ui_CardCommandLabel;
+
 const lv_img_dsc_t *ui_imgset_calculator[1] = {&ui_img_calculator1_png};
 const lv_img_dsc_t *ui_imgset_gomore[1] = {&ui_img_gomore3_png};
 const lv_img_dsc_t *ui_imgset_iu[1] = {&ui_img_iu1_png};
@@ -41,6 +45,41 @@ void ui_event_NFCCardpage_cb(lv_event_t *e)
         Page_Back_Bottom();
     }
 }
+
+void ui_event_WriteCardGoMoreImg(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        lv_label_set_text(ui_CardCommandLabel, "Writing card...");
+    }
+}
+
+void ui_event_ReadCardGoMoreImg(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        lv_label_set_text(ui_CardCommandLabel, "Reading card...");
+    }
+}
+
+void ui_event_CardDormancySwitch(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetooth_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        Bluetoorh_Close(e);
+    }
+}
+
 
 void ui_NFCCardPage_screen_init(void)
 {
@@ -96,7 +135,8 @@ void ui_NFCCardPage_screen_init(void)
     lv_obj_set_x(ui_WriteCardGoMoreImg, 70);
     lv_obj_set_y(ui_WriteCardGoMoreImg, -1);
     lv_obj_set_align(ui_WriteCardGoMoreImg, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_WriteCardGoMoreImg, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
+
+    lv_obj_add_flag(ui_WriteCardGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_WriteCardGoMoreImg, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_ReadCardPanel = lv_obj_create(ui_NFCCardPage);
@@ -142,7 +182,8 @@ void ui_NFCCardPage_screen_init(void)
     lv_obj_set_x(ui_ReadCardGoMoreImg, 70);
     lv_obj_set_y(ui_ReadCardGoMoreImg, -1);
     lv_obj_set_align(ui_ReadCardGoMoreImg, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_ReadCardGoMoreImg, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
+
+    lv_obj_add_flag(ui_ReadCardGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_ReadCardGoMoreImg, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_CardDormancyPanel = lv_obj_create(ui_NFCCardPage);
@@ -198,6 +239,21 @@ void ui_NFCCardPage_screen_init(void)
     lv_obj_set_style_text_color(ui_CardDormancyLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_CardDormancyLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+
+    ui_CardCommandLabel = lv_label_create(ui_NFCCardPage);
+    lv_obj_set_width(ui_CardCommandLabel, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_CardCommandLabel, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_CardCommandLabel, -1);
+    lv_obj_set_y(ui_CardCommandLabel, 98);
+    lv_obj_set_align(ui_CardCommandLabel, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_CardCommandLabel, "Waiting for Command...");
+    lv_obj_set_style_text_color(ui_CardCommandLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_CardCommandLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui_CardCommandLabel, LV_TEXT_ALIGN_AUTO, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_CardCommandLabel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_add_event_cb(ui_WriteCardGoMoreImg, ui_event_WriteCardGoMoreImg, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_ReadCardGoMoreImg, ui_event_ReadCardGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CardDormancySwitch, ui_event_CardDormancySwitch, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_NFCCardPage, ui_event_NFCCardpage_cb, LV_EVENT_ALL, NULL);
     

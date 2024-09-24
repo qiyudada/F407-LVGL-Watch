@@ -12,12 +12,12 @@ void Drain_Close(lv_event_t *e)
 
 void NFC_Open(lv_event_t *e)
 {
-	// Your code here
+	MW_Interface.NFC.ConnectionState = 0;
 }
 
 void NFC_Close(lv_event_t *e)
 {
-	// Your code here
+	MW_Interface.NFC.ConnectionState = 1;
 }
 
 void Bluetooth_Open(lv_event_t *e)
@@ -40,15 +40,12 @@ void Wifi_Close(lv_event_t *e)
 	// Your code here
 }
 
-
-void WristWake_Open(lv_event_t* e)
+void WristWake_Open(lv_event_t *e)
 {
-    MW_Interface.IMU.WristEnable();
+	MW_Interface.IMU.WristEnable();
 }
 
-void WristWake_Close(lv_event_t* e)
+void WristWake_Close(lv_event_t *e)
 {
-    MW_Interface.IMU.WristDisable();
+	MW_Interface.IMU.WristDisable();
 }
-
-

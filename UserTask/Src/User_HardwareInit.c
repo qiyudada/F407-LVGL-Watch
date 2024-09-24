@@ -41,6 +41,7 @@ void HardwareInitTask(void *argument)
             MW_Interface.NFC.ConnectionState = MW_Interface.NFC.Init();
             Delay_us(100);
         }
+        MW_Interface.NFC.ConnectionState = 1;/* set NFC close state */
         /*-------bluetooth Init------- */
         MW_Interface.BLE.Init();
         MW_Interface.BLE.Control(0);
@@ -54,7 +55,7 @@ void HardwareInitTask(void *argument)
             MW_Interface.IMU.ConnectionError = MW_Interface.IMU.Init();
             Delay_ms(300);
         }
-        
+
         /*----------AT24Cxx(EEPROM) Init---------- */
         AT24Cxx_Init();
         /*----------Data  read Init---------- */
@@ -72,7 +73,7 @@ void HardwareInitTask(void *argument)
                 MW_Interface.IMU.wrist_is_enabled = recbuf[0];
                 MW_Interface.BLE.ConnectionState = 0;
             }
-            
+
             RTC_DateTypeDef nowdate;
             HAL_RTC_GetDate(&hrtc, &nowdate, RTC_FORMAT_BIN);
 
@@ -93,7 +94,7 @@ void HardwareInitTask(void *argument)
         LCD_Fill(0, 0, MY_DISP_HOR_RES, MY_DISP_VER_RES, WHITE);
         LCD_ShowString2(84, 140, 116, 156, 16, "Welcome!", Purple);
         Delay_ms(2000);
-         /*--------PWM Init----------*/
+        /*--------PWM Init----------*/
         LED_PWM_Init();
         LED_Set_Light(5);
         /*---------Touch Init---------- */

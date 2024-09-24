@@ -11,7 +11,7 @@
 ///////////////////// ANIMATIONS ////////////////////
 
 ///////////////////// SCREENS-Initiation ////////////////////
-
+lv_obj_t * ui____initial_actions0;
 /**
  *@brief  Initialize the screen
  */
