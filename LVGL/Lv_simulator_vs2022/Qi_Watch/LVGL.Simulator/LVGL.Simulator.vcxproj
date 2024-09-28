@@ -79,6 +79,10 @@
     <ClCompile Include="ui\images\ui_img_1688708748.c" />
     <ClCompile Include="ui\images\ui_img_876444160.c" />
     <ClCompile Include="ui\images\ui_img_876457220.c" />
+    <ClCompile Include="ui\images\ui_img_add_png.c" />
+    <ClCompile Include="ui\images\ui_img_alarmoff_png.c" />
+    <ClCompile Include="ui\images\ui_img_alarmon_png.c" />
+    <ClCompile Include="ui\images\ui_img_alarm_png.c" />
     <ClCompile Include="ui\images\ui_img_back_png.c" />
     <ClCompile Include="ui\images\ui_img_bibluetooth_png.c" />
     <ClCompile Include="ui\images\ui_img_calculator1_png.c" />
@@ -114,6 +118,7 @@
     <ClCompile Include="ui\images\ui_img_wifi_png.c" />
     <ClCompile Include="ui\images\ui_img_wrist_png.c" />
     <ClCompile Include="ui\images\ui_img_writecard_png.c" />
+    <ClCompile Include="ui\screens\ui_AlarmPage.c" />
     <ClCompile Include="ui\screens\ui_CalendarPage.c" />
     <ClCompile Include="ui\screens\ui_ComputerPage.c" />
     <ClCompile Include="ui\screens\ui_HomePage.c" />

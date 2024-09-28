@@ -83,7 +83,6 @@ extern lv_obj_t * ui_BluetoothPic;
 void ui_event_WifiPic(lv_event_t * e);
 extern lv_obj_t * ui_WifiPic;
 
-void ui_event_Calendar(lv_event_t * e);
 extern lv_obj_t * ui_Calendar;
 
 /*--------------------SCREEN: ui_MessageArcPage------------------------------*/
@@ -98,27 +97,27 @@ void ui_MessageArcPage_screen_deinit(void);
 void ui_event_MessageArcPage(lv_event_t * e);
 
 
-void ui_event_StepArc(lv_event_t * e);
+
 extern lv_obj_t * ui_StepArc;
 extern lv_obj_t * ui_Stepimg;
-void ui_event_StepArcLabel(lv_event_t * e);
+
 extern lv_obj_t * ui_StepArcLabel;
 
-void ui_event_TempatureArc(lv_event_t * e);
+
 extern lv_obj_t * ui_TempatureArc;
 extern lv_obj_t * ui_Tempimg;
-void ui_event_TempArcLabel(lv_event_t * e);
+
 extern lv_obj_t * ui_TempArcLabel;
 
 
-void ui_event_HumidityArc(lv_event_t * e);
+
 extern lv_obj_t * ui_HumidityArc;
 extern lv_obj_t * ui_Humidimg;
-void ui_event_HumidArcLabel(lv_event_t * e);
+
 extern lv_obj_t * ui_HumidArcLabel;
 
 
-void ui_event_LightBar(lv_event_t * e);
+
 extern lv_obj_t * ui_LightBar;
 extern lv_obj_t * ui_Image2;
 
@@ -157,10 +156,10 @@ extern lv_obj_t * ui_MenuCardLabel;
 void ui_event_CardGoMoreImg(lv_event_t * e);
 extern lv_obj_t * ui_CardGoMoreImg;
 
-extern lv_obj_t * ui_StoptimePanel;
-extern lv_obj_t * ui_StoptimeImage;
-extern lv_obj_t * ui_StoptimeLabel;
-extern lv_obj_t * ui_StoptimeGoMoreImg;
+extern lv_obj_t * ui_MenuAlarmPanel;
+extern lv_obj_t * ui_MenuAlarmImage;
+extern lv_obj_t * ui_MenuAlarmLabel;
+extern lv_obj_t * ui_MenuAlarmGoMoreImg;
 
 void ui_event_CalculatorGoMoreImg(lv_event_t *e);
 extern lv_obj_t * ui_CalculatorPanel;
@@ -250,6 +249,43 @@ extern lv_obj_t * ui_CalendarShowPage;
 void ui_CalendarPage_screen_init(void);
 void ui_CalendarPage_screen_deinit(void);
 
+
+/*--------------------------SCREEN: ui_AlarmPage-------------------------------------*/
+extern Page_t Page_Alarm;
+
+extern int alarmCount;
+
+void ui_AlarmPage_screen_init(void);
+void ui_AlarmPage_screen_deinit(void);
+
+void CreateAlarmSettingPage(lv_obj_t* parent,int index);
+
+extern int Alarm_Number;
+lv_obj_t* ui_AlarmPage;
+lv_obj_t* ui_AddImage;
+lv_obj_t* ui_AlarmSettingPage;
+
+void ui_event_AlarmSettingSwitch(lv_event_t* e);
+
+
+lv_obj_t* ui_AlarmSettingSwitch;
+lv_obj_t* ui_AlarmSettingLabel;
+lv_obj_t* ui_AlarmImgContainer;
+
+
+/*--------------------------SCREEN: ui_SettingTimePage-------------------------------------*/
+extern Page_t Page_Settime;
+
+void ui_SetTimePage_screen_init(void);
+void ui_SetTimePage_screen_deinit(void);
+
+
+lv_obj_t* ui_SetTimePage;
+lv_obj_t* ui_HourRoller;
+lv_obj_t* ui_MinuteRoller;
+lv_obj_t* ui_SetTimeLabel;
+lv_obj_t* ui_ConfirmImage;
+
 /*--------------------Picture------------------------------*/
 LV_IMG_DECLARE(ui_img_iu_bg_png);    // assets/iu_bg.png
 LV_IMG_DECLARE(ui_img_iu_bg3_png);    // assets/iu_bg3.png
@@ -290,7 +326,11 @@ LV_IMG_DECLARE(ui_img_readcard_png);    // assets/Readcard.png
 LV_IMG_DECLARE(ui_img_nfcoff_png);    // assets/Nfcoff.png
 LV_IMG_DECLARE(ui_img_iu_bg2_png);    // assets/iu_bg2.png
 LV_IMG_DECLARE(ui_img_wrist_png);    // assets/iu_bg2.png
-
+LV_IMG_DECLARE(ui_img_add_png);    // assets/add.png
+LV_IMG_DECLARE(ui_img_alarmoff_png);    // assets/AlarmOff.png
+LV_IMG_DECLARE(ui_img_alarmon_png);    // assets/AlarmOn.png
+LV_IMG_DECLARE(ui_img_confirm_png);    // assets/Confirm.png
+LV_IMG_DECLARE(ui_img_alarm_png);    // assets/Alarm.png
 
 /*extra font declations */
 LV_FONT_DECLARE(ui_font_Cuyuan24);

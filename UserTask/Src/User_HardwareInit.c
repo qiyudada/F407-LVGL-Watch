@@ -11,6 +11,7 @@
 #include "user_DataSaveTask.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
+#include "User_RunMode.h"
 #include "ui.h"
 /**
  * @brief Hardware Init Task
@@ -41,7 +42,7 @@ void HardwareInitTask(void *argument)
             MW_Interface.NFC.ConnectionState = MW_Interface.NFC.Init();
             Delay_us(100);
         }
-        MW_Interface.NFC.ConnectionState = 1;/* set NFC close state */
+        MW_Interface.NFC.ConnectionState = 1; /* set NFC close state */
         /*-------bluetooth Init------- */
         MW_Interface.BLE.Init();
         MW_Interface.BLE.Control(0);
@@ -96,7 +97,7 @@ void HardwareInitTask(void *argument)
         Delay_ms(2000);
         /*--------PWM Init----------*/
         LED_PWM_Init();
-        LED_Set_Light(5);
+        LED_Set_Light(ui_LightSliderValue);
         /*---------Touch Init---------- */
         tp_dev.init();
         /*----------Lvgl Init---------- */

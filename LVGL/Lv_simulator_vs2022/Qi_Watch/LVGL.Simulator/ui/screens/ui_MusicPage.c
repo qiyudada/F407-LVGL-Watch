@@ -18,6 +18,7 @@ lv_obj_t *ui_ShareImage;
 lv_obj_t *ui_GomoreImage;
 
 
+
 /*--------------------SCREEN: ui_MusicPage------------------------------*/
 
 void ui_event_MusicPage(lv_event_t *e)

@@ -1,8 +1,26 @@
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Keil\ARM Start\ARM\ARMCC\Bin'
 Build target 'F4-LVGL-Watch'
-compiling ui_MenuPage.c...
+compiling StrCalculate.c...
+..\LVGL\APP\design\StrCalculate.c(13): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c(24): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c(53): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c(64): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c(92): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c(103): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c(156): warning:  #940-D: missing return statement at end of non-void function "SymisHighPriority" 
+  }
+..\LVGL\APP\design\StrCalculate.c(301): warning:  #68-D: integer conversion resulted in a change of sign
+          return -1;
+..\LVGL\APP\design\StrCalculate.c: 8 warnings, 0 errors
+compiling ui_ComputerPage.c...
 linking...
-Program Size: Code=205580 RO-data=775448 RW-data=1708 ZI-data=114040  
+Program Size: Code=206272 RO-data=775432 RW-data=1712 ZI-data=93024  
 FromELF: creating hex file...
-"F4-LVGL-Watch\F4-LVGL-Watch.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:23
+"F4-LVGL-Watch\F4-LVGL-Watch.axf" - 0 Error(s), 8 Warning(s).
+Build Time Elapsed:  00:00:21

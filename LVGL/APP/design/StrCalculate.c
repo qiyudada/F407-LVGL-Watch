@@ -3,9 +3,12 @@
 #include <string.h>
 #include "StrCalculate.h"
 
+/**
+ * @get the number or symbol push in stack
+ */
 uint8_t strput(StrStack_t *st, char strin)
 {
-    if (st->Top_Point == 15 - 1)
+    if (st->Top_Point == 10 - 1)
     {
         return -1;
     }
@@ -193,9 +196,12 @@ uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack
     int i;
     for (i = 0; i < strlen; i++)
     {
+        /*judge if the current character is a point*/
         if (str[i] == '.')
         {
+            /*set temp as point type*/
             temp.datatype = POINT_TYPE;
+            /*check pre number is number or not*/
             if (temp_pre.datatype == NUMBER_TYPE)
             {
             }
@@ -205,6 +211,7 @@ uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack
             }
             temp_pre = temp;
         }
+        
         if (str[i] <= '9' && str[i] >= '0')
         {
             // 溢出报错
@@ -216,6 +223,7 @@ uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack
             temp.datatype = NUMBER_TYPE;
             temp.number = (str[i] - '0');
             temp.symbol = NULL;
+            
             // 如果为连续数字,需要进行进位,将数字栈顶读出进位，再加上现在位，再入栈
             if (temp_pre.datatype == NUMBER_TYPE)
             {

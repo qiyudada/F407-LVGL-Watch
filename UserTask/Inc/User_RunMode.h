@@ -7,7 +7,7 @@
 #include "sys.h"
  
 extern uint16_t IdleTimerCount;
-
+extern uint8_t ui_LightSliderValue;
 
 void IdleTimerCallback(void *argument);
 

@@ -36,7 +36,7 @@ lv_obj_t *ui_BluetoothPic;
 void ui_event_WifiPic(lv_event_t *e);
 lv_obj_t *ui_WifiPic;
 
-void ui_event_Calendar(lv_event_t *e);
+
 lv_obj_t *ui_Calendar;
 
 /*--------------------SCREEN: ui_Navigation------------------------------*/
@@ -74,6 +74,19 @@ void ui_event_DrainPic(lv_event_t *e)
         Drain_Close(e);
     }
 }
+
+
+void ui_event_ClockPic(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_LONG_PRESSED)
+    {
+        page_stack_pop(&PageStack);
+        Page_Load(&Page_Alarm);
+    }
+}
+
 
 void ui_event_NFCPic(lv_event_t *e)
 {
@@ -391,6 +404,7 @@ void ui_Navigation_screen_init(void)
 
     lv_obj_add_event_cb(ui_SettingPic, ui_event_SettingPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_DrainPic, ui_event_DrainPic, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_ClockPic, ui_event_ClockPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_NFCPic, ui_event_NFCPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_MusicPic, ui_event_MusicPic, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalculatorPic, ui_event_CalculatorPic, LV_EVENT_ALL, NULL);

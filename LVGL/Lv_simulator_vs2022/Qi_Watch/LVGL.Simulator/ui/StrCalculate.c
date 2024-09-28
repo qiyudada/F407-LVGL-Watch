@@ -177,6 +177,7 @@ void CalculateOne(NumStack_t *numstack, SymStack_t *symstack)
     SymStackDel(symstack);
 }
 
+
 uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack_t *SymStack)
 {
     NumStackClear(NumStack);
@@ -188,8 +189,10 @@ uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack
     temp.symbol = NULL;
     temp_pre = temp;
     temp_pre.datatype = SYMBOL_TYPE;
+    
     if (str[0] > '9' || str[0] < '0')
         return 1; // erro
+        
     int i;
     for (i = 0; i < strlen; i++)
     {

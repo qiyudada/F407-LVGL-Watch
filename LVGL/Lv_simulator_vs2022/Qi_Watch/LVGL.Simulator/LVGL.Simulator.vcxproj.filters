@@ -77,6 +77,11 @@
     <ClCompile Include="ui\ui_helpers.c" />
     <ClCompile Include="Middlewares\User_DataManagement.c" />
     <ClCompile Include="ui\images\ui_img_wrist_png.c" />
+    <ClCompile Include="ui\images\ui_img_add_png.c" />
+    <ClCompile Include="ui\images\ui_img_alarmoff_png.c" />
+    <ClCompile Include="ui\images\ui_img_alarmon_png.c" />
+    <ClCompile Include="ui\screens\ui_AlarmPage.c" />
+    <ClCompile Include="ui\images\ui_img_alarm_png.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LVGL.Simulator.rc" />

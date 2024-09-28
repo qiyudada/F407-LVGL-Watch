@@ -207,6 +207,7 @@ f4-lvgl-watch\user_hardwareinit.o: ../Drivers-BSP/TEMT6000/TEMT6000.h
 f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/user_DataSaveTask.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_disp.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/examples/porting/lv_port_indev.h
+f4-lvgl-watch\user_hardwareinit.o: ../UserTask/Inc/User_RunMode.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_hardwareinit.o: ../LVGL/APP/design/ui_helpers.h

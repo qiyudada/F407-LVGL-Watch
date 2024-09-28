@@ -129,7 +129,7 @@ void User_Tasks_Init(void)
 
     /* start timers, add new ones, ... */
     IdleTimerHandle = osTimerNew(IdleTimerCallback, osTimerPeriodic, NULL, NULL);
-    osTimerStart(IdleTimerHandle, 400);
+    osTimerStart(IdleTimerHandle, 200);
 
     /* add queues, ... */
     Key_MessageQueue = osMessageQueueNew(1, 1, NULL);
