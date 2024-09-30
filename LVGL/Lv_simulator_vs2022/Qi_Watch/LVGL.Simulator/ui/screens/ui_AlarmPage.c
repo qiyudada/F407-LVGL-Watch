@@ -82,72 +82,72 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
 {
     if (Number > 4 && Number == 0) return;
 
-    for(int i = 1; i < Number+1; i++)
+    for(int i = 0; i < Number; i++)
     {
-        alarms[i-1].alarmSettingPage = lv_obj_create(parent);
-        lv_obj_set_width(alarms[i-1].alarmSettingPage, 230);
-        lv_obj_set_height(alarms[i-1].alarmSettingPage, 60);
-        lv_obj_set_x(alarms[i-1].alarmSettingPage, 0);
-        lv_obj_set_y(alarms[i-1].alarmSettingPage, -70+(i-1)*65);
+        alarms[i].alarmSettingPage = lv_obj_create(parent);
+        lv_obj_set_width(alarms[i].alarmSettingPage, 230);
+        lv_obj_set_height(alarms[i].alarmSettingPage, 60);
+        lv_obj_set_x(alarms[i].alarmSettingPage, 0);
+        lv_obj_set_y(alarms[i].alarmSettingPage, -70+(i)*65);
 
-        lv_obj_set_align(alarms[i-1].alarmSettingPage, LV_ALIGN_CENTER);
-        lv_obj_clear_flag(alarms[i-1].alarmSettingPage, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-        lv_obj_set_style_bg_color(alarms[i-1].alarmSettingPage, lv_color_hex(0x8B8D9C), LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_opa(alarms[i-1].alarmSettingPage, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_grad_dir(alarms[i-1].alarmSettingPage, LV_GRAD_DIR_HOR, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_border_color(alarms[i-1].alarmSettingPage, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_border_opa(alarms[i-1].alarmSettingPage, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_align(alarms[i].alarmSettingPage, LV_ALIGN_CENTER);
+        lv_obj_clear_flag(alarms[i].alarmSettingPage, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+        lv_obj_set_style_bg_color(alarms[i].alarmSettingPage, lv_color_hex(0x8B8D9C), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_opa(alarms[i].alarmSettingPage, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_grad_dir(alarms[i].alarmSettingPage, LV_GRAD_DIR_HOR, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_border_color(alarms[i].alarmSettingPage, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_border_opa(alarms[i].alarmSettingPage, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-        alarms[i-1].alarmSettingSwitch = lv_switch_create(alarms[i-1].alarmSettingPage);
-        lv_obj_set_width(alarms[i-1].alarmSettingSwitch, 50);
-        lv_obj_set_height(alarms[i-1].alarmSettingSwitch, 25);
-        lv_obj_set_x(alarms[i-1].alarmSettingSwitch, 70);
-        lv_obj_set_y(alarms[i-1].alarmSettingSwitch, -1);
-        lv_obj_set_align(alarms[i-1].alarmSettingSwitch, LV_ALIGN_CENTER);
-        lv_obj_set_style_bg_color(alarms[i-1].alarmSettingSwitch, lv_color_hex(0x506753), LV_PART_INDICATOR | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_opa(alarms[i-1].alarmSettingSwitch, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_color(alarms[i-1].alarmSettingSwitch, lv_color_hex(0x4D604F), LV_PART_INDICATOR | LV_STATE_CHECKED);
-        lv_obj_set_style_bg_opa(alarms[i-1].alarmSettingSwitch, 255, LV_PART_INDICATOR | LV_STATE_CHECKED);
+        alarms[i].alarmSettingSwitch = lv_switch_create(alarms[i].alarmSettingPage);
+        lv_obj_set_width(alarms[i].alarmSettingSwitch, 50);
+        lv_obj_set_height(alarms[i].alarmSettingSwitch, 25);
+        lv_obj_set_x(alarms[i].alarmSettingSwitch, 70);
+        lv_obj_set_y(alarms[i].alarmSettingSwitch, -1);
+        lv_obj_set_align(alarms[i].alarmSettingSwitch, LV_ALIGN_CENTER);
+        lv_obj_set_style_bg_color(alarms[i].alarmSettingSwitch, lv_color_hex(0x506753), LV_PART_INDICATOR | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_opa(alarms[i].alarmSettingSwitch, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_color(alarms[i].alarmSettingSwitch, lv_color_hex(0x4D604F), LV_PART_INDICATOR | LV_STATE_CHECKED);
+        lv_obj_set_style_bg_opa(alarms[i].alarmSettingSwitch, 255, LV_PART_INDICATOR | LV_STATE_CHECKED);
 
-        if (!lv_obj_has_state(alarms[i-1].alarmSettingSwitch, LV_STATE_CHECKED)&& alarms[i-1].alarmState)
+        if (!lv_obj_has_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED)&& alarms[i].alarmState)
         {
-            lv_obj_add_state(alarms[i-1].alarmSettingSwitch, LV_STATE_CHECKED);
+            lv_obj_add_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED);
         }
         else
         {
-            lv_obj_clear_state(alarms[i-1].alarmSettingSwitch, LV_STATE_CHECKED);
+            lv_obj_clear_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED);
         }
 
-        alarms[i-1].alarmSettingLabel = lv_label_create(alarms[i-1].alarmSettingPage);
-        lv_obj_set_width(alarms[i-1].alarmSettingLabel, LV_SIZE_CONTENT);   /// 1
-        lv_obj_set_height(alarms[i-1].alarmSettingLabel, LV_SIZE_CONTENT);    /// 1
-        lv_obj_set_x(alarms[i-1].alarmSettingLabel, -30);
-        lv_obj_set_y(alarms[i-1].alarmSettingLabel, 0);
-        lv_obj_set_align(alarms[i-1].alarmSettingLabel, LV_ALIGN_CENTER);
+        alarms[i].alarmSettingLabel = lv_label_create(alarms[i].alarmSettingPage);
+        lv_obj_set_width(alarms[i].alarmSettingLabel, LV_SIZE_CONTENT);   /// 1
+        lv_obj_set_height(alarms[i].alarmSettingLabel, LV_SIZE_CONTENT);    /// 1
+        lv_obj_set_x(alarms[i].alarmSettingLabel, -30);
+        lv_obj_set_y(alarms[i].alarmSettingLabel, 0);
+        lv_obj_set_align(alarms[i].alarmSettingLabel, LV_ALIGN_CENTER);
 
-        lv_snprintf(alarms[i-1].time_str, sizeof(alarms[i-1].time_str), "%s:%s",alarms[i-1].hour_str, alarms[i-1].min_str);
-        lv_label_set_text(alarms[i-1].alarmSettingLabel, alarms[i-1].time_str);
+        lv_snprintf(alarms[i].time_str, sizeof(alarms[i].time_str), "%s:%s",alarms[i].hour_str, alarms[i].min_str);
+        lv_label_set_text(alarms[i].alarmSettingLabel, alarms[i].time_str);
 
-        lv_obj_add_flag(alarms[i-1].alarmSettingLabel, LV_OBJ_FLAG_CLICKABLE);
-        lv_obj_set_style_text_color(alarms[i-1].alarmSettingLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_opa(alarms[i-1].alarmSettingLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_font(alarms[i-1].alarmSettingLabel, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-
-        alarms[i-1].alarmImgContainer = lv_obj_create(alarms[i-1].alarmSettingPage);
-        lv_obj_set_width(alarms[i-1].alarmImgContainer, 30);
-        lv_obj_set_height(alarms[i-1].alarmImgContainer, 30);
-        lv_obj_set_x(alarms[i-1].alarmImgContainer, -88);
-        lv_obj_set_y(alarms[i-1].alarmImgContainer, -1);
-        lv_obj_set_align(alarms[i-1].alarmImgContainer, LV_ALIGN_CENTER);
-        lv_obj_add_flag(alarms[i-1].alarmImgContainer, LV_OBJ_FLAG_CHECKABLE);
-        lv_obj_clear_flag(alarms[i-1].alarmImgContainer,LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-        lv_obj_set_style_bg_img_src(alarms[i-1].alarmImgContainer, &ui_img_alarmoff_png, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_img_src(alarms[i-1].alarmImgContainer, &ui_img_alarmon_png, LV_PART_MAIN | LV_STATE_CHECKED);
+        lv_obj_add_flag(alarms[i].alarmSettingLabel, LV_OBJ_FLAG_CLICKABLE);
+        lv_obj_set_style_text_color(alarms[i].alarmSettingLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_opa(alarms[i].alarmSettingLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(alarms[i].alarmSettingLabel, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
 
-        lv_obj_add_event_cb(alarms[i-1].alarmSettingLabel, ui_event_AlarmLabelSettime, LV_EVENT_ALL, (void*)(uintptr_t)i);
-        lv_obj_add_event_cb(alarms[i-1].alarmSettingSwitch, ui_event_AlarmSettingSwitch, LV_EVENT_ALL, (void*)(uintptr_t)i);
+        alarms[i].alarmImgContainer = lv_obj_create(alarms[i].alarmSettingPage);
+        lv_obj_set_width(alarms[i].alarmImgContainer, 30);
+        lv_obj_set_height(alarms[i].alarmImgContainer, 30);
+        lv_obj_set_x(alarms[i].alarmImgContainer, -88);
+        lv_obj_set_y(alarms[i].alarmImgContainer, -1);
+        lv_obj_set_align(alarms[i].alarmImgContainer, LV_ALIGN_CENTER);
+        lv_obj_add_flag(alarms[i].alarmImgContainer, LV_OBJ_FLAG_CHECKABLE);
+        lv_obj_clear_flag(alarms[i].alarmImgContainer,LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+        lv_obj_set_style_bg_img_src(alarms[i].alarmImgContainer, &ui_img_alarmoff_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_img_src(alarms[i].alarmImgContainer, &ui_img_alarmon_png, LV_PART_MAIN | LV_STATE_CHECKED);
+
+
+        lv_obj_add_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime, LV_EVENT_ALL, (void*)(uintptr_t)i);
+        lv_obj_add_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch, LV_EVENT_ALL, (void*)(uintptr_t)i);
 
     }
    

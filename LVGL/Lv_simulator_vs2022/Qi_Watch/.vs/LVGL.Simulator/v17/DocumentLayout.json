@@ -83,8 +83,7 @@
               "RelativeToolTip": "LVGL.Simulator\\lvgl\\src\\core\\lv_obj.c",
               "ViewState": "AQIAAFsBAAAAAAAAAAAawGkBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-30T01:52:31.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T01:52:31.143Z"
             },
             {
               "$type": "Document",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_SetTimePage.c",
               "ViewState": "AQIAABkAAAAAAAAAAAAAACMAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-25T02:01:13.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T02:01:13.288Z"
             },
             {
               "$type": "Document",
@@ -131,7 +129,7 @@
               "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\screens\\ui_AlarmPage.c",
               "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_AlarmPage.c",
               "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_AlarmPage.c",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAAAFQAAAARAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAAAIgAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-09-25T01:28:47.388Z",
               "EditorCaption": ""
