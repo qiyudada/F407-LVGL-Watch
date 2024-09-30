@@ -59,4 +59,6 @@ D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5)
 D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 ui.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ui\ui.c, ui\ui.c。
 D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 ui_events.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ui\ui_events.c, ui\ui_events.c。
 D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 ui_helpers.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ui\ui_helpers.c, ui\ui_helpers.c。
+  ui_AlarmPage.c
+  ui_AlarmPage.c
   LVGL.Simulator.vcxproj -> D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Binaries\Debug\x64\Qi_Watch.exe

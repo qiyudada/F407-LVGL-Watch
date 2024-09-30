@@ -38,9 +38,10 @@ void ui_event_AlarmLabelSettime(lv_event_t* e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t* target = lv_event_get_target(e);
-    int alarm_currentpointer = (int)(uintptr_t)lv_event_get_user_data(e);
+    int alarmpointer = (int)(uintptr_t)lv_event_get_user_data(e);
     if (event_code == LV_EVENT_CLICKED)
     {
+        alarm_currentpointer = alarmpointer;
         Page_Load(&Page_Settime);
     }
 
@@ -80,7 +81,7 @@ void ui_even_AddImage_cb(lv_event_t* e)
 
 void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
 {
-    if (Number > 4 && Number == 0) return;
+    if (Number > 4 || Number == 0) return;
 
     for(int i = 0; i < Number; i++)
     {
@@ -88,7 +89,7 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         lv_obj_set_width(alarms[i].alarmSettingPage, 230);
         lv_obj_set_height(alarms[i].alarmSettingPage, 60);
         lv_obj_set_x(alarms[i].alarmSettingPage, 0);
-        lv_obj_set_y(alarms[i].alarmSettingPage, -70+(i)*65);
+        lv_obj_set_y(alarms[i].alarmSettingPage, -70+i*65);
 
         lv_obj_set_align(alarms[i].alarmSettingPage, LV_ALIGN_CENTER);
         lv_obj_clear_flag(alarms[i].alarmSettingPage, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
@@ -142,7 +143,7 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         lv_obj_set_y(alarms[i].alarmSettingLabel, 0);
         lv_obj_set_align(alarms[i].alarmSettingLabel, LV_ALIGN_CENTER);
 
-        lv_snprintf(alarms[i].time_str, sizeof(alarms[i].time_str), "%s:%s",alarms[i].hour_str, alarms[i].min_str);
+        
         lv_label_set_text(alarms[i].alarmSettingLabel, alarms[i].time_str);
 
         lv_obj_add_flag(alarms[i].alarmSettingLabel, LV_OBJ_FLAG_CLICKABLE);

@@ -42,6 +42,7 @@ void ui_event_ConfirmImg_cb(lv_event_t* e)
                 alarms[alarmCount-1].hour_str, sizeof(alarms[alarmCount].hour_str));
             lv_roller_get_selected_str(ui_MinuteRoller,
                 alarms[alarmCount-1].min_str, sizeof(alarms[alarmCount].min_str));
+            lv_snprintf(alarms[alarmCount - 1].time_str, sizeof(alarms[alarmCount - 1].time_str), "%s:%s", alarms[alarmCount - 1].hour_str, alarms[alarmCount - 1].min_str);
         }
         else/*label option*/
         {
@@ -49,6 +50,8 @@ void ui_event_ConfirmImg_cb(lv_event_t* e)
                 alarms[alarm_currentpointer].hour_str, sizeof(alarms[alarm_currentpointer].hour_str));
             lv_roller_get_selected_str(ui_MinuteRoller,
                 alarms[alarm_currentpointer].min_str, sizeof(alarms[alarm_currentpointer].min_str));
+            lv_snprintf(alarms[alarm_currentpointer].time_str, sizeof(alarms[alarm_currentpointer].time_str), "%s:%s", alarms[alarm_currentpointer].hour_str, alarms[alarm_currentpointer].min_str);
+
         }
    
         Page_Back();
