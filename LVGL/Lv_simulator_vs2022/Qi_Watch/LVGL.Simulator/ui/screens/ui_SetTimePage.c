@@ -46,9 +46,9 @@ void ui_event_ConfirmImg_cb(lv_event_t* e)
         else/*label option*/
         {
             lv_roller_get_selected_str(ui_HourRoller,
-                alarms[alarm_currentpointer].hour_str, sizeof(alarms[alarmCount].hour_str));
+                alarms[alarm_currentpointer].hour_str, sizeof(alarms[alarm_currentpointer].hour_str));
             lv_roller_get_selected_str(ui_MinuteRoller,
-                alarms[alarm_currentpointer].min_str, sizeof(alarms[alarmCount].min_str));
+                alarms[alarm_currentpointer].min_str, sizeof(alarms[alarm_currentpointer].min_str));
         }
    
         Page_Back();

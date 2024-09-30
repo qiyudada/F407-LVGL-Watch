@@ -98,6 +98,20 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         lv_obj_set_style_border_color(alarms[i].alarmSettingPage, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_border_opa(alarms[i].alarmSettingPage, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+
+        alarms[i].alarmImgContainer = lv_obj_create(alarms[i].alarmSettingPage);
+        lv_obj_set_width(alarms[i].alarmImgContainer, 30);
+        lv_obj_set_height(alarms[i].alarmImgContainer, 30);
+        lv_obj_set_x(alarms[i].alarmImgContainer, -88);
+        lv_obj_set_y(alarms[i].alarmImgContainer, -1);
+        lv_obj_set_align(alarms[i].alarmImgContainer, LV_ALIGN_CENTER);
+        lv_obj_add_flag(alarms[i].alarmImgContainer, LV_OBJ_FLAG_CHECKABLE);
+        lv_obj_clear_flag(alarms[i].alarmImgContainer, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+        lv_obj_set_style_bg_img_src(alarms[i].alarmImgContainer, &ui_img_alarmoff_png, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_bg_img_src(alarms[i].alarmImgContainer, &ui_img_alarmon_png, LV_PART_MAIN | LV_STATE_CHECKED);
+
+
+
         alarms[i].alarmSettingSwitch = lv_switch_create(alarms[i].alarmSettingPage);
         lv_obj_set_width(alarms[i].alarmSettingSwitch, 50);
         lv_obj_set_height(alarms[i].alarmSettingSwitch, 25);
@@ -112,10 +126,13 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         if (!lv_obj_has_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED)&& alarms[i].alarmState)
         {
             lv_obj_add_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED);
+            lv_obj_add_state(alarms[i].alarmImgContainer, LV_STATE_CHECKED);
+            
         }
         else
         {
             lv_obj_clear_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED);
+            lv_obj_clear_state(alarms[i].alarmImgContainer, LV_STATE_CHECKED);
         }
 
         alarms[i].alarmSettingLabel = lv_label_create(alarms[i].alarmSettingPage);
@@ -132,19 +149,6 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         lv_obj_set_style_text_color(alarms[i].alarmSettingLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(alarms[i].alarmSettingLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_font(alarms[i].alarmSettingLabel, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-
-        alarms[i].alarmImgContainer = lv_obj_create(alarms[i].alarmSettingPage);
-        lv_obj_set_width(alarms[i].alarmImgContainer, 30);
-        lv_obj_set_height(alarms[i].alarmImgContainer, 30);
-        lv_obj_set_x(alarms[i].alarmImgContainer, -88);
-        lv_obj_set_y(alarms[i].alarmImgContainer, -1);
-        lv_obj_set_align(alarms[i].alarmImgContainer, LV_ALIGN_CENTER);
-        lv_obj_add_flag(alarms[i].alarmImgContainer, LV_OBJ_FLAG_CHECKABLE);
-        lv_obj_clear_flag(alarms[i].alarmImgContainer,LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-        lv_obj_set_style_bg_img_src(alarms[i].alarmImgContainer, &ui_img_alarmoff_png, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_img_src(alarms[i].alarmImgContainer, &ui_img_alarmon_png, LV_PART_MAIN | LV_STATE_CHECKED);
-
 
         lv_obj_add_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime, LV_EVENT_ALL, (void*)(uintptr_t)i);
         lv_obj_add_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch, LV_EVENT_ALL, (void*)(uintptr_t)i);
