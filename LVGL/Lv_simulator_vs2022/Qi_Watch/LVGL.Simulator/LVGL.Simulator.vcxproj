@@ -90,6 +90,8 @@
     <ClCompile Include="ui\images\ui_img_card_png.c" />
     <ClCompile Include="ui\images\ui_img_cat_png.c" />
     <ClCompile Include="ui\images\ui_img_clock_png.c" />
+    <ClCompile Include="ui\images\ui_img_confirm_png.c" />
+    <ClCompile Include="ui\images\ui_img_delete_png.c" />
     <ClCompile Include="ui\images\ui_img_drain_png.c" />
     <ClCompile Include="ui\images\ui_img_ggmoreo_png.c" />
     <ClCompile Include="ui\images\ui_img_gomore3_png.c" />

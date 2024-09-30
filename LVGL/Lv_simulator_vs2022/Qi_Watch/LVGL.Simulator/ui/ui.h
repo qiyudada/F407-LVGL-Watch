@@ -253,24 +253,37 @@ void ui_CalendarPage_screen_deinit(void);
 /*--------------------------SCREEN: ui_AlarmPage-------------------------------------*/
 extern Page_t Page_Alarm;
 
-extern int alarmCount;
+#define Alarm_Number 4
+
+typedef struct {
+    int alarmState;/*per alarm state*/
+    char hour_str[3];
+    char min_str[3];
+    char time_str[6];
+    lv_obj_t* alarmSettingPage;
+    lv_obj_t* alarmSettingSwitch;
+    lv_obj_t* alarmSettingLabel;
+    lv_obj_t* alarmImgContainer;
+} Alarm_t;
+
+extern int alarm_currentpointer;
+
+extern Alarm_t alarms[Alarm_Number];
+
+extern int alarmCount;/*Open alarm counts*/
+extern bool Add_option;
 
 void ui_AlarmPage_screen_init(void);
 void ui_AlarmPage_screen_deinit(void);
-
 void CreateAlarmSettingPage(lv_obj_t* parent,int index);
-
-extern int Alarm_Number;
-lv_obj_t* ui_AlarmPage;
-lv_obj_t* ui_AddImage;
-lv_obj_t* ui_AlarmSettingPage;
-
 void ui_event_AlarmSettingSwitch(lv_event_t* e);
 
-
-lv_obj_t* ui_AlarmSettingSwitch;
-lv_obj_t* ui_AlarmSettingLabel;
-lv_obj_t* ui_AlarmImgContainer;
+extern lv_obj_t* ui_AlarmPage;
+extern lv_obj_t* ui_AddImage;
+extern lv_obj_t* ui_AlarmSettingPage;
+extern lv_obj_t* ui_AlarmSettingSwitch;
+extern lv_obj_t* ui_AlarmSettingLabel;
+extern lv_obj_t* ui_AlarmImgContainer;
 
 
 /*--------------------------SCREEN: ui_SettingTimePage-------------------------------------*/
@@ -279,12 +292,12 @@ extern Page_t Page_Settime;
 void ui_SetTimePage_screen_init(void);
 void ui_SetTimePage_screen_deinit(void);
 
-
-lv_obj_t* ui_SetTimePage;
-lv_obj_t* ui_HourRoller;
-lv_obj_t* ui_MinuteRoller;
-lv_obj_t* ui_SetTimeLabel;
-lv_obj_t* ui_ConfirmImage;
+extern lv_obj_t* ui_SetTimePage;
+extern lv_obj_t* ui_HourRoller;
+extern lv_obj_t* ui_MinuteRoller;
+extern lv_obj_t* ui_SetTimeLabel;
+extern lv_obj_t* ui_ConfirmImage;
+extern lv_obj_t* ui_DeleteImg;
 
 /*--------------------Picture------------------------------*/
 LV_IMG_DECLARE(ui_img_iu_bg_png);    // assets/iu_bg.png
@@ -331,6 +344,7 @@ LV_IMG_DECLARE(ui_img_alarmoff_png);    // assets/AlarmOff.png
 LV_IMG_DECLARE(ui_img_alarmon_png);    // assets/AlarmOn.png
 LV_IMG_DECLARE(ui_img_confirm_png);    // assets/Confirm.png
 LV_IMG_DECLARE(ui_img_alarm_png);    // assets/Alarm.png
+LV_IMG_DECLARE(ui_img_delete_png);    // assets/delete.png
 
 /*extra font declations */
 LV_FONT_DECLARE(ui_font_Cuyuan24);

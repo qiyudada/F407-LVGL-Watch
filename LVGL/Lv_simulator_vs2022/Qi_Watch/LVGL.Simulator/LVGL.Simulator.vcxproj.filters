@@ -82,6 +82,8 @@
     <ClCompile Include="ui\images\ui_img_alarmon_png.c" />
     <ClCompile Include="ui\screens\ui_AlarmPage.c" />
     <ClCompile Include="ui\images\ui_img_alarm_png.c" />
+    <ClCompile Include="ui\images\ui_img_confirm_png.c" />
+    <ClCompile Include="ui\images\ui_img_delete_png.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LVGL.Simulator.rc" />

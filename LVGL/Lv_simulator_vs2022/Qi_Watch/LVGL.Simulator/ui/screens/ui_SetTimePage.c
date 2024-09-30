@@ -8,7 +8,7 @@ lv_obj_t* ui_HourRoller;
 lv_obj_t* ui_MinuteRoller;
 lv_obj_t* ui_SetTimeLabel;
 lv_obj_t* ui_ConfirmImage;
-
+lv_obj_t* ui_DeleteImg;
 
 
 void ui_event_SetTimepage_cb(lv_event_t* e)
@@ -27,13 +27,43 @@ void ui_event_ConfirmImg_cb(lv_event_t* e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t* target = lv_event_get_target(e);
+    
     if (event_code == LV_EVENT_CLICKED)
     {
-        alarmCount++;
-        if (alarmCount > 4)
+        if (Add_option)
         {
-           return;
+            Add_option = false;
+            alarmCount++;
+            if (alarmCount > 4)
+            {
+                return;
+            }
+            lv_roller_get_selected_str(ui_HourRoller,
+                alarms[alarmCount-1].hour_str, sizeof(alarms[alarmCount].hour_str));
+            lv_roller_get_selected_str(ui_MinuteRoller,
+                alarms[alarmCount-1].min_str, sizeof(alarms[alarmCount].min_str));
         }
+        else/*label option*/
+        {
+            lv_roller_get_selected_str(ui_HourRoller,
+                alarms[alarm_currentpointer].hour_str, sizeof(alarms[alarmCount].hour_str));
+            lv_roller_get_selected_str(ui_MinuteRoller,
+                alarms[alarm_currentpointer].min_str, sizeof(alarms[alarmCount].min_str));
+        }
+   
+        Page_Back();
+    }
+}
+
+
+void ui_event_DeleteImg_cb(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        
+
         Page_Back();
     }
 }
@@ -100,6 +130,20 @@ void ui_SetTimePage_screen_init(void)
     lv_obj_add_flag(ui_ConfirmImage, LV_OBJ_FLAG_CLICKABLE);     /// Flags
     lv_obj_clear_flag(ui_ConfirmImage, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
+    if (!Add_option)
+    {
+        ui_DeleteImg = lv_img_create(ui_SetTimePage);
+        lv_img_set_src(ui_DeleteImg, &ui_img_delete_png);
+        lv_obj_set_width(ui_DeleteImg, LV_SIZE_CONTENT);   /// 1
+        lv_obj_set_height(ui_DeleteImg, LV_SIZE_CONTENT);    /// 1
+        lv_obj_set_x(ui_DeleteImg, 100);
+        lv_obj_set_y(ui_DeleteImg, -141);
+        lv_obj_set_align(ui_DeleteImg, LV_ALIGN_CENTER);
+        lv_obj_add_flag(ui_DeleteImg, LV_OBJ_FLAG_CLICKABLE);     /// Flags
+        lv_obj_clear_flag(ui_DeleteImg, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+        lv_obj_add_event_cb(ui_DeleteImg, ui_event_DeleteImg_cb, LV_EVENT_ALL, NULL);
+    }
 
     lv_obj_add_event_cb(ui_ConfirmImage, ui_event_ConfirmImg_cb, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_SetTimePage, ui_event_SetTimepage_cb, LV_EVENT_ALL, NULL);
