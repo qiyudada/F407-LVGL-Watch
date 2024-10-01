@@ -53,7 +53,6 @@ void ui_event_ConfirmImg_cb(lv_event_t* e)
             lv_snprintf(alarms[alarm_currentpointer].time_str, sizeof(alarms[alarm_currentpointer].time_str), "%s:%s", alarms[alarm_currentpointer].hour_str, alarms[alarm_currentpointer].min_str);
 
         }
-   
         Page_Back();
     }
 }
@@ -65,8 +64,6 @@ void ui_event_DeleteImg_cb(lv_event_t* e)
     lv_obj_t* target = lv_event_get_target(e);
     if (event_code == LV_EVENT_CLICKED)
     {
-        
-
         Page_Back();
     }
 }
@@ -82,7 +79,7 @@ void ui_SetTimePage_screen_init(void)
     ui_HourRoller = lv_roller_create(ui_SetTimePage);
     lv_roller_set_options(ui_HourRoller,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23",
-                          LV_ROLLER_MODE_INFINITE);
+        LV_ROLLER_MODE_NORMAL);
     lv_obj_set_height(ui_HourRoller, 100);
     lv_obj_set_width(ui_HourRoller, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_x(ui_HourRoller, -50);
@@ -99,7 +96,7 @@ void ui_SetTimePage_screen_init(void)
     ui_MinuteRoller = lv_roller_create(ui_SetTimePage);
     lv_roller_set_options(ui_MinuteRoller,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60",
-                          LV_ROLLER_MODE_INFINITE);
+        LV_ROLLER_MODE_NORMAL);
     lv_obj_set_height(ui_MinuteRoller, 100);
     lv_obj_set_width(ui_MinuteRoller, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_x(ui_MinuteRoller, 50);

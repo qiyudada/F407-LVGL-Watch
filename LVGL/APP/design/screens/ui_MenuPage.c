@@ -1,14 +1,14 @@
 ﻿#include "../ui.h"
 
 Page_t Page_Menu = {ui_MenuPage_screen_init, ui_MenuPage_screen_deinit, &ui_MenuPage};
+
 /*--------------------SCREEN: ui_MenuPage------------------------------*/
 void ui_MenuPage_screen_init(void);
 
 lv_obj_t *ui_MenuPage;
 lv_obj_t *ui_MenuContainer;
-
-/*bluetooth*/
-void ui_event_BluetoothSwitch(lv_event_t *e);
+/*bluetoorh*/
+void ui_event_BluetoothSwitch(lv_event_t* e);
 lv_obj_t *ui_BluetoothPanel;
 lv_obj_t *ui_MenuBluetoothImage;
 lv_obj_t *ui_BluetoothSwitch;
@@ -24,18 +24,18 @@ lv_obj_t *ui_MenuCalendarImage;
 lv_obj_t *ui_MenuCalendarLabel;
 lv_obj_t *ui_CalendarGoMoreImg;
 /*card*/
+void ui_event_CardGoMoreImg(lv_event_t* e);
 lv_obj_t *ui_CardPanel;
 lv_obj_t *ui_MenuCardImage;
 lv_obj_t *ui_MenuCardLabel;
-void ui_event_CardGoMoreImg(lv_event_t *e);
 lv_obj_t *ui_CardGoMoreImg;
-/*stoptime*/
-lv_obj_t *ui_StoptimePanel;
-lv_obj_t *ui_StoptimeImage;
-lv_obj_t *ui_StoptimeLabel;
-lv_obj_t *ui_StoptimeGoMoreImg;
+/*Alarm*/
+lv_obj_t *ui_MenuAlarmPanel;
+lv_obj_t *ui_MenuAlarmImage;
+lv_obj_t *ui_MenuAlarmLabel;
+lv_obj_t *ui_MenuAlarmGoMoreImg;
 /*calculator*/
-void ui_event_CalculatorGoMoreImg(lv_event_t *e);
+void ui_event_CalculatorGoMoreImg(lv_event_t* e);
 lv_obj_t *ui_CalculatorPanel;
 lv_obj_t *ui_CalculatorImg;
 lv_obj_t *ui_CalculatorLabelMenu;
@@ -53,13 +53,27 @@ void ui_event_BluetoothSwitch(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t *target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    if (event_code == LV_EVENT_VALUE_CHANGED&&lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         Bluetooth_Open(e);
     }
-    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    if (event_code == LV_EVENT_VALUE_CHANGED&&!lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         Bluetoorh_Close(e);
+    }
+}
+
+void ui_event_Mpu6050WristSwitch(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        WristWake_Open(e);
+    }
+    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
+    {
+        WristWake_Close(e);
     }
 }
 
@@ -85,6 +99,16 @@ void ui_event_CalculatorGoMoreImg(lv_event_t *e)
     }
 }
 
+void ui_event_MenuAlarmGoMoreImg(lv_event_t* e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t* target = lv_event_get_target(e);
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        Page_Load(&Page_Alarm);
+    }
+}
+
 void ui_event_CalendarGoMoreImg(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -106,20 +130,7 @@ void ui_event_ui_MenuPage(lv_event_t *e)
     }
 }
 
-void ui_event_Mpu6050WristSwitch(lv_event_t* e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t* target = lv_event_get_target(e);
-    if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
-    {
-        WristWake_Open(e);
-    }
-    if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
-    {
-        WristWake_Close(e);
-    }
-}
-/*------------------------------------------------------------------------------------------------------------------*/
+
 void ui_MenuPage_screen_init(void)
 {
     ui_MenuPage = lv_obj_create(NULL);
@@ -183,6 +194,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_style_bg_color(ui_BluetoothSwitch, lv_color_hex(0x391CE6), LV_PART_KNOB | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_BluetoothSwitch, 255, LV_PART_KNOB | LV_STATE_DEFAULT);
 
+    /*load ble setting*/
     if (!lv_obj_has_state(ui_BluetoothSwitch, LV_STATE_CHECKED) && MW_Interface.BLE.ConnectionState)
     {
         lv_obj_add_state(ui_BluetoothSwitch, LV_STATE_CHECKED);
@@ -202,6 +214,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_style_text_color(ui_MenuBluetoothLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_MenuBluetoothLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    /*wifi*/
     ui_WifiPanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_WifiPanel, 230);
     lv_obj_set_height(ui_WifiPanel, 60);
@@ -295,7 +308,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_CalendarGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
-    /*card nfc*/
+    /*nfc card*/
     ui_CardPanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_CardPanel, 230);
     lv_obj_set_height(ui_CardPanel, 60);
@@ -342,53 +355,53 @@ void ui_MenuPage_screen_init(void)
     lv_obj_add_flag(ui_CardGoMoreImg, LV_OBJ_FLAG_CLICKABLE);    /*img obj must be clickable*/
     lv_obj_clear_flag(ui_CardGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
-    /*stoptime*/
-    ui_StoptimePanel = lv_obj_create(ui_MenuContainer);
-    lv_obj_set_width(ui_StoptimePanel, 230);
-    lv_obj_set_height(ui_StoptimePanel, 60);
-    lv_obj_set_x(ui_StoptimePanel, 0);
-    lv_obj_set_y(ui_StoptimePanel, 137);
-    lv_obj_set_align(ui_StoptimePanel, LV_ALIGN_CENTER);
-    lv_obj_clear_flag(ui_StoptimePanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
-    lv_obj_set_style_bg_color(ui_StoptimePanel, lv_color_hex(0xE56FF1), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_StoptimePanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_color(ui_StoptimePanel, lv_color_hex(0x9E0CAC), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_main_stop(ui_StoptimePanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_stop(ui_StoptimePanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui_StoptimePanel, LV_GRAD_DIR_HOR, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui_StoptimePanel, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui_StoptimePanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    /*Alarm*/
+    ui_MenuAlarmPanel = lv_obj_create(ui_MenuContainer);
+    lv_obj_set_width(ui_MenuAlarmPanel, 230);
+    lv_obj_set_height(ui_MenuAlarmPanel, 60);
+    lv_obj_set_x(ui_MenuAlarmPanel, 0);
+    lv_obj_set_y(ui_MenuAlarmPanel, 137);
+    lv_obj_set_align(ui_MenuAlarmPanel, LV_ALIGN_CENTER);
+    lv_obj_clear_flag(ui_MenuAlarmPanel, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+    lv_obj_set_style_bg_color(ui_MenuAlarmPanel, lv_color_hex(0xE56FF1), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_MenuAlarmPanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_color(ui_MenuAlarmPanel, lv_color_hex(0x9E0CAC), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_main_stop(ui_MenuAlarmPanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_stop(ui_MenuAlarmPanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui_MenuAlarmPanel, LV_GRAD_DIR_HOR, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui_MenuAlarmPanel, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui_MenuAlarmPanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_StoptimeImage = lv_img_create(ui_StoptimePanel);
-    lv_img_set_src(ui_StoptimeImage, &ui_img_stoptime_png);
-    lv_obj_set_width(ui_StoptimeImage, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height(ui_StoptimeImage, LV_SIZE_CONTENT); /// 1
-    lv_obj_set_x(ui_StoptimeImage, -90);
-    lv_obj_set_y(ui_StoptimeImage, 0);
-    lv_obj_set_align(ui_StoptimeImage, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_StoptimeImage, LV_OBJ_FLAG_ADV_HITTEST);  /// Flags
-    lv_obj_clear_flag(ui_StoptimeImage, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+    ui_MenuAlarmImage = lv_img_create(ui_MenuAlarmPanel);
+    lv_img_set_src(ui_MenuAlarmImage, &ui_img_alarm_png);
+    lv_obj_set_width(ui_MenuAlarmImage, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_MenuAlarmImage, LV_SIZE_CONTENT); /// 1
+    lv_obj_set_x(ui_MenuAlarmImage, -90);
+    lv_obj_set_y(ui_MenuAlarmImage, 0);
+    lv_obj_set_align(ui_MenuAlarmImage, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_MenuAlarmImage, LV_OBJ_FLAG_ADV_HITTEST);  /// Flags
+    lv_obj_clear_flag(ui_MenuAlarmImage, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
-    ui_StoptimeLabel = lv_label_create(ui_StoptimePanel);
-    lv_obj_set_width(ui_StoptimeLabel, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height(ui_StoptimeLabel, LV_SIZE_CONTENT); /// 1
-    lv_obj_set_x(ui_StoptimeLabel, -33);
-    lv_obj_set_y(ui_StoptimeLabel, 0);
-    lv_obj_set_align(ui_StoptimeLabel, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_StoptimeLabel, "Stoptime");
-    lv_obj_set_style_text_color(ui_StoptimeLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_StoptimeLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    ui_MenuAlarmLabel = lv_label_create(ui_MenuAlarmPanel);
+    lv_obj_set_width(ui_MenuAlarmLabel, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_MenuAlarmLabel, LV_SIZE_CONTENT); /// 1
+    lv_obj_set_x(ui_MenuAlarmLabel, -40);
+    lv_obj_set_y(ui_MenuAlarmLabel, 0);
+    lv_obj_set_align(ui_MenuAlarmLabel, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_MenuAlarmLabel, "Alarm");
+    lv_obj_set_style_text_color(ui_MenuAlarmLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_MenuAlarmLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_StoptimeGoMoreImg = lv_img_create(ui_StoptimePanel);
-    lv_img_set_src(ui_StoptimeGoMoreImg, &ui_img_gomore3_png);
-    lv_obj_set_width(ui_StoptimeGoMoreImg, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height(ui_StoptimeGoMoreImg, LV_SIZE_CONTENT); /// 1
-    lv_obj_set_x(ui_StoptimeGoMoreImg, 70);
-    lv_obj_set_y(ui_StoptimeGoMoreImg, -1);
-    lv_obj_set_align(ui_StoptimeGoMoreImg, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_StoptimeGoMoreImg, LV_OBJ_FLAG_CLICKABLE);
-    lv_obj_clear_flag(ui_StoptimeGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
-    
+    ui_MenuAlarmGoMoreImg = lv_img_create(ui_MenuAlarmPanel);
+    lv_img_set_src(ui_MenuAlarmGoMoreImg, &ui_img_gomore3_png);
+    lv_obj_set_width(ui_MenuAlarmGoMoreImg, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_MenuAlarmGoMoreImg, LV_SIZE_CONTENT); /// 1
+    lv_obj_set_x(ui_MenuAlarmGoMoreImg, 70);
+    lv_obj_set_y(ui_MenuAlarmGoMoreImg, -1);
+    lv_obj_set_align(ui_MenuAlarmGoMoreImg, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_MenuAlarmGoMoreImg, LV_OBJ_FLAG_CLICKABLE);
+    lv_obj_clear_flag(ui_MenuAlarmGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
+
     /*calculator*/
     ui_CalculatorPanel = lv_obj_create(ui_MenuContainer);
     lv_obj_set_width(ui_CalculatorPanel, 230);
@@ -433,6 +446,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_x(ui_CalculatorGoMoreImg, 70);
     lv_obj_set_y(ui_CalculatorGoMoreImg, -1);
     lv_obj_set_align(ui_CalculatorGoMoreImg, LV_ALIGN_CENTER);
+
     lv_obj_add_flag(ui_CalculatorGoMoreImg, LV_OBJ_FLAG_CLICKABLE);
     lv_obj_clear_flag(ui_CalculatorGoMoreImg, LV_OBJ_FLAG_SCROLLABLE); /// Flags
 
@@ -480,6 +494,7 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_style_bg_color(ui_Mpu6050WristSwitch, lv_color_hex(0x0C949B), LV_PART_KNOB | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Mpu6050WristSwitch, 255, LV_PART_KNOB | LV_STATE_DEFAULT);
 
+
     if (!lv_obj_has_state(ui_Mpu6050WristSwitch, LV_STATE_CHECKED) && MW_Interface.IMU.wrist_is_enabled)
     {
         lv_obj_add_state(ui_Mpu6050WristSwitch, LV_STATE_CHECKED);
@@ -499,14 +514,17 @@ void ui_MenuPage_screen_init(void)
     lv_obj_set_style_text_color(ui_Mpu6050WristLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_Mpu6050WristLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+
     /*event callbacks */
     lv_obj_add_event_cb(ui_BluetoothSwitch, ui_event_BluetoothSwitch, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CardGoMoreImg, ui_event_CardGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalculatorGoMoreImg, ui_event_CalculatorGoMoreImg, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_MenuAlarmGoMoreImg, ui_event_MenuAlarmGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_CalendarGoMoreImg, ui_event_CalendarGoMoreImg, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_MenuPage, ui_event_ui_MenuPage, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Mpu6050WristSwitch, ui_event_Mpu6050WristSwitch, LV_EVENT_ALL, NULL);
-    
+
+
 }
 
 void ui_MenuPage_screen_deinit(void)

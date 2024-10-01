@@ -976,9 +976,39 @@
               <FilePath>..\LVGL\APP\design\images\ui_img_wifi_png.c</FilePath>
             </File>
             <File>
+              <FileName>ui_img_add_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_add_png.c</FilePath>
+            </File>
+            <File>
               <FileName>ui_img_writecard_png.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\images\ui_img_writecard_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_alarm_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_alarm_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_alarmon_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_alarmon_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_alarmoff_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_alarmoff_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_confirm_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_confirm_png.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_img_delete_png.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\images\ui_img_delete_png.c</FilePath>
             </File>
             <File>
               <FileName>ui_img_wrist_png.c</FileName>
@@ -1044,6 +1074,16 @@
               <FileName>ui_events.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\APP\design\ui_events.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_SetTimePage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_SetTimePage.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_AlarmPage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\APP\design\screens\ui_AlarmPage.c</FilePath>
             </File>
           </Files>
         </Group>
