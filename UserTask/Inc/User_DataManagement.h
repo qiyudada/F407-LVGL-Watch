@@ -6,7 +6,6 @@ extern "C"
 {
 #endif
 
-
 /*Gross management*/
 #define User_Manage_file 1
 
@@ -100,16 +99,15 @@ extern "C"
      */
     typedef struct
     {
-        uint8_t ConnectionError;
-        uint16_t Steps;
-        uint8_t wrist_state;
-        uint8_t wrist_is_enabled;
-
         uint8_t (*Init)(void);
         void (*WristEnable)(void);
         void (*WristDisable)(void);
         uint16_t (*GetSteps)(void);
         int (*SetSteps)(unsigned long count);
+        uint16_t Steps;
+        uint8_t ConnectionError;
+        uint8_t wrist_state;
+        uint8_t wrist_is_enabled;
     } MW_IMU_InterfaceTypeDef;
 
     /**
@@ -117,11 +115,11 @@ extern "C"
      */
     typedef struct
     {
+        void (*GetHumiTemp)(int *humi, int *temp);
+        uint8_t (*Init)(void);
         uint8_t ConnectionError;
         uint8_t temperature;
         uint8_t humidity;
-        uint8_t (*Init)(void);
-        void (*GetHumiTemp)(int *humi, int *temp);
     } MW_DTH11_InterfaceTypeDef;
 
     /**
@@ -129,9 +127,9 @@ extern "C"
      */
     typedef struct
     {
-        uint8_t Light_Intensity;
         uint8_t (*Init)(void);
         uint8_t (*LightSensor_Read)(uint8_t *pData);
+        uint8_t Light_Intensity;
     } MW_TEMT6000_InterfaceTypeDef;
 
     /**
@@ -139,11 +137,11 @@ extern "C"
      */
     typedef struct
     {
-        uint8_t ConnectionState;
         void (*Init)(void);
         void (*Control)(short mode);
         void (*BufferClean)(void);
         GPIO_PinState (*GetState)(void);
+        uint8_t ConnectionState;    
     } MW_BLE_InterfaceTypeDef;
 
     /**
@@ -151,8 +149,8 @@ extern "C"
      */
     typedef struct
     {
-        uint8_t ConnectionState;
         uint8_t (*Init)(void);
+        uint8_t ConnectionState;      
     } MW_NFC_InterfaceTypeDef;
 
     /**
