@@ -1,5 +1,4 @@
 f4-lvgl-watch\ui_calendarpage.o: ..\LVGL\APP\design\screens\ui_CalendarPage.c
-f4-lvgl-watch\ui_calendarpage.o: .\RTE\_F4-LVGL-Watch\RTE_Components.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/lvgl.h
 f4-lvgl-watch\ui_calendarpage.o: ../LVGL/src/misc/lv_log.h

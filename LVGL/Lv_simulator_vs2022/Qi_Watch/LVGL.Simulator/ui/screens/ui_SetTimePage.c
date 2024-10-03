@@ -9,7 +9,7 @@ lv_obj_t* ui_MinuteRoller;
 lv_obj_t* ui_SetTimeLabel;
 lv_obj_t* ui_ConfirmImage;
 lv_obj_t* ui_DeleteImg;
-
+lv_obj_t* ui_Dropdown;
 
 void ui_event_SetTimepage_cb(lv_event_t* e)
 {
@@ -114,7 +114,7 @@ void ui_SetTimePage_screen_init(void)
     lv_obj_set_width(ui_SetTimeLabel, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_SetTimeLabel, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_SetTimeLabel, 0);
-    lv_obj_set_y(ui_SetTimeLabel, -90);
+    lv_obj_set_y(ui_SetTimeLabel, -140);
     lv_obj_set_align(ui_SetTimeLabel, LV_ALIGN_CENTER);
     lv_label_set_text(ui_SetTimeLabel, "Setting Time");
     lv_obj_set_style_text_color(ui_SetTimeLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -137,13 +137,37 @@ void ui_SetTimePage_screen_init(void)
         lv_obj_set_width(ui_DeleteImg, LV_SIZE_CONTENT);   /// 1
         lv_obj_set_height(ui_DeleteImg, LV_SIZE_CONTENT);    /// 1
         lv_obj_set_x(ui_DeleteImg, 100);
-        lv_obj_set_y(ui_DeleteImg, -141);
+        lv_obj_set_y(ui_DeleteImg, -140);
         lv_obj_set_align(ui_DeleteImg, LV_ALIGN_CENTER);
         lv_obj_add_flag(ui_DeleteImg, LV_OBJ_FLAG_CLICKABLE);     /// Flags
         lv_obj_clear_flag(ui_DeleteImg, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
         lv_obj_add_event_cb(ui_DeleteImg, ui_event_DeleteImg_cb, LV_EVENT_ALL, NULL);
     }
+
+
+    ui_Dropdown = lv_dropdown_create(ui_SetTimePage);
+    lv_dropdown_set_options(ui_Dropdown, "Mon\nTue\nWed\nThu\nFri\nSat\nSun");
+    lv_obj_set_width(ui_Dropdown, 150);
+    lv_obj_set_height(ui_Dropdown, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Dropdown, 0);
+    lv_obj_set_y(ui_Dropdown, -90);
+    lv_obj_set_align(ui_Dropdown, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_Dropdown, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_set_style_bg_color(ui_Dropdown, lv_color_hex(0x8F8E99), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Dropdown, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui_Dropdown, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui_Dropdown, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_text_color(ui_Dropdown, lv_color_hex(0x808080), LV_PART_INDICATOR | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_Dropdown, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_bg_color(lv_dropdown_get_list(ui_Dropdown), lv_color_hex(0x8B8D9C), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(lv_dropdown_get_list(ui_Dropdown), 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(lv_dropdown_get_list(ui_Dropdown), lv_color_hex(0x000000),
+        LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(lv_dropdown_get_list(ui_Dropdown), 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
 
     lv_obj_add_event_cb(ui_ConfirmImage, ui_event_ConfirmImg_cb, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_SetTimePage, ui_event_SetTimepage_cb, LV_EVENT_ALL, NULL);

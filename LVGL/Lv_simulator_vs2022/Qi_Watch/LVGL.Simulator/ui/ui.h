@@ -298,6 +298,7 @@ extern lv_obj_t* ui_MinuteRoller;
 extern lv_obj_t* ui_SetTimeLabel;
 extern lv_obj_t* ui_ConfirmImage;
 extern lv_obj_t* ui_DeleteImg;
+extern lv_obj_t* ui_Dropdown;
 
 /*--------------------Picture------------------------------*/
 LV_IMG_DECLARE(ui_img_iu_bg_png);    // assets/iu_bg.png
