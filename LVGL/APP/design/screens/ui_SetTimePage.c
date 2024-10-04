@@ -1,5 +1,6 @@
 #include "ui.h"
-
+#include "rtc.h"
+#include <stdlib.h>
 Page_t Page_Settime = {ui_SetTimePage_screen_init, ui_SetTimePage_screen_deinit, &ui_SetTimePage};
 
 /*-----------------------SCREEN: ui_SetTimePage------------------------------------*/
@@ -9,7 +10,24 @@ lv_obj_t *ui_MinuteRoller;
 lv_obj_t *ui_SetTimeLabel;
 lv_obj_t *ui_ConfirmImage;
 lv_obj_t *ui_DeleteImg;
-lv_obj_t* ui_Dropdown;
+lv_obj_t *ui_Dropdown;
+
+void UpdateAlarmTime(int alarm_index)
+{
+    RTC_AlarmTypeDef sAlarm = {0};
+
+    sAlarm.AlarmTime.Hours = atoi(alarms[alarm_index].hour_str);
+    sAlarm.AlarmTime.Minutes = atoi(alarms[alarm_index].min_str);
+    sAlarm.AlarmTime.Seconds = 0;
+    sAlarm.AlarmDateWeekDay = RTC_WEEKDAY_MONDAY;
+    sAlarm.Alarm = RTC_ALARM_A + alarm_index; // 为每个闹钟设置不同的Alarm A/B
+
+    if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BIN) != HAL_OK)
+    {
+        Error_Handler();
+    }
+}
+
 void ui_event_SetTimepage_cb(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -50,6 +68,7 @@ void ui_event_ConfirmImg_cb(lv_event_t *e)
                                        alarms[alarm_currentpointer].min_str, sizeof(alarms[alarm_currentpointer].min_str));
             lv_snprintf(alarms[alarm_currentpointer].time_str, sizeof(alarms[alarm_currentpointer].time_str), "%s:%s", alarms[alarm_currentpointer].hour_str, alarms[alarm_currentpointer].min_str);
         }
+        UpdateAlarmTime(alarm_currentpointer);
         Page_Back();
     }
 }
@@ -161,7 +180,6 @@ void ui_SetTimePage_screen_init(void)
     lv_obj_set_style_border_color(lv_dropdown_get_list(ui_Dropdown), lv_color_hex(0x000000),
                                   LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_opa(lv_dropdown_get_list(ui_Dropdown), 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-
 
     lv_obj_add_event_cb(ui_ConfirmImage, ui_event_ConfirmImg_cb, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_SetTimePage, ui_event_SetTimepage_cb, LV_EVENT_ALL, NULL);

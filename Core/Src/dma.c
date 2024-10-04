@@ -80,6 +80,8 @@ void MX_DMA_Init(void)
   HAL_NVIC_SetPriority(DMA2_Stream7_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream7_IRQn);
 
+   HAL_DMA_RegisterCallback(&hdma_memtomem_dma2_stream7, HAL_DMA_XFER_CPLT_CB_ID, LVGL_LCD_FSMC_DMA_pCallback);
+
 }
 
 /* USER CODE BEGIN 2 */

@@ -84,7 +84,7 @@ void MX_RTC_Init(void)
 
   /** Enable the Alarm A
   */
-  sAlarm.AlarmTime.Hours = 0x12;
+  sAlarm.AlarmTime.Hours = 0x0;
   sAlarm.AlarmTime.Minutes = 0x0;
   sAlarm.AlarmTime.Seconds = 0x0;
   sAlarm.AlarmTime.SubSeconds = 0x0;
