@@ -15,6 +15,8 @@ bool Add_option = false;
 int alarm_currentpointer;
 
 
+
+
 void ui_event_AlarmSettingSwitch(lv_event_t* e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);

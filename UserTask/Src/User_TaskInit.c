@@ -148,10 +148,10 @@ void User_Tasks_Init(void)
     MPUCheckTaskHandle = osThreadNew(MPUCheckTask, NULL, &MPUCheckTask_attributes);              // 10
     DataSaveTaskHandle = osThreadNew(DataSaveTask, NULL, &DataSaveTask_attributes);              // 10
     KeyTaskHandle = osThreadNew(KeyTask, NULL, &KeyTask_attributes);                             // 24
-    //IdleEnterTaskHandle = osThreadNew(IdleEnterTask, NULL, &IdleEnterTask_attributes);           // 40
-   // StopEnterTaskHandle = osThreadNew(StopEnterTask, NULL, &StopEnterTask_attributes);           // 41
-   // WDOGFeedTaskHandle = osThreadNew(WDOGFeedTask, NULL, &WDOGFeedTask_attributes);              // 42
-    HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes); // 43
+    IdleEnterTaskHandle = osThreadNew(IdleEnterTask, NULL, &IdleEnterTask_attributes);           // 40
+    StopEnterTaskHandle = osThreadNew(StopEnterTask, NULL, &StopEnterTask_attributes);           // 41
+    WDOGFeedTaskHandle = osThreadNew(WDOGFeedTask, NULL, &WDOGFeedTask_attributes);              // 42
+    HardwareInit_TaskHandle = osThreadNew(HardwareInitTask, NULL, &HardwareInitTask_attributes); // 43(running firstly)
 
     /* add  others ... */
     uint8_t SensorUpdataStr;

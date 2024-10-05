@@ -15,10 +15,8 @@ lv_obj_t *ui_Dropdown;
 #define DEC_TO_BCD(val) (((val / 10) << 4) + (val % 10))
 #define BCD_TO_DEC(val) (((val >> 4) * 10) + (val & 0x0F))
 
-uint8_t GetUserInputWeekday(int alarm_index)
+uint8_t GetUserInputWeekday(const char* weekday_str)
 {
-    const char *weekday_str = alarms[alarm_index].week_str;
-
     if (strcmp(weekday_str, "Mon") == 0)
         return RTC_WEEKDAY_MONDAY;
     if (strcmp(weekday_str, "Tue") == 0)
@@ -61,7 +59,7 @@ void RTC_AlarmA_Set(int alarm_index)
     uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
     uint8_t current_day = BCD_TO_DEC(currentDate.Date);
 
-    uint8_t user_weekday = GetUserInputWeekday(alarm_index);
+    uint8_t user_weekday = GetUserInputWeekday(alarms[alarm_index].week_str);
 
     uint8_t day_offset = CalculateDayOffset(current_weekday, user_weekday);
 
@@ -95,7 +93,7 @@ void RTC_AlarmB_Set(int alarm_index)
     uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
     uint8_t current_day = BCD_TO_DEC(currentDate.Date);
 
-    uint8_t user_weekday = DEC_TO_BCD(GetUserInputWeekday(alarm_index));
+    uint8_t user_weekday = DEC_TO_BCD(GetUserInputWeekday(alarms[alarm_index].week_str));
 
     uint8_t day_offset = DEC_TO_BCD(CalculateDayOffset(current_weekday, user_weekday));
 
@@ -195,6 +193,10 @@ void ui_SetTimePage_screen_init(void)
     lv_roller_set_options(ui_HourRoller,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23",
                           LV_ROLLER_MODE_NORMAL);
+    if (!Add_option)
+    {
+        lv_roller_set_selected(ui_HourRoller, atoi(alarms[alarm_currentpointer].hour_str), LV_ANIM_OFF);
+    }
     lv_obj_set_height(ui_HourRoller, 100);
     lv_obj_set_width(ui_HourRoller, LV_SIZE_CONTENT); /// 1
     lv_obj_set_x(ui_HourRoller, -50);
@@ -212,6 +214,10 @@ void ui_SetTimePage_screen_init(void)
     lv_roller_set_options(ui_MinuteRoller,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59",
                           LV_ROLLER_MODE_NORMAL);
+    if (!Add_option)
+    {
+        lv_roller_set_selected(ui_MinuteRoller, atoi(alarms[alarm_currentpointer].min_str), LV_ANIM_OFF);
+    }
     lv_obj_set_height(ui_MinuteRoller, 100);
     lv_obj_set_width(ui_MinuteRoller, LV_SIZE_CONTENT); /// 1
     lv_obj_set_x(ui_MinuteRoller, 50);
@@ -262,6 +268,11 @@ void ui_SetTimePage_screen_init(void)
 
     ui_Dropdown = lv_dropdown_create(ui_SetTimePage);
     lv_dropdown_set_options(ui_Dropdown, "Mon\nTue\nWed\nThu\nFri\nSat\nSun");
+    if (!Add_option)
+    {
+        int week_index = GetUserInputWeekday(alarms[alarm_currentpointer].week_str);
+        lv_dropdown_set_selected(ui_Dropdown, week_index-1);
+    }
     lv_obj_set_width(ui_Dropdown, 150);
     lv_obj_set_height(ui_Dropdown, LV_SIZE_CONTENT); /// 1
     lv_obj_set_x(ui_Dropdown, 0);

@@ -11,6 +11,21 @@ lv_obj_t* ui_ConfirmImage;
 lv_obj_t* ui_DeleteImg;
 lv_obj_t* ui_Dropdown;
 
+
+int GetWeekdayIndex(const char* week_str)
+{
+    if (strcmp(week_str, "Mon") == 0) return 0;
+    else if (strcmp(week_str, "Tue") == 0) return 1;
+    else if (strcmp(week_str, "Wed") == 0) return 2;
+    else if (strcmp(week_str, "Thu") == 0) return 3;
+    else if (strcmp(week_str, "Fri") == 0) return 4;
+    else if (strcmp(week_str, "Sat") == 0) return 5;
+    else if (strcmp(week_str, "Sun") == 0) return 6;
+    return 0;  // 默认返回0（"Mon"）
+}
+
+
+
 void ui_event_SetTimepage_cb(lv_event_t* e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -82,6 +97,10 @@ void ui_SetTimePage_screen_init(void)
     lv_roller_set_options(ui_HourRoller,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23",
         LV_ROLLER_MODE_NORMAL);
+    if (!Add_option)
+    {
+        lv_roller_set_selected(ui_HourRoller, atoi(alarms[alarm_currentpointer].hour_str), LV_ANIM_OFF);
+    }
     lv_obj_set_height(ui_HourRoller, 100);
     lv_obj_set_width(ui_HourRoller, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_x(ui_HourRoller, -50);
@@ -99,6 +118,10 @@ void ui_SetTimePage_screen_init(void)
     lv_roller_set_options(ui_MinuteRoller,
                           "00\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60",
         LV_ROLLER_MODE_NORMAL);
+    if (!Add_option)
+    {
+        lv_roller_set_selected(ui_MinuteRoller, atoi(alarms[alarm_currentpointer].min_str), LV_ANIM_OFF);
+    }
     lv_obj_set_height(ui_MinuteRoller, 100);
     lv_obj_set_width(ui_MinuteRoller, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_x(ui_MinuteRoller, 50);
@@ -150,6 +173,7 @@ void ui_SetTimePage_screen_init(void)
 
     ui_Dropdown = lv_dropdown_create(ui_SetTimePage);
     lv_dropdown_set_options(ui_Dropdown, "Mon\nTue\nWed\nThu\nFri\nSat\nSun");
+   
     lv_obj_set_width(ui_Dropdown, 150);
     lv_obj_set_height(ui_Dropdown, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_Dropdown, 0);
@@ -169,6 +193,13 @@ void ui_SetTimePage_screen_init(void)
     lv_obj_set_style_border_color(lv_dropdown_get_list(ui_Dropdown), lv_color_hex(0x000000),
         LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_opa(lv_dropdown_get_list(ui_Dropdown), 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    if (!Add_option)
+    {
+        int week_index = GetWeekdayIndex(alarms[alarm_currentpointer].day_str);
+        lv_dropdown_set_selected(ui_Dropdown, week_index);
+
+    }
 
 
     lv_obj_add_event_cb(ui_ConfirmImage, ui_event_ConfirmImg_cb, LV_EVENT_ALL, NULL);
