@@ -50,6 +50,8 @@
         "atomic": "c",
         "cstdint": "c",
         "user_watchdog.h": "c",
-        "rte_components.h": "c"
+        "rte_components.h": "c",
+        "stm32f4xx_hal_conf.h": "c",
+        "stm32f4xx_hal_rtc.h": "c"
     }
 }

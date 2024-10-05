@@ -259,7 +259,8 @@ typedef struct {
     int alarmState;/*per alarm state*/
     char hour_str[3];
     char min_str[3];
-    char time_str[6];
+    char day_str[4];
+    char time_str[15];
     lv_obj_t* alarmSettingPage;
     lv_obj_t* alarmSettingSwitch;
     lv_obj_t* alarmSettingLabel;

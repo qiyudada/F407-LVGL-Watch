@@ -12,19 +12,116 @@ lv_obj_t *ui_ConfirmImage;
 lv_obj_t *ui_DeleteImg;
 lv_obj_t *ui_Dropdown;
 
-void UpdateAlarmTime(int alarm_index)
+#define DEC_TO_BCD(val) (((val / 10) << 4) + (val % 10))
+#define BCD_TO_DEC(val) (((val >> 4) * 10) + (val & 0x0F))
+
+uint8_t GetUserInputWeekday(int alarm_index)
+{
+    const char *weekday_str = alarms[alarm_index].week_str;
+
+    if (strcmp(weekday_str, "Mon") == 0)
+        return RTC_WEEKDAY_MONDAY;
+    if (strcmp(weekday_str, "Tue") == 0)
+        return RTC_WEEKDAY_TUESDAY;
+    if (strcmp(weekday_str, "Wed") == 0)
+        return RTC_WEEKDAY_WEDNESDAY;
+    if (strcmp(weekday_str, "Thu") == 0)
+        return RTC_WEEKDAY_THURSDAY;
+    if (strcmp(weekday_str, "Fri") == 0)
+        return RTC_WEEKDAY_FRIDAY;
+    if (strcmp(weekday_str, "Sat") == 0)
+        return RTC_WEEKDAY_SATURDAY;
+    if (strcmp(weekday_str, "Sun") == 0)
+        return RTC_WEEKDAY_SUNDAY;
+
+    return RTC_WEEKDAY_MONDAY;
+}
+
+uint8_t CalculateDayOffset(uint8_t current_weekday, uint8_t target_weekday)
+{
+    if (target_weekday >= current_weekday)
+    {
+        return target_weekday - current_weekday;
+    }
+    else
+    {
+        return (7 - current_weekday) + target_weekday;
+    }
+}
+
+void RTC_AlarmA_Set(int alarm_index)
 {
     RTC_AlarmTypeDef sAlarm = {0};
+    RTC_TimeTypeDef currentTime = {0};
+    RTC_DateTypeDef currentDate = {0};
 
-    sAlarm.AlarmTime.Hours = atoi(alarms[alarm_index].hour_str);
-    sAlarm.AlarmTime.Minutes = atoi(alarms[alarm_index].min_str);
+    HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
+    HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
+
+    uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
+    uint8_t current_day = BCD_TO_DEC(currentDate.Date);
+
+    uint8_t user_weekday = GetUserInputWeekday(alarm_index);
+
+    uint8_t day_offset = CalculateDayOffset(current_weekday, user_weekday);
+
+    sAlarm.AlarmTime.Hours = DEC_TO_BCD(atoi(alarms[alarm_index].hour_str));
+    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(atoi(alarms[alarm_index].min_str));
     sAlarm.AlarmTime.Seconds = 0;
-    sAlarm.AlarmDateWeekDay = RTC_WEEKDAY_MONDAY;
-    sAlarm.Alarm = RTC_ALARM_A + alarm_index; // 为每个闹钟设置不同的Alarm A/B
+    sAlarm.AlarmTime.SubSeconds = 0x0;
+    sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+    sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+    sAlarm.AlarmMask = RTC_ALARMMASK_SECONDS;
+    sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+    sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
+    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(current_day + day_offset);
+    sAlarm.Alarm = RTC_ALARM_A;
 
-    if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BIN) != HAL_OK)
+    if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
     {
         Error_Handler();
+    }
+}
+
+void RTC_AlarmB_Set(int alarm_index)
+{
+    RTC_AlarmTypeDef sAlarm = {0};
+    RTC_TimeTypeDef currentTime = {0};
+    RTC_DateTypeDef currentDate = {0};
+
+    HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
+    HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
+
+    uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
+    uint8_t current_day = BCD_TO_DEC(currentDate.Date);
+
+    uint8_t user_weekday = DEC_TO_BCD(GetUserInputWeekday(alarm_index));
+
+    uint8_t day_offset = DEC_TO_BCD(CalculateDayOffset(current_weekday, user_weekday));
+
+    sAlarm.AlarmTime.Hours = DEC_TO_BCD(atoi(alarms[alarm_index].hour_str));
+    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(atoi(alarms[alarm_index].min_str));
+    sAlarm.AlarmTime.Seconds = 0;
+    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(current_day + day_offset);
+    sAlarm.Alarm = RTC_ALARM_B;
+
+    if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
+    {
+        Error_Handler();
+    }
+}
+
+void UpdateAlarmTime(int alarm_index)
+{
+    alarms[alarm_index].alarmState = true;
+
+    if (alarm_index == 0)
+    {
+        RTC_AlarmA_Set(alarm_index);
+    }
+    else if (alarm_index == 1)
+    {
+        RTC_AlarmB_Set(alarm_index);
     }
 }
 
@@ -58,7 +155,9 @@ void ui_event_ConfirmImg_cb(lv_event_t *e)
                                        alarms[alarmCount - 1].hour_str, sizeof(alarms[alarmCount].hour_str));
             lv_roller_get_selected_str(ui_MinuteRoller,
                                        alarms[alarmCount - 1].min_str, sizeof(alarms[alarmCount].min_str));
-            lv_snprintf(alarms[alarmCount - 1].time_str, sizeof(alarms[alarmCount - 1].time_str), "%s:%s", alarms[alarmCount - 1].hour_str, alarms[alarmCount - 1].min_str);
+            lv_dropdown_get_selected_str(ui_Dropdown, alarms[alarmCount - 1].week_str, sizeof(alarms[alarmCount - 1].week_str));
+            lv_snprintf(alarms[alarmCount - 1].time_str, sizeof(alarms[alarmCount - 1].time_str), "%s:%s-%s", alarms[alarmCount - 1].hour_str, alarms[alarmCount - 1].min_str, alarms[alarmCount - 1].week_str);
+            UpdateAlarmTime(alarmCount - 1);
         }
         else /*label option*/
         {
@@ -66,9 +165,11 @@ void ui_event_ConfirmImg_cb(lv_event_t *e)
                                        alarms[alarm_currentpointer].hour_str, sizeof(alarms[alarm_currentpointer].hour_str));
             lv_roller_get_selected_str(ui_MinuteRoller,
                                        alarms[alarm_currentpointer].min_str, sizeof(alarms[alarm_currentpointer].min_str));
-            lv_snprintf(alarms[alarm_currentpointer].time_str, sizeof(alarms[alarm_currentpointer].time_str), "%s:%s", alarms[alarm_currentpointer].hour_str, alarms[alarm_currentpointer].min_str);
+            lv_dropdown_get_selected_str(ui_Dropdown, alarms[alarm_currentpointer].week_str, sizeof(alarms[alarm_currentpointer].week_str));
+            lv_snprintf(alarms[alarm_currentpointer].time_str, sizeof(alarms[alarm_currentpointer].time_str), "%s:%s-%s", alarms[alarm_currentpointer].hour_str, alarms[alarm_currentpointer].min_str, alarms[alarm_currentpointer].week_str);
+            UpdateAlarmTime(alarm_currentpointer);
         }
-        UpdateAlarmTime(alarm_currentpointer);
+
         Page_Back();
     }
 }

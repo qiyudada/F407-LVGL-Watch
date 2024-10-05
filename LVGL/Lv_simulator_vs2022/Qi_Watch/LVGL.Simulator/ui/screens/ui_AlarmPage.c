@@ -175,7 +175,7 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         alarms[i].alarmSettingLabel = lv_label_create(alarms[i].alarmSettingPage);
         lv_obj_set_width(alarms[i].alarmSettingLabel, LV_SIZE_CONTENT);   /// 1
         lv_obj_set_height(alarms[i].alarmSettingLabel, LV_SIZE_CONTENT);    /// 1
-        lv_obj_set_x(alarms[i].alarmSettingLabel, -30);
+        lv_obj_set_x(alarms[i].alarmSettingLabel, -20);
         lv_obj_set_y(alarms[i].alarmSettingLabel, 0);
         lv_obj_set_align(alarms[i].alarmSettingLabel, LV_ALIGN_CENTER);
 
@@ -184,7 +184,7 @@ void CreateAlarmSettingPage(lv_obj_t* parent,int Number)
         lv_obj_add_flag(alarms[i].alarmSettingLabel, LV_OBJ_FLAG_CLICKABLE);
         lv_obj_set_style_text_color(alarms[i].alarmSettingLabel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(alarms[i].alarmSettingLabel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_font(alarms[i].alarmSettingLabel, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(alarms[i].alarmSettingLabel, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
 
 
         /*callback function*/

@@ -1,5 +1,4 @@
 #include "ui.h"
-#include "rtc.h"
 #include <stdlib.h>
 
 Page_t Page_Alarm = {ui_AlarmPage_screen_init, ui_AlarmPage_screen_deinit, &ui_AlarmPage};
@@ -15,16 +14,55 @@ int alarmCount = 0;
 bool Add_option = false;
 int alarm_currentpointer;
 
-//void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
-//{
-//    for (int i = 0; i < 4; i++)
-//    {
-//        if (alarms[i].alarmState && atoi(alarms[i].hour_str) == current_hours && atoi(alarms[i].min_str) == current_minutes)
-//        {
-//            TriggerAlarm(i);
-//        }
-//    }
-//}
+void Trigger_Alarm_A(int index)
+{
+    LED1(0);
+}
+
+void Trigger_Alarm_B(int index)
+{
+    LED1(1);
+}
+
+void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
+{
+    RTC_TimeTypeDef alarmTime = {0};
+    RTC_DateTypeDef alarmDate = {0};
+
+    HAL_RTC_GetTime(hrtc, &alarmTime, RTC_FORMAT_BIN);
+    HAL_RTC_GetDate(hrtc, &alarmDate, RTC_FORMAT_BIN);
+
+    uint8_t current_hours = alarmTime.Hours;
+    uint8_t current_minutes = alarmTime.Minutes;
+
+    for (int i = 0; i < 4; i++)
+    {
+        if (alarms[i].alarmState && atoi(alarms[i].hour_str) == current_hours && atoi(alarms[i].min_str) == current_minutes)
+        {
+            Trigger_Alarm_A(i);
+        }
+    }
+}
+
+void HAL_RTCEx_AlarmBEventCallback(RTC_HandleTypeDef *hrtc)
+{
+    RTC_TimeTypeDef alarmTime = {0};
+    RTC_DateTypeDef alarmDate = {0};
+
+    HAL_RTC_GetTime(hrtc, &alarmTime, RTC_FORMAT_BIN);
+    HAL_RTC_GetDate(hrtc, &alarmDate, RTC_FORMAT_BIN);
+
+    uint8_t current_hours = alarmTime.Hours;
+    uint8_t current_minutes = alarmTime.Minutes;
+
+    for (int i = 0; i < 4; i++)
+    {
+        if (alarms[i].alarmState && atoi(alarms[i].hour_str) == current_hours && atoi(alarms[i].min_str) == current_minutes)
+        {
+            Trigger_Alarm_B(i);
+        }
+    }
+}
 
 void ui_event_AlarmSettingSwitch(lv_event_t *e)
 {
@@ -181,7 +219,7 @@ void CreateAlarmSettingPage(lv_obj_t *parent, int Number)
         alarms[i].alarmSettingLabel = lv_label_create(alarms[i].alarmSettingPage);
         lv_obj_set_width(alarms[i].alarmSettingLabel, LV_SIZE_CONTENT);  /// 1
         lv_obj_set_height(alarms[i].alarmSettingLabel, LV_SIZE_CONTENT); /// 1
-        lv_obj_set_x(alarms[i].alarmSettingLabel, -30);
+        lv_obj_set_x(alarms[i].alarmSettingLabel, -15);
         lv_obj_set_y(alarms[i].alarmSettingLabel, 0);
         lv_obj_set_align(alarms[i].alarmSettingLabel, LV_ALIGN_CENTER);
 
