@@ -274,8 +274,23 @@ extern lv_obj_t* ui_AlarmImgContainer;
 /*--------------------------SCREEN: ui_SettingTimePage-------------------------------------*/
 extern Page_t Page_Settime;
 
+typedef struct{
+    int alarm_A_index;
+    int alarm_B_index; 
+    /*temporary index*/
+    int alarm_C_index;
+    int alarm_D_index;
+    bool alarm_A_state;
+    bool alarm_B_state;  
+    
+}alarm_resource_t;
+
+extern alarm_resource_t alarms_setting;
+
+
 void ui_SetTimePage_screen_init(void);
 void ui_SetTimePage_screen_deinit(void);
+void UpdateAlarmTime(int alarm_index);
 
 extern lv_obj_t* ui_SetTimePage;
 extern lv_obj_t* ui_HourRoller;
@@ -284,6 +299,9 @@ extern lv_obj_t* ui_SetTimeLabel;
 extern lv_obj_t* ui_ConfirmImage;
 extern lv_obj_t* ui_DeleteImg;
 extern lv_obj_t* ui_Dropdown;
+
+
+
 /*--------------------Picture------------------------------*/
 LV_IMG_DECLARE(ui_img_iu_bg_png);    // assets/iu_bg.png
 LV_IMG_DECLARE(ui_img_iu_bg3_png);    // assets/iu_bg3.png

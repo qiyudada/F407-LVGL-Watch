@@ -12,10 +12,15 @@ lv_obj_t *ui_ConfirmImage;
 lv_obj_t *ui_DeleteImg;
 lv_obj_t *ui_Dropdown;
 
+alarm_resource_t alarms_setting = {
+    .alarm_A_state = false,
+    .alarm_B_state = false,
+};
+
 #define DEC_TO_BCD(val) (((val / 10) << 4) + (val % 10))
 #define BCD_TO_DEC(val) (((val >> 4) * 10) + (val & 0x0F))
 
-uint8_t GetUserInputWeekday(const char* weekday_str)
+uint8_t GetUserInputWeekday(const char *weekday_str)
 {
     if (strcmp(weekday_str, "Mon") == 0)
         return RTC_WEEKDAY_MONDAY;
@@ -47,7 +52,12 @@ uint8_t CalculateDayOffset(uint8_t current_weekday, uint8_t target_weekday)
     }
 }
 
-void RTC_AlarmA_Set(int alarm_index)
+/**
+ * @brief set alarm time and enable alarm interrupt
+ * @param alarmType RTC_ALARM_A or RTC_ALARM_B
+ * @return None
+ */
+void RTC_Alarm_Set(int alarm_index, uint32_t AlarmType)
 {
     RTC_AlarmTypeDef sAlarm = {0};
     RTC_TimeTypeDef currentTime = {0};
@@ -73,53 +83,86 @@ void RTC_AlarmA_Set(int alarm_index)
     sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
     sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
     sAlarm.AlarmDateWeekDay = DEC_TO_BCD(current_day + day_offset);
-    sAlarm.Alarm = RTC_ALARM_A;
+    sAlarm.Alarm = AlarmType;
 
     if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
     {
         Error_Handler();
     }
-}
 
-void RTC_AlarmB_Set(int alarm_index)
-{
-    RTC_AlarmTypeDef sAlarm = {0};
-    RTC_TimeTypeDef currentTime = {0};
-    RTC_DateTypeDef currentDate = {0};
-
-    HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
-    HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
-
-    uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
-    uint8_t current_day = BCD_TO_DEC(currentDate.Date);
-
-    uint8_t user_weekday = DEC_TO_BCD(GetUserInputWeekday(alarms[alarm_index].week_str));
-
-    uint8_t day_offset = DEC_TO_BCD(CalculateDayOffset(current_weekday, user_weekday));
-
-    sAlarm.AlarmTime.Hours = DEC_TO_BCD(atoi(alarms[alarm_index].hour_str));
-    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(atoi(alarms[alarm_index].min_str));
-    sAlarm.AlarmTime.Seconds = 0;
-    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(current_day + day_offset);
-    sAlarm.Alarm = RTC_ALARM_B;
-
-    if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
-    {
-        Error_Handler();
-    }
+    if (AlarmType == RTC_ALARM_A)
+        alarms_setting.alarm_A_index = alarm_index;
+    else
+        alarms_setting.alarm_B_index = alarm_index;
 }
 
 void UpdateAlarmTime(int alarm_index)
 {
     alarms[alarm_index].alarmState = true;
+    /*store new alarm time temporarily */
+    int new_alarm_hour = atoi(alarms[alarm_index].hour_str);
+    int new_alarm_min = atoi(alarms[alarm_index].min_str);
+    int new_alarm_time = new_alarm_hour * 60 + new_alarm_min;
 
-    if (alarm_index == 0)
+    /*default alarm maximum value*/
+    int alarmA_time = 0x7FFFFFFF;
+    int alarmB_time = 0x7FFFFFFF;
+
+    /*if alarm a or b is set already, get alarm a or b time for comparison */
+    if (alarms_setting.alarm_A_state)
     {
-        RTC_AlarmA_Set(alarm_index);
+        int alarmA_hour = atoi(alarms[0].hour_str);
+        int alarmA_min = atoi(alarms[0].min_str);
+        alarmA_time = alarmA_hour * 60 + alarmA_min;
     }
-    else if (alarm_index == 1)
+    if (alarms_setting.alarm_B_state)
     {
-        RTC_AlarmB_Set(alarm_index);
+        int alarmB_hour = atoi(alarms[1].hour_str);
+        int alarmB_min = atoi(alarms[1].min_str);
+        alarmB_time = alarmB_hour * 60 + alarmB_min;
+    }
+
+    /*if alarm a or b is not set, set alarm a or b */
+    if (!alarms_setting.alarm_A_state)
+    {
+        if (alarms_setting.alarm_B_state && new_alarm_time >= alarmB_time)
+        {
+            RTC_Alarm_Set(alarms_setting.alarm_B_index, RTC_ALARM_A);
+            RTC_Alarm_Set(alarm_index, RTC_ALARM_B);
+            alarms_setting.alarm_A_state = true;
+        }
+        else if (new_alarm_time < alarmB_time || alarms_setting.alarm_B_state)
+        {
+            RTC_Alarm_Set(alarm_index, RTC_ALARM_A);
+        }
+    }
+    else if (!alarms_setting.alarm_B_state)
+    {
+        if (new_alarm_time > alarmA_time)
+        {
+            RTC_Alarm_Set(alarm_index, RTC_ALARM_B);
+        }
+        else
+        {
+            RTC_Alarm_Set(alarms_setting.alarm_A_index, RTC_ALARM_B);
+            RTC_Alarm_Set(alarm_index, RTC_ALARM_A);
+        }
+        alarms_setting.alarm_B_state = true;
+    }
+    else
+    {
+        /*if new alarm time is smaller than alarm a, set new alarm to alarm a,alarm a will be moved to alarm b */
+        if (new_alarm_time < alarmA_time)
+        {
+            RTC_Alarm_Set(alarms_setting.alarm_A_index, RTC_ALARM_B);
+            RTC_Alarm_Set(alarm_index, RTC_ALARM_A);
+        }
+        /* if new alarm time is between alarm a and alarm b, set new alarm to alarm b */
+        else if (new_alarm_time < alarmB_time)
+        {
+            RTC_Alarm_Set(alarm_index, RTC_ALARM_B);
+        }
+        
     }
 }
 
@@ -167,7 +210,7 @@ void ui_event_ConfirmImg_cb(lv_event_t *e)
             lv_snprintf(alarms[alarm_currentpointer].time_str, sizeof(alarms[alarm_currentpointer].time_str), "%s:%s-%s", alarms[alarm_currentpointer].hour_str, alarms[alarm_currentpointer].min_str, alarms[alarm_currentpointer].week_str);
             UpdateAlarmTime(alarm_currentpointer);
         }
-
+        /*back to alarmpage*/
         Page_Back();
     }
 }
@@ -271,7 +314,7 @@ void ui_SetTimePage_screen_init(void)
     if (!Add_option)
     {
         int week_index = GetUserInputWeekday(alarms[alarm_currentpointer].week_str);
-        lv_dropdown_set_selected(ui_Dropdown, week_index-1);
+        lv_dropdown_set_selected(ui_Dropdown, week_index - 1);
     }
     lv_obj_set_width(ui_Dropdown, 150);
     lv_obj_set_height(ui_Dropdown, LV_SIZE_CONTENT); /// 1

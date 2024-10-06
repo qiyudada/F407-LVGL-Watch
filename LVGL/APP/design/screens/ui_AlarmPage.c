@@ -14,12 +14,12 @@ int alarmCount = 0;
 bool Add_option = false;
 int alarm_currentpointer;
 
-void Trigger_Alarm_A(int index)
+void Trigger_Alarm_A(void)
 {
     LED1(0);
 }
 
-void Trigger_Alarm_B(int index)
+void Trigger_Alarm_B(void)
 {
     LED1(1);
 }
@@ -35,12 +35,12 @@ void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
     uint8_t current_hours = alarmTime.Hours;
     uint8_t current_minutes = alarmTime.Minutes;
 
-    for (int i = 0; i < 4; i++)
+    if (alarms[alarms_setting.alarm_A_index].alarmState && atoi(alarms[alarms_setting.alarm_A_index].hour_str) == current_hours && atoi(alarms[alarms_setting.alarm_A_index].min_str) == current_minutes)
     {
-        if (alarms[i].alarmState && atoi(alarms[i].hour_str) == current_hours && atoi(alarms[i].min_str) == current_minutes)
-        {
-            Trigger_Alarm_A(i);
-        }
+        alarms_setting.alarm_A_state = false;
+        alarms[alarms_setting.alarm_A_index].alarmState = false;
+        Trigger_Alarm_A();
+        UpdateAlarmTime(alarms_setting.alarm_C_index);
     }
 }
 
@@ -55,12 +55,11 @@ void HAL_RTCEx_AlarmBEventCallback(RTC_HandleTypeDef *hrtc)
     uint8_t current_hours = alarmTime.Hours;
     uint8_t current_minutes = alarmTime.Minutes;
 
-    for (int i = 0; i < 4; i++)
+    if (alarms[alarms_setting.alarm_B_index].alarmState && atoi(alarms[alarms_setting.alarm_B_index].hour_str) == current_hours && atoi(alarms[alarms_setting.alarm_B_index].min_str) == current_minutes)
     {
-        if (alarms[i].alarmState && atoi(alarms[i].hour_str) == current_hours && atoi(alarms[i].min_str) == current_minutes)
-        {
-            Trigger_Alarm_B(i);
-        }
+        alarms_setting.alarm_B_state = false;
+        alarms[alarms_setting.alarm_B_index].alarmState = false;
+        Trigger_Alarm_B();
     }
 }
 
