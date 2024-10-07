@@ -12,10 +12,7 @@ lv_obj_t *ui_ConfirmImage;
 lv_obj_t *ui_DeleteImg;
 lv_obj_t *ui_Dropdown;
 
-alarm_resource_t alarms_setting = {
-    .alarm_A_state = false,
-    .alarm_B_state = false,
-};
+AlarmNode *Alarms_NodeList = NULL;
 
 #define DEC_TO_BCD(val) (((val / 10) << 4) + (val % 10))
 #define BCD_TO_DEC(val) (((val >> 4) * 10) + (val & 0x0F))
@@ -57,24 +54,17 @@ uint8_t CalculateDayOffset(uint8_t current_weekday, uint8_t target_weekday)
  * @param alarmType RTC_ALARM_A or RTC_ALARM_B
  * @return None
  */
-void RTC_Alarm_Set(int alarm_index, uint32_t AlarmType)
+void RTC_Alarm_Set(void)
 {
+    if (Alarms_NodeList == NULL)
+    {
+        return;
+    }
+
     RTC_AlarmTypeDef sAlarm = {0};
-    RTC_TimeTypeDef currentTime = {0};
-    RTC_DateTypeDef currentDate = {0};
 
-    HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BIN);
-    HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BIN);
-
-    uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
-    uint8_t current_day = BCD_TO_DEC(currentDate.Date);
-
-    uint8_t user_weekday = GetUserInputWeekday(alarms[alarm_index].week_str);
-
-    uint8_t day_offset = CalculateDayOffset(current_weekday, user_weekday);
-
-    sAlarm.AlarmTime.Hours = DEC_TO_BCD(atoi(alarms[alarm_index].hour_str));
-    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(atoi(alarms[alarm_index].min_str));
+    sAlarm.AlarmTime.Hours = DEC_TO_BCD(Alarms_NodeList->hour);
+    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(Alarms_NodeList->minute);
     sAlarm.AlarmTime.Seconds = 0;
     sAlarm.AlarmTime.SubSeconds = 0x0;
     sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
@@ -82,88 +72,87 @@ void RTC_Alarm_Set(int alarm_index, uint32_t AlarmType)
     sAlarm.AlarmMask = RTC_ALARMMASK_SECONDS;
     sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
     sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
-    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(current_day + day_offset);
-    sAlarm.Alarm = AlarmType;
+    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(Alarms_NodeList->calDay);
+    sAlarm.Alarm = RTC_ALARM_A;
 
     if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
     {
         Error_Handler();
     }
-
-    if (AlarmType == RTC_ALARM_A)
-        alarms_setting.alarm_A_index = alarm_index;
-    else
-        alarms_setting.alarm_B_index = alarm_index;
 }
 
 void UpdateAlarmTime(int alarm_index)
 {
-    alarms[alarm_index].alarmState = true;
-    /*store new alarm time temporarily */
-    int new_alarm_hour = atoi(alarms[alarm_index].hour_str);
-    int new_alarm_min = atoi(alarms[alarm_index].min_str);
-    int new_alarm_time = new_alarm_hour * 60 + new_alarm_min;
+    AlarmNode *newAlarm = (AlarmNode *)malloc(sizeof(AlarmNode));
+    RTC_TimeTypeDef currentTime = {0};
+    RTC_DateTypeDef currentDate = {0};
 
-    /*default alarm maximum value*/
-    int alarmA_time = 0x7FFFFFFF;
-    int alarmB_time = 0x7FFFFFFF;
-
-    /*if alarm a or b is set already, get alarm a or b time for comparison */
-    if (alarms_setting.alarm_A_state)
+    if (newAlarm == NULL)
     {
-        int alarmA_hour = atoi(alarms[0].hour_str);
-        int alarmA_min = atoi(alarms[0].min_str);
-        alarmA_time = alarmA_hour * 60 + alarmA_min;
-    }
-    if (alarms_setting.alarm_B_state)
-    {
-        int alarmB_hour = atoi(alarms[1].hour_str);
-        int alarmB_min = atoi(alarms[1].min_str);
-        alarmB_time = alarmB_hour * 60 + alarmB_min;
+        printf("updatetime Memory allocation failed\n");
+        return;
     }
 
-    /*if alarm a or b is not set, set alarm a or b */
-    if (!alarms_setting.alarm_A_state)
+    newAlarm->alarm_index = alarm_index;
+    newAlarm->hour = atoi(alarms[alarm_index].hour_str);
+    newAlarm->minute = atoi(alarms[alarm_index].min_str);
+    strncpy(newAlarm->week_str, alarms[alarm_index].week_str, sizeof(newAlarm->week_str));
+    newAlarm->next = NULL;
+    alarms[newAlarm->alarm_index].alarmState = true;
+
+    HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BCD);
+    HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BCD);
+
+    uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
+    uint8_t current_day = BCD_TO_DEC(currentDate.Date);
+
+    uint8_t user_weekday = GetUserInputWeekday(newAlarm->week_str);
+    uint8_t day_offset = CalculateDayOffset(current_weekday, user_weekday);
+    newAlarm->calDay = day_offset + current_day;
+
+    /*if alarm head is null*/
+    if (Alarms_NodeList == NULL)
     {
-        if (alarms_setting.alarm_B_state && new_alarm_time >= alarmB_time)
-        {
-            RTC_Alarm_Set(alarms_setting.alarm_B_index, RTC_ALARM_A);
-            RTC_Alarm_Set(alarm_index, RTC_ALARM_B);
-            alarms_setting.alarm_A_state = true;
-        }
-        else if (new_alarm_time < alarmB_time || alarms_setting.alarm_B_state)
-        {
-            RTC_Alarm_Set(alarm_index, RTC_ALARM_A);
-        }
-    }
-    else if (!alarms_setting.alarm_B_state)
-    {
-        if (new_alarm_time > alarmA_time)
-        {
-            RTC_Alarm_Set(alarm_index, RTC_ALARM_B);
-        }
-        else
-        {
-            RTC_Alarm_Set(alarms_setting.alarm_A_index, RTC_ALARM_B);
-            RTC_Alarm_Set(alarm_index, RTC_ALARM_A);
-        }
-        alarms_setting.alarm_B_state = true;
+
+        Alarms_NodeList = newAlarm;
     }
     else
     {
-        /*if new alarm time is smaller than alarm a, set new alarm to alarm a,alarm a will be moved to alarm b */
-        if (new_alarm_time < alarmA_time)
-        {
-            RTC_Alarm_Set(alarms_setting.alarm_A_index, RTC_ALARM_B);
-            RTC_Alarm_Set(alarm_index, RTC_ALARM_A);
-        }
-        /* if new alarm time is between alarm a and alarm b, set new alarm to alarm b */
-        else if (new_alarm_time < alarmB_time)
-        {
-            RTC_Alarm_Set(alarm_index, RTC_ALARM_B);
-        }
+        AlarmNode *prev = NULL;
+        AlarmNode *current = Alarms_NodeList;
         
+        int newAlarmTime = newAlarm->calDay * 1440 + newAlarm->hour * 60 + newAlarm->minute;
+
+        while (current != NULL)
+        {
+            /*get current alarm time for comparison*/
+            int currentAlarmTime = current->calDay * 1440 + current->hour * 60 + current->minute;
+
+            /*if new alarm time is less than current alarm*/
+            if (newAlarmTime < currentAlarmTime)
+            {
+                break;
+            }
+            /*look for next alarm*/
+            prev = current;
+            current = current->next;
+        }
+        /*if prev is null, means new alarm should be added to the head*/
+        if (prev == NULL)
+        {
+
+            newAlarm->next = Alarms_NodeList;
+            Alarms_NodeList = newAlarm;
+        }
+        /*else, add new alarm after prev*/
+        else
+        {
+            prev->next = newAlarm;
+            newAlarm->next = current;
+        }
     }
+    /*update rtc alarm resource*/
+    RTC_Alarm_Set();
 }
 
 void ui_event_SetTimepage_cb(lv_event_t *e)
