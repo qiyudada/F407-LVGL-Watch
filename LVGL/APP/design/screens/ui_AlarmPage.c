@@ -53,15 +53,48 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
     if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         alarms[index].alarmState = true;
+        UpdateAlarmTime(index);
         lv_obj_add_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
     }
     if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         alarms[index].alarmState = false;
+
+        AlarmNode *prev = NULL;
+        AlarmNode *current = Alarms_NodeList;
+
+        while (current != NULL)
+        {
+            if (current->alarm_index == index)
+            {
+                if (prev == NULL)
+                {
+
+                    if (current->next == NULL)
+                    {
+                        free(current);
+                        Alarms_NodeList = NULL;
+                    }
+                    else if (current->next != NULL)
+                    {
+                        Alarms_NodeList = current->next;
+                        free(current);
+                    }
+                }
+                else
+                {
+                    prev->next = current->next;
+                    free(current);
+                }
+                break;
+            }
+            prev = current;
+            current = current->next;
+        }
+        RTC_Alarm_Set();
         lv_obj_clear_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
     }
 }
-
 void ui_event_AlarmLabelSettime(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -87,6 +120,39 @@ void ui_event_AlarmImgDel(lv_event_t *e)
             return;
 
         lv_obj_del(alarms[alarm_currentpointer].alarmSettingPage);
+
+        AlarmNode *prev = NULL;
+        AlarmNode *current = Alarms_NodeList;
+
+        while (current != NULL)
+        {
+            if (current->alarm_index == alarm_currentpointer)
+            {
+                if (prev == NULL)
+                {
+
+                    if (current->next == NULL)
+                    {
+                        free(current);
+                        Alarms_NodeList = NULL;
+                    }
+                    else if (current->next != NULL)
+                    {
+                        Alarms_NodeList = current->next;
+                        free(current);
+                    }
+                }
+                else
+                {
+                    prev->next = current->next;
+                    free(current);
+                }
+                break;
+            }
+            prev = current;
+            current = current->next;
+        }
+        RTC_Alarm_Set();
 
         for (int i = alarm_currentpointer; i < alarmCount - 1; i++)
         {

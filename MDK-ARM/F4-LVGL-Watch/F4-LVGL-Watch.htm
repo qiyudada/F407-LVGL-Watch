@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F4-LVGL-Watch\F4-LVGL-Watch.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F4-LVGL-Watch\F4-LVGL-Watch.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Oct 07 17:00:12 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Oct 07 19:07:09 2024
 <BR><P>
 <H3>Maximum Stack Usage =        976 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2942,7 +2942,9 @@ Global Symbols
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetAlarm_IT
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmAEventCallback
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_AlarmSettingSwitch
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_AlarmImgDel
+<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmAEventCallback
 <LI><a href="#[2ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateAlarmTime
 </UL>
 
@@ -3272,7 +3274,8 @@ Global Symbols
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_ConfirmImg_cb
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_AlarmSettingSwitch
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_ConfirmImg_cb
 </UL>
 
 <P><STRONG><a name="[34]"></a>UsageFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.UsageFault_Handler))
@@ -4279,7 +4282,9 @@ Global Symbols
 <P><STRONG><a name="[1fd]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmAEventCallback
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_AlarmSettingSwitch
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ui_event_AlarmImgDel
+<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmAEventCallback
 </UL>
 
 <P><STRONG><a name="[443]"></a>get_state</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, lv_imgbtn.o(i.get_state))
@@ -12389,7 +12394,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ui_alarmpage.o(i.ui_AlarmPage_screen_init)
 </UL>
-<P><STRONG><a name="[8d]"></a>ui_event_AlarmImgDel</STRONG> (Thumb, 202 bytes, Stack size 24 bytes, ui_alarmpage.o(i.ui_event_AlarmImgDel))
+<P><STRONG><a name="[8d]"></a>ui_event_AlarmImgDel</STRONG> (Thumb, 260 bytes, Stack size 24 bytes, ui_alarmpage.o(i.ui_event_AlarmImgDel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 464<LI>Call Chain = ui_event_AlarmImgDel &rArr; lv_obj_set_y &rArr; lv_obj_set_style_y &rArr; lv_obj_set_local_style_prop &rArr; lv_obj_refresh_style &rArr; refresh_children_style &rArr;  refresh_children_style (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_event_cb
@@ -12399,6 +12404,8 @@ Global Symbols
 <LI><a href="#[54d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
 <LI><a href="#[5a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_user_data
 <LI><a href="#[5fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_remove_event_cb
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Alarm_Set
+<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[532]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
@@ -12416,8 +12423,8 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> ui_alarmpage.o(i.CreateAlarmSettingPage)
 <LI> ui_alarmpage.o(i.ui_event_AlarmImgDel)
 </UL>
-<P><STRONG><a name="[8f]"></a>ui_event_AlarmSettingSwitch</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, ui_alarmpage.o(i.ui_event_AlarmSettingSwitch))
-<BR><BR>[Stack]<UL><LI>Max Depth = 496<LI>Call Chain = ui_event_AlarmSettingSwitch &rArr; lv_obj_clear_state &rArr; lv_obj_set_state &rArr; lv_obj_refresh_style &rArr; refresh_children_style &rArr;  refresh_children_style (Cycle)
+<P><STRONG><a name="[8f]"></a>ui_event_AlarmSettingSwitch</STRONG> (Thumb, 170 bytes, Stack size 24 bytes, ui_alarmpage.o(i.ui_event_AlarmSettingSwitch))
+<BR><BR>[Stack]<UL><LI>Max Depth = 504<LI>Call Chain = ui_event_AlarmSettingSwitch &rArr; lv_obj_clear_state &rArr; lv_obj_set_state &rArr; lv_obj_refresh_style &rArr; refresh_children_style &rArr;  refresh_children_style (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_target
 <LI><a href="#[38e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_code
@@ -12425,6 +12432,9 @@ Global Symbols
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clear_state
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_state
 <LI><a href="#[5a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_get_user_data
+<LI><a href="#[2ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateAlarmTime
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Alarm_Set
+<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> ui_alarmpage.o(i.CreateAlarmSettingPage)
 <LI> ui_alarmpage.o(i.ui_event_AlarmImgDel)
