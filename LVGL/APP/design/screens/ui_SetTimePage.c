@@ -95,22 +95,8 @@ void RTC_Alarm_Set(void)
  */
 void UpdateAlarmTime(int alarm_index)
 {
-    AlarmNode *newAlarm = (AlarmNode *)malloc(sizeof(AlarmNode));
     RTC_TimeTypeDef currentTime = {0};
     RTC_DateTypeDef currentDate = {0};
-
-    if (newAlarm == NULL)
-    {
-        printf("updatetime Memory allocation failed\n");
-        return;
-    }
-
-    newAlarm->alarm_index = alarm_index;
-    newAlarm->hour = atoi(alarms[alarm_index].hour_str);
-    newAlarm->minute = atoi(alarms[alarm_index].min_str);
-    strncpy(newAlarm->week_str, alarms[alarm_index].week_str, sizeof(newAlarm->week_str));
-    newAlarm->next = NULL;
-    alarms[newAlarm->alarm_index].alarmState = true;
 
     HAL_RTC_GetTime(&hrtc, &currentTime, RTC_FORMAT_BCD);
     HAL_RTC_GetDate(&hrtc, &currentDate, RTC_FORMAT_BCD);
@@ -118,49 +104,109 @@ void UpdateAlarmTime(int alarm_index)
     uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
     uint8_t current_day = BCD_TO_DEC(currentDate.Date);
 
-    uint8_t user_weekday = GetUserInputWeekday(newAlarm->week_str);
-    uint8_t day_offset = CalculateDayOffset(current_weekday, user_weekday);
-    newAlarm->calDay = day_offset + current_day;
+    int user_hour = atoi(alarms[alarm_index].hour_str);
+    int user_minute = atoi(alarms[alarm_index].min_str);
+    char user_weekstr[4];
+    strncpy(user_weekstr, alarms[alarm_index].week_str, sizeof(user_weekstr));
 
-    /*if alarm head is null*/
-    if (Alarms_NodeList == NULL)
+    int user_weekday = GetUserInputWeekday(user_weekstr);
+    int user_day_offset = CalculateDayOffset(current_weekday, user_weekday);
+    int user_calday = user_day_offset + current_day;
+    int newAlarmTime = user_calday * 1440 + user_hour * 60 + user_minute;
+
+    AlarmNode *prev = NULL;
+    AlarmNode *current = Alarms_NodeList;
+
+    while (current != NULL)
     {
-        Alarms_NodeList = newAlarm;
+        /*if the node is already on the list*/
+        if (current->alarm_index == alarm_index)
+        {
+            /*calculate currentAlarmTime*/
+            int currentAlarmTime = current->calDay * 1440 + current->hour * 60 + current->minute;
+
+            /*if the time is the same, return*/
+            if (newAlarmTime == currentAlarmTime)
+            {
+                return;
+            }
+
+            /*if the time is different, update the node time message*/
+            current->hour = user_hour;
+            current->minute = user_minute;
+            strncpy(current->week_str, user_weekstr, sizeof(current->week_str));
+            current->calDay = user_calday;
+
+            /*if node isn't the first node and the previous node's time is less than or equal to the new time*/
+            if (prev != NULL && (prev->calDay * 1440 + prev->hour * 60 + prev->minute) <= newAlarmTime 
+            && (current->next == NULL || (current->next->calDay * 1440 + current->next->hour * 60 + current->next->minute) > newAlarmTime))
+            {
+                return;
+            }
+            /*if the node is the first node*/
+            if (prev == NULL)
+            {
+                Alarms_NodeList = current->next;
+            }
+            else
+            {
+                prev->next = current->next;
+            }
+
+            current->next = NULL;
+            break;
+        }
+        prev = current;
+        current = current->next;
+    }
+
+    /*if current is NULL, create a new node*/
+    if (current == NULL)
+    {
+        current = (AlarmNode *)malloc(sizeof(AlarmNode));
+        if (current == NULL)
+        {
+            printf("Memory allocation failed\n");
+            return;
+        }
+
+        current->alarm_index = alarm_index;
+        current->hour = user_hour;
+        current->minute = user_minute;
+        strncpy(current->week_str, user_weekstr, sizeof(current->week_str));
+        current->calDay = user_calday;
+        current->next = NULL;
+
+        alarms[alarm_index].alarmState = true;
+    }
+
+    /*look for new place to insert*/
+    AlarmNode *insertPrev = NULL;
+    AlarmNode *insertCurrent = Alarms_NodeList;
+
+    while (insertCurrent != NULL)
+    {
+
+        int insertCurrentTime = insertCurrent->calDay * 1440 + insertCurrent->hour * 60 + insertCurrent->minute;
+
+        if (newAlarmTime < insertCurrentTime)
+        {
+            break;
+        }
+        insertPrev = insertCurrent;
+        insertCurrent = insertCurrent->next;
+    }
+
+    if (insertPrev == NULL)
+    {
+        current->next = Alarms_NodeList;
+        Alarms_NodeList = current;
     }
     else
     {
-        AlarmNode *prev = NULL;
-        AlarmNode *current = Alarms_NodeList;
-        
-        int newAlarmTime = newAlarm->calDay * 1440 + newAlarm->hour * 60 + newAlarm->minute;
 
-        while (current != NULL)
-        {
-            /*get current alarm time for comparison*/
-            int currentAlarmTime = current->calDay * 1440 + current->hour * 60 + current->minute;
-
-            /*if new alarm time is less than current alarm*/
-            if (newAlarmTime < currentAlarmTime)
-            {
-                break;
-            }
-            /*look for next alarm*/
-            prev = current;
-            current = current->next;
-        }
-        /*if prev is null, means new alarm should be added to the head*/
-        if (prev == NULL)
-        {
-
-            newAlarm->next = Alarms_NodeList;
-            Alarms_NodeList = newAlarm;
-        }
-        /*else, add new alarm after prev*/
-        else
-        {
-            prev->next = newAlarm;
-            newAlarm->next = current;
-        }
+        insertPrev->next = current;
+        current->next = insertCurrent;
     }
     /*update rtc alarm resource*/
     RTC_Alarm_Set();

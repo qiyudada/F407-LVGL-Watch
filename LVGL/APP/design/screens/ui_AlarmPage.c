@@ -1,5 +1,6 @@
 #include "ui.h"
 #include <stdlib.h>
+#include "rtc.h"
 
 Page_t Page_Alarm = {ui_AlarmPage_screen_init, ui_AlarmPage_screen_deinit, &ui_AlarmPage};
 
@@ -30,20 +31,41 @@ void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
     uint8_t current_hours = alarmTime.Hours;
     uint8_t current_minutes = alarmTime.Minutes;
 
-    if (alarms[Alarms_NodeList->alarm_index].alarmState && atoi(alarms[Alarms_NodeList->alarm_index].hour_str) == current_hours && atoi(alarms[Alarms_NodeList->alarm_index].min_str) == current_minutes)
+    AlarmNode *triggeredAlarm = Alarms_NodeList;
+
+    if (alarms[triggeredAlarm->alarm_index].alarmState &&
+        atoi(alarms[triggeredAlarm->alarm_index].hour_str) == current_hours &&
+        atoi(alarms[triggeredAlarm->alarm_index].min_str) == current_minutes)
     {
-        alarms[Alarms_NodeList->alarm_index].alarmState = false;
+        alarms[triggeredAlarm->alarm_index].alarmState = false;
         Trigger_Alarm_A();
-        AlarmNode *expiredAlarm = Alarms_NodeList;
-        if (Alarms_NodeList->next)
+
+        if (Alarms_NodeList->next == NULL)
+        {
+
+            free(triggeredAlarm);
+            Alarms_NodeList = NULL;
+
+            HAL_RTC_DeactivateAlarm(hrtc, RTC_ALARM_A);
+        }
+        else
         {
             Alarms_NodeList = Alarms_NodeList->next;
+
+            AlarmNode *tail = Alarms_NodeList;
+
+            while (tail->next != NULL)
+            {
+                tail = tail->next;
+            }
+
+            tail->next = triggeredAlarm;
+            triggeredAlarm->next = NULL;
+
+            RTC_Alarm_Set();
         }
-        free(expiredAlarm);
-        RTC_Alarm_Set();
     }
 }
-
 void ui_event_AlarmSettingSwitch(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -59,42 +81,52 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
     if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         alarms[index].alarmState = false;
+        lv_obj_clear_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
 
         AlarmNode *prev = NULL;
+        AlarmNode *targetNode = NULL;
         AlarmNode *current = Alarms_NodeList;
 
         while (current != NULL)
         {
             if (current->alarm_index == index)
             {
+                targetNode = current;
                 if (prev == NULL)
                 {
 
-                    if (current->next == NULL)
-                    {
-                        free(current);
-                        Alarms_NodeList = NULL;
-                    }
-                    else if (current->next != NULL)
-                    {
-                        Alarms_NodeList = current->next;
-                        free(current);
-                    }
+                    Alarms_NodeList = current->next;
                 }
                 else
                 {
                     prev->next = current->next;
-                    free(current);
                 }
+                targetNode->next = NULL;
                 break;
             }
             prev = current;
             current = current->next;
+
+            if (targetNode == NULL)
+            {
+                return;
+            }
+
+            free(targetNode);
+            targetNode = NULL;
+
+            if (Alarms_NodeList == NULL)
+            {
+                HAL_RTC_DeactivateAlarm(&hrtc, RTC_ALARM_A);
+            }
+            else
+            {
+                RTC_Alarm_Set();
+            }
         }
-        RTC_Alarm_Set();
-        lv_obj_clear_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
     }
 }
+
 void ui_event_AlarmLabelSettime(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -135,8 +167,10 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                     {
                         free(current);
                         Alarms_NodeList = NULL;
+
+                        HAL_RTC_DeactivateAlarm(&hrtc, RTC_ALARM_A);
                     }
-                    else if (current->next != NULL)
+                    else
                     {
                         Alarms_NodeList = current->next;
                         free(current);
@@ -146,6 +180,12 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                 {
                     prev->next = current->next;
                     free(current);
+                }
+
+                
+                if (Alarms_NodeList != NULL)
+                {
+                    RTC_Alarm_Set();
                 }
                 break;
             }

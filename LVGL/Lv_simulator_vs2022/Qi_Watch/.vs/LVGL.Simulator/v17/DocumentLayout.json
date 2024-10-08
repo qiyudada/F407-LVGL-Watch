@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_SetTimePage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|solutionrelative:LVGL.Simulator\\ui\\screens\\ui_SetTimePage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_SetTimePage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LVGL.Simulator\\ui\\screens\\ui_SetTimePage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}|LVGL.Simulator\\LVGL.Simulator.vcxproj|D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\screens\\ui_AlarmPage.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -47,8 +47,7 @@
               "ViewState": "AQIAAPoAAAAAAAAAAAAswAUBAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-24T02:06:28.754Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -133,8 +132,7 @@
               "RelativeToolTip": "LVGL.Simulator\\ui\\screens\\ui_AlarmPage.c",
               "ViewState": "AQIAADYAAAAAAAAAAAAAABcAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-09-25T01:28:47.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T01:28:47.388Z"
             }
           ]
         }
