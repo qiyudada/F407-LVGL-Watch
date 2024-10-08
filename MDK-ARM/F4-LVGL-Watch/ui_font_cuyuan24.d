@@ -133,8 +133,8 @@ f4-lvgl-watch\ui_font_cuyuan24.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_font_cuyuan24.o: ..\LVGL\APP\design\fonts\../ui_events.h
 f4-lvgl-watch\ui_font_cuyuan24.o: ..\LVGL\APP\design\fonts\../ui_helpers.h
 f4-lvgl-watch\ui_font_cuyuan24.o: ..\LVGL\APP\design\fonts\../ui.h
-f4-lvgl-watch\ui_font_cuyuan24.o: ../UserTask/Inc/User_PageManagement.h
-f4-lvgl-watch\ui_font_cuyuan24.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\ui_font_cuyuan24.o: ..\MidTask\User_PageManagement.h
+f4-lvgl-watch\ui_font_cuyuan24.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\ui_font_cuyuan24.o: ../Core/Inc/main.h
 f4-lvgl-watch\ui_font_cuyuan24.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\ui_font_cuyuan24.o: ../Core/Inc/stm32f4xx_hal_conf.h

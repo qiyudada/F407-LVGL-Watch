@@ -1,5 +1,5 @@
-f4-lvgl-watch\user_datamanagement.o: ..\UserTask\Src\User_DataManagement.c
-f4-lvgl-watch\user_datamanagement.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_datamanagement.o: ..\MidTask\User_DataManagement.c
+f4-lvgl-watch\user_datamanagement.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_datamanagement.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_datamanagement.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_datamanagement.o: ../Core/Inc/stm32f4xx_hal_conf.h

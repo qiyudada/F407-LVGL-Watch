@@ -17,6 +17,11 @@ AlarmNode *Alarms_NodeList = NULL;
 #define DEC_TO_BCD(val) (((val / 10) << 4) + (val % 10))
 #define BCD_TO_DEC(val) (((val >> 4) * 10) + (val & 0x0F))
 
+/**
+ * @brief get weekday from string
+ * @param weekday_str weekday string
+ * @return weekday 0x01~0x07
+ */
 uint8_t GetUserInputWeekday(const char *weekday_str)
 {
     if (strcmp(weekday_str, "Mon") == 0)
@@ -37,6 +42,10 @@ uint8_t GetUserInputWeekday(const char *weekday_str)
     return RTC_WEEKDAY_MONDAY;
 }
 
+/**
+ * @brief calculate the day offset between current weekday and target weekday
+ * @return day offset
+ */
 uint8_t CalculateDayOffset(uint8_t current_weekday, uint8_t target_weekday)
 {
     if (target_weekday >= current_weekday)
@@ -80,7 +89,10 @@ void RTC_Alarm_Set(void)
         Error_Handler();
     }
 }
-
+/**
+ * @brief update alarm time
+ * @param alarm_index current alarm index
+ */
 void UpdateAlarmTime(int alarm_index)
 {
     AlarmNode *newAlarm = (AlarmNode *)malloc(sizeof(AlarmNode));
@@ -113,7 +125,6 @@ void UpdateAlarmTime(int alarm_index)
     /*if alarm head is null*/
     if (Alarms_NodeList == NULL)
     {
-
         Alarms_NodeList = newAlarm;
     }
     else

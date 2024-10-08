@@ -53,7 +53,7 @@ f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 f4-lvgl-watch\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_TaskInit.h
-f4-lvgl-watch\freertos.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\freertos.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/Delay/Delay.h
 f4-lvgl-watch\freertos.o: ../Drivers-SYSTEM/SYS/sys.h

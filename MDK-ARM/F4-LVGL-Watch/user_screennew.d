@@ -1,7 +1,7 @@
 f4-lvgl-watch\user_screennew.o: ..\UserTask\Src\User_ScreenNew.c
 f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_ScreenNew.h
 f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_TaskInit.h
-f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_screennew.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_screennew.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_screennew.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_screennew.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -208,4 +208,4 @@ f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui_helpers.h
 f4-lvgl-watch\user_screennew.o: ../LVGL/APP/design/ui.h
-f4-lvgl-watch\user_screennew.o: ../UserTask/Inc/User_PageManagement.h
+f4-lvgl-watch\user_screennew.o: ..\MidTask\User_PageManagement.h

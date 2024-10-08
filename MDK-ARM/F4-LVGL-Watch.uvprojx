@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;../Drivers-SYSTEM/Log;../Drivers-SYSTEM/Ringbuffer;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/MPU6050/eMPL;../Drivers-BSP/KEY;../Drivers-BSP/LED;../Drivers-BSP/BLE;../Drivers-BSP/DTH11;../Drivers-BSP/TEMT6000;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../LVGL;../LVGL/src;../LVGL/examples/porting;../LVGL/APP/design;../UserTask/Src;../UserTask/Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers-SYSTEM/Uart_Redefine;../Drivers-SYSTEM/SYS;../Drivers-SYSTEM/Log;../Drivers-SYSTEM/Ringbuffer;../Drivers-SYSTEM/IIC;../Drivers-SYSTEM/Delay;../Drivers-BSP/AT24CXX;../Drivers-BSP/LCD;../Drivers-BSP/TOUCH;../Drivers-BSP/RC522;../Drivers-BSP/MPU6050;../Drivers-BSP/MPU6050/eMPL;../Drivers-BSP/KEY;../Drivers-BSP/LED;../Drivers-BSP/BLE;../Drivers-BSP/DTH11;../Drivers-BSP/TEMT6000;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../LVGL;../LVGL/src;../LVGL/examples/porting;../LVGL/APP/design;../UserTask/Src;../UserTask/Inc;..\MidTask</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -766,19 +766,24 @@
           <GroupName>Application/Mid_Task</GroupName>
           <Files>
             <File>
+              <FileName>StrCalculate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MidTask\StrCalculate.c</FilePath>
+            </File>
+            <File>
               <FileName>User_DataManagement.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\UserTask\Src\User_DataManagement.c</FilePath>
+              <FilePath>..\MidTask\User_DataManagement.c</FilePath>
             </File>
             <File>
               <FileName>User_PageManagement.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\UserTask\Src\User_PageManagement.c</FilePath>
+              <FilePath>..\MidTask\User_PageManagement.c</FilePath>
             </File>
             <File>
-              <FileName>StrCalculate.c</FileName>
+              <FileName>SinList.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\APP\design\StrCalculate.c</FilePath>
+              <FilePath>..\MidTask\SinList.c</FilePath>
             </File>
           </Files>
         </Group>

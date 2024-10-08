@@ -1,7 +1,7 @@
 f4-lvgl-watch\user_blecommunication.o: ..\UserTask\Src\User_BLECommunication.c
 f4-lvgl-watch\user_blecommunication.o: ../UserTask/Inc/User_BLECommunication.h
 f4-lvgl-watch\user_blecommunication.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\string.h
-f4-lvgl-watch\user_blecommunication.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_blecommunication.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_blecommunication.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_blecommunication.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_blecommunication.o: ../Core/Inc/stm32f4xx_hal_conf.h

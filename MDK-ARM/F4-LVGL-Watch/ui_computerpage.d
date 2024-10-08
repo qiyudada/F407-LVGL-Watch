@@ -133,8 +133,8 @@ f4-lvgl-watch\ui_computerpage.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_computerpage.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\ui_computerpage.o: ../LVGL/APP/design/ui_helpers.h
 f4-lvgl-watch\ui_computerpage.o: ../LVGL/APP/design/ui.h
-f4-lvgl-watch\ui_computerpage.o: ../UserTask/Inc/User_PageManagement.h
-f4-lvgl-watch\ui_computerpage.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\ui_computerpage.o: ..\MidTask\User_PageManagement.h
+f4-lvgl-watch\ui_computerpage.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\ui_computerpage.o: ../Core/Inc/main.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\ui_computerpage.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -207,4 +207,4 @@ f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_
 f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\ui_computerpage.o: ../Drivers-BSP/TEMT6000/TEMT6000.h
-f4-lvgl-watch\ui_computerpage.o: ../LVGL/APP/design/StrCalculate.h
+f4-lvgl-watch\ui_computerpage.o: ..\MidTask\StrCalculate.h

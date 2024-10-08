@@ -42,7 +42,7 @@ f4-lvgl-watch\rtc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 f4-lvgl-watch\rtc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 f4-lvgl-watch\rtc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 f4-lvgl-watch\rtc.o: ../Drivers-SYSTEM/Log/log.h
-f4-lvgl-watch\rtc.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\rtc.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f4-lvgl-watch\rtc.o: ../Core/Inc/FreeRTOSConfig.h
 f4-lvgl-watch\rtc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

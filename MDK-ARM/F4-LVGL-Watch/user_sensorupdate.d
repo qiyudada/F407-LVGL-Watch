@@ -1,7 +1,7 @@
 f4-lvgl-watch\user_sensorupdate.o: ..\UserTask\Src\User_SensorUpdate.c
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_SensorUpdate.h
 f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_TaskInit.h
-f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_sensorupdate.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_sensorupdate.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_sensorupdate.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -204,7 +204,7 @@ f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motio
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\user_sensorupdate.o: ../Drivers-BSP/TEMT6000/TEMT6000.h
-f4-lvgl-watch\user_sensorupdate.o: ../UserTask/Inc/User_PageManagement.h
+f4-lvgl-watch\user_sensorupdate.o: ..\MidTask\User_PageManagement.h
 f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui.h
 f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui_events.h
 f4-lvgl-watch\user_sensorupdate.o: ../LVGL/APP/design/ui_helpers.h

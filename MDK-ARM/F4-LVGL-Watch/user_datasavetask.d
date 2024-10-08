@@ -47,7 +47,7 @@ f4-lvgl-watch\user_datasavetask.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_datasavetask.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\user_datasavetask.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
 f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/User_TaskInit.h
-f4-lvgl-watch\user_datasavetask.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_datasavetask.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_datasavetask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f4-lvgl-watch\user_datasavetask.o: ../Core/Inc/FreeRTOSConfig.h
 f4-lvgl-watch\user_datasavetask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

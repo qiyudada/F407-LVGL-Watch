@@ -46,7 +46,7 @@ f4-lvgl-watch\user_runmode.o: ../Drivers-SYSTEM/SYS/sys.h
 f4-lvgl-watch\user_runmode.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_runmode.o: ../Drivers-SYSTEM/Log/log.h
 f4-lvgl-watch\user_runmode.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\stdio.h
-f4-lvgl-watch\user_runmode.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_runmode.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_runmode.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 f4-lvgl-watch\user_runmode.o: ../Core/Inc/FreeRTOSConfig.h
 f4-lvgl-watch\user_runmode.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

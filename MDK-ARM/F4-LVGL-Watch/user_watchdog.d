@@ -1,6 +1,6 @@
 f4-lvgl-watch\user_watchdog.o: ..\UserTask\Src\User_WatchDog.c
 f4-lvgl-watch\user_watchdog.o: ../UserTask/Inc/User_WatchDog.h
-f4-lvgl-watch\user_watchdog.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\user_watchdog.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\user_watchdog.o: ../Core/Inc/main.h
 f4-lvgl-watch\user_watchdog.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\user_watchdog.o: ../Core/Inc/stm32f4xx_hal_conf.h

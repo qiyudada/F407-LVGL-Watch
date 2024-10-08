@@ -133,8 +133,8 @@ f4-lvgl-watch\ui_homepage.o: ../LVGL/src/extra/widgets/span/lv_span.h
 f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui_events.h
 f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui_helpers.h
 f4-lvgl-watch\ui_homepage.o: ..\LVGL\APP\design\screens\../ui.h
-f4-lvgl-watch\ui_homepage.o: ../UserTask/Inc/User_PageManagement.h
-f4-lvgl-watch\ui_homepage.o: ../UserTask/Inc/User_DataManagement.h
+f4-lvgl-watch\ui_homepage.o: ..\MidTask\User_PageManagement.h
+f4-lvgl-watch\ui_homepage.o: ..\MidTask\User_DataManagement.h
 f4-lvgl-watch\ui_homepage.o: ../Core/Inc/main.h
 f4-lvgl-watch\ui_homepage.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 f4-lvgl-watch\ui_homepage.o: ../Core/Inc/stm32f4xx_hal_conf.h
