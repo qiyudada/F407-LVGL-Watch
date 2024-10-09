@@ -274,17 +274,6 @@ extern lv_obj_t* ui_AlarmImgContainer;
 /*--------------------------SCREEN: ui_SettingTimePage-------------------------------------*/
 extern Page_t Page_Settime;
 
-typedef struct AlarmNode{
-    int alarm_index;
-    int hour;               
-    int minute;
-    int calDay;            
-    char week_str[4];       
-    struct AlarmNode *next; 
-}AlarmNode;
-
-extern AlarmNode *Alarms_NodeList;
-
 
 void ui_SetTimePage_screen_init(void);
 void ui_SetTimePage_screen_deinit(void);

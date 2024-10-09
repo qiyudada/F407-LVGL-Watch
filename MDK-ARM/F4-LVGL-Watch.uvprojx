@@ -780,6 +780,11 @@
               <FileType>1</FileType>
               <FilePath>..\MidTask\User_PageManagement.c</FilePath>
             </File>
+            <File>
+              <FileName>SinList.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MidTask\SinList.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

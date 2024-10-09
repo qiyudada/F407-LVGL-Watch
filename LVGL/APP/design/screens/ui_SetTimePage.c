@@ -1,6 +1,8 @@
 #include "ui.h"
 #include "rtc.h"
 #include <stdlib.h>
+#include "SinList.h"
+
 Page_t Page_Settime = {ui_SetTimePage_screen_init, ui_SetTimePage_screen_deinit, &ui_SetTimePage};
 
 /*-----------------------SCREEN: ui_SetTimePage------------------------------------*/
@@ -123,10 +125,10 @@ void UpdateAlarmTime(int alarm_index)
         if (current->alarm_index == alarm_index)
         {
             /*calculate currentAlarmTime*/
-            int currentAlarmTime = current->calDay * 1440 + current->hour * 60 + current->minute;
+            current->alarmTotalTime = current->calDay * 1440 + current->hour * 60 + current->minute;
 
             /*if the time is the same, return*/
-            if (newAlarmTime == currentAlarmTime)
+            if (newAlarmTime == current->alarmTotalTime)
             {
                 return;
             }
@@ -137,24 +139,10 @@ void UpdateAlarmTime(int alarm_index)
             strncpy(current->week_str, user_weekstr, sizeof(current->week_str));
             current->calDay = user_calday;
 
-            /*if node isn't the first node and the previous node's time is less than or equal to the new time*/
-            if (prev != NULL && (prev->calDay * 1440 + prev->hour * 60 + prev->minute) <= newAlarmTime 
-            && (current->next == NULL || (current->next->calDay * 1440 + current->next->hour * 60 + current->next->minute) > newAlarmTime))
-            {
-                return;
-            }
-            /*if the node is the first node*/
-            if (prev == NULL)
-            {
-                Alarms_NodeList = current->next;
-            }
-            else
-            {
-                prev->next = current->next;
-            }
-
-            current->next = NULL;
-            break;
+            /*condition 1 :if node isn't the first node and the previous node's time is less than or equal to the new time*/
+            
+            
+          
         }
         prev = current;
         current = current->next;

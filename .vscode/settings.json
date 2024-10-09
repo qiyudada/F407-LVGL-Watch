@@ -54,5 +54,10 @@
         "stm32f4xx_hal_conf.h": "c",
         "stm32f4xx_hal_rtc.h": "c",
         "sinlist.h": "c"
-    }
+    },
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.preferredDarkColorTheme": "Monokai Pro",
+    "workbench.preferredLightColorTheme": "Monokai Pro",
+    "workbench.preferredHighContrastColorTheme": "Monokai Pro",
+    "workbench.preferredHighContrastLightColorTheme": "Monokai Pro"
 }

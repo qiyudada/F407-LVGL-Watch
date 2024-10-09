@@ -1,5 +1,6 @@
 #include "ui.h"
 #include <stdlib.h>
+#include "SinList.h"
 #include "rtc.h"
 
 Page_t Page_Alarm = {ui_AlarmPage_screen_init, ui_AlarmPage_screen_deinit, &ui_AlarmPage};
