@@ -207,3 +207,5 @@ f4-lvgl-watch\ui_settimepage.o: ../Drivers-BSP/MPU6050/eMPL/inv_mpu_dmp_motion_d
 f4-lvgl-watch\ui_settimepage.o: ../Drivers-BSP/BLE/Hc06.h
 f4-lvgl-watch\ui_settimepage.o: ../Drivers-BSP/DTH11/Dth11.h
 f4-lvgl-watch\ui_settimepage.o: ../Drivers-BSP/TEMT6000/TEMT6000.h
+f4-lvgl-watch\ui_settimepage.o: ..\MidTask\SinList.h
+f4-lvgl-watch\ui_settimepage.o: D:\Keil\ARM Start\ARM\ARMCC\Bin\..\include\assert.h

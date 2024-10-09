@@ -10,10 +10,19 @@ typedef struct AlarmNode{
     int minute;
     int calDay;
     int alarmTotalTime;           
-    char week_str[4];       
+    char week_str[4];    
     struct AlarmNode *next; 
 }AlarmNode;
 
-extern AlarmNode *Alarms_NodeList;
+extern AlarmNode *Alarms_ActiveNodeList;
+extern AlarmNode *Alarms_InactiveNodeList;
 
+AlarmNode *CreateNewNode(void);
 
+void PrintNode(AlarmNode *head);
+
+int SortNode(AlarmNode **head);
+
+void MoveSpecificNodeOut(int alarm_index);
+
+void MoveSpecificNodeIn(int alarm_index);

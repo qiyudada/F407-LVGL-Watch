@@ -240,6 +240,7 @@ extern Page_t Page_Alarm;
 #define Alarm_Number 4
 
 typedef struct {
+    bool alarmEnable;/*per alarm list state*/
     bool alarmState;/*per alarm state*/
     char hour_str[3];
     char min_str[3];
