@@ -241,6 +241,9 @@ void ui_event_SetTimepage_cb(lv_event_t *e)
     }
 }
 
+/**
+ * @brief Confirm button callback
+ */
 void ui_event_ConfirmImg_cb(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -256,8 +259,11 @@ void ui_event_ConfirmImg_cb(lv_event_t *e)
             {
                 --alarmCount;
                 printf("Alarm number is full,current alarm counts are %d\r\n", alarmCount);
+                /*back to previous page,but the function will continue to execute to end*/
                 Page_Back();
+                return;
             }
+
             lv_roller_get_selected_str(ui_HourRoller,
                                        alarms[alarmCount - 1].hour_str, sizeof(alarms[alarmCount].hour_str));
             lv_roller_get_selected_str(ui_MinuteRoller,

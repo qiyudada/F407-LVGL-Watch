@@ -14,12 +14,12 @@ lv_obj_t *ui_DateLabel;
 lv_timer_t *ui_HomePageTimer;
 
 // variables
-uint8_t ui_TimeHourValue = 22;
-uint8_t ui_TimeMinuteValue = 05;
+uint8_t ui_TimeHourValue = 7;
+uint8_t ui_TimeMinuteValue = 0;
 const char *ui_Days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
-uint8_t ui_DateMonthValue = 9;
-uint8_t ui_DateDayValue = 19;
-uint8_t ui_DataWeekdayValue = 4;
+uint8_t ui_DateMonthValue = 10;
+uint8_t ui_DateDayValue = 7;
+uint8_t ui_DataWeekdayValue = 1;
 
 /*--------------------SCREEN: ui_HomePage------------------------------*/
 

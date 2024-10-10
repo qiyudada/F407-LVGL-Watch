@@ -67,7 +67,9 @@ int SortNode(AlarmNode **head)
         }
         else
         {
+            /*find the position to insert current node*/
             AlarmNode *temp = sorted;
+            /*loop until find the position to insert current node*/
             while (temp->next != NULL && temp->next->alarmTotalTime < current->alarmTotalTime)
             {
                 temp = temp->next;
@@ -77,35 +79,38 @@ int SortNode(AlarmNode **head)
             temp->next = current;
         }
 
+        /*store next node*/
         current = nextNode;
     }
-
+    /*update head*/
     *head = sorted;
 
     return 1;
 }
 
 /**
- *@brief move specific node to the end of list
+ *@brief move specific node to the inactive of list
  *@param alarm_index
  */
-void MoveSpecificNodeOut(int alarm_index)
+void MoveSpecificNodeOutAct(int alarm_index)
 {
     AlarmNode *prev = NULL;
     AlarmNode *current = Alarms_ActiveNodeList;
 
+    /*loop until find the node*/
     while (current != NULL && current->alarm_index != alarm_index)
     {
         prev = current;
         current = current->next;
     }
 
+    /*node not found*/
     if (current == NULL)
     {
         printf("Alarm not found\n");
         return;
     }
-
+    /*if first node*/
     if (prev == NULL)
     {
         Alarms_ActiveNodeList = current->next;
@@ -117,6 +122,7 @@ void MoveSpecificNodeOut(int alarm_index)
 
     current->next = NULL;
 
+    /*if inactive list is null*/
     if (Alarms_InactiveNodeList == NULL)
     {
         Alarms_InactiveNodeList = current;
@@ -130,9 +136,11 @@ void MoveSpecificNodeOut(int alarm_index)
         }
         inactiveCurrent->next = current;
     }
+
+    printf("Alarm %d moved to inactive list\n", alarm_index);
 }
 
-void MoveSpecificNodeIn(int alarm_index)
+void MoveSpecificNodeInAct(int alarm_index)
 {
     AlarmNode *prev = NULL;
     AlarmNode *current = Alarms_InactiveNodeList;

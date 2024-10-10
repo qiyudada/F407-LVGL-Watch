@@ -82,14 +82,14 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
         alarms[index].alarmState = true;
         alarms[index].alarmEnable = true;
         lv_obj_add_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
-        MoveSpecificNodeIn(index);
+        MoveSpecificNodeInAct(index);
         UpdateAlarmTime(index);
     }
     if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         alarms[index].alarmState = false;
         alarms[index].alarmEnable = false;
-        MoveSpecificNodeOut(index);
+        MoveSpecificNodeOutAct(index);
         RTC_Alarm_Set();
         lv_obj_clear_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
     }
@@ -114,30 +114,30 @@ void ui_event_AlarmImgDel(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t *target = lv_event_get_target(e);
-    int alarmpointer = (int)(uintptr_t)lv_event_get_user_data(e);
+    int Delpointer = (int)(uintptr_t)lv_event_get_user_data(e);
     if (event_code == LV_EVENT_LONG_PRESSED)
     {
         /*if pointer is out of range*/
-        if (alarmpointer < 0 || alarmpointer >= alarmCount)
+        if (Delpointer < 0 || Delpointer >= alarmCount)
             return;
 
         AlarmNode *prev = NULL;
-    
+
         /*if current alarm is active*/
-        if (alarms[alarmpointer].alarmEnable)
+        if (alarms[Delpointer].alarmEnable)
         {
             AlarmNode *current = Alarms_ActiveNodeList;
 
             while (current != NULL)
             {
-                if (current->alarm_index == alarmpointer)
+                if (current->alarm_index == Delpointer)
                 {
                     /*if current is head,two coniditions
                     1.current is head,and no next node
                     2.current is head,and has next node*/
                     alarms[current->alarm_index].alarmEnable = false;
                     alarms[current->alarm_index].alarmState = false;
-                    current->alarm_index = -1;
+                    
                     if (prev == NULL)
                     {
                         /*if current list only has one node*/
@@ -152,10 +152,11 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                         }
                         else
                         {
-
                             Alarms_ActiveNodeList = current->next;
                             free(current);
                             current = NULL;
+
+                            RTC_Alarm_Set();
                         }
                     }
                     else
@@ -163,11 +164,13 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                         prev->next = current->next;
                         free(current);
                         current = NULL;
+
+                        RTC_Alarm_Set();
                     }
-                    
-                    RTC_Alarm_Set();
+
                     break;
                 }
+
                 prev = current;
                 current = current->next;
             }
@@ -178,7 +181,7 @@ void ui_event_AlarmImgDel(lv_event_t *e)
 
             while (current != NULL)
             {
-                if (current->alarm_index == alarmpointer)
+                if (current->alarm_index == Delpointer)
                 {
 
                     if (prev == NULL)
@@ -201,10 +204,10 @@ void ui_event_AlarmImgDel(lv_event_t *e)
         }
 
         /*delete specific alarm setting*/
-        lv_obj_del(alarms[alarmpointer].alarmSettingPage);
-        memset(&alarms[alarmpointer], 0, sizeof(alarms[alarmpointer]));
+        lv_obj_del(alarms[Delpointer].alarmSettingPage);
+       
         /*refresh the callback list function*/
-        for (int i = alarmpointer; i < alarmCount - 1; i++)
+        for (int i = Delpointer; i < alarmCount - 1; i++)
         {
             alarms[i] = alarms[i + 1];
             lv_obj_set_y(alarms[i].alarmSettingPage, -70 + i * 65);

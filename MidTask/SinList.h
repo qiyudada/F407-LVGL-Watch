@@ -23,6 +23,6 @@ void PrintNode(AlarmNode *head);
 
 int SortNode(AlarmNode **head);
 
-void MoveSpecificNodeOut(int alarm_index);
+void MoveSpecificNodeOutAct(int alarm_index);
 
-void MoveSpecificNodeIn(int alarm_index);
+void MoveSpecificNodeInAct(int alarm_index);
