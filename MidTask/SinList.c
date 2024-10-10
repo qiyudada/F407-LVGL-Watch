@@ -28,7 +28,7 @@ void PrintNode(AlarmNode *head)
     AlarmNode *temp = head;
     while (temp != NULL)
     {
-        printf("---------------------------------------\r\n");
+        printf("\r\n---------------------------------------\r\n");
         printf("Alarm_index:%d\r\n", temp->alarm_index);
         printf("Alarm_TotalTime:%d\r\n", temp->alarmTotalTime);
         printf("Alarm_CalDay:%d\r\n", temp->calDay);

@@ -286,7 +286,7 @@ extern lv_obj_t* ui_HourRoller;
 extern lv_obj_t* ui_MinuteRoller;
 extern lv_obj_t* ui_SetTimeLabel;
 extern lv_obj_t* ui_ConfirmImage;
-extern lv_obj_t* ui_DeleteImg;
+extern lv_obj_t* ui_CancelImg;
 extern lv_obj_t* ui_Dropdown;
 
 

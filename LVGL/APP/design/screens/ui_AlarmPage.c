@@ -65,7 +65,6 @@ void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
 
             RTC_Alarm_Set();
         }
-        lv_scr_load(lv_scr_act());
     }
 }
 
@@ -108,6 +107,9 @@ void ui_event_AlarmLabelSettime(lv_event_t *e)
     }
 }
 
+/**
+ * @brief Alarm Delete Event Callback
+ */
 void ui_event_AlarmImgDel(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -115,59 +117,99 @@ void ui_event_AlarmImgDel(lv_event_t *e)
     int alarmpointer = (int)(uintptr_t)lv_event_get_user_data(e);
     if (event_code == LV_EVENT_LONG_PRESSED)
     {
-
-        alarm_currentpointer = alarmpointer;
-        if (alarm_currentpointer < 0 || alarm_currentpointer >= alarmCount)
+        /*if pointer is out of range*/
+        if (alarmpointer < 0 || alarmpointer >= alarmCount)
             return;
 
-        lv_obj_del(alarms[alarm_currentpointer].alarmSettingPage);
-
         AlarmNode *prev = NULL;
-        AlarmNode *current = Alarms_ActiveNodeList;
-
-        while (current != NULL)
+    
+        /*if current alarm is active*/
+        if (alarms[alarmpointer].alarmEnable)
         {
-            if (current->alarm_index == alarm_currentpointer)
+            AlarmNode *current = Alarms_ActiveNodeList;
+
+            while (current != NULL)
             {
-                if (prev == NULL)
+                if (current->alarm_index == alarmpointer)
                 {
-
-                    if (current->next == NULL)
+                    /*if current is head,two coniditions
+                    1.current is head,and no next node
+                    2.current is head,and has next node*/
+                    alarms[current->alarm_index].alarmEnable = false;
+                    alarms[current->alarm_index].alarmState = false;
+                    current->alarm_index = -1;
+                    if (prev == NULL)
                     {
-                        free(current);
-                        Alarms_ActiveNodeList = NULL;
+                        /*if current list only has one node*/
+                        if (current->next == NULL)
+                        {
 
-                        HAL_RTC_DeactivateAlarm(&hrtc, RTC_ALARM_A);
+                            free(current);
+                            Alarms_ActiveNodeList = NULL;
+
+                            /*disable alarm setting*/
+                            HAL_RTC_DeactivateAlarm(&hrtc, RTC_ALARM_A);
+                        }
+                        else
+                        {
+
+                            Alarms_ActiveNodeList = current->next;
+                            free(current);
+                            current = NULL;
+                        }
                     }
                     else
                     {
-                        Alarms_ActiveNodeList = current->next;
+                        prev->next = current->next;
                         free(current);
+                        current = NULL;
                     }
-                }
-                else
-                {
-                    prev->next = current->next;
-                    free(current);
-                }
-
-                if (Alarms_ActiveNodeList != NULL)
-                {
+                    
                     RTC_Alarm_Set();
+                    break;
                 }
-                break;
+                prev = current;
+                current = current->next;
             }
-            prev = current;
-            current = current->next;
         }
-        RTC_Alarm_Set();
-
-        for (int i = alarm_currentpointer; i < alarmCount - 1; i++)
+        else
         {
+            AlarmNode *current = Alarms_InactiveNodeList;
 
+            while (current != NULL)
+            {
+                if (current->alarm_index == alarmpointer)
+                {
+
+                    if (prev == NULL)
+                    {
+                        // Current is head
+                        Alarms_InactiveNodeList = current->next;
+                    }
+                    else
+                    {
+                        prev->next = current->next;
+                    }
+
+                    free(current);
+                    current = NULL;
+                    break;
+                }
+                prev = current;
+                current = current->next;
+            }
+        }
+
+        /*delete specific alarm setting*/
+        lv_obj_del(alarms[alarmpointer].alarmSettingPage);
+        memset(&alarms[alarmpointer], 0, sizeof(alarms[alarmpointer]));
+        /*refresh the callback list function*/
+        for (int i = alarmpointer; i < alarmCount - 1; i++)
+        {
             alarms[i] = alarms[i + 1];
             lv_obj_set_y(alarms[i].alarmSettingPage, -70 + i * 65);
 
+            /*must remove original callback firstly*/
             lv_obj_remove_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDel);
             lv_obj_remove_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime);
             lv_obj_remove_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch);
@@ -176,7 +218,9 @@ void ui_event_AlarmImgDel(lv_event_t *e)
             lv_obj_add_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime, LV_EVENT_ALL, (void *)(uintptr_t)i);
             lv_obj_add_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch, LV_EVENT_ALL, (void *)(uintptr_t)i);
         }
+
         memset(&alarms[alarmCount - 1], 0, sizeof(alarms[0]));
+
         if (alarmCount > 0)
         {
             --alarmCount;
