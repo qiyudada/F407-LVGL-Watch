@@ -11,6 +11,7 @@ AlarmNode *CreateNewNode(void)
     {
         printf("Memory Allocation Failed\n");
         Error_Handler();
+        return NULL;
     }
     else
     {

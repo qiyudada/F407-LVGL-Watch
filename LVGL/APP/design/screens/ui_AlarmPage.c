@@ -1,7 +1,6 @@
 #include "ui.h"
 #include <stdlib.h>
 #include "SinList.h"
-#include "rtc.h"
 
 Page_t Page_Alarm = {ui_AlarmPage_screen_init, ui_AlarmPage_screen_deinit, &ui_AlarmPage};
 
@@ -167,7 +166,7 @@ void ui_event_AlarmImgDel(lv_event_t *e)
 
                         RTC_Alarm_Set();
                     }
-
+                    /*above coniditions are used to execute one conidition only*/
                     break;
                 }
 

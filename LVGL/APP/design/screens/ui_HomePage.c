@@ -7,9 +7,7 @@ void ui_HomePage_screen_init(void);
 void ui_event_HomePage(lv_event_t *e);
 
 lv_obj_t *ui_HomePage;
-
 lv_obj_t *ui_ClockNumberLabel;
-
 lv_obj_t *ui_DateLabel;
 lv_timer_t *ui_HomePageTimer;
 

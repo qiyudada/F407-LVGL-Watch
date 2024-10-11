@@ -109,7 +109,12 @@ void HardwareInitTask(void *argument)
 
         log_info("Hardware initiate has been completed!");
 
-        osThreadTerminate(HardwareInit_TaskHandle);
+        if (HardwareInit_TaskHandle != NULL)
+        {
+            osThreadTerminate(HardwareInit_TaskHandle);
+            HardwareInit_TaskHandle = NULL;
+        }
+
         osDelay(500);
     }
 }
