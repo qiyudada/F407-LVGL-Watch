@@ -26,8 +26,8 @@ void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
 {
    
     /*turn alarm state to false*/
-    alarms[Alarms_ActiveNodeList->alarm_index].alarmState = false;
-    alarms[Alarms_ActiveNodeList->alarm_index].alarmEnable = false;
+    alarms[Alarms_ActiveNodeList->alarm_index].alarmSwitchState = false;
+    alarms[Alarms_ActiveNodeList->alarm_index].alarmActiveState = false;
 
     /*trigger alarm*/
     Trigger_Alarm_A();
@@ -64,8 +64,8 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
 
     if (event_code == LV_EVENT_VALUE_CHANGED && lv_obj_has_state(target, LV_STATE_CHECKED))
     {
-        alarms[index].alarmState = true;
-        alarms[index].alarmEnable = true;
+        alarms[index].alarmSwitchState = true;
+        alarms[index].alarmActiveState = true;
         lv_obj_add_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
         MoveSpecificNodeInAct(index);
         UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
@@ -73,8 +73,8 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
     }
     if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
     {
-        alarms[index].alarmState = false;
-        alarms[index].alarmEnable = false;
+        alarms[index].alarmSwitchState = false;
+        alarms[index].alarmActiveState = false;
         MoveSpecificNodeOutAct(index);
         UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
         RTC_Alarm_Set();
@@ -111,7 +111,7 @@ void ui_event_AlarmImgDel(lv_event_t *e)
         AlarmNode *prev = NULL;
 
         /*if current alarm is active*/
-        if (alarms[Delpointer].alarmEnable)
+        if (alarms[Delpointer].alarmActiveState)
         {
             AlarmNode *current = Alarms_ActiveNodeList;
 
@@ -122,8 +122,8 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                     /*if current is head,two coniditions
                     1.current is head,and no next node
                     2.current is head,and has next node*/
-                    alarms[current->alarm_index].alarmEnable = false;
-                    alarms[current->alarm_index].alarmState = false;
+                    alarms[current->alarm_index].alarmActiveState = false;
+                    alarms[current->alarm_index].alarmSwitchState = false;
 
                     if (prev == NULL)
                     {
@@ -304,7 +304,7 @@ void CreateAlarmSettingPage(lv_obj_t *parent, int Number)
         lv_obj_set_style_bg_opa(alarms[i].alarmSettingSwitch, 255, LV_PART_INDICATOR | LV_STATE_CHECKED);
 
         /*synchronize the switch turn state setting before*/
-        if (!lv_obj_has_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED) && alarms[i].alarmState)
+        if (!lv_obj_has_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED) && alarms[i].alarmSwitchState)
         {
             lv_obj_add_state(alarms[i].alarmSettingSwitch, LV_STATE_CHECKED);
             lv_obj_add_state(alarms[i].alarmImgContainer, LV_STATE_CHECKED);

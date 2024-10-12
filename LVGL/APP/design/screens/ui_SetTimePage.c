@@ -73,10 +73,45 @@ void RTC_Alarm_Set(void)
         return;
     }
 
+    RTC_TimeTypeDef AlarmcurrentTime = {0};
+    RTC_DateTypeDef AlarmcurrentDate = {0};
+
+    /*get current time*/
+    HAL_RTC_GetTime(&hrtc, &AlarmcurrentTime, RTC_FORMAT_BCD);
+    HAL_RTC_GetDate(&hrtc, &AlarmcurrentDate, RTC_FORMAT_BCD);
+
+    uint8_t day = BCD_TO_DEC(AlarmcurrentDate.Date);
+    uint8_t hour = BCD_TO_DEC(AlarmcurrentTime.Hours);
+    uint8_t minute = BCD_TO_DEC(AlarmcurrentTime.Minutes);
+
+    uint32_t currentTime = day * 1440 + hour * 60 + minute;
+
+    AlarmNode *current = Alarms_ActiveNodeList;
+    AlarmNode *nearestAlarm = NULL;
+
+    while (current != NULL)
+    {
+        uint32_t alarmTime = current->calDay * 1440 + current->hour * 60 + current->minute;
+
+        if (alarmTime > currentTime)
+        {
+            if (nearestAlarm == NULL || alarmTime < (nearestAlarm->calDay * 1440 + nearestAlarm->hour * 60 + nearestAlarm->minute))
+            {
+                nearestAlarm = current;
+            }
+        }
+        current = current->next;
+    }
+
+    if (nearestAlarm == NULL)
+    {
+        return;
+    }
+
     RTC_AlarmTypeDef sAlarm = {0};
 
-    sAlarm.AlarmTime.Hours = DEC_TO_BCD(Alarms_ActiveNodeList->hour);
-    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(Alarms_ActiveNodeList->minute);
+    sAlarm.AlarmTime.Hours = DEC_TO_BCD(nearestAlarm->hour);
+    sAlarm.AlarmTime.Minutes = DEC_TO_BCD(nearestAlarm->minute);
     sAlarm.AlarmTime.Seconds = 0;
     sAlarm.AlarmTime.SubSeconds = 0x0;
     sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
@@ -84,7 +119,7 @@ void RTC_Alarm_Set(void)
     sAlarm.AlarmMask = RTC_ALARMMASK_SECONDS;
     sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
     sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
-    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(Alarms_ActiveNodeList->calDay);
+    sAlarm.AlarmDateWeekDay = DEC_TO_BCD(nearestAlarm->calDay);
     sAlarm.Alarm = RTC_ALARM_A;
 
     if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
@@ -109,6 +144,8 @@ void UpdateAlarmTime(int alarm_index)
 
     uint8_t current_weekday = BCD_TO_DEC(currentDate.WeekDay);
     uint8_t current_day = BCD_TO_DEC(currentDate.Date);
+    uint8_t current_hour = BCD_TO_DEC(currentTime.Hours);
+    uint8_t current_minute = BCD_TO_DEC(currentTime.Minutes);
 
     /*get user time*/
     int user_hour = atoi(alarms[alarm_index].hour_str);
@@ -123,7 +160,7 @@ void UpdateAlarmTime(int alarm_index)
 
     AlarmNode *prev = NULL;
 
-    if (alarms[alarm_index].alarmEnable)
+    if (alarms[alarm_index].alarmActiveState)
     {
 
         AlarmNode *current = Alarms_ActiveNodeList;
@@ -173,7 +210,7 @@ void UpdateAlarmTime(int alarm_index)
             current->alarmTotalTime = current->calDay * 1440 + current->hour * 60 + current->minute;
 
             /*active current alarm*/
-            alarms[alarm_index].alarmState = true;
+            alarms[alarm_index].alarmSwitchState = true;
 
             if (Alarms_ActiveNodeList == NULL)
             {
@@ -269,7 +306,7 @@ void ui_event_ConfirmImg_cb(lv_event_t *e)
                                        alarms[alarmCount - 1].min_str, sizeof(alarms[alarmCount].min_str));
             lv_dropdown_get_selected_str(ui_Dropdown, alarms[alarmCount - 1].week_str, sizeof(alarms[alarmCount - 1].week_str));
             lv_snprintf(alarms[alarmCount - 1].time_str, sizeof(alarms[alarmCount - 1].time_str), "%s:%s-%s", alarms[alarmCount - 1].hour_str, alarms[alarmCount - 1].min_str, alarms[alarmCount - 1].week_str);
-            alarms[alarmCount - 1].alarmEnable = true;
+            alarms[alarmCount - 1].alarmActiveState = true;
             UpdateAlarmTime(alarmCount - 1);
         }
         else /*label option*/

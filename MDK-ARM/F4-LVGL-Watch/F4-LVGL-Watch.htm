@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F4-LVGL-Watch\F4-LVGL-Watch.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F4-LVGL-Watch\F4-LVGL-Watch.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Oct 12 09:40:47 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Oct 12 16:33:11 2024
 <BR><P>
 <H3>Maximum Stack Usage =        976 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1697,7 +1697,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1fe]"></a>HAL_RTC_AlarmAEventCallback</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, ui_alarmpage.o(i.HAL_RTC_AlarmAEventCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = HAL_RTC_AlarmAEventCallback &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = HAL_RTC_AlarmAEventCallback &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateAlarmActiveListIndex
 <LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_DeactivateAlarm
@@ -1709,7 +1709,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[204]"></a>HAL_RTC_AlarmIRQHandler</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, stm32f4xx_hal_rtc.o(i.HAL_RTC_AlarmIRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = HAL_RTC_AlarmIRQHandler &rArr; HAL_RTC_AlarmAEventCallback &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = HAL_RTC_AlarmIRQHandler &rArr; HAL_RTC_AlarmAEventCallback &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmAEventCallback
 <LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTCEx_AlarmBEventCallback
@@ -1736,6 +1736,7 @@ Global Symbols
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataSaveTask
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MW_RTC_Get_TimeDate
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateAlarmTime
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Alarm_Set
 </UL>
 
 <P><STRONG><a name="[207]"></a>HAL_RTC_GetTime</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, stm32f4xx_hal_rtc.o(i.HAL_RTC_GetTime))
@@ -1746,6 +1747,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageSendTask
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MW_RTC_Get_TimeDate
 <LI><a href="#[2b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateAlarmTime
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Alarm_Set
 </UL>
 
 <P><STRONG><a name="[208]"></a>HAL_RTC_Init</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, stm32f4xx_hal_rtc.o(i.HAL_RTC_Init))
@@ -2968,17 +2970,19 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[62]"></a>RTC_Alarm_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.RTC_Alarm_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = RTC_Alarm_IRQHandler &rArr; HAL_RTC_AlarmIRQHandler &rArr; HAL_RTC_AlarmAEventCallback &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = RTC_Alarm_IRQHandler &rArr; HAL_RTC_AlarmIRQHandler &rArr; HAL_RTC_AlarmAEventCallback &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmIRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[202]"></a>RTC_Alarm_Set</STRONG> (Thumb, 140 bytes, Stack size 56 bytes, ui_settimepage.o(i.RTC_Alarm_Set))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
+<P><STRONG><a name="[202]"></a>RTC_Alarm_Set</STRONG> (Thumb, 324 bytes, Stack size 88 bytes, ui_settimepage.o(i.RTC_Alarm_Set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetAlarm_IT
+<LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetTime
+<LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetDate
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PrintNode
 <LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
@@ -3313,7 +3317,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2b4]"></a>UpdateAlarmTime</STRONG> (Thumb, 400 bytes, Stack size 72 bytes, ui_settimepage.o(i.UpdateAlarmTime))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = UpdateAlarmTime &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = UpdateAlarmTime &rArr; RTC_Alarm_Set &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetTime
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_GetDate
