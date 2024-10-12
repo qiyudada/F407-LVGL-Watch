@@ -24,47 +24,33 @@ void Trigger_Alarm_A(void)
 
 void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
 {
-    RTC_TimeTypeDef alarmTime = {0};
-    RTC_DateTypeDef alarmDate = {0};
+   
+    /*turn alarm state to false*/
+    alarms[Alarms_ActiveNodeList->alarm_index].alarmState = false;
+    alarms[Alarms_ActiveNodeList->alarm_index].alarmEnable = false;
 
-    HAL_RTC_GetTime(hrtc, &alarmTime, RTC_FORMAT_BIN);
-    HAL_RTC_GetDate(hrtc, &alarmDate, RTC_FORMAT_BIN);
+    /*trigger alarm*/
+    Trigger_Alarm_A();
 
-    uint8_t current_hours = alarmTime.Hours;
-    uint8_t current_minutes = alarmTime.Minutes;
-
-    AlarmNode *triggeredAlarm = Alarms_ActiveNodeList;
-
-    /*if alarm message is marked*/
-    if (alarms[triggeredAlarm->alarm_index].alarmState &&
-        atoi(alarms[triggeredAlarm->alarm_index].hour_str) == current_hours &&
-        atoi(alarms[triggeredAlarm->alarm_index].min_str) == current_minutes)
+    /*if alarm only has one,free current node*/
+    if (Alarms_ActiveNodeList->next == NULL)
     {
-        /*turn alarm state to false*/
-        alarms[triggeredAlarm->alarm_index].alarmState = false;
-        alarms[triggeredAlarm->alarm_index].alarmEnable = false;
 
-        /*trigger alarm*/
-        Trigger_Alarm_A();
+        free(Alarms_ActiveNodeList);
+        Alarms_ActiveNodeList = NULL;
 
-        /*if alarm only has one,free current node*/
-        if (Alarms_ActiveNodeList->next == NULL)
-        {
-
-            free(triggeredAlarm);
-            Alarms_ActiveNodeList = NULL;
-
-            /*disable rtc alarm a*/
-            HAL_RTC_DeactivateAlarm(hrtc, RTC_ALARM_A);
-        }
-        else
-        {
-            /*move next alarm to head*/
-            Alarms_ActiveNodeList = Alarms_ActiveNodeList->next;
-
-            RTC_Alarm_Set();
-        }
+        /*disable rtc alarm a*/
+        HAL_RTC_DeactivateAlarm(hrtc, RTC_ALARM_A);
     }
+    else
+    {
+        /*move next alarm to head*/
+        free(Alarms_ActiveNodeList);
+        Alarms_ActiveNodeList = Alarms_ActiveNodeList->next;
+        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
+        RTC_Alarm_Set();
+    }
+    
 }
 
 /**
@@ -82,6 +68,7 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
         alarms[index].alarmEnable = true;
         lv_obj_add_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
         MoveSpecificNodeInAct(index);
+        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
         UpdateAlarmTime(index);
     }
     if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
@@ -89,6 +76,7 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
         alarms[index].alarmState = false;
         alarms[index].alarmEnable = false;
         MoveSpecificNodeOutAct(index);
+        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
         RTC_Alarm_Set();
         lv_obj_clear_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
     }
@@ -136,7 +124,7 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                     2.current is head,and has next node*/
                     alarms[current->alarm_index].alarmEnable = false;
                     alarms[current->alarm_index].alarmState = false;
-                    
+
                     if (prev == NULL)
                     {
                         /*if current list only has one node*/
@@ -155,6 +143,8 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                             free(current);
                             current = NULL;
 
+                            UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
+
                             RTC_Alarm_Set();
                         }
                     }
@@ -163,6 +153,8 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                         prev->next = current->next;
                         free(current);
                         current = NULL;
+
+                        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
 
                         RTC_Alarm_Set();
                     }
@@ -184,17 +176,25 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                 {
 
                     if (prev == NULL)
-                    {
-                        // Current is head
-                        Alarms_InactiveNodeList = current->next;
+                    { // Current is head
+                        if (current->next == NULL)
+                        {
+                            free(current);
+                            current = NULL;
+                        }
+                        else
+                        {
+                            Alarms_InactiveNodeList = current->next;
+                            free(current);
+                            current = NULL;
+                        }
                     }
                     else
                     {
                         prev->next = current->next;
+                        free(current);
+                        current = NULL;
                     }
-
-                    free(current);
-                    current = NULL;
                     break;
                 }
                 prev = current;
@@ -204,7 +204,7 @@ void ui_event_AlarmImgDel(lv_event_t *e)
 
         /*delete specific alarm setting*/
         lv_obj_del(alarms[Delpointer].alarmSettingPage);
-       
+
         /*refresh the callback list function*/
         for (int i = Delpointer; i < alarmCount - 1; i++)
         {

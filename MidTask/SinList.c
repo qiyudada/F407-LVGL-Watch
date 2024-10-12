@@ -185,3 +185,29 @@ void MoveSpecificNodeInAct(int alarm_index)
 
     printf("Alarm %d moved to active list\n", alarm_index);
 }
+
+void UpdateAlarmActiveListIndex(AlarmNode *ACt)
+{
+    AlarmNode *node = ACt;
+    int newIndex = 0;
+
+    while (node != NULL)
+    {
+        node->alarm_index = newIndex++;
+        node = node->next;
+    }
+
+   
+}
+
+void UpdateAlarmInactiveListIndex(AlarmNode *InACt)
+{
+    AlarmNode *node = InACt;
+    int newIndex = 0;
+
+    while (node != NULL)
+    {
+        node->alarm_index = newIndex++;
+        node = node->next;
+    }
+}
