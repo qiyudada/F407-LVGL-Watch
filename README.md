@@ -4,6 +4,8 @@
 
 本项目是基于STM32F407ZGT6开发板的智能手表~~（大号款）~~，中间件是hal、rtos、lvgl，功能目前包括日历、计算器、计步、闹钟、蓝牙通信、NFC（待实现）、环境光测量、温湿度测量等，目前手头并没有手表的一些测量传感器，只能说功能待开发和完善。后续如有机会会添加气压测量、心率测量、指南针、蓝牙升级等等功能。
 
+<img src="D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\assets\IMG_20241012_17245195.jpeg" alt="IMG_20241012_17245195" style="zoom: 25%;" />
+
 # 2.Designing scheme
 
 ## 1.Hardware bom
