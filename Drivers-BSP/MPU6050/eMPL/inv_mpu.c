@@ -3051,8 +3051,9 @@ u8 mpu_dmp_init(void)
         res = mpu_lp_accel_mode(20);
         if (res)
             return -1;
-        // res=mpu_set_sensors(INV_XYZ_ACCEL);//设置所需要的传感器
-        // if(res)return 1;
+        res = mpu_set_sensors(INV_XYZ_ACCEL); // 设置所需要的传感器
+        if (res)
+            return 1;
         res = mpu_configure_fifo(INV_XYZ_ACCEL); // 设置FIFO
         if (res)
             return 2;
@@ -3062,16 +3063,18 @@ u8 mpu_dmp_init(void)
         res = dmp_load_motion_driver_firmware(); // 加载dmp固件
         if (res)
             return 4;
-        // res=dmp_set_orientation(inv_orientation_matrix_to_scalar(gyro_orientation));//设置陀螺仪方向
-        // if(res)return 5;
+        res = dmp_set_orientation(inv_orientation_matrix_to_scalar(gyro_orientation)); // 设置陀螺仪方向
+        if (res)
+            return 5;
         res = dmp_enable_feature(DMP_FEATURE_TAP | DMP_FEATURE_SEND_RAW_ACCEL | DMP_FEATURE_PEDOMETER); // 设置dmp功能
         if (res)
             return 6;
         res = dmp_set_fifo_rate(DEFAULT_MPU_HZ); // 设置DMP输出速率(最大不超过200Hz)
         if (res)
             return 7;
-        // res=run_self_test();		//自检
-        // if(res)return 8;
+        res = run_self_test(); // 自检
+        if (res)
+            return 8;
         res = mpu_set_dmp_state(1); // 使能DMP
         if (res)
             return 9;

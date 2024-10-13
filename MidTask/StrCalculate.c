@@ -211,7 +211,7 @@ uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack
             }
             temp_pre = temp;
         }
-        
+
         if (str[i] <= '9' && str[i] >= '0')
         {
             // 溢出报错
@@ -223,10 +223,11 @@ uint8_t NumSymSeparate(char *str, uint8_t strlen, NumStack_t *NumStack, SymStack
             temp.datatype = NUMBER_TYPE;
             temp.number = (str[i] - '0');
             temp.symbol = NULL;
-            
+
             // 如果为连续数字,需要进行进位,将数字栈顶读出进位，再加上现在位，再入栈
             if (temp_pre.datatype == NUMBER_TYPE)
             {
+                /*用当前运算符的栈顶元素和前一位数字进行进位*/
                 if (!NumBehindPoint_Flag)
                 {
                     temp.number += NumStack->data[NumStack->Top_Point - 1] * 10;
