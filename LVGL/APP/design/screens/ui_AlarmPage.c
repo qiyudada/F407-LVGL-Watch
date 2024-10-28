@@ -16,7 +16,7 @@ Alarm_t alarms[Alarm_Number];
 int alarmCount = 0;
 bool Add_option = false;
 int alarm_currentpointer;
-
+int alarm_currentsetpointer;
 void Trigger_Alarm_A(void)
 {
     LED1_TOGGLE();
@@ -24,10 +24,10 @@ void Trigger_Alarm_A(void)
 
 void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
 {
-   
+
     /*turn alarm state to false*/
-    alarms[Alarms_ActiveNodeList->alarm_index].alarmSwitchState = false;
-    alarms[Alarms_ActiveNodeList->alarm_index].alarmActiveState = false;
+    alarms[alarm_currentsetpointer].alarmSwitchState = false;
+    alarms[alarm_currentsetpointer].alarmActiveState = false;
 
     /*trigger alarm*/
     Trigger_Alarm_A();
@@ -35,7 +35,7 @@ void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
     /*if alarm only has one,free current node*/
     if (Alarms_ActiveNodeList->next == NULL)
     {
-
+        MoveSpecificNode_OutAct(alarm_currentsetpointer);
         free(Alarms_ActiveNodeList);
         Alarms_ActiveNodeList = NULL;
 
@@ -45,12 +45,11 @@ void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
     else
     {
         /*move next alarm to head*/
+        MoveSpecificNode_InAct(alarm_currentsetpointer);
         free(Alarms_ActiveNodeList);
         Alarms_ActiveNodeList = Alarms_ActiveNodeList->next;
-        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
         RTC_Alarm_Set();
     }
-    
 }
 
 /**
@@ -67,16 +66,14 @@ void ui_event_AlarmSettingSwitch(lv_event_t *e)
         alarms[index].alarmSwitchState = true;
         alarms[index].alarmActiveState = true;
         lv_obj_add_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
-        MoveSpecificNodeInAct(index);
-        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
+        MoveSpecificNode_InAct(index);
         UpdateAlarmTime(index);
     }
     if (event_code == LV_EVENT_VALUE_CHANGED && !lv_obj_has_state(target, LV_STATE_CHECKED))
     {
         alarms[index].alarmSwitchState = false;
         alarms[index].alarmActiveState = false;
-        MoveSpecificNodeOutAct(index);
-        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
+        MoveSpecificNode_OutAct(index);
         RTC_Alarm_Set();
         lv_obj_clear_state(alarms[index].alarmImgContainer, LV_STATE_CHECKED);
     }
@@ -97,7 +94,7 @@ void ui_event_AlarmLabelSettime(lv_event_t *e)
 /**
  * @brief Alarm Delete Event Callback
  */
-void ui_event_AlarmImgDel(lv_event_t *e)
+void ui_event_AlarmImgDelete(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t *target = lv_event_get_target(e);
@@ -143,8 +140,6 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                             free(current);
                             current = NULL;
 
-                            UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
-
                             RTC_Alarm_Set();
                         }
                     }
@@ -153,8 +148,6 @@ void ui_event_AlarmImgDel(lv_event_t *e)
                         prev->next = current->next;
                         free(current);
                         current = NULL;
-
-                        UpdateAlarmActiveListIndex(Alarms_ActiveNodeList);
 
                         RTC_Alarm_Set();
                     }
@@ -212,11 +205,11 @@ void ui_event_AlarmImgDel(lv_event_t *e)
             lv_obj_set_y(alarms[i].alarmSettingPage, -70 + i * 65);
 
             /*must remove original callback firstly*/
-            lv_obj_remove_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDel);
+            lv_obj_remove_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDelete);
             lv_obj_remove_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime);
             lv_obj_remove_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch);
 
-            lv_obj_add_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDel, LV_EVENT_ALL, (void *)(uintptr_t)i);
+            lv_obj_add_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDelete, LV_EVENT_ALL, (void *)(uintptr_t)i);
             lv_obj_add_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime, LV_EVENT_ALL, (void *)(uintptr_t)i);
             lv_obj_add_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch, LV_EVENT_ALL, (void *)(uintptr_t)i);
         }
@@ -247,7 +240,7 @@ void ui_event_MenuAlarmpage_cb(lv_event_t *e)
     }
 }
 
-void ui_even_AddImage_cb(lv_event_t *e)
+void ui_even_AddAlarmImage_cb(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t *target = lv_event_get_target(e);
@@ -331,7 +324,7 @@ void CreateAlarmSettingPage(lv_obj_t *parent, int Number)
         lv_obj_set_style_text_font(alarms[i].alarmSettingLabel, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
         /*callback function*/
-        lv_obj_add_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDel, LV_EVENT_ALL, (void *)(uintptr_t)i);
+        lv_obj_add_event_cb(alarms[i].alarmImgContainer, ui_event_AlarmImgDelete, LV_EVENT_ALL, (void *)(uintptr_t)i);
         lv_obj_add_event_cb(alarms[i].alarmSettingLabel, ui_event_AlarmLabelSettime, LV_EVENT_ALL, (void *)(uintptr_t)i);
         lv_obj_add_event_cb(alarms[i].alarmSettingSwitch, ui_event_AlarmSettingSwitch, LV_EVENT_ALL, (void *)(uintptr_t)i);
     }
@@ -356,7 +349,7 @@ void ui_AlarmPage_screen_init(void)
 
     CreateAlarmSettingPage(ui_AlarmPage, alarmCount);
 
-    lv_obj_add_event_cb(ui_AddImage, ui_even_AddImage_cb, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_AddImage, ui_even_AddAlarmImage_cb, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_AlarmPage, ui_event_MenuAlarmpage_cb, LV_EVENT_ALL, NULL);
 }
 

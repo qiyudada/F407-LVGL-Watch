@@ -257,6 +257,7 @@ extern int alarm_currentpointer;
 extern Alarm_t alarms[Alarm_Number];
 
 extern int alarmCount;/*Open alarm counts*/
+extern int alarm_currentsetpointer;
 extern bool Add_option;
 
 void ui_AlarmPage_screen_init(void);

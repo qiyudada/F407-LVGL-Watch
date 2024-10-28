@@ -62,7 +62,7 @@ uint8_t CalculateDayOffset(uint8_t current_weekday, uint8_t target_weekday)
 }
 
 /**
- * @brief set alarm time and enable alarm interrupt,only valid for the first alarm
+ * @brief set alarm time and enable alarm interrupt
  * @param void
  * @return None
  */
@@ -91,13 +91,15 @@ void RTC_Alarm_Set(void)
 
     while (current != NULL)
     {
-        uint32_t alarmTime = current->calDay * 1440 + current->hour * 60 + current->minute;
+        uint32_t alarmCurrentTime = current->calDay * 1440 + current->hour * 60 + current->minute;
 
-        if (alarmTime > currentTime)
+        if (alarmCurrentTime > currentTime)
         {
-            if (nearestAlarm == NULL || alarmTime < (nearestAlarm->calDay * 1440 + nearestAlarm->hour * 60 + nearestAlarm->minute))
+            if (nearestAlarm == NULL || alarmCurrentTime < (nearestAlarm->calDay * 1440 + nearestAlarm->hour * 60 + nearestAlarm->minute))
             {
                 nearestAlarm = current;
+                alarm_currentsetpointer = nearestAlarm->alarm_index;
+                printf("current nearest alarm: %d\n",alarm_currentsetpointer);
             }
         }
         current = current->next;
@@ -107,7 +109,7 @@ void RTC_Alarm_Set(void)
     {
         return;
     }
-
+    
     RTC_AlarmTypeDef sAlarm = {0};
 
     sAlarm.AlarmTime.Hours = DEC_TO_BCD(nearestAlarm->hour);
@@ -185,11 +187,7 @@ void UpdateAlarmTime(int alarm_index)
                 strncpy(current->week_str, user_weekstr, sizeof(current->week_str));
                 current->calDay = user_calday;
 
-                /*sort the list*/
-                if (SortNode(&Alarms_ActiveNodeList))
-                {
-                    goto rtc_set;
-                }
+                goto rtc_set;
             }
             /*if current is not target node, move to next node*/
             prev = current;
@@ -221,10 +219,7 @@ void UpdateAlarmTime(int alarm_index)
                 prev->next = current;
             }
 
-            if (SortNode(&Alarms_ActiveNodeList))
-            {
-                goto rtc_set;
-            }
+            goto rtc_set;
         }
     }
     else
@@ -243,7 +238,7 @@ void UpdateAlarmTime(int alarm_index)
                 /*if the time is the same, return*/
                 if (newAlarmTime == current->alarmTotalTime)
                 {
-                    goto rtc_set;
+                    return;
                 }
                 else
                 {
@@ -252,7 +247,7 @@ void UpdateAlarmTime(int alarm_index)
                     current->minute = user_minute;
                     strncpy(current->week_str, user_weekstr, sizeof(current->week_str));
                     current->calDay = user_calday;
-                    goto rtc_set;
+                    return;
                 }
             }
             /*if current is not target node, move to next node*/
@@ -278,7 +273,7 @@ void ui_event_SetTimepage_cb(lv_event_t *e)
 }
 
 /**
- * @brief Confirm button callback
+ * @brief Confirm button callback for setting time
  */
 void ui_event_ConfirmImg_cb(lv_event_t *e)
 {

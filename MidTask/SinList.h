@@ -23,9 +23,9 @@ void PrintNode(AlarmNode *head);
 
 int SortNode(AlarmNode **head);
 
-void MoveSpecificNodeOutAct(int alarm_index);
+void MoveSpecificNode_OutAct(int alarm_index);
 
-void MoveSpecificNodeInAct(int alarm_index);
+void MoveSpecificNode_InAct(int alarm_index);
 
 void UpdateAlarmActiveListIndex(AlarmNode *ACt);
 
