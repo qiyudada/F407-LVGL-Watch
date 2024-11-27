@@ -17,6 +17,7 @@ int alarmCount = 0;
 bool Add_option = false;
 int alarm_currentpointer;
 int alarm_currentsetpointer;
+
 void Trigger_Alarm_A(void)
 {
     LED1_TOGGLE();

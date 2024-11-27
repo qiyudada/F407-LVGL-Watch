@@ -1,7 +1,7 @@
 Dependencies for Project 'F4-LVGL-Watch', Target 'F4-LVGL-Watch': (DO NOT MODIFY !)
-F (startup_stm32f407xx.s)(0x67074E3D)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list startup_stm32f407xx.lst --xref -o f4-lvgl-watch\startup_stm32f407xx.o --depend f4-lvgl-watch\startup_stm32f407xx.d)
-F (../Core/Src/main.c)(0x671F3F53)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\main.o --omf_browse f4-lvgl-watch\main.crf --depend f4-lvgl-watch\main.d)
-I (../Core/Inc/main.h)(0x66EE36B6)
+F (startup_stm32f407xx.s)(0x67418416)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list startup_stm32f407xx.lst --xref -o f4-lvgl-watch\startup_stm32f407xx.o --depend f4-lvgl-watch\startup_stm32f407xx.d)
+F (../Core/Src/main.c)(0x67418A3D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\main.o --omf_browse f4-lvgl-watch\main.crf --depend f4-lvgl-watch\main.d)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -62,9 +62,9 @@ I (../Core/Inc/tim.h)(0x66EE2DBF)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
 I (../Core/Inc/gpio.h)(0x66DEE765)
 I (../Core/Inc/fsmc.h)(0x66DEE766)
-F (../Core/Src/gpio.c)(0x66EE2DBB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\gpio.o --omf_browse f4-lvgl-watch\gpio.crf --depend f4-lvgl-watch\gpio.d)
+F (../Core/Src/gpio.c)(0x67418A3D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\gpio.o --omf_browse f4-lvgl-watch\gpio.crf --depend f4-lvgl-watch\gpio.d)
 I (../Core/Inc/gpio.h)(0x66DEE765)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -117,7 +117,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6700F701)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6700F702)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6700F701)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -310,7 +310,7 @@ I (../Drivers-BSP/DTH11/Dth11.h)(0x66E93D51)
 I (../Drivers-BSP/TEMT6000/TEMT6000.h)(0x66EEA729)
 F (../Core/Src/adc.c)(0x66EEC6BD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\adc.o --omf_browse f4-lvgl-watch\adc.crf --depend f4-lvgl-watch\adc.d)
 I (../Core/Inc/adc.h)(0x66EE9AD1)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -351,9 +351,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
-F (../Core/Src/dma.c)(0x67035405)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\dma.o --omf_browse f4-lvgl-watch\dma.crf --depend f4-lvgl-watch\dma.d)
+F (../Core/Src/dma.c)(0x67418A3D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\dma.o --omf_browse f4-lvgl-watch\dma.crf --depend f4-lvgl-watch\dma.d)
 I (../Core/Inc/dma.h)(0x66F1251C)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -530,7 +530,7 @@ I (../Drivers-BSP/LCD/Lcd.h)(0x66E43BB5)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 F (../Core/Src/fsmc.c)(0x66F2138C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\fsmc.o --omf_browse f4-lvgl-watch\fsmc.crf --depend f4-lvgl-watch\fsmc.d)
 I (../Core/Inc/fsmc.h)(0x66DEE766)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -573,7 +573,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 F (../Core/Src/iwdg.c)(0x66EEC6BE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\iwdg.o --omf_browse f4-lvgl-watch\iwdg.crf --depend f4-lvgl-watch\iwdg.d)
 I (../Core/Inc/iwdg.h)(0x66EEC6BE)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -614,9 +614,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
-F (../Core/Src/rtc.c)(0x6706A131)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\rtc.o --omf_browse f4-lvgl-watch\rtc.crf --depend f4-lvgl-watch\rtc.d)
+F (../Core/Src/rtc.c)(0x67418A3D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\rtc.o --omf_browse f4-lvgl-watch\rtc.crf --depend f4-lvgl-watch\rtc.d)
 I (../Core/Inc/rtc.h)(0x66E6420C)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -817,7 +817,7 @@ I (../Drivers-BSP/DTH11/Dth11.h)(0x66E93D51)
 I (../Drivers-BSP/TEMT6000/TEMT6000.h)(0x66EEA729)
 F (../Core/Src/spi.c)(0x66E39A89)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\spi.o --omf_browse f4-lvgl-watch\spi.crf --depend f4-lvgl-watch\spi.d)
 I (../Core/Inc/spi.h)(0x66DEE767)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -860,7 +860,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 F (../Core/Src/tim.c)(0x66EE2DBF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\tim.o --omf_browse f4-lvgl-watch\tim.crf --depend f4-lvgl-watch\tim.d)
 I (../Core/Inc/tim.h)(0x66EE2DBF)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -903,7 +903,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 F (../Core/Src/usart.c)(0x66E39A8A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\usart.o --omf_browse f4-lvgl-watch\usart.crf --depend f4-lvgl-watch\usart.d)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -945,7 +945,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 F (../Core/Src/stm32f4xx_it.c)(0x66FF4CDD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\stm32f4xx_it.o --omf_browse f4-lvgl-watch\stm32f4xx_it.crf --depend f4-lvgl-watch\stm32f4xx_it.d)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -992,7 +992,7 @@ I (../Drivers-SYSTEM/SYS/sys.h)(0x66F117FE)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 F (../Core/Src/stm32f4xx_hal_msp.c)(0x66E39A8A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\stm32f4xx_hal_msp.o --omf_browse f4-lvgl-watch\stm32f4xx_hal_msp.crf --depend f4-lvgl-watch\stm32f4xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -1076,7 +1076,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 F (..\UserTask\Src\User_TaskInit.c)(0x670A3D53)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\user_taskinit.o --omf_browse f4-lvgl-watch\user_taskinit.crf --depend f4-lvgl-watch\user_taskinit.d)
 I (../UserTask/Inc/User_TaskInit.h)(0x66EE2B52)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -1291,7 +1291,7 @@ F (..\UserTask\Src\User_HardwareInit.c)(0x6709330A)(--c99 -c --cpu Cortex-M4.fp 
 I (../UserTask/Inc/User_HardwareInit.h)(0x66E44B68)
 I (../UserTask/Inc/User_TaskInit.h)(0x66EE2B52)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -1502,7 +1502,7 @@ F (..\UserTask\Src\User_SensorUpdate.c)(0x66EFCA84)(--c99 -c --cpu Cortex-M4.fp 
 I (../UserTask/Inc/User_SensorUpdate.h)(0x66EE67FE)
 I (../UserTask/Inc/User_TaskInit.h)(0x66EE2B52)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -1709,7 +1709,7 @@ F (..\UserTask\Src\User_KeyTask.c)(0x66EF8EE2)(--c99 -c --cpu Cortex-M4.fp -D__M
 I (../UserTask/Inc/User_KeyTask.h)(0x66E9261D)
 I (../UserTask/Inc/User_TaskInit.h)(0x66EE2B52)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -1916,7 +1916,7 @@ F (..\UserTask\Src\User_ScreenNew.c)(0x66F3D783)(--c99 -c --cpu Cortex-M4.fp -D_
 I (../UserTask/Inc/User_ScreenNew.h)(0x66E92969)
 I (../UserTask/Inc/User_TaskInit.h)(0x66EE2B52)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -2123,7 +2123,7 @@ F (..\UserTask\Src\User_BLECommunication.c)(0x66EE419C)(--c99 -c --cpu Cortex-M4
 I (../UserTask/Inc/User_BLECommunication.h)(0x66ED661A)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -2366,7 +2366,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../UserTask/Inc/User_TaskInit.h)(0x66EE2B52)
@@ -2569,7 +2569,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
@@ -2734,7 +2734,7 @@ I (../Core/Inc/usart.h)(0x66E2C5D4)
 F (..\UserTask\Src\User_WatchDog.c)(0x66EECF13)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\user_watchdog.o --omf_browse f4-lvgl-watch\user_watchdog.crf --depend f4-lvgl-watch\user_watchdog.d)
 I (../UserTask/Inc/User_WatchDog.h)(0x66EEC7EF)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -2942,7 +2942,7 @@ I (..\MidTask\StrCalculate.h)(0x66F5495B)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\MidTask\User_DataManagement.c)(0x66F02AB7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\user_datamanagement.o --omf_browse f4-lvgl-watch\user_datamanagement.crf --depend f4-lvgl-watch\user_datamanagement.d)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -3276,7 +3276,7 @@ I (../LVGL/APP/design/ui.h)(0x671F9C3A)
 I (../LVGL/APP/design/ui_events.h)(0x66F0C7E8)
 I (../LVGL/APP/design/ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -3484,7 +3484,7 @@ I (../LVGL/APP/design/ui_events.h)(0x66F0C7E8)
 I (../LVGL/APP/design/ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -3688,7 +3688,7 @@ I (..\LVGL\APP\design\fonts\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\fonts\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -3893,7 +3893,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -4098,7 +4098,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -4303,7 +4303,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -4508,7 +4508,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -4713,7 +4713,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -4918,7 +4918,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -5123,7 +5123,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -5328,7 +5328,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -5533,7 +5533,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -5738,7 +5738,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -5943,7 +5943,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -6148,7 +6148,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -6353,7 +6353,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -6558,7 +6558,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -6763,7 +6763,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -6968,7 +6968,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -7173,7 +7173,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -7378,7 +7378,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -7583,7 +7583,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -7788,7 +7788,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -7993,7 +7993,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -8198,7 +8198,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -8403,7 +8403,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -8608,7 +8608,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -8813,7 +8813,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -9018,7 +9018,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -9223,7 +9223,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -9428,7 +9428,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -9633,7 +9633,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -9838,7 +9838,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -10043,7 +10043,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -10248,7 +10248,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -10453,7 +10453,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -10658,7 +10658,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -10863,7 +10863,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -11068,7 +11068,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -11273,7 +11273,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -11478,7 +11478,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -11683,7 +11683,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -11888,7 +11888,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -12093,7 +12093,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -12298,7 +12298,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -12503,7 +12503,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -12708,7 +12708,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -12913,7 +12913,7 @@ I (..\LVGL\APP\design\images\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\images\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -13118,7 +13118,7 @@ I (..\LVGL\APP\design\ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -13323,7 +13323,7 @@ I (../LVGL/src/extra/widgets/span/lv_span.h)(0x66C5F62B)
 I (..\LVGL\APP\design\ui_events.h)(0x66F0C7E8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -13528,7 +13528,7 @@ I (..\LVGL\APP\design\ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -13733,7 +13733,7 @@ I (../LVGL/APP/design/ui_events.h)(0x66F0C7E8)
 I (../LVGL/APP/design/ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -13939,7 +13939,7 @@ I (..\LVGL\APP\design\fonts\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\fonts\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -14144,7 +14144,7 @@ I (..\LVGL\APP\design\screens\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\screens\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -14349,7 +14349,7 @@ I (..\LVGL\APP\design\screens\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\screens\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -14554,7 +14554,7 @@ I (..\LVGL\APP\design\screens\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\screens\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -14759,7 +14759,7 @@ I (..\LVGL\APP\design\screens\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\screens\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -14964,7 +14964,7 @@ I (..\LVGL\APP\design\screens\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\screens\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -15169,7 +15169,7 @@ I (..\LVGL\APP\design\screens\../ui_events.h)(0x66F0C7E8)
 I (..\LVGL\APP\design\screens\../ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -15374,7 +15374,7 @@ I (../LVGL/APP/design/ui_events.h)(0x66F0C7E8)
 I (../LVGL/APP/design/ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -15579,7 +15579,7 @@ I (../LVGL/APP/design/ui_events.h)(0x66F0C7E8)
 I (../LVGL/APP/design/ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -15786,7 +15786,7 @@ I (../LVGL/APP/design/ui_events.h)(0x66F0C7E8)
 I (../LVGL/APP/design/ui_helpers.h)(0x66E793F8)
 I (..\MidTask\User_PageManagement.h)(0x66EBAF57)
 I (..\MidTask\User_DataManagement.h)(0x66FEA47D)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -16902,7 +16902,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66F117FE)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 F (..\Drivers-SYSTEM\SYS\sys.c)(0x66E26052)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\sys.o --omf_browse f4-lvgl-watch\sys.crf --depend f4-lvgl-watch\sys.d)
@@ -16948,7 +16948,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
 I (../Drivers-SYSTEM/SYS/sys.h)(0x66F117FE)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 F (..\Drivers-SYSTEM\Uart_Redefine\Uart_Redefine.c)(0x66E24454)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\uart_redefine.o --omf_browse f4-lvgl-watch\uart_redefine.crf --depend f4-lvgl-watch\uart_redefine.d)
@@ -16994,7 +16994,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/usart.h)(0x66E2C5D4)
@@ -17041,11 +17041,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 F (..\Drivers-SYSTEM\Log\log.c)(0x66EE2921)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\log.o --omf_browse f4-lvgl-watch\log.crf --depend f4-lvgl-watch\log.d)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -17090,7 +17090,7 @@ I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 F (..\Drivers-SYSTEM\Ringbuffer\cFIFO.c)(0x66E26880)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers-SYSTEM/Uart_Redefine -I ../Drivers-SYSTEM/SYS -I ../Drivers-SYSTEM/Log -I ../Drivers-SYSTEM/Ringbuffer -I ../Drivers-SYSTEM/IIC -I ../Drivers-SYSTEM/Delay -I ../Drivers-BSP/AT24CXX -I ../Drivers-BSP/LCD -I ../Drivers-BSP/TOUCH -I ../Drivers-BSP/RC522 -I ../Drivers-BSP/MPU6050 -I ../Drivers-BSP/MPU6050/eMPL -I ../Drivers-BSP/KEY -I ../Drivers-BSP/LED -I ../Drivers-BSP/BLE -I ../Drivers-BSP/DTH11 -I ../Drivers-BSP/TEMT6000 -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LVGL -I ../LVGL/src -I ../LVGL/examples/porting -I ../LVGL/APP/design -I ../UserTask/Src -I ../UserTask/Inc -I ..\MidTask-I.\RTE\_F4-LVGL-Watch-I"D:\Keil\ARM Start\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include"-I"D:\Keil\ARM Start\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o f4-lvgl-watch\cfifo.o --omf_browse f4-lvgl-watch\cfifo.crf --depend f4-lvgl-watch\cfifo.d)
 I (..\Drivers-SYSTEM\Ringbuffer\cFIFO.h)(0x66E93899)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6700F896)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66EEC6C0)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6700F896)
@@ -17178,7 +17178,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-SYSTEM/IIC/iic_hal.h)(0x66E060A3)
@@ -17224,7 +17224,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
@@ -17273,7 +17273,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../LVGL/lvgl.h)(0x66C5F62B)
@@ -17449,7 +17449,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -17626,7 +17626,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)
@@ -17675,7 +17675,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\math.h)(0x588B8344)
@@ -17726,7 +17726,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x66EF9B81)
 I (..\Drivers-BSP\MPU6050\eMPL\dmpKey.h)(0x66EF9B81)
@@ -17779,7 +17779,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (..\Drivers-BSP\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x66EF9B81)
 I (../Drivers-BSP/MPU6050/mpu6050.h)(0x66EF9B81)
@@ -17828,7 +17828,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-BSP/LED/LED.h)(0x66EF8EE1)
@@ -17887,7 +17887,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/tim.h)(0x66EE2DBF)
@@ -17934,7 +17934,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\string.h)(0x588B8344)
@@ -17982,7 +17982,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-BSP/LCD/Lcd.h)(0x66E43BB5)
@@ -18030,7 +18030,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/adc.h)(0x66EE9AD1)
@@ -28901,7 +28901,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers-BSP/LCD/Lcd.h)(0x66E43BB5)
@@ -29078,6 +29078,6 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6700F896)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6700F896)
 I (../Drivers-SYSTEM/Delay/Delay.h)(0x66DEE6D2)
-I (../Core/Inc/main.h)(0x66EE36B6)
+I (../Core/Inc/main.h)(0x67418A3D)
 I (../Drivers-SYSTEM/Log/log.h)(0x66E3070E)
 I (D:\Keil\ARM Start\ARM\ARMCC\include\stdio.h)(0x588B8344)
