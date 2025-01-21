@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
         "outputPath": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\Output\\Objects\\Debug\\LVGL.Simulator\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],

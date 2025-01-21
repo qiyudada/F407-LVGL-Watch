@@ -93,8 +93,8 @@ u8 MPU_Init(void)
 	res = MPU_Read_Byte(MPU_DEVICE_ID_REG);
 	if (res == MPU_ADDR) // ID
 	{
-		MPU_Write_Byte(MPU_PWR_MGMT1_REG, 0X28); // SET the internal 8MHz,sleep=0,cycle=1,TEMP_DIS=1//low power modes
-		MPU_Write_Byte(MPU_PWR_MGMT2_REG, 0X87); // enable accelerometer,disanable gyroscope,set the wake up frequence=20Hz
+		MPU_Write_Byte(MPU_PWR_MGMT1_REG, 0X01); 
+		MPU_Write_Byte(MPU_PWR_MGMT2_REG, 0X00); 
 		MPU_Set_Rate(50);						 // 采样率50Hz
 	}
 	else

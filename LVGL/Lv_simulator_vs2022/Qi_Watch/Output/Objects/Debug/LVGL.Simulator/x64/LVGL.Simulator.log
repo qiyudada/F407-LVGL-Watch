@@ -59,4 +59,619 @@ D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5)
 D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 ui.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ui\ui.c, ui\ui.c。
 D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 ui_events.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ui\ui_events.c, ui\ui_events.c。
 D:\Visual Stdio\IDE\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1119,5): warning MSB8027: 名为 ui_helpers.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ui\ui_helpers.c, ui\ui_helpers.c。
+  LVGL.Simulator.cpp
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_table.h(55,10): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“LVGL.Simulator.cpp”)
+      D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_table.h(55,10):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+  StrCalculate.c
+  User_DataManagement.c
+  User_PageManagement.c
+  ui_comp_hook.c
+  ui_font_Cuyuan24.c
+  ui_font_Number.c
+  ui_img_1508907960.c
+  ui_img_1688708748.c
+  ui_img_876444160.c
+  ui_img_876457220.c
+  ui_img_add_png.c
+  ui_img_alarmoff_png.c
+  ui_img_alarmon_png.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\User_DataManagement.c(226,5): warning C4098: “MW_DHT11_Read_Data”:“void”函数返回值
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(24,33): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(159,17): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(188,17): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(217,35): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(218,25): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(293,29): warning C4267: “函数”: 从“size_t”转换到“uint8_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\User_DataManagement.c(186,1): warning C4716: “MW_MPU_Set_Steps”: 必须返回一个值
+  ui_img_alarm_png.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\Middlewares\StrCalculate.c(153,1): warning C4715: “SymisHighPriority”: 不是所有的控件路径都返回值
+  ui_img_back_png.c
+  ui_img_bibluetooth_png.c
+  ui_img_calculator1_png.c
+  ui_img_calculator_png.c
+  ui_img_card_png.c
+  ui_img_cat_png.c
+  ui_img_clock_png.c
+  ui_img_confirm_png.c
+  ui_img_delete_png.c
+  ui_img_drain_png.c
+  ui_img_ggmoreo_png.c
+  ui_img_gomore3_png.c
+  ui_img_heart_png.c
+  ui_img_humidity_png.c
+  ui_img_iu1_png.c
+  ui_img_iu_bg2_png.c
+  ui_img_iu_bg3_png.c
+  ui_img_iu_bg_png.c
+  ui_img_light_png.c
+  ui_img_next_png.c
+  ui_img_nfcoff_png.c
+  ui_img_nfc_png.c
+  ui_img_opencal_png.c
+  ui_img_open_png.c
+  ui_img_phcalendar_png.c
+  ui_img_phsharefill_png.c
+  ui_img_play_png.c
+  ui_img_readcard_png.c
+  ui_img_setting_png.c
+  ui_img_step_png.c
+  ui_img_stoptime_png.c
+  ui_img_suspend_png.c
+  ui_img_tempature_png.c
+  ui_img_tokenolt_png.c
+  ui_img_wifi_png.c
+  ui_img_wrist_png.c
+  ui_img_writecard_png.c
+  ui_AlarmPage.c
+  ui_CalendarPage.c
+  ui_ComputerPage.c
+  ui_HomePage.c
+  ui_MenuPage.c
+  ui_MessageArcPage.c
+  ui_MusicPage.c
+  ui_Navigation.c
+  ui_NFCCardPage.c
+  StrCalculate.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(24,33): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(159,17): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(189,17): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(220,35): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(221,25): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(296,29): warning C4267: “函数”: 从“size_t”转换到“uint8_t”，可能丢失数据
+  ui.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(153,1): warning C4715: “SymisHighPriority”: 不是所有的控件路径都返回值
+  ui_events.c
+  ui_helpers.c
+  lv_rt_thread_port.c
+  lv_ui_entry.c
+  lv_disp.c
+  lv_event.c
+  lv_group.c
+  lv_indev.c
+  lv_indev_scroll.c
+  lv_obj.c
+  lv_obj_class.c
+  lv_obj_draw.c
+  lv_obj_pos.c
+  lv_obj_scroll.c
+  lv_obj_style.c
+  lv_obj_style_gen.c
+  lv_obj_tree.c
+  lv_refr.c
+  lv_theme.c
+  lv_gpu_arm2d.c
+  lv_draw.c
+  lv_draw_arc.c
+  lv_draw_img.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\core\lv_obj_style.c(613,26): warning C4244: “初始化”: 从“const uint16_t”转换到“bool”，可能丢失数据
+  lv_draw_label.c
+  lv_draw_layer.c
+  lv_draw_line.c
+  lv_draw_mask.c
+  lv_draw_rect.c
+  lv_draw_transform.c
+  lv_draw_triangle.c
+  lv_img_buf.c
+  lv_img_cache.c
+  lv_img_decoder.c
+  lv_draw_pxp.c
+  lv_draw_pxp_blend.c
+  lv_gpu_nxp_pxp.c
+  lv_gpu_nxp_pxp_osa.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\draw\lv_img_buf.c(261,24): warning C4244: “=”: 从“uint16_t”转换到“uint8_t”，可能丢失数据
+  lv_draw_vglite.c
+  lv_draw_vglite_arc.c
+  lv_draw_vglite_blend.c
+  lv_draw_vglite_line.c
+  lv_draw_vglite_rect.c
+  lv_vglite_buf.c
+  lv_vglite_utils.c
+  lv_gpu_d2_draw_label.c
+  lv_gpu_d2_ra6m3.c
+  lv_draw_sdl.c
+  lv_draw_sdl_arc.c
+  lv_draw_sdl_bg.c
+  lv_draw_sdl_composite.c
+  lv_draw_sdl_img.c
+  lv_draw_sdl_label.c
+  lv_draw_sdl_layer.c
+  lv_draw_sdl_line.c
+  lv_draw_sdl_mask.c
+  lv_draw_sdl_polygon.c
+  lv_draw_sdl_rect.c
+  lv_draw_sdl_stack_blur.c
+  lv_draw_sdl_texture_cache.c
+  lv_draw_sdl_utils.c
+  lv_gpu_stm32_dma2d.c
+  lv_gpu_swm341_dma2d.c
+  lv_draw_sw.c
+  lv_draw_sw_arc.c
+  lv_draw_sw_blend.c
+  lv_draw_sw_dither.c
+  lv_draw_sw_gradient.c
+  lv_draw_sw_img.c
+  lv_draw_sw_layer.c
+  lv_draw_sw_letter.c
+  lv_draw_sw_line.c
+  lv_draw_sw_polygon.c
+  lv_draw_sw_rect.c
+  lv_draw_sw_transform.c
+  lv_flex.c
+  lv_grid.c
+  lv_bmp.c
+  lv_ffmpeg.c
+  lv_freetype.c
+  lv_fs_fatfs.c
+  lv_fs_littlefs.c
+  lv_fs_posix.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\draw\sw\lv_draw_sw_line.c(380,42): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_fs_stdio.c
+  lv_fs_win32.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\draw\sw\lv_draw_sw_rect.c(1034,28): warning C4244: “=”: 从“uint16_t”转换到“lv_opa_t”，可能丢失数据
+  gifdec.c
+  lv_gif.c
+  lodepng.c
+  lv_png.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\gif\gifdec.c(648,35): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\gif\gifdec.c(652,24): warning C4267: “+=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\gif\gifdec.c(659,30): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\gif\gifdec.c(664,48): warning C4267: “+=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\gif\gifdec.c(665,52): warning C4267: “=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_qrcode.c
+  qrcodegen.c
+  lv_rlottie.c
+  lv_sjpg.c
+  tjpgd.c
+  lv_tiny_ttf.c
+  lv_extra.c
+  lv_fragment.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\sjpg\tjpgd.c(1000,12): warning C4267: “+=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  lv_fragment_manager.c
+  lv_gridnav.c
+  lv_ime_pinyin.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\gif\lv_gif.c(136,14): warning C4018: “<”: 有符号/无符号不匹配
+  lv_imgfont.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(365,31): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(390,33): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(711,35): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(729,28): warning C4267: “=”: 从“size_t”转换到“unsigned short”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(730,20): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(753,36): warning C4267: “=”: 从“size_t”转换到“unsigned short”，可能丢失数据
+  lv_monkey.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(770,37): warning C4267: “=”: 从“size_t”转换到“unsigned short”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(1617,60): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(1599,46): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  lv_msg.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(3731,77): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4701,29): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4923,57): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4928,80): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4929,91): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4930,80): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4931,91): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  lv_snapshot.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4932,80): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4933,91): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(4934,75): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5125,3): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5149,7): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5183,40): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5200,3): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5222,45): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5253,45): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5366,45): warning C4267: “函数”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\libs\png\lodepng.c(5444,28): warning C4334: “<<”: 32 位移位的结果被隐式转换为 64 位(是否希望进行 64 位移位?)
+  lv_theme_basic.c
+  lv_theme_default.c
+  lv_theme_mono.c
+  lv_animimg.c
+  lv_calendar.c
+  lv_calendar_header_arrow.c
+  lv_calendar_header_dropdown.c
+  lv_chart.c
+  lv_colorwheel.c
+  lv_imgbtn.c
+  lv_keyboard.c
+  lv_led.c
+  lv_list.c
+  lv_menu.c
+  lv_meter.c
+  lv_msgbox.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\calendar\lv_calendar.c(134,33): warning C4018: “<”: 有符号/无符号不匹配
+  lv_span.c
+  lv_spinbox.c
+  lv_spinner.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\colorwheel\lv_colorwheel.c(679,29): warning C4244: “函数”: 从“uint16_t”转换到“uint8_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\colorwheel\lv_colorwheel.c(688,32): warning C4244: “函数”: 从“uint16_t”转换到“uint8_t”，可能丢失数据
+  lv_tabview.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\imgbtn\lv_imgbtn.c(170,24): warning C4090: “函数”: 不同的“const”限定符
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\imgbtn\lv_imgbtn.c(171,24): warning C4090: “函数”: 不同的“const”限定符
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\imgbtn\lv_imgbtn.c(205,20): warning C4018: “>”: 有符号/无符号不匹配
+  lv_tileview.c
+  lv_win.c
+  lv_font.c
+  lv_font_dejavu_16_persian_hebrew.c
+  lv_font_fmt_txt.c
+  lv_font_loader.c
+  lv_font_montserrat_10.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\font\lv_font_fmt_txt.c(239,58): warning C4244: “=”: 从“lv_uintptr_t”转换到“uint32_t”，可能丢失数据
+  lv_font_montserrat_12.c
+  lv_font_montserrat_12_subpx.c
+  lv_font_montserrat_14.c
+  lv_font_montserrat_16.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\span\lv_span.c(890,43): warning C4267: “=”: 从“size_t”转换到“uint16_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(111,75): warning C4244: “=”: 从“int64_t”转换到“int32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(112,81): warning C4244: “=”: 从“int64_t”转换到“int32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(166,38): warning C4244: “初始化”: 从“int64_t”转换到“int32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(262,19): warning C4244: “return”: 从“uint16_t”转换到“bool”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(369,45): warning C4244: “=”: 从“int64_t”转换到“int32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(396,57): warning C4267: “函数”: 从“size_t”转换到“int32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\extra\widgets\spinbox\lv_spinbox.c(406,32): warning C4267: “初始化”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_font_montserrat_18.c
+  lv_font_montserrat_20.c
+  lv_font_montserrat_22.c
+  lv_font_montserrat_24.c
+  lv_font_montserrat_26.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\font\lv_font_loader.c(264,56): warning C4267: “初始化”: 从“size_t”转换到“uint8_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\font\lv_font_loader.c(508,43): warning C4244: “=”: 从“int16_t”转换到“int8_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\font\lv_font_loader.c(509,44): warning C4244: “=”: 从“uint16_t”转换到“int8_t”，可能丢失数据
+  lv_font_montserrat_28.c
+  lv_font_montserrat_28_compressed.c
+  lv_font_montserrat_30.c
+  lv_font_montserrat_32.c
+  lv_font_montserrat_34.c
+  lv_font_montserrat_36.c
+  lv_font_montserrat_38.c
+  lv_font_montserrat_40.c
+  lv_font_montserrat_42.c
+  lv_font_montserrat_44.c
+  lv_font_montserrat_46.c
+  lv_font_montserrat_48.c
+  lv_font_montserrat_8.c
+  lv_font_simsun_16_cjk.c
+  lv_font_unscii_16.c
+  lv_font_unscii_8.c
+  lv_hal_disp.c
+  lv_hal_indev.c
+  lv_hal_tick.c
+  lv_anim.c
+  lv_anim_timeline.c
+  lv_area.c
+  lv_async.c
+  lv_bidi.c
+  lv_color.c
+  lv_fs.c
+  lv_gc.c
+  lv_ll.c
+  lv_log.c
+  lv_lru.c
+  lv_math.c
+  lv_mem.c
+  lv_printf.c
+  lv_style.c
+  lv_style_gen.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_lru.c(147,51): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_lru.c(152,46): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_lru.c(198,51): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_lru.c(201,46): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_lru.c(222,51): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_lru.c(225,46): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_templ.c
+  lv_timer.c
+  lv_tlsf.c
+  lv_txt.c
+  lv_txt_ap.c
+  lv_utils.c
+  lv_arc.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_mem.c(157,21): warning C4267: “+=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_mem.c(180,37): warning C4267: “-=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_mem.c(561,29): warning C4267: “+=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_mem.c(563,40): warning C4267: “=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_bar.c
+  lv_btn.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_style.c(208,56): warning C4267: “=”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_btnmatrix.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\misc\lv_style.c(391,76): warning C4018: “<”: 有符号/无符号不匹配
+  lv_canvas.c
+  lv_checkbox.c
+  lv_dropdown.c
+  lv_img.c
+  lv_label.c
+  lv_line.c
+  lv_objx_templ.c
+  lv_roller.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_btnmatrix.c(728,36): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  lv_slider.c
+  lv_switch.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(191,18): warning C4018: “<”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(196,26): warning C4018: “<”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(239,17): warning C4018: “>”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(240,17): warning C4018: “>”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(284,29): warning C4018: “>”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(335,29): warning C4018: “>”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(367,17): warning C4018: “>”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(368,17): warning C4018: “>”: 有符号/无符号不匹配
+  lv_table.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(410,29): warning C4018: “>”: 有符号/无符号不匹配
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_canvas.c(463,29): warning C4018: “>”: 有符号/无符号不匹配
+  lv_textarea.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_dropdown.c(242,45): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_dropdown.c(226,27): warning C4267: “初始化”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_dropdown.c(410,27): warning C4267: “初始化”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  drm.c
+  fbdev.c
+  GC9A01.c
+  ILI9341.c
+  R61581.c
+  SHARP_MIP.c
+  SSD1963.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_roller.c(123,51): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_roller.c(172,51): warning C4018: “>”: 有符号/无符号不匹配
+  ST7565.c
+  UC1610.c
+  gtkdrv.c
+  AD_touch.c
+  evdev.c
+  FT5406EE8.c
+  libinput.c
+  xkb.c
+  XPT2046.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\lvgl\src\widgets\lv_textarea.c(988,58): warning C4267: “函数”: 从“size_t”转换到“uint32_t”，可能丢失数据
+  sdl.c
+  sdl_common.c
+  sdl_gpu.c
+  wayland.c
+  win32drv.c
+  win_drv.c
+  ui_comp_hook.c
+  ui_font_Cuyuan24.c
+  ui_font_Number.c
+  ui_img_1508907960.c
+  ui_img_1688708748.c
+  ui_img_876444160.c
+  ui_img_876457220.c
+  ui_img_add_png.c
+  ui_img_alarmoff_png.c
+  ui_img_alarmon_png.c
+  ui_img_alarm_png.c
+  ui_img_back_png.c
+  ui_img_bibluetooth_png.c
+  ui_img_calculator1_png.c
+  ui_img_calculator_png.c
+  ui_img_card_png.c
+  ui_img_cat_png.c
+  ui_img_clock_png.c
+  ui_img_confirm_png.c
+  ui_img_delete_png.c
+  ui_img_drain_png.c
+  ui_img_ggmoreo_png.c
+  ui_img_gomore3_png.c
+  ui_img_heart_png.c
+  ui_img_humidity_png.c
+  ui_img_iu1_png.c
+  ui_img_iu_bg2_png.c
+  ui_img_iu_bg3_png.c
+  ui_img_iu_bg_png.c
+  ui_img_light_png.c
+  ui_img_next_png.c
+  ui_img_nfcoff_png.c
+  ui_img_nfc_png.c
+  ui_img_opencal_png.c
+  ui_img_open_png.c
+  ui_img_phcalendar_png.c
+  ui_img_phsharefill_png.c
+  ui_img_play_png.c
+  ui_img_readcard_png.c
+  ui_img_setting_png.c
+  ui_img_step_png.c
+  ui_img_stoptime_png.c
+  ui_img_suspend_png.c
+  ui_img_tempature_png.c
+  ui_img_tokenolt_png.c
+  ui_img_wifi_png.c
+  ui_img_wrist_png.c
+  ui_img_writecard_png.c
+  ui_AlarmPage.c
+  ui_CalendarPage.c
+  ui_ComputerPage.c
+  ui_HomePage.c
+  ui_MenuPage.c
+  ui_MessageArcPage.c
+  ui_MusicPage.c
+  ui_Navigation.c
+  ui_NFCCardPage.c
+  ui_SetTimePage.c
+  StrCalculate.c
+  ui.c
+  ui_events.c
+  ui_helpers.c
+  autofit.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(24,33): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(159,17): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(189,17): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(220,35): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(221,25): warning C4047: “=”:“char”与“void *”的间接级别不同
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(296,29): warning C4267: “函数”: 从“size_t”转换到“uint8_t”，可能丢失数据
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\StrCalculate.c(153,1): warning C4715: “SymisHighPriority”: 不是所有的控件路径都返回值
+  ftbase.c
+  ftbbox.c
+  ftbdf.c
+  ftbitmap.c
+  ftcid.c
+  ftfstype.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\ui\screens\ui_SetTimePage.c(102,47): warning C4013: “atoi”未定义；假设外部返回 int
+  ftgasp.c
+  ftglyph.c
+  ftgxval.c
+  ftinit.c
+  ftmm.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\base\ftcalc.c(1106,30): warning C4244: “return”: 从“FT_Int64”转换到“FT_Int32”，可能丢失数据
+  (编译源文件“freetype/src/base/ftbase.c”)
+  
+  ftotval.c
+  ftpatent.c
+  ftpfr.c
+  ftstroke.c
+  ftsynth.c
+  fttype1.c
+  ftwinfnt.c
+  bdf.c
+  ftcache.c
+  cff.c
+  type1cid.c
+  dlgwrap.c
+  ftgzip.c
+  ftlzw.c
+  pcf.c
+  pfr.c
+  psaux.c
+  pshinter.c
+  psmodule.c
+  raster.c
+  sfnt.c
+  smooth.c
+  sdf.c
+  svg.c
+  truetype.c
+  type1.c
+  type42.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\psaux\t1decode.c(1996,23): warning C4267: “=”: 从“size_t”转换到“FT_Int”，可能丢失数据
+  (编译源文件“freetype/src/psaux/psaux.c”)
+  
+  winfnt.c
+  ftdebug.c
+  ftsystem.c
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\smooth\ftgrays.c(1980,20): warning C4267: “+=”: 从“size_t”转换到“TCoord”，可能丢失数据
+  (编译源文件“freetype/src/smooth/smooth.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\psaux\psintrp.c(1005,25): warning C4267: “=”: 从“size_t”转换到“FT_Fast”，可能丢失数据
+  (编译源文件“freetype/src/psaux/psaux.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\sfnt\sfdriver.c(859,13): warning C4267: “=”: 从“size_t”转换到“FT_UInt”，可能丢失数据
+  (编译源文件“freetype/src/sfnt/sfnt.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\sfnt\sfdriver.c(1011,36): warning C4244: “函数”: 从“__int64”转换到“const unsigned int”，可能丢失数据
+  (编译源文件“freetype/src/sfnt/sfnt.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(287,48): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(308,55): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(340,62): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(370,19): warning C4267: “=”: 从“size_t”转换到“FT_UInt”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(579,56): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(588,55): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(597,58): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(606,60): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1driver.c(616,55): warning C4267: “=”: 从“size_t”转换到“FT_ULong”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1load.c(1771,64): warning C4244: “=”: 从“__int64”转换到“FT_Int”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type1\t1load.c(1941,36): warning C4244: “=”: 从“__int64”转换到“FT_Int”，可能丢失数据
+  (编译源文件“freetype/src/type1/type1.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\LVGL.Simulator\freetype\src\type42\t42parse.c(870,62): warning C4244: “=”: 从“__int64”转换到“FT_Int”，可能丢失数据
+  (编译源文件“freetype/src/type42/type42.c”)
+  
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\StrCalculate.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_comp_hook.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_font_Cuyuan24.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_font_Number.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_1508907960.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_1688708748.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_876444160.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_876457220.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_add_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_alarmoff_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_alarmon_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_alarm_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_back_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_bibluetooth_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_calculator1_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_calculator_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_card_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_cat_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_clock_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_confirm_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_delete_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_drain_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_ggmoreo_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_gomore3_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_heart_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_humidity_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_iu1_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_iu_bg2_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_iu_bg3_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_iu_bg_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_light_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_next_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_nfcoff_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_nfc_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_opencal_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_open_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_phcalendar_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_phsharefill_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_play_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_readcard_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_setting_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_step_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_stoptime_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_suspend_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_tempature_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_tokenolt_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_wifi_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_wrist_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_img_writecard_png.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_AlarmPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_CalendarPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_ComputerPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_HomePage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_MenuPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_MessageArcPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_MusicPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_Navigation.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_NFCCardPage.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\StrCalculate.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_events.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Objects\Debug\LVGL.Simulator\x64\ui_helpers.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
   LVGL.Simulator.vcxproj -> D:\2024710Embeded Learn\My FreeRtos\F407-LVGL-Watch\LVGL\Lv_simulator_vs2022\Qi_Watch\Output\Binaries\Debug\x64\Qi_Watch.exe
