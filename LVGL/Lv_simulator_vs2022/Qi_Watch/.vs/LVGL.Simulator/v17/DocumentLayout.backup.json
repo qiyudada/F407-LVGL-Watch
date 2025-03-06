@@ -37,19 +37,6 @@
           "SelectedChildIndex": 10,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ui.h",
-              "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h",
-              "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\ui.h",
-              "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h",
-              "RelativeToolTip": "LVGL.Simulator\\ui\\ui.h",
-              "ViewState": "AQIAAPoAAAAAAAAAAAAswAUBAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-24T02:06:28.754Z",
-              "IsPinned": true
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{588470cc-84f8-4a57-9ac4-86bca0625ff4}"
             },
@@ -72,6 +59,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ui.h",
+              "DocumentMoniker": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h",
+              "RelativeDocumentMoniker": "LVGL.Simulator\\ui\\ui.h",
+              "ToolTip": "D:\\2024710Embeded Learn\\My FreeRtos\\F407-LVGL-Watch\\LVGL\\Lv_simulator_vs2022\\Qi_Watch\\LVGL.Simulator\\ui\\ui.h",
+              "RelativeToolTip": "LVGL.Simulator\\ui\\ui.h",
+              "ViewState": "AQIAAPoAAAAAAAAAAAAswAUBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-24T02:06:28.754Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
